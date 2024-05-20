@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light"><head>
+    <title>JavaScript · HZW</title>
+    <meta charset="utf-8">
+    
+    <meta name="generator" content="Hugo 0.124.1">
+    <meta property="og:title" content="JavaScript" />
+<meta property="og:description" content="a note for learning JavaScript" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://seconsorl.github.io/post/javascript/" /><meta property="og:image" content="https://seconsorl.github.io/images/profile.png" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2024-05-06T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-05-06T00:00:00+00:00" /><meta property="og:site_name" content="A junior from NBU" />
+
+
+
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="HZW">
+    
+    
+    
+    <link rel="stylesheet" type="text/css" href="https://seconsorl.github.io/css/style.min.565d8c479597aa43658922d4b31e286529a7525a22c9546fa1018fc5e5ef6d86.css" integrity="sha256-Vl2MR5WXqkNliSLUsx4oZSmnUloiyVRvoQGPxeXvbYY=" crossorigin="anonymous" type="text/css">
+
+    
+    
+    
+    <script type="text/javascript" src="https://seconsorl.github.io/js/heyo-header.min.a3fa728a9f57833a31dfb45c48caaf1e4890c8c97f07bd7133fc2359745edb5d.js" integrity="sha256-o/pyip9Xgzox37RcSMqvHkiQyMl/B71xM/wjWXRe210=" crossorigin="anonymous"></script>
+
+    
+    
+    <link rel="stylesheet" type="text/css" href="https://seconsorl.github.io/css/fonts.9398921f2d404983c2b7f9a68ddc72e3f5e58a3e38b0a8e4a70d75c12ebfb7c5.css" integrity="sha256-k5iSHy1ASYPCt/mmjdxy4/Xlij44sKjkpw11wS6/t8U=" crossorigin="anonymous">
+
+    
+    
+    
+    <script type="text/javascript" src="https://seconsorl.github.io/js/sidebar-toc.min.788b639e2ec681549740b90b3b865d5f9e1789e3ca9c06ccc45d65655434c954.js" integrity="sha256-eItjni7GgVSXQLkLO4ZdX54XiePKnAbMxF1lZVQ0yVQ=" crossorigin="anonymous"></script>
+
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-graph.26b92ed9317bdc6f35642d588bdf3283f40998846e01cf4bee22a126907fbf3b.js" integrity="sha256-Jrku2TF73G81ZC1Yi98yg/QJmIRuAc9L7iKhJpB/vzs=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-digitalRain.af8a7b5c4428cc62d5bf49bf2698d4112c2459ee0c22c1c753ab304aef69888a.js" integrity="sha256-r4p7XEQozGLVv0m/JpjUESwkWe4MIsHHU6swSu9piIo=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-circleBrushStrokes.fe8fc3ee52e1d90e9236be8c36a27711efa024beb4da304829f95dfbb61d6e84.js" integrity="sha256-/o/D7lLh2Q6SNr6MNqJ3Ee&#43;gJL602jBIKfld&#43;7YdboQ=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-meta.71b5202ea881c86ac19e4b55414656a5444204a4ba08ff7368a5aa99c0a60949.js" integrity="sha256-cbUgLqiByGrBnktVQUZWpURCBKS6CP9zaKWqmcCmCUk=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sidebar-sketch.min.2e95015880993ef9abcad62d111decea22406616931bce193254bf8af2339953.js" integrity="sha256-LpUBWICZPvmrytYtER3s6iJAZhaTG84ZMlS/ivIzmVM=" crossorigin="anonymous" defer></script>
+    
+    
+    
+    <link rel="shortcut icon" href="https://seconsorl.github.io/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://seconsorl.github.io/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://seconsorl.github.io/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://seconsorl.github.io/favicons/favicon-16x16.png">
+    <link rel="canonical" href="https://seconsorl.github.io/post/javascript/">
+    
+    
+    
+    
+    
+
+    
+    <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://seconsorl.github.io/images/profile.png" /><meta name="twitter:title" content="JavaScript"/>
+<meta name="twitter:description" content="a note for learning JavaScript"/>
+
+</head><body>
+        <div class="main">
+            <div class="page-top">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a  href="/"  title="">Home</a></li>
+        
+            
+            <li><a  href="/post/"  title="">Posts</a></li>
+        
+            
+            <li><a  href="/about/"  title="">About</a></li>
+        
+        <li class="grow"></li>
+        
+        <li>
+            <a class="theme-switch" title="Switch Theme">
+                <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+            <div class="sidebar" id="sidebar">
+    <div class="top-toc">
+        <img src="https://seconsorl.github.io/images/profile.png" alt="profile picture">
+        
+        <a href="/">A junior from NBU</a>
+    </div>
+    
+    <div class="middle-sidebar grow" id="middle-sidebar">
+        
+            
+            
+                
+            
+
+            
+        
+    </div>
+
+    <div class="footer">
+        <ul class="social-links">
+            
+            <li>
+                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://github.com/SeConSorL" target="_blank" rel="noopener noreferrer" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" rel="me" aria-label="instagram">
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+            <li>
+                <a href="mailto:216002917@nbu.edu.cn" target="_blank" rel="noopener noreferrer" rel="me" aria-label="e-mail">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+        </ul>
+
+        <div class="by">by HZW <b>·</b> 2024</div>
+    </div>
+</div>
+            <div class="content">
+<div class="post">
+    
+    <div class="post-title">
+        <h1>JavaScript</h1>
+        
+            <div class="post-header">
+    <div style="padding-top: 10px;">
+        <i class="far fa-calendar"></i><span class="date">May 6, 2024</span>
+        <i class="far fa-clock"></i><span class="reading-time">3 minutes</span>
+        
+
+
+    </div>
+</div>
+        
+    </div>
+    <div class="post-content">
+        <h2 id="tips">TIPS</h2>
+<p><a href="https://www.w3school.com.cn/jsref/index.asp">w3school</a></p>
+<p>浏览器运行的时候会自动在每行后面加一个<code>;</code>，需要注意不要换行</p>
+<p>JS代码没问题就不会报错；会变成<strong>Undefine</strong></p>
+<h2 id="了解前端">了解前端</h2>
+<p>JavaScript一门弱类型脚本语言，其源代码在发往客户端运行之前不需经过编译，而是将文本格式的字符代码发送给浏览器由浏览器解释运行。</p>
+<p><strong>Native 原生JS开发</strong> 按照【<strong>ECMAScript</strong>】的方式开发，简称ES，所有浏览器支持（ES5）。ES6是常用的，当前主流版本：webpack打包成为ES5支持。区别就是增加了新特性。</p>
+<p><strong>TypeScript</strong> 微软标准  有些情况下需编译（成JS）才能执行。</p>
+<h3 id="js框架">JS框架</h3>
+<ul>
+<li>
+<p>jQuery：优点是简化了DOM操作，缺点是DOM操作太频繁，影响前端性能；在前端眼里使用它仅仅是为了兼容IE6、7、8；</p>
+</li>
+<li>
+<p>Angular：Google收购的前端框架，由一群Java程序员开发，其特点是将后台的MVC模式搬到了前端并增加了<strong>模块化开发</strong>的理念，与微软合作，采用TypeScript语法开发；对后台程序员友好，对前端程序员不太友好；最大的点是版本迭代不合理（如：1代-&gt;2代，除了名字，基本就是两个东西</p>
+</li>
+<li>
+<p><code>React</code>：Facebook出品，一赖高性能的JS前端框架；特点是提出了新概念<strong>虚拟DOM</strong>用于减少真实DOM操作，在内存中模拟DOM操作，有效提升了前端渲染效率；缺点是使用复杂。因为需要额外学习一门<strong>JSX</strong>语言；</p>
+</li>
+<li>
+<p><code>Vue</code>：一款渐进式JavaScript框架，所渭渐进式就是逐步实现新特性的意思，如实现模块化开发、路由、状态管理等新特性。其特点是综合了Angular（模块化）和React（虚拟DOM）的优点；</p>
+</li>
+<li>
+<p><code>Axios</code>：前端通信框架；因为Vue的边界很明确，就是为了处理DOM，所以并不具备通信能力，此时就需要额外使用一个通信框架与服务器交互；当然也可以直接选择使用jQuery提供的AJAX通信功能；</p>
+</li>
+</ul>
+<h3 id="ui框架">UI框架</h3>
+<ul>
+<li>
+<p>Ant-Design：阿里巴巴出品，基于React的UI框架</p>
+</li>
+<li>
+<p>ElementUl、iview、ice：饿了么出品，基于Vue的UI框架</p>
+</li>
+<li>
+<p>Bootstrap：Twitter推出的一个用于前端开发的开源工具包</p>
+</li>
+<li>
+<p>AmazeUl：一款HTML5跨屏前端框架</p>
+</li>
+</ul>
+<h3 id="javascript构建工具">JavaScript构建工具</h3>
+<ul>
+<li>
+<p>Babel：JS编译工具，主要用于浏览器不支持的ES新特性，比如用于编译TypeScript</p>
+</li>
+<li>
+<p>WebPack：模块打包器，主要作用是打包、压缩、合并及按序加载</p>
+</li>
+</ul>
+<h3 id="三端统一">三端统一</h3>
+<p>主要目的是实现一套代码三端同意。打包方式有以下两种：</p>
+<ul>
+<li>
+<p>云打包：HBuild -&gt; HBuildX，DCloud出品；API Cloud</p>
+</li>
+<li>
+<p>本地：Cordova（前身是PhoneGap）</p>
+</li>
+</ul>
+<h2 id="快速入门">快速入门</h2>
+<h3 id="引入js">引入JS</h3>
+<ul>
+<li>HTML的<code>script</code>标签内写JS代码</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">script</span>&gt;
+</span></span><span style="display:flex;"><span>  alter(<span style="color:#f1fa8c">&#34;Hello World&#34;</span>);
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">script</span>&gt;
+</span></span></code></pre></div><ul>
+<li>在<code>.js</code>文件中写，html中引用即可</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">script</span> <span style="color:#50fa7b">src</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;路径&#34;</span>&gt; &lt;/<span style="color:#ff79c6">script</span>&gt;  必须要加闭标签
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">script</span> <span style="color:#50fa7b">type</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;text/javascript &#34;</span>&gt;&lt;/<span style="color:#ff79c6">script</span>&gt;<span style="color:#6272a4">&lt;!-- 不用显示定义type，默认js--&gt;</span>
+</span></span></code></pre></div><h3 id="基本">基本</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>----------严格区分大小写------------
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">script</span>&gt;
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">//1、定义变量
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  <span style="color:#8be9fd;font-style:italic">var</span> num<span style="color:#ff79c6">=</span><span style="color:#bd93f9">1</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">var</span> name<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;huzhiwen&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">//2、条件控制
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  <span style="color:#ff79c6">if</span> (  <span style="color:#ff79c6">&amp;&amp;</span>  <span style="color:#ff79c6">||</span>  ){} <span style="color:#ff79c6">else</span>{} <span style="color:#6272a4">//与java相同
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">//注释  /*  */
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">script</span>&gt;
+</span></span></code></pre></div><h4 id="调试">调试</h4>
+<p>浏览器 -&gt; console  <strong>单行解释执行</strong></p>
+<p>-&gt; Sources 行号可以设置<strong>断点</strong>，刷新后右侧可以调试执行</p>
+<h3 id="数据类型">数据类型</h3>
+<p><strong>变量</strong> 不要以数字开头，可以用<code>_</code>、<code>$</code>开头，可以用中文</p>
+<ul>
+<li>
+<p>number：js不区分小数、整数、科学计数法；NaN（不是一个数字）；INF（无限大）</p>
+</li>
+<li>
+<p>字符串：单双引号都可以</p>
+</li>
+<li>
+<p>布尔值：true、false；</p>
+</li>
+<li>
+<p>逻辑运算：&amp;&amp;、||、！</p>
+</li>
+<li>
+<p>比较运算符：==（不是=）类型不一样，但是值一样也会 true 、<code>===</code>（绝对等于）类型一样，值一样才会 true 。</p>
+<ul>
+<li>NaN 与所有数值都不相等（包括自己），只能通过 isNaN(x) 判断x是不是 NaN</li>
+</ul>
+</li>
+<li>
+<p>浮点数问题：计算机不会算，所以会有精度损失，尽量避免进行运算。</p>
+</li>
+<li>
+<p>null 和 undefined ：null 空，undefined 未定义</p>
+</li>
+<li>
+<p>数组：var arr=[1,&lsquo;2&rsquo;];  new Array(1,&lsquo;2&rsquo;);  跟Python差不多。</p>
+<ul>
+<li>取数组下标时，如果越界了，就会undefined</li>
+</ul>
+</li>
+<li>
+<p>对象：用大括号<code>{}</code>，属性:值。每个属性之间用逗号隔开，最后一个不需要</p>
+</li>
+</ul>
+<h3 id="严格检查模式">严格检查模式</h3>
+<p>可以直接像python那样不定义直接赋值变量，但是可能会与引用的js文件冲突了。</p>
+<p><strong>var</strong>：作用域是函数范围</p>
+<p><strong>let</strong>：作用域是块范围</p>
+<p>在script标签中，开头加<code>'use strict'</code>，预防js的随意性导致的问题（需设置支持ES6语法）</p>
+<p>局部变量建议用let定义</p>
+<h2 id="数据类型-1">数据类型</h2>
+<h3 id="字符串">字符串</h3>
+<ul>
+<li>
+<p>正常字符串使用单引号<code>' '</code>或者双引号<code>&quot; &quot;</code></p>
+</li>
+<li>
+<p>转义字符 \</p>
+<pre tabindex="0"><code>\&#39;  引号
+\n  换行
+\t  tab
+\u4e2d  unicode编码 ‘中’
+\x41  ASCII字符
+</code></pre></li>
+<li>
+<p>多行字符串  用单反引号 `` ` ，ESC键下面</p>
+</li>
+<li>
+<p>模板字符串  可以用${}来引用  <strong>EL表达式</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">let</span> name<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#39;huzhiwen&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">let</span> msg<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">`hello,</span><span style="color:#f1fa8c">${</span>name<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">`</span>
+</span></span></code></pre></div></li>
+<li>
+<p>字符串属性和方法，length、toUpperCase()、substring( start [,end+1] ) 等等</p>
+</li>
+<li>
+<p>字符串的可变性：<strong>不可变</strong></p>
+</li>
+</ul>
+<h3 id="数组">数组</h3>
+<p><strong>Array可以包括任意数据类型</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#6272a4">//--------------数组可变------------------
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">var</span> arr<span style="color:#ff79c6">=</span>[<span style="color:#f1fa8c">&#34;1&#34;</span>,<span style="color:#bd93f9">1</span>,<span style="color:#bd93f9">2</span>,<span style="color:#bd93f9">3</span>,<span style="color:#bd93f9">4</span>,<span style="color:#bd93f9">5</span>]
+</span></span><span style="display:flex;"><span>arr.length<span style="color:#ff79c6">=</span><span style="color:#bd93f9">10</span> <span style="color:#6272a4">// 导致arr=[1,2,3,4,5,empty*5]
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">//如果赋值过小，元素就会丢失
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">//indexOf,通过元素获取下标索引
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>arr.indexOf(<span style="color:#bd93f9">1</span>);  arr.indexOf(<span style="color:#f1fa8c">&#34;1&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">//slice() 切片或者叫截取   和python差不多 [start,end)
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>arr.slice(<span style="color:#bd93f9">1</span>,<span style="color:#bd93f9">5</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">//push、pop 压入尾部  弹出尾部
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">//unshift(),shift() 压入头部  弹出头部 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">//sort() 升序排序
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">//reverse 反转
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">//concat  拼接（只是会返回一个新数组，不会修改原数组）
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>arr.concat([<span style="color:#bd93f9">1</span>,<span style="color:#bd93f9">2</span>,<span style="color:#bd93f9">3</span>]);
+</span></span><span style="display:flex;"><span>[<span style="color:#f1fa8c">&#34;1&#34;</span>,<span style="color:#bd93f9">1</span>,<span style="color:#bd93f9">2</span>,<span style="color:#bd93f9">3</span>,<span style="color:#bd93f9">4</span>,<span style="color:#bd93f9">5</span>,<span style="color:#bd93f9">1</span>,<span style="color:#bd93f9">2</span>,<span style="color:#bd93f9">3</span>]
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">//join
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>打印数组使用特定字符串连接。
+</span></span><span style="display:flex;"><span>arr.join(<span style="color:#f1fa8c">&#39;-&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">//多维数组
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>[[],[]]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">//数组可以像对象一样添加的属性的，会被遍历出来的
+</span></span></span></code></pre></div><h3 id="对象">对象</h3>
+<p>若干键值对，逗号隔开</p>
+<p>JS中的所有键都是字符串，值是任意对象</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">var</span> person<span style="color:#ff79c6">=</span>{
+</span></span><span style="display:flex;"><span>  属性名<span style="color:#ff79c6">:</span>属性值,
+</span></span><span style="display:flex;"><span>  ...
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">//对象赋值
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>person.name<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;胡值闻&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">//使用一个不存在的对象属性不会报错
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">//动态删减属性
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">delete</span> person.name
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">//动态添加
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>直接给新的属性添加值
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">//判断是否在对象中
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#f1fa8c">&#39;age&#39;</span> <span style="color:#ff79c6">in</span> person;
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">//判断属性是否是对象自身拥有的
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>hasOwnProperty()
+</span></span></code></pre></div><h3 id="流程控制">流程控制</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#6272a4">//判断
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">if</span> (){}
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">else</span>
+</span></span><span style="display:flex;"><span>{}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">//循环
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">while</span>()
+</span></span><span style="display:flex;"><span>  {  }
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">for</span> ()
+</span></span><span style="display:flex;"><span>  {  }
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">// 数组循环
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">//forEach()
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>age.forEach( <span style="color:#8be9fd;font-style:italic">function</span>(value){} )
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">//for in
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">for</span> (<span style="color:#8be9fd;font-style:italic">var</span> num <span style="color:#ff79c6">in</span> age) <span style="color:#6272a4">//num是索引
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  {}
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">for</span> (<span style="color:#8be9fd;font-style:italic">var</span> num <span style="color:#ff79c6">of</span> age) <span style="color:#6272a4">//num是元素
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  {}
+</span></span></code></pre></div><h3 id="map和set">Map和Set</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">var</span> map<span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Map([[<span style="color:#f1fa8c">&#39;123&#39;</span>,<span style="color:#bd93f9">123</span>],[<span style="color:#f1fa8c">&#39;abc&#39;</span>,<span style="color:#bd93f9">345</span>],[<span style="color:#f1fa8c">&#39;qwe&#39;</span>,<span style="color:#bd93f9">678</span>]]);
+</span></span><span style="display:flex;"><span>map.set(<span style="color:#f1fa8c">&#39;admin&#39;</span>,<span style="color:#bd93f9">123456</span>);<span style="color:#6272a4">//新增
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>map.get(<span style="color:#f1fa8c">&#39;123&#39;</span>);
+</span></span><span style="display:flex;"><span>map.<span style="color:#ff79c6">delete</span>(<span style="color:#f1fa8c">&#39;123&#39;</span>);  <span style="color:#6272a4">//删除
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">var</span> set<span style="color:#ff79c6">=</span><span style="color:#ff79c6">new</span> Set([<span style="color:#bd93f9">3</span>,<span style="color:#bd93f9">1</span>,<span style="color:#bd93f9">1</span>,<span style="color:#bd93f9">1</span>]);  <span style="color:#6272a4">//自动去重,可以保存NaN和undef，但是也会去重
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>set.add(<span style="color:#bd93f9">2</span>); <span style="color:#6272a4">//新增
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>set.<span style="color:#ff79c6">delete</span>(); <span style="color:#6272a4">//删除
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">//判断是否在
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>set.has();
+</span></span><span style="display:flex;"><span>[<span style="color:#bd93f9">1</span>] <span style="color:#ff79c6">in</span> set
+</span></span></code></pre></div><h4 id="iterator迭代">iterator迭代</h4>
+<p>迭代器（Iterator）是一种遍历任何可迭代对象（Iterable）的通用接口。迭代器是ES6规范中引入的一种新的数据类型，用于遍历各种数据结构，包括数组、对象、Map、Set等。在语言层面上，迭代器可以被看做一个有next方法的对象，每次调用next方法都可以返回一个值对象（Value）和一个布尔值（Done），表示是否遍历结束。其中，Value代表当前迭代项的取值，Done代表迭代是否结束。
+<strong>基本语法</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">function</span><span style="color:#ff79c6">*</span> genFunc(){
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">yield</span> <span style="color:#f1fa8c">&#39;a&#39;</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">yield</span> <span style="color:#f1fa8c">&#39;b&#39;</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">yield</span> <span style="color:#f1fa8c">&#39;c&#39;</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">const</span> genObj <span style="color:#ff79c6">=</span> genFunc(); <span style="color:#6272a4">// 获取生成器对象
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>console.log(genObj.next()); <span style="color:#6272a4">// { value: &#39;a&#39;, done: false }
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>console.log(genObj.next()); <span style="color:#6272a4">// { value: &#39;b&#39;, done: false }
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>console.log(genObj.next()); <span style="color:#6272a4">// { value: &#39;c&#39;, done: false }
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>console.log(genObj.next()); <span style="color:#6272a4">// { value: undefined, done: true }
+</span></span></span></code></pre></div><p>上述代码中，我们定义了一个名为genFunc的生成器函数，并在函数体中使用命令yield定义一个可生成的值。生成器函数返回一个生成器对象，该对象可以使用next()方法获取生成值和指示生成器是否完成。</p>
+<p><strong>生成器传参</strong>
+像普通函数一样，生成器函数也可以接收参数。可以使用next()方法传入参数，并在生成器函数中访问它们。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">function</span><span style="color:#ff79c6">*</span> greet(names) {
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">for</span> (<span style="color:#ff79c6">const</span> name <span style="color:#ff79c6">of</span> names) {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">yield</span> <span style="color:#f1fa8c">`Hello </span><span style="color:#f1fa8c">${</span>name<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">!`</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">const</span> genObj <span style="color:#ff79c6">=</span> greet([<span style="color:#f1fa8c">&#39;John&#39;</span>, <span style="color:#f1fa8c">&#39;Jane&#39;</span>, <span style="color:#f1fa8c">&#39;Jim&#39;</span>]);
+</span></span><span style="display:flex;"><span>console.log(genObj.next().value); <span style="color:#6272a4">// Hello John!
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>console.log(genObj.next().value); <span style="color:#6272a4">// Hello Jane!
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>console.log(genObj.next().value); <span style="color:#6272a4">// Hello Jim!
+</span></span></span></code></pre></div><p><strong>生成器委托</strong></p>
+<p>生成器函数可以相互转移控制权，这被称为“生成器委托”。</p>
+<pre tabindex="0"><code>function* greet() {
+  yield &#39;Hello&#39;;
+  yield* politeGreet();
+}
+
+function* politeGreet() {
+  yield &#39;Mr.&#39;;
+  yield &#39;and Mrs.&#39;;
+  yield &#39;Smith&#39;;
+}
+
+const greetings = [];
+for (const greeting of greet()) {
+  greetings.push(greeting);
+}
+console.log(greetings.join(&#39; &#39;)); // Hello Mr. and Mrs. Smith
+</code></pre><p><strong>例子</strong></p>
+<p>我们定义了一个createIterator函数，用于返回一个迭代器对象。该函数接收一个数组作为参数，创建并返回一个迭代器对象，该对象包含一个next方法，通过迭代访问数组中的元素，每次返回一个包含当前迭代值和是否遍历结束的对象。</p>
+<pre tabindex="0"><code>function createIterator(arr) {
+  let index = 0;
+  return {
+    next() {
+      return index &lt; arr.length ?
+        { value: arr[index++], done: false } :
+        { done: true };
+    }
+  };
+}
+const arr = [1, 2, 3, 4];
+const iterator = createIterator(arr);
+
+let result = iterator.next();
+while (!result.done) {
+  console.log(result.value); // 输出 1 2 3 4
+  result = iterator.next();
+}
+</code></pre><h3 id="函数和变量常量">函数和变量、常量</h3>
+<p>函数也是一种变量</p>
+<h4 id="定义">定义</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#6272a4">//一
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">function</span> abs(x)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">if</span> (x<span style="color:#ff79c6">&lt;</span><span style="color:#bd93f9">0</span>) <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">-</span>x;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">return</span> x;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">//二  匿名函数
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">var</span> abs<span style="color:#ff79c6">=</span><span style="color:#8be9fd;font-style:italic">function</span>(x){
+</span></span><span style="display:flex;"><span>  ...
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>一旦执行return 代表函数结束；如果没有执行return，函数执行完也会返回结果，结果就是Undef或者NaN</p>
+<p><strong>参数</strong></p>
+<p>js可以传任意数量的参数，不会报错；</p>
+<p><strong>arguments</strong>是关键字，代表所有传递进来的参数。</p>
+<p><strong>rest</strong>，获取除了已经定义的所有参数，使用时<code>...rest</code>; <code>...</code>表示可变长数组; 只能写在最后面，必须用<code>...</code>标识</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">function</span> abs(x)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  arguments  <span style="color:#6272a4">//参数列表
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  <span style="color:#ff79c6">if</span> (<span style="color:#ff79c6">typeof</span> x<span style="color:#ff79c6">!==</span><span style="color:#f1fa8c">&#39;number&#39;</span>)   <span style="color:#6272a4">//手动抛出异常
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">throw</span> <span style="color:#f1fa8c">&#39;Not a number&#39;</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">if</span> (x<span style="color:#ff79c6">&lt;</span><span style="color:#bd93f9">0</span>) <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">-</span>x;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">return</span> x;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="作用域">作用域</h4>
+<p><strong>var</strong>定义的变量是函数作用域的。假设在函数内部声明，则在函数外不能使用。</p>
+<p>函数查找变量是从“内”向“外”查找的，如果在全局作用域内都没有找到，则会报错<code>RefrenceError</code></p>
+<p>自动提升变量的声明，但是不赋值。</p>
+<p>建议使用类似pascal的声明形式。</p>
+<p><strong>全局</strong></p>
+<p>在script标签开头定义</p>
+<p>默认所有的全局变量和函数，都会自动绑定在windows对象下。（ 包括alert() ）</p>
+<p>所有变量和函数都可以重写，包括默认的。</p>
+<p>JS只有一个全局作用域</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">var</span> x<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#39;xxx&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">window</span>.alert(x);
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">var</span> old_alert<span style="color:#ff79c6">=</span><span style="color:#8be9fd;font-style:italic">window</span>.alert;
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">//old_alert（×）；
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">window</span>.alert<span style="color:#ff79c6">=</span><span style="color:#8be9fd;font-style:italic">function</span>(){}
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">//发现alert()失效了
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">window</span>.alert(<span style="color:#bd93f9">123</span>);
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">//恢复
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">window</span>.alert<span style="color:#ff79c6">=</span>old_alert;
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">window</span>.alert(<span style="color:#bd93f9">456</span>);
+</span></span></code></pre></div><p><strong>局部（let）</strong></p>
+<p>let范围是代码块</p>
+<h5 id="规范">规范</h5>
+<p>由于所有的全局变量都会绑定到我们的window上。如果不同的js文件，使用了相同的全局变量，冲突。</p>
+<p><strong>减少冲突</strong></p>
+<p>定义唯一的全局变量</p>
+<p>把自己的代码放入自己定义的唯一空间</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">var</span> HZW<span style="color:#ff79c6">=</span>{};
+</span></span><span style="display:flex;"><span>HZW.name<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#39;huzhiwen&#39;</span>;
+</span></span><span style="display:flex;"><span>HZW.age<span style="color:#ff79c6">=</span><span style="color:#8be9fd;font-style:italic">function</span>(){
+</span></span><span style="display:flex;"><span>  ...
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>举例：<strong>jQuery</strong>;   jQuery. = $()</p>
+<h4 id="常量">常量</h4>
+<p>ES6之前，用全大写字母命名的变量就是常量。</p>
+<p>现在用<strong>const</strong></p>
+<h4 id="方法">方法</h4>
+
+    </div>
+    <div class="post-footer">
+        <div class="info">
+            
+            
+        </div>
+        
+
+
+    </div>
+    
+        
+    
+</div>
+
+                <div class="grow"></div>
+                <div class="built-with">
+    Built with <a href="https://gohugo.io/">Hugo</a> <b>·</b> Using the <a href="https://github.com/LucasVadilho/heyo-hugo-theme">heyo</a> theme
+</div>
+            </div>
+        </div>
+        
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha512-3M00D/rn8n+2ZVXBO9Hib0GKNpkm8MSUU/e2VNthDyBYxKWG+BftNYYcuEjXlyrSO637tidzMBXfE7sQm0INUg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<script type="text/javascript">
+            
+            
+            window.MathJax = {
+                tex: {
+                    inlineMath: [['$', '$'], ['\\(', '\\)']],
+                    displayMath: [['$$','$$'], ['\\[', '\\]']]
+                },
+                svg: {
+                    scale: 1.25,
+                }
+            };
+        </script><script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.1.0/es5/tex-mml-svg.min.js" integrity="sha512-/mL9Gs6E5Bz6NtPOr9eY&#43;T8IIdJbo2JL3TudApzFFelwBXEc3TeFLU6kPq122TJROv7jkktuBRkz5h8vGzrsyA==" crossorigin="anonymous"></script>
+    </body>
+</html>

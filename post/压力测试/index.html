@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light"><head>
+    <title>压力测试 · HZW</title>
+    <meta charset="utf-8">
+    
+    <meta name="generator" content="Hugo 0.124.1">
+    <meta property="og:title" content="压力测试" />
+<meta property="og:description" content="a note for learning 压力测试" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://seconsorl.github.io/post/%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95/" /><meta property="og:image" content="https://seconsorl.github.io/images/profile.png" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2024-05-06T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-05-06T00:00:00+00:00" /><meta property="og:site_name" content="A junior from NBU" />
+
+
+
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="HZW">
+    
+    
+    
+    <link rel="stylesheet" type="text/css" href="https://seconsorl.github.io/css/style.min.565d8c479597aa43658922d4b31e286529a7525a22c9546fa1018fc5e5ef6d86.css" integrity="sha256-Vl2MR5WXqkNliSLUsx4oZSmnUloiyVRvoQGPxeXvbYY=" crossorigin="anonymous" type="text/css">
+
+    
+    
+    
+    <script type="text/javascript" src="https://seconsorl.github.io/js/heyo-header.min.a3fa728a9f57833a31dfb45c48caaf1e4890c8c97f07bd7133fc2359745edb5d.js" integrity="sha256-o/pyip9Xgzox37RcSMqvHkiQyMl/B71xM/wjWXRe210=" crossorigin="anonymous"></script>
+
+    
+    
+    <link rel="stylesheet" type="text/css" href="https://seconsorl.github.io/css/fonts.9398921f2d404983c2b7f9a68ddc72e3f5e58a3e38b0a8e4a70d75c12ebfb7c5.css" integrity="sha256-k5iSHy1ASYPCt/mmjdxy4/Xlij44sKjkpw11wS6/t8U=" crossorigin="anonymous">
+
+    
+    
+    
+    <script type="text/javascript" src="https://seconsorl.github.io/js/sidebar-toc.min.788b639e2ec681549740b90b3b865d5f9e1789e3ca9c06ccc45d65655434c954.js" integrity="sha256-eItjni7GgVSXQLkLO4ZdX54XiePKnAbMxF1lZVQ0yVQ=" crossorigin="anonymous"></script>
+
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-graph.26b92ed9317bdc6f35642d588bdf3283f40998846e01cf4bee22a126907fbf3b.js" integrity="sha256-Jrku2TF73G81ZC1Yi98yg/QJmIRuAc9L7iKhJpB/vzs=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-digitalRain.af8a7b5c4428cc62d5bf49bf2698d4112c2459ee0c22c1c753ab304aef69888a.js" integrity="sha256-r4p7XEQozGLVv0m/JpjUESwkWe4MIsHHU6swSu9piIo=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-circleBrushStrokes.fe8fc3ee52e1d90e9236be8c36a27711efa024beb4da304829f95dfbb61d6e84.js" integrity="sha256-/o/D7lLh2Q6SNr6MNqJ3Ee&#43;gJL602jBIKfld&#43;7YdboQ=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-meta.71b5202ea881c86ac19e4b55414656a5444204a4ba08ff7368a5aa99c0a60949.js" integrity="sha256-cbUgLqiByGrBnktVQUZWpURCBKS6CP9zaKWqmcCmCUk=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sidebar-sketch.min.2e95015880993ef9abcad62d111decea22406616931bce193254bf8af2339953.js" integrity="sha256-LpUBWICZPvmrytYtER3s6iJAZhaTG84ZMlS/ivIzmVM=" crossorigin="anonymous" defer></script>
+    
+    
+    
+    <link rel="shortcut icon" href="https://seconsorl.github.io/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://seconsorl.github.io/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://seconsorl.github.io/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://seconsorl.github.io/favicons/favicon-16x16.png">
+    <link rel="canonical" href="https://seconsorl.github.io/post/%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95/">
+    
+    
+    
+    
+    
+
+    
+    <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://seconsorl.github.io/images/profile.png" /><meta name="twitter:title" content="压力测试"/>
+<meta name="twitter:description" content="a note for learning 压力测试"/>
+
+</head><body>
+        <div class="main">
+            <div class="page-top">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a  href="/"  title="">Home</a></li>
+        
+            
+            <li><a  href="/post/"  title="">Posts</a></li>
+        
+            
+            <li><a  href="/about/"  title="">About</a></li>
+        
+        <li class="grow"></li>
+        
+        <li>
+            <a class="theme-switch" title="Switch Theme">
+                <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+            <div class="sidebar" id="sidebar">
+    <div class="top-toc">
+        <img src="https://seconsorl.github.io/images/profile.png" alt="profile picture">
+        
+        <a href="/">A junior from NBU</a>
+    </div>
+    
+    <div class="middle-sidebar grow" id="middle-sidebar">
+        
+            
+            
+                
+            
+
+            
+        
+    </div>
+
+    <div class="footer">
+        <ul class="social-links">
+            
+            <li>
+                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://github.com/SeConSorL" target="_blank" rel="noopener noreferrer" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" rel="me" aria-label="instagram">
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+            <li>
+                <a href="mailto:216002917@nbu.edu.cn" target="_blank" rel="noopener noreferrer" rel="me" aria-label="e-mail">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+        </ul>
+
+        <div class="by">by HZW <b>·</b> 2024</div>
+    </div>
+</div>
+            <div class="content">
+<div class="post">
+    
+    <div class="post-title">
+        <h1>压力测试</h1>
+        
+            <div class="post-header">
+    <div style="padding-top: 10px;">
+        <i class="far fa-calendar"></i><span class="date">May 6, 2024</span>
+        <i class="far fa-clock"></i><span class="reading-time">One minute</span>
+        
+
+
+    </div>
+</div>
+        
+    </div>
+    <div class="post-content">
+        <h2 id="介绍">介绍</h2>
+<p><strong>压力测试</strong>（Stress Testing）是一种评估系统在极端条件下性能的技术。其目的是确定系统在过载情况下的稳定性和可靠性，识别潜在的瓶颈和弱点。压力测试通常应用于软件、硬件、网络以及其他需要确保高可靠性的系统中。</p>
+<h3 id="压力测试的主要目标">压力测试的主要目标</h3>
+<ol>
+<li><strong>确定系统的最大负载能力</strong>：了解系统在超出正常操作条件时能够处理的最大负载。</li>
+<li><strong>识别系统的瓶颈</strong>：找出系统性能下降或故障的原因，例如CPU、内存、磁盘I/O或网络带宽的限制。</li>
+<li><strong>验证系统的稳定性</strong>：确保系统在长时间的高负载下仍能保持正常运行，而不会崩溃或出现重大错误。</li>
+<li><strong>测试系统的恢复能力</strong>：观察系统在压力解除后能否迅速恢复正常运行。</li>
+</ol>
+<h3 id="类型">类型</h3>
+<ol>
+<li><strong>负载测试（Load Testing）</strong>：模拟大量用户或操作请求，逐步增加负载，直到系统达到性能极限。</li>
+<li><strong>耐久测试（Endurance Testing）</strong>：在较长时间内持续施加高负载，测试系统在长时间运行下的稳定性。</li>
+<li><strong>尖峰测试（Spike Testing）</strong>：突然增加系统负载，观察系统能否迅速适应并处理这种突发负载。</li>
+<li><strong>灾难恢复测试（Disaster Recovery Testing）</strong>：模拟灾难性事件，测试系统的恢复能力和应急响应能力。</li>
+</ol>
+<h3 id="步骤">步骤</h3>
+<ol>
+<li><strong>确定测试目标</strong>：明确测试的具体目标和预期结果。</li>
+<li><strong>选择测试工具</strong>：选择合适的压力测试工具，如Apache JMeter、LoadRunner、Gatling等。</li>
+<li><strong>设计测试方案</strong>：规划测试的具体步骤，包括负载模型、测试数据、测试场景等。</li>
+<li><strong>执行测试</strong>：按照测试方案实施测试，逐步增加负载并监控系统性能。</li>
+<li><strong>分析测试结果</strong>：收集和分析测试数据，找出系统的瓶颈和问题。</li>
+<li><strong>优化系统</strong>：根据测试结果，对系统进行优化和调整，提高其性能和稳定性。</li>
+<li><strong>重新测试</strong>：再次进行压力测试，验证优化后的系统能否满足预期的性能要求。</li>
+</ol>
+<h3 id="压力测试工具">压力测试工具</h3>
+<p>一些常用的压力测试工具包括：</p>
+<ul>
+<li><strong>Apache JMeter</strong>：开源的负载测试工具，支持多种协议（HTTP、HTTPS、FTP等），适用于Web应用的压力测试。</li>
+<li><strong>LoadRunner</strong>：商业负载测试工具，功能强大，支持广泛的协议和应用。</li>
+<li><strong>Gatling</strong>：高性能的负载测试工具，基于Scala开发，适用于大规模并发测试。</li>
+<li><strong>Siege</strong>：轻量级的HTTP负载测试工具，适用于快速测试Web服务器的性能。</li>
+</ul>
+<p>通过定期进行压力测试，组织可以确保其系统在实际使用中能够承受预期的高负载，保持高性能和高可靠性，从而提升用户体验和业务连续性。</p>
+<h2 id="load-impactk6">Load Impact（K6）</h2>
+<p>Load Impact（现在更名为k6）有提供免费的试用项，对于匿名用户提供25用户三分钟在线模拟，如果是试用用户则可以获得50用户15分钟在线的模拟测试，Load Impact会记录下每一个模拟测试用户的在线情况。</p>
+<p><a href="http://loadimpact.com/">官网</a></p>
+<p><a href="https://blog.csdn.net/a756598009/article/details/125541718">学习使用</a></p>
+<h3 id="步骤-1">步骤</h3>
+<ul>
+<li>
+<p><strong>创建项目</strong></p>
+</li>
+<li>
+<p>创建新测试</p>
+</li>
+<li>
+<p><strong>开始构造</strong></p>
+</li>
+<li>
+<p><strong>开始录制</strong>（它会记录你在浏览器的使用记录）</p>
+<p>建议先打开一个空的标签页，然后开始录制；</p>
+</li>
+<li>
+<p><strong>安装插件K6</strong>（如果是第一次使用的话），这个是chrome插件</p>
+</li>
+<li>
+<p><strong>录制脚本的网页地址</strong>：输入你要录制脚本的网页地址，然后开始录制</p>
+</li>
+<li>
+<p><strong>录制操作</strong>：确认开始，就会跳转到你要<strong>之前输入的录制脚本的地址</strong>，然后你在你项目的地址进行操作你要录制的地方，就会录制你要录制的地址的接口、操作、文件、文档、图片资源等。</p>
+</li>
+<li>
+<p><strong>录制完成</strong>：停止录制，<strong>取消</strong>按钮 就是停止录制（停止录制后会跳转回来）</p>
+</li>
+<li>
+<p><strong>内容筛选</strong>：调整你需要留下的压测内容就勾选保存下来，不需要的就不勾选</p>
+</li>
+<li>
+<p><strong>设置负载地区</strong>：一般默认即可</p>
+</li>
+<li>
+<p><strong>设置模拟用户的数量，时间</strong></p>
+</li>
+<li>
+<p><strong>设置资源</strong>（CPU，内存，响应时间，请求率等）</p>
+</li>
+<li>
+<p><strong>设置选项</strong>：设置启动时的模拟用户量，结束时的模拟用户量，中间时间的模拟用户量，时长之类等的设置。</p>
+</li>
+<li>
+<p><strong>请求的内容删除与修改</strong>：请求的内容，可以查看到请求的内容，或者在里面修改，删除之类的</p>
+</li>
+<li>
+<p><strong>执行性能测试</strong></p>
+</li>
+<li>
+<p><strong>查看测试结果</strong>：跑完之后，在创建的项目里面可以看到测试的记录</p>
+</li>
+<li>
+<p><strong>导出，保存，分析</strong>：右上角  $\vdots$  出有选项可以导出数据</p>
+<p>接下来可以直接在里面查看压力性能测试的结果，或者导出保存发给其他人进行性能结果分析，然后根据他的响应时间，CPU,内存，等进行分析优化。</p>
+</li>
+</ul>
+<h2 id="apache-jmeter">Apache JMeter</h2>
+<p><strong>Apache JMeter</strong> 是开源软件，是一个纯 Java 应用程序，旨在加载测试功能行为和测量性能 。它最初是为测试 Web 应用程序而设计的，但后来扩展到其他测试功能</p>
+<h3 id="功能">功能</h3>
+<ul>
+<li>能够加载和性能测试许多不同的应用程序/服务器/协议类型：
+<ul>
+<li>Web - HTTP, HTTPS (Java，NodeJS，PHP，ASP.NET， …)</li>
+<li>SOAP/REST 网络服务</li>
+<li>文件传输协议</li>
+<li>通过 JDBC 数据库</li>
+<li>LDAP</li>
+<li>通过 JMS 的面向消息的中间件 (MOM)</li>
+<li>邮件 - SMTP(S)、POP3(S) 和 IMAP(S)</li>
+<li>本机命令或 shell 脚本</li>
+<li>TCP</li>
+<li>Java对象</li>
+</ul>
+</li>
+<li>全功能测试 IDE，允许快速测试计划记录（从浏览器或本机应用程序）、构建和调试。</li>
+<li><strong>CLI 模式</strong>（命令行模式（以前称为非 GUI）/headless 模式）从任何 Java 兼容操作系统（Linux、Windows、Mac OSX 等）进行负载测试</li>
+<li>一个完整且准备好呈现的动态 HTML 报告</li>
+<li>通过从最流行的响应格式HTML、JSON、 XML或任何文本格式 中提取数据的能力轻松关联</li>
+<li>完全的可移植性和100% 的 Java 纯度。</li>
+<li>完整的<strong>多线程</strong>框架允许多个线程并发采样和不同线程组同时采样不同的函数。</li>
+<li>测试结果的缓存和离线分析/回放。</li>
+<li>高度可扩展的核心：
+<ul>
+<li>可插拔采样器允许无限的测试能力。</li>
+<li>脚本采样器（JSR223 兼容语言，如Groovy和 BeanShell）</li>
+<li>可以使用可插入计时器 选择多个负载统计信息。</li>
+<li>数据分析和可视化插件允许很大的可扩展性和个性化。</li>
+<li>函数可用于为测试提供动态输入或提供数据操作。</li>
+<li>通过适用于 Maven、Gradle 和 Jenkins 的第 3 方开源库轻松持续集成</li>
+</ul>
+</li>
+</ul>
+<h3 id="主要的配置元件">主要的配置元件</h3>
+<ul>
+<li>测试计划：是使用 JMeter 进行测试的起点，它是其它 JMeter测试元件的容器</li>
+<li>线程组：代表一定数量的用户，它可以用来模拟用户并发发送请求。实际的请求内容在Sampler中定义，它被线程组包含</li>
+<li>配置元件：维护Sampler需要的配置信息，并根据实际的需要修改请求的内容</li>
+<li>前置处理器：负责在请求之前工作，常用来修改请求的设置</li>
+<li>后置处理器：负责在请求之后工作，常用获取返回的值</li>
+</ul>
+<h3 id="下载">下载</h3>
+<p><a href="https://jmeter.apache.org/download_jmeter.cgi">官网</a>   安装<strong>需要Java 8+</strong>（jdk8以上）</p>
+<p>zip是windows的   tgz是linux的</p>
+<h4 id="windows">Windows</h4>
+<h5 id="安装">安装</h5>
+<ul>
+<li>
+<p>下载下来后解压</p>
+</li>
+<li>
+<p>进入<code>bin/</code> 目录下，运行<code>jmeter.bat</code>文件</p>
+</li>
+<li>
+<p>之后会出现一个dos窗口（不要关闭），随后会弹出UI界面</p>
+</li>
+</ul>
+<h5 id="使用">使用</h5>
+<blockquote>
+<p>切换中文，<code>Options</code>-&gt;<code>Choose Language</code>-&gt;<code>Chinese(Simplified)</code></p>
+</blockquote>
+<p><strong>线程组</strong></p>
+<ul>
+<li>
+<p>新建：右键点击测试计划，<code>添加</code>-&gt;<code>线程（用户）</code>-&gt;<code>线程组</code></p>
+</li>
+<li>
+<p>配置：新建的线程组中，线程属性有<u>线程数</u>（模拟请求数量）、<u>Ramp-up时间</u>（线程启动时间）、<u>循环次数</u>（会执行几次，若勾上<code>永远</code>表示一直循环）</p>
+</li>
+</ul>
+<p><strong>HTTP请求</strong></p>
+<ul>
+<li>
+<p>新建：在线程组上右键，<code>添加</code>-&gt;<code>取样器</code>-&gt;<code>HTTP请求</code></p>
+</li>
+<li>
+<p>配置</p>
+<ul>
+<li>Web服务器中可以设置  <strong>服务器地址</strong>（127.0.0.1）及其<strong>端口号</strong></li>
+<li>HTTP请求中可以设置<strong>请求方式</strong>（GET、POST等）、<strong>请求路径</strong>、<strong>编码方式</strong></li>
+</ul>
+</li>
+</ul>
+<p><strong>监听器</strong></p>
+<p>监听器可以监听HTTP的请求过程以及结果</p>
+<p>新建：在HTTP请求上右键，<code>添加</code>-&gt;<code>监听器</code>，可以选择很多种监听器</p>
+<p><code>察看结果树</code>、<code>汇总报告</code>、<code>聚合报告</code>，<code>后端监听器</code>四个监听器。</p>
+<p><strong>运行</strong></p>
+<p>点击上方工具栏中绿色的启动按钮即可，启动后按钮会变成灰色</p>
+<h4 id="ubuntu">Ubuntu</h4>
+
+    </div>
+    <div class="post-footer">
+        <div class="info">
+            
+            
+        </div>
+        
+
+
+    </div>
+    
+        
+    
+</div>
+
+                <div class="grow"></div>
+                <div class="built-with">
+    Built with <a href="https://gohugo.io/">Hugo</a> <b>·</b> Using the <a href="https://github.com/LucasVadilho/heyo-hugo-theme">heyo</a> theme
+</div>
+            </div>
+        </div>
+        
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha512-3M00D/rn8n+2ZVXBO9Hib0GKNpkm8MSUU/e2VNthDyBYxKWG+BftNYYcuEjXlyrSO637tidzMBXfE7sQm0INUg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<script type="text/javascript">
+            
+            
+            window.MathJax = {
+                tex: {
+                    inlineMath: [['$', '$'], ['\\(', '\\)']],
+                    displayMath: [['$$','$$'], ['\\[', '\\]']]
+                },
+                svg: {
+                    scale: 1.25,
+                }
+            };
+        </script><script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.1.0/es5/tex-mml-svg.min.js" integrity="sha512-/mL9Gs6E5Bz6NtPOr9eY&#43;T8IIdJbo2JL3TudApzFFelwBXEc3TeFLU6kPq122TJROv7jkktuBRkz5h8vGzrsyA==" crossorigin="anonymous"></script>
+    </body>
+</html>

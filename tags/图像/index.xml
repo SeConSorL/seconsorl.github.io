@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>图像 on My Blog</title>
+    <link>https://seconsorl.github.io/tags/%E5%9B%BE%E5%83%8F/</link>
+    <description>Recent content in 图像 on My Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>216002917@nbu.edu.cn (HZW)</managingEditor>
+    <webMaster>216002917@nbu.edu.cn (HZW)</webMaster>
+    <lastBuildDate>Mon, 06 May 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://seconsorl.github.io/tags/%E5%9B%BE%E5%83%8F/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>傅里叶变换</title>
+      <link>https://seconsorl.github.io/post/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2fourier-transform/</link>
+      <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
+      <guid>https://seconsorl.github.io/post/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2fourier-transform/</guid>
+      <description>傅里叶变换 傅里叶级数 介绍 $\sin(kx)$与$\cos(nx)$在一个周期内是两两正交的： $$ \int_{-\pi}^{\pi}\sin(kx)\sin(nx)dx=0(n\ne k)=\pi(n=k) $$ $$ \int_{-\pi}^{\pi}\cos(kx)\cos(nx)dx=0(n\ne k)=\pi(n=k) $$ $$ \int_{-\pi}^{\pi}\sin(kx)\cos(nx)dx=0 $$ 因为被积函数是奇函数。&#xA;因此，$\sin(kx)$与$\cos(nx)$为函数空间的一组正交基。函数空间（此处应为希尔伯特空间:完备的内积空间）中任何一个函数都可以用这些基来表示，就如三维欧式空间中任何一个向量都可以用$x,y,z$来表示。&#xA;不同之处在于对于函数的表示是无穷维的，比如方波函数$SW(x)$：&#xA;它的傅里叶级数可以表示为： $$ SW(x)=b_1 \sin x+b_2 \sin(2x)+b_3 \sin(3x)+\dots =\sum_{n=1}^{\infty}b_n \sin(nx) $$ 求各系数非常简单，方程两边同乘$\sin(kx)$，然后在一个周期内积分，可得： $$ b_k=\frac{1}{\pi}\int_{-\pi}^{\pi}SW(x)\sin(kx)dx=\frac{2}{\pi}\int_0^{\pi}\sin(kx)dx=\frac{2}{\pi}|\frac{-\cos(kx)}{k}|_{0}^{\pi} \ =\frac{2}{\pi}{ \frac{2}{1},\frac{0}{2},\frac{2}{3}\dots } $$&#xA;$$ SW(x)=\frac{4}{\pi}(\frac{\sin x}{1}+\frac{\sin(3x)}{3}+\frac{\sin(5x)}{5}+\dots) $$&#xA;注意：在靠近间断点x=0处，随着所用项（基）的增多，波动(overshoot)越来越靠近间断点，这种现象叫做吉布斯现象(Gibbs phenomenon)。只能减小其影响，但无法避免，这是处理不连续函数的一个巨大障碍。&#xA;吉布斯现象的典故：【英文大意：在刚要进入本世纪的时候, 一位美国物理学家 A．Michelson 制造了一部机器,借助于这部机器可以求得以图像给出的函数的头 80 个傅里叶分量．机器分析所得的这一结果可以通过下列方法进行检验, 即把所求得的分量加在一起, 看看这样得到的函数是否接近于原来的函数．在大多数情况中, 它是正确的; 但是当用于方波函数 S(x) 的时候, 在它的间断点处 “出现了一个原来函数中不存在的奇怪的突点．Michelson 感到迷惑不解, 猜想也许是机器的某个隐藏着的缺陷引起的毛病．他把他的观察写信告诉了著名的数学物理学家 Josiah Gibbs, 征求他的意见．Gibbs研究了这个现象, 并解释了这个现象 (发表在 1899 年给《自然》的一篇通讯中)。】&#xA;类似地，对于偶函数，只需用$\cos(nx)$表示&#xA;一般地，任何一个函数 $f(x)\subset C([−\pi,\pi])$ (既不是奇函数，也不是偶函数)可以表示为： $$ f(x)=a_0+\sum_{n=1}^{\infty}a_n \cos(nx)+\sum_{n=1}^{\infty}b_n \sin(nx) $$ 求各系数特别简单，等式两边分别同乘$1,\cos(kx),\sin(kx)$，然后在一个周期内积分可得$a_0,a_k,b_k$，即： $$ a_0=\frac{1}{2\pi}\int_{-\pi}^{\pi}f(x)dx,\ a_k=\frac{1}{\pi}\int_{-\pi}^{\pi}f(x)\cos(kx)dx,\ b_k=\frac{1}{\pi}\int_{-\pi}^{\pi}f(x)\sin(kx)dx $$ 进一步，推广到复数域。我们知道$e^{-ikx}$与$e^{inx}$是正交的（内积为0），即： $$ \int_{-\pi}^{\pi}e^{-ikx}e^{ink}dx=|\frac{e^{i(n-k)x}}{i(n-k)}|{-\pi}^{\pi}=0 (n\ne k) $$ 也就是说$e^{ikx}$是希尔伯特空间的一组正交基。此处复数内积运算，需乘其共轭 $e^{-ikx}$。则任何一个周期函数$f(x)$可以表示为： $$ f(x)=\sum{n=-\infty}^{\infty}c_ne^{inx} $$ 求$c_k$，则可以两边同时乘上$e^{-ikx}$，然后在一个周期内积分可得： $$ \int_{-\pi}^{\pi}f(x)e^{-ikx}dx=\int_{-\pi}^{\pi}c_0e^{-ikx}dx+\int_{-\pi}^{\pi}c_1e^{ix}e^{-ikx}dx+\int_{-\pi}^{\pi}c_{-1}e^{-ix}e^{-ikx}dx\ \dots+\int_{-\pi}^{\pi}c_ke^{ikx}e^{-ikx}dx+\dots $$ 右边只有$\int_{-\pi}^{\pi}c_ke^{ikx}e^{-ikx}dx=2\pi c_k$，其他都为0，即：&#xA;$c_k=\frac{1}{2\pi}\int_{-\pi}^{\pi}f(x)e^{-ikx}dx$</description>
+    </item>
+  </channel>
+</rss>

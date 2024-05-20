@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light"><head>
+    <title>Django · HZW</title>
+    <meta charset="utf-8">
+    
+    <meta name="generator" content="Hugo 0.124.1">
+    <meta property="og:title" content="Django" />
+<meta property="og:description" content="a note for learning django" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://seconsorl.github.io/post/django%E8%AF%B4%E6%98%8E/" /><meta property="og:image" content="https://seconsorl.github.io/images/profile.png" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2024-05-06T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-05-06T00:00:00+00:00" /><meta property="og:site_name" content="A junior from NBU" />
+
+
+
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="HZW">
+    
+    
+    
+    <link rel="stylesheet" type="text/css" href="https://seconsorl.github.io/css/style.min.565d8c479597aa43658922d4b31e286529a7525a22c9546fa1018fc5e5ef6d86.css" integrity="sha256-Vl2MR5WXqkNliSLUsx4oZSmnUloiyVRvoQGPxeXvbYY=" crossorigin="anonymous" type="text/css">
+
+    
+    
+    
+    <script type="text/javascript" src="https://seconsorl.github.io/js/heyo-header.min.a3fa728a9f57833a31dfb45c48caaf1e4890c8c97f07bd7133fc2359745edb5d.js" integrity="sha256-o/pyip9Xgzox37RcSMqvHkiQyMl/B71xM/wjWXRe210=" crossorigin="anonymous"></script>
+
+    
+    
+    <link rel="stylesheet" type="text/css" href="https://seconsorl.github.io/css/fonts.9398921f2d404983c2b7f9a68ddc72e3f5e58a3e38b0a8e4a70d75c12ebfb7c5.css" integrity="sha256-k5iSHy1ASYPCt/mmjdxy4/Xlij44sKjkpw11wS6/t8U=" crossorigin="anonymous">
+
+    
+    
+    
+    <script type="text/javascript" src="https://seconsorl.github.io/js/sidebar-toc.min.788b639e2ec681549740b90b3b865d5f9e1789e3ca9c06ccc45d65655434c954.js" integrity="sha256-eItjni7GgVSXQLkLO4ZdX54XiePKnAbMxF1lZVQ0yVQ=" crossorigin="anonymous"></script>
+
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-graph.26b92ed9317bdc6f35642d588bdf3283f40998846e01cf4bee22a126907fbf3b.js" integrity="sha256-Jrku2TF73G81ZC1Yi98yg/QJmIRuAc9L7iKhJpB/vzs=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-digitalRain.af8a7b5c4428cc62d5bf49bf2698d4112c2459ee0c22c1c753ab304aef69888a.js" integrity="sha256-r4p7XEQozGLVv0m/JpjUESwkWe4MIsHHU6swSu9piIo=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-circleBrushStrokes.fe8fc3ee52e1d90e9236be8c36a27711efa024beb4da304829f95dfbb61d6e84.js" integrity="sha256-/o/D7lLh2Q6SNr6MNqJ3Ee&#43;gJL602jBIKfld&#43;7YdboQ=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-meta.71b5202ea881c86ac19e4b55414656a5444204a4ba08ff7368a5aa99c0a60949.js" integrity="sha256-cbUgLqiByGrBnktVQUZWpURCBKS6CP9zaKWqmcCmCUk=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sidebar-sketch.min.2e95015880993ef9abcad62d111decea22406616931bce193254bf8af2339953.js" integrity="sha256-LpUBWICZPvmrytYtER3s6iJAZhaTG84ZMlS/ivIzmVM=" crossorigin="anonymous" defer></script>
+    
+    
+    
+    <link rel="shortcut icon" href="https://seconsorl.github.io/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://seconsorl.github.io/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://seconsorl.github.io/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://seconsorl.github.io/favicons/favicon-16x16.png">
+    <link rel="canonical" href="https://seconsorl.github.io/post/django%E8%AF%B4%E6%98%8E/">
+    
+    
+    
+    
+    
+
+    
+    <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://seconsorl.github.io/images/profile.png" /><meta name="twitter:title" content="Django"/>
+<meta name="twitter:description" content="a note for learning django"/>
+
+</head><body>
+        <div class="main">
+            <div class="page-top">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a  href="/"  title="">Home</a></li>
+        
+            
+            <li><a  href="/post/"  title="">Posts</a></li>
+        
+            
+            <li><a  href="/about/"  title="">About</a></li>
+        
+        <li class="grow"></li>
+        
+        <li>
+            <a class="theme-switch" title="Switch Theme">
+                <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+            <div class="sidebar" id="sidebar">
+    <div class="top-toc">
+        <img src="https://seconsorl.github.io/images/profile.png" alt="profile picture">
+        
+        <a href="/">A junior from NBU</a>
+    </div>
+    
+    <div class="middle-sidebar grow" id="middle-sidebar">
+        
+            
+            
+                
+            
+
+            
+        
+    </div>
+
+    <div class="footer">
+        <ul class="social-links">
+            
+            <li>
+                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://github.com/SeConSorL" target="_blank" rel="noopener noreferrer" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" rel="me" aria-label="instagram">
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+            <li>
+                <a href="mailto:216002917@nbu.edu.cn" target="_blank" rel="noopener noreferrer" rel="me" aria-label="e-mail">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+        </ul>
+
+        <div class="by">by HZW <b>·</b> 2024</div>
+    </div>
+</div>
+            <div class="content">
+<div class="post">
+    
+    <div class="post-title">
+        <h1>Django</h1>
+        
+            <div class="post-header">
+    <div style="padding-top: 10px;">
+        <i class="far fa-calendar"></i><span class="date">May 6, 2024</span>
+        <i class="far fa-clock"></i><span class="reading-time">9 minutes</span>
+        
+
+
+    </div>
+</div>
+        
+    </div>
+    <div class="post-content">
+        <h1 id="创建项目">创建项目</h1>
+<pre tabindex="0"><code>django-admin startproject &#34;项目名称&#34; 
+</code></pre><pre tabindex="0"><code>//结构如下
+$ cd 项目名称/
+$ tree
+.
+|-- 项目名称
+|   |-- __init__.py
+|   |-- asgi.py
+|   |-- settings.py
+|   |-- urls.py
+|   `-- wsgi.py
+`-- manage.py
+</code></pre><ul>
+<li><strong>HelloWorld:</strong> 项目的容器。</li>
+<li><strong>manage.py:</strong> 一个实用的命令行工具，可让你以各种方式与该 Django 项目进行交互。</li>
+<li><strong>HelloWorld/<strong>init</strong>.py:</strong> 一个空文件，告诉 Python 该目录是一个 Python 包。</li>
+<li><strong>HelloWorld/asgi.py:</strong> 一个 ASGI 兼容的 Web 服务器的入口，以便运行你的项目。</li>
+<li><strong>HelloWorld/settings.py:</strong> 该 Django 项目的设置/配置。</li>
+<li><strong>HelloWorld/urls.py:</strong> 该 Django 项目的 URL 声明; 一份由 Django 驱动的网站&quot;目录&quot;。</li>
+<li><strong>HelloWorld/wsgi.py:</strong> 一个 WSGI 兼容的 Web 服务器的入口，以便运行你的项目。</li>
+</ul>
+<h1 id="启动服务器">启动服务器</h1>
+<pre tabindex="0"><code>python manage.py runserver 0.0.0.0:8000  --这句话需要在项目文件夹下执行
+</code></pre><p><strong>0.0.0.0</strong> 让其它电脑可连接到开发服务器，<strong>8000</strong> 为端口号。如果不说明，那么端口号默认为 <strong>8000</strong>。</p>
+<p>在浏览器输入你服务器的 ip（这里我们输入本机 IP 地址： <strong>127.0.0.1:8000</strong>） 及端口号，如果正常启动，页面中间是一个小火箭</p>
+<p><strong>可以manage.py里修改配置</strong></p>
+<pre tabindex="0"><code>if __name__ == &#39;__main__&#39;:
+    from django.core.management.commands.runserver import Command as Runserver  
+    Runserver.default_addr = &#39;127.0.0.1&#39;  # 修改默认地址  
+    Runserver.default_port = &#39;8080&#39;  # 修改默认端口  
+    main()
+</code></pre><h1 id="urlspy">urls.py</h1>
+<h5 id="使用url或re_path">使用url或re_path</h5>
+<pre tabindex="0"><code>from django.conf.urls import url --不能使用，无法使用,在Django 4.0中删除
+</code></pre><p>使用 <code>re_path</code> 替代 <code>url</code></p>
+<pre tabindex="0"><code>from django.urls import include, re_path
+
+from myapp.views import home
+
+urlpatterns = [
+    re_path(r&#39;^$&#39;, home, name=&#39;home&#39;),
+    re_path(r&#39;^myapp/&#39;, include(&#39;myapp.urls&#39;),
+]
+</code></pre><h5 id="使用path">使用path</h5>
+<pre tabindex="0"><code>from django.urls import path
+
+path(route, view, kwargs=None, name=None)
+</code></pre><ul>
+<li>route: 字符串，表示 URL 规则，与之匹配的 URL 会执行对应的第二个参数 view。</li>
+<li>view: 用于执行与正则表达式匹配的 URL 请求。</li>
+<li>kwargs: 视图使用的字典类型的参数。</li>
+<li>name: 用来反向获取 URL。</li>
+</ul>
+<h1 id="模版">模版</h1>
+<p>模板是一个文本，用于分离文档的表现形式和内容。</p>
+<p>项目文件夹下创建<code>templates</code>文件夹</p>
+<p>需要向Django说明模板文件的路径，修改<code>项目名称/settings.py</code>，修改 TEMPLATES 中的 DIRS 为 <strong>[os.path.join(BASE_DIR, &rsquo;templates&rsquo;)]</strong>（需要import os）</p>
+<h3 id="示例">示例：</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#6272a4">#在views.py文件中</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">from</span> django.shortcuts <span style="color:#ff79c6">import</span> render
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">runoob</span>(request):
+</span></span><span style="display:flex;"><span>    context          <span style="color:#ff79c6">=</span> {}
+</span></span><span style="display:flex;"><span>    context[<span style="color:#f1fa8c">&#39;hello&#39;</span>] <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;Hello World!&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> render(request, <span style="color:#f1fa8c">&#39;runoob.html&#39;</span>, context)  <span style="color:#6272a4">#此处runoob.html为DIRS的路径</span>
+</span></span></code></pre></div><p>这里使用 <strong>render</strong> 来替代之前使用的 <del>HttpResponse</del>。<strong>render</strong> 还使用了一个字典 context 作为参数。</p>
+<p>context 字典中元素的键值 <strong>hello</strong> 对应了模板中的变量 <strong>{{ hello }}</strong></p>
+<p>runoob.html中的内容  <code>&lt;h1&gt;{{ hello }}&lt;/h1&gt;</code></p>
+<p><strong>使用模板来输出数据，从而实现数据与视图分离</strong></p>
+<h3 id="django-模板标签">Django 模板标签</h3>
+<p>views.py：｛&ldquo;HTML变量名&rdquo; : &ldquo;views变量名&rdquo;｝
+HTML：｛｛变量名｝｝</p>
+<h5 id="列表">列表</h5>
+<p>可以用 <code>.</code> 索引下标取出对应的元素。</p>
+<p>{{ views_list }}</p>   # 取出整个列表
+<p>{{ views_list.0 }}</p> # 取出列表的第一个元素
+<h5 id="字典">字典</h5>
+<p>可以用 <code>.键</code> 取出对应的值</p>
+<p>{{ views_dict }}</p>
+<p>{{ views_dict.name }}</p>
+<h5 id="过滤器">过滤器</h5>
+<pre tabindex="0"><code>{{ 变量名 | 过滤器：可选参数 }}     --模板过滤器可以在变量被显示前修改它
+</code></pre><pre tabindex="0"><code>{{ name|lower }}      --`{{ name }}变量被过滤器lower处理后，文档大写转换文本为小写。
+</code></pre><p>过滤管道可以被* 套接* ，既是说，一个过滤器管道的输出又可以作为下一个管道的输入：</p>
+<pre tabindex="0"><code>{{ my_list|first|upper }}  --将第一个元素并将其转化为大写
+</code></pre><pre tabindex="0"><code>{{ bio|truncatewords:&#34;30&#34; }}  --将显示变量 bio 的前30个词。
+/*如果字符串包含的字符总个数多于指定的字符数量，那么会被截断掉后面的部分。
+截断的字符串将以 ... 结尾。*/
+</code></pre><h6 id="其他过滤器">其他过滤器</h6>
+<ul>
+<li>
+<p>addslashes : 添加反斜杠到任何反斜杠、单引号或者双引号前面。</p>
+</li>
+<li>
+<p>date : 按指定的格式字符串参数格式化 date 或者 datetime 对象，实例：</p>
+<pre tabindex="0"><code>{{ pub_date|date:&#34;F j, Y&#34; }}
+</code></pre></li>
+<li>
+<p>length : 返回变量的长度。</p>
+</li>
+</ul>
+<h6 id="default">default</h6>
+<p>default 为变量提供一个默认值。</p>
+<p>如果 views 传的变量的布尔值是 false，则使用指定的默认值。</p>
+<p>以下值为 false：</p>
+<pre tabindex="0"><code>0  0.0  False  0j  &#34;&#34;  []  ()  set()  {}  None
+</code></pre><p>{{ name|default:&ldquo;菜鸟教程666&rdquo; }}</p>
+<h6 id="filesizeformat">filesizeformat</h6>
+<p>以更易读的方式显示文件的大小（即<code>13 KB</code>, <code>4.1 MB</code>, <code>102 bytes</code>等）。</p>
+<p>字典返回的是键值对的数量，集合返回的是去重后的长度。</p>
+<p>{{ num|filesizeformat}}</p>
+<h6 id="date">date</h6>
+<p>根据给定格式对一个日期变量进行格式化。</p>
+<p>格式 <strong>Y-m-d H:i:s</strong>返回 <strong>年-月-日 小时:分钟:秒</strong> 的格式时间。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">import</span> datetime
+</span></span><span style="display:flex;"><span>now<span style="color:#ff79c6">=</span>datetime<span style="color:#ff79c6">.</span>datetime<span style="color:#ff79c6">.</span>now()
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">return</span> render(request, <span style="color:#f1fa8c">&#34;runoob.html&#34;</span>, {<span style="color:#f1fa8c">&#34;time&#34;</span>: now})
+</span></span></code></pre></div><p>{{ time|date:&ldquo;Y-m-d&rdquo; }}</p>
+<h6 id="safe">safe</h6>
+<p>将字符串标记为安全，不需要转义。(<strong>可以写HTML代码</strong>)</p>
+<p>要保证 <strong>views.py</strong> 传过来的数据绝对安全，才能用 <strong>safe</strong>。</p>
+<p>和后端 views.py 的 mark_safe 效果相同。</p>
+<p>Django 会自动对 views.py 传到HTML文件中的标签语法进行转义，令其语义失效。加 safe 过滤器是告诉 Django 该数据是安全的，不必对其进行转义，可以让该数据语义生效。</p>
+<h6 id="ifelse-标签">if/else 标签</h6>
+<p>基本语法格式如下：</p>
+<pre tabindex="0"><code>{% if condition %}
+     ... display
+{% endif %}
+</code></pre><p>或者：</p>
+<pre tabindex="0"><code>{% if condition1 %}
+   ... display 1
+{% elif condition2 %}
+   ... display 2
+{% else %}
+   ... display 3
+{% endif %}
+</code></pre><p><strong>{% if %}</strong> 标签接受 <strong>and</strong> 、 <strong>or</strong> 、 <strong>not</strong> 和对变量取反（ **not **）</p>
+<h6 id="for-标签">for 标签</h6>
+<p>{% for %}     {% endfor %}允许我们在一个序列上迭代。</p>
+<p>与 Python 的 <code>for</code> 语句的情形类似，循环语法是 <code>for X in Y</code> ，<strong>Y</strong> 是要迭代的序列而 <strong>X</strong> 是在每一个特定的循环中使用的变量名称。</p>
+<p>给标签（迭代的序列）后面增加一个<code>reversed</code>使得该列表被反向迭代：</p>
+<p>标签里可以通过 {{forloop}} 变量获取循环序号</p>
+<ul>
+<li>forloop.counter: 顺序获取循环序号，从 1 开始计算</li>
+<li>forloop.counter0: 顺序获取循环序号，从 0 开始计算</li>
+<li>forloop.revcounter: 倒序获取循环序号，结尾序号为 1</li>
+<li>forloop.revcounter0: 倒序获取循环序号，结尾序号为 0</li>
+<li>forloop.first（一般配合if标签使用）: 第一条数据返回 True，其他数据返回 False</li>
+<li>forloop.last（一般配合if标签使用）: 最后一条数据返回 True，其他数据返回 False</li>
+</ul>
+<h6 id="-empty-从句在循环为空的时候执行">{% empty %}从句，在循环为空的时候执行</h6>
+<h6 id="ifequalifnotequal-标签">ifequal/ifnotequal 标签</h6>
+<p>{% ifequal %} 标签比较两个值，当他们相等时，显示在 {% ifequal %} 和 {% endifequal %} 之中所有的值。</p>
+<p>支持可选的 {% else%} 标签</p>
+<h6 id="注释标签">注释标签</h6>
+<p>Django 注释使用 {# #}。</p>
+<h6 id="include-标签">include 标签</h6>
+<p>{% include %} 标签允许在模板中包含其它的模板的内容。</p>
+<p>下面这个例子都包含了 nav.html 模板：</p>
+<h1 id="创建app">创建APP</h1>
+<p>app不是应用，是功能的划分，创建app需要靠manage.py，终端输入：</p>
+<pre tabindex="0"><code>python manage.py startapp app名
+或者 django-admin startapp app名
+</code></pre><p>app文件介绍：</p>
+<pre tabindex="0"><code>appliction01
+  __init__·.py
+  admin.py // django默认的自带后台管理
+  apps.py // app启动类
+  migrations // 数据库变更记录
+  models.py // 数据库的操作在这里
+  test.py // 单元测试
+  views.py // Blog里面的url里的函数一般都要在这里找（常用）
+</code></pre><p>app创建了<strong>还需要添加进配置</strong>才可以正常运行，我们需要在blog的setting.py文件中添加：</p>
+<pre tabindex="0"><code>INSTALLED_APPS=[
+.....
+&#39;app名+app&#39;,
+]
+</code></pre><h1 id="django模型数据库">Django模型（数据库）</h1>
+<p>Django 对各种数据库提供了很好的支持，包括：PostgreSQL、MySQL、SQLite、Oracle。</p>
+<h3 id="django-orm">Django ORM</h3>
+<p>ORM 解析过程:</p>
+<ul>
+<li>1、ORM 会将 Python 代码转成为 SQL 语句。</li>
+<li>2、SQL 语句通过 pymysql 传送到数据库服务端。</li>
+<li>3、在数据库中执行 SQL 语句并将结果返回。</li>
+</ul>
+<p>Models类  对应  数据表</p>
+<p>对象实例   对应  一条记录</p>
+<p>属性           对应  字段</p>
+<p><strong>ORM 无法操作到数据库级别，只能操作到数据表</strong></p>
+<pre tabindex="0"><code>create database 数据库名称 default charset=utf8; # 防止编码问题，指定为 utf8
+</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>DATABASES <span style="color:#ff79c6">=</span> { 
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#39;default&#39;</span>: 
+</span></span><span style="display:flex;"><span>    { 
+</span></span><span style="display:flex;"><span>        <span style="color:#f1fa8c">&#39;ENGINE&#39;</span>: <span style="color:#f1fa8c">&#39;django.db.backends.mysql&#39;</span>,    <span style="color:#6272a4"># 数据库引擎</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f1fa8c">&#39;NAME&#39;</span>: <span style="color:#f1fa8c">&#39;runoob&#39;</span>, <span style="color:#6272a4"># 数据库名称</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f1fa8c">&#39;HOST&#39;</span>: <span style="color:#f1fa8c">&#39;127.0.0.1&#39;</span>, <span style="color:#6272a4"># 数据库地址，本机 ip 地址 127.0.0.1 </span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f1fa8c">&#39;PORT&#39;</span>: <span style="color:#bd93f9">3306</span>, <span style="color:#6272a4"># 端口 </span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f1fa8c">&#39;USER&#39;</span>: <span style="color:#f1fa8c">&#39;root&#39;</span>,  <span style="color:#6272a4"># 数据库用户名</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f1fa8c">&#39;PASSWORD&#39;</span>: <span style="color:#f1fa8c">&#39;123456&#39;</span>, <span style="color:#6272a4"># 数据库密码</span>
+</span></span><span style="display:flex;"><span>    }  
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>接下来，告诉 Django 使用 pymysql 模块连接 mysql 数据库：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#6272a4"># 在与 settings.py 同级目录下的 __init__.py 中引入模块和进行配置 </span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">import</span> pymysql
+</span></span><span style="display:flex;"><span>pymysql<span style="color:#ff79c6">.</span>install_as_MySQLdb()
+</span></span></code></pre></div><h3 id="定义模型">定义模型</h3>
+<ul>
+<li>创建一个 app</li>
+<li>修改 <code>app名</code>/models.py 文件，代码如下：</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#6272a4"># models.py</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">from</span> django.db <span style="color:#ff79c6">import</span> models
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">Test</span>(models<span style="color:#ff79c6">.</span>Model):  <span style="color:#6272a4">#类名表示数据库表名</span>
+</span></span><span style="display:flex;"><span>    name <span style="color:#ff79c6">=</span> models<span style="color:#ff79c6">.</span>CharField(max_length<span style="color:#ff79c6">=</span><span style="color:#bd93f9">20</span>)
+</span></span></code></pre></div><p>类继承了models.Model，类里面的<strong>变量</strong>代表数据表中的<strong>字段</strong>(name)，<strong>数据类型</strong>则由CharField（相当于varchar）、DateField（相当于datetime）， <strong>max_length 参数限定长度</strong>。</p>
+<ul>
+<li>
+<p>在命令行中运行：$</p>
+<pre tabindex="0"><code>python3 manage.py migrate   # 创建表结构
+python3 manage.py makemigrations TestModel  # 让 Django 知道我们在我们的模型有一些变更
+python3 manage.py migrate TestModel   # 创建表结构
+</code></pre></li>
+</ul>
+<p>看到几行 &ldquo;Creating table…&rdquo; 的字样，你的数据表就创建好了。</p>
+<p><strong>表名组成结构为：应用名_类名</strong></p>
+<p>**注意：**尽管我们没有在 models 给表设置主键，但是 Django 会自动添加一个 id 作为主键。</p>
+<h4 id="常见报错信息">常见报错信息</h4>
+<ul>
+<li>如果执行上面命令时会出现如下报错信息:</li>
+</ul>
+<p><u>File &ldquo;&hellip;&hellip;..\django\db\backends\mysql\base.py&rdquo;</u></p>
+<p><u>ImproperlyConfigured(mysqlclient 1.3.13 or newer is required)</u></p>
+<p>原因是 <strong>MySQLclient 目前只支持到 Python3.4</strong></p>
+<p>解决：可以按照路径<strong>找到base文件</strong>，把这两行代码注释掉（代码在文件开头部分）：</p>
+<pre tabindex="0"><code>if version &lt; (1, 3, 13):
+    raise ImproperlyConfigured(&#39;mysqlclient 1.3.13 or newer is required; you have %s.&#39; % Database.__version__)
+</code></pre><ul>
+<li>如果出现以下报错信息：</li>
+</ul>
+<p>file &ldquo;&hellip;&hellip;.\operations.py&rdquo;  query = query.decode(errors=&lsquo;replace&rsquo;)</p>
+<p>解决：在那句话之前加上：</p>
+<pre tabindex="0"><code>query = query.encode()
+</code></pre><h3 id="数据库操作">数据库操作</h3>
+<h5 id="添加数据">添加数据</h5>
+<p>添加数据需要<strong>先创建对象</strong>，然后再<strong>执行 save</strong> 函数，相当于SQL中的INSERT：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">from</span> django.http <span style="color:#ff79c6">import</span> HttpResponse
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">from</span> TestModel.models <span style="color:#ff79c6">import</span> Test
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 数据库操作</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">testdb</span>(request):
+</span></span><span style="display:flex;"><span>    test1 <span style="color:#ff79c6">=</span> Test(name<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#39;runoob&#39;</span>)
+</span></span><span style="display:flex;"><span>    test1<span style="color:#ff79c6">.</span>save()
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> HttpResponse(<span style="color:#f1fa8c">&#34;&lt;p&gt;数据添加成功！&lt;/p&gt;&#34;</span>)
+</span></span></code></pre></div><h5 id="获取数据">获取数据</h5>
+<p>Django提供了多种方式来获取数据库的内容，如下代码所示：</p>
+<pre><code>from django.http import HttpResponse
+from TestModel.models import Test
+# 数据库操作
+def testdb(request):
+	# 初始化
+	response = &quot;&quot;
+	response1 = &quot;&quot;
+	# 通过objects这个模型管理器的all()获得所有数据行，相当于SQL中的SELECT * FROM
+	list = Test.objects.all()
+    
+	# filter相当于SQL中的WHERE，可设置条件过滤结果
+	response2 = Test.objects.filter(id=1) 
+
+	# 获取单个对象
+	response3 = Test.objects.get(id=1) 
+
+	# 限制返回的数据 相当于 SQL 中的 OFFSET 0 LIMIT 2;
+	Test.objects.order_by('name')[0:2]
+
+	#数据排序
+	Test.objects.order_by(&quot;id&quot;)
+
+	# 上面的方法可以连锁使用
+	Test.objects.filter(name=&quot;runoob&quot;).order_by(&quot;id&quot;)
+
+	# 输出所有数据
+	for var in list:
+    response1 += var.name + &quot; &quot;
+	response = response1
+	return HttpResponse(&quot;&lt;p&gt;&quot; + response + &quot;&lt;/p&gt;&quot;)
+</code></pre>
+<h5 id="更新数据">更新数据</h5>
+<p>修改数据可以使用 <code>save() </code>或 <code>update()</code>:</p>
+<pre tabindex="0"><code>from django.http import HttpResponse
+from TestModel.models import Test
+# 数据库操作
+def testdb(request):
+    # 修改其中一个id=1的name字段，再save，相当于SQL中的UPDATE
+    test1 = Test.objects.get(id=1)
+    test1.name = &#39;Google&#39;
+    test1.save()
+    # 另外一种方式
+    #Test.objects.filter(id=1).update(name=&#39;Google&#39;)
+    # 修改所有的列
+    # Test.objects.all().update(name=&#39;Google&#39;)
+    return HttpResponse(&#34;&lt;p&gt;修改成功&lt;/p&gt;&#34;)
+</code></pre><h5 id="删除数据">删除数据</h5>
+<p>删除数据库中的对象只需调用该对象的<code>delete()</code>方法即可：</p>
+<pre tabindex="0"><code>from django.http import HttpResponse
+from TestModel.models import Test
+# 数据库操作
+def testdb(request):
+    # 删除id=1的数据
+    test1 = Test.objects.get(id=1)
+    test1.delete()
+    # 另外一种方式
+    # Test.objects.filter(id=1).delete()
+    # 删除所有数据
+    # Test.objects.all().delete()
+    return HttpResponse(&#34;&lt;p&gt;删除成功&lt;/p&gt;&#34;)
+</code></pre><h1 id="django-表单">Django 表单</h1>
+<p>HTTP协议以&quot;<strong>请求－回复</strong>&ldquo;的方式工作。客户发送请求时，可以在请求中<strong>附加数据</strong>。服务器通过解析请求，就可以获得客户传来的数据，并根据URL来提供特定的服务。</p>
+<h3 id="get-方法">GET 方法</h3>
+<ul>
+<li>在项目中创建一个 search.py 文件，用于接收用户的请求：</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">from</span> django.http <span style="color:#ff79c6">import</span> HttpResponse
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">from</span> django.shortcuts <span style="color:#ff79c6">import</span> render
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 表单</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">search_form</span>(request):
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> render(request, <span style="color:#f1fa8c">&#39;search_form.html&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 接收请求数据</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">search</span>(request):  
+</span></span><span style="display:flex;"><span>    request<span style="color:#ff79c6">.</span>encoding<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#39;utf-8&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">if</span> <span style="color:#f1fa8c">&#39;q&#39;</span> <span style="color:#ff79c6">in</span> request<span style="color:#ff79c6">.</span>GET <span style="color:#ff79c6">and</span> request<span style="color:#ff79c6">.</span>GET[<span style="color:#f1fa8c">&#39;q&#39;</span>]:
+</span></span><span style="display:flex;"><span>        message <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;你搜索的内容为: &#39;</span> <span style="color:#ff79c6">+</span> request<span style="color:#ff79c6">.</span>GET[<span style="color:#f1fa8c">&#39;q&#39;</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>        message <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;你提交了空表单&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> HttpResponse(message)
+</span></span></code></pre></div><ul>
+<li>在模板目录 templates 中添加 search_form.html 表单</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#ff79c6">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">html</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">head</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">meta</span> <span style="color:#50fa7b">charset</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;utf-8&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">title</span>&gt;菜鸟教程(runoob.com)&lt;/<span style="color:#ff79c6">title</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">head</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">body</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">form</span> <span style="color:#50fa7b">action</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;/search/&#34;</span> <span style="color:#50fa7b">method</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;get&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                  <span style="color:#6272a4">&lt;!-- 注意前面的/ --&gt;</span>
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#ff79c6">input</span> <span style="color:#50fa7b">type</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;text&#34;</span> <span style="color:#50fa7b">name</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;q&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#ff79c6">input</span> <span style="color:#50fa7b">type</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;submit&#34;</span> <span style="color:#50fa7b">value</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;搜索&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#ff79c6">form</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">body</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">html</span>&gt;
+</span></span></code></pre></div><p><strong>urls.py</strong>中添加<code>url(r'^search-form/$', search.search_form),url(r'^search/$', search.search),</code></p>
+<p>表单会将内容发到中<code>action</code>的地址上，这里<code>action</code>是与<strong>urls.py</strong>相连，经过<strong>urls.py</strong>处理后传给相应的文件</p>
+<h3 id="post-方法">POST 方法</h3>
+<p>提交数据时更常用 POST 方法。我们下面使用该方法，并用一个URL和处理函数，同时显示视图和处理请求。</p>
+<ul>
+<li>我们在 <strong>templates</strong> 创建<code> post.html</code>：</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#ff79c6">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">html</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">head</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">meta</span> <span style="color:#50fa7b">charset</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;utf-8&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">title</span>&gt;菜鸟教程(runoob.com)&lt;/<span style="color:#ff79c6">title</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">head</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">body</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">form</span> <span style="color:#50fa7b">action</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;/search-post/&#34;</span> <span style="color:#50fa7b">method</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;post&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>        {% csrf_token %}
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#ff79c6">input</span> <span style="color:#50fa7b">type</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;text&#34;</span> <span style="color:#50fa7b">name</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;q&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#ff79c6">input</span> <span style="color:#50fa7b">type</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;submit&#34;</span> <span style="color:#50fa7b">value</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;搜索&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#ff79c6">form</span>&gt;
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">p</span>&gt;{{ rlt }}&lt;/<span style="color:#ff79c6">p</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">body</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">html</span>&gt;
+</span></span></code></pre></div><p>在模板的末尾，我们增加一个 <code>rlt</code>记号，为表格处理结果预留位置。</p>
+<p>表格后面还有一个 <strong>{% csrf_token %}</strong> 的标签。<code>csrf </code>全称是<code> Cross Site Request Forgery</code>。这是 Django 提供的防止伪装提交请求的功能。POST 方法提交的表格，<strong>必须</strong>有此标签。</p>
+<ul>
+<li>新建 search2.py 文件并使用 search_post 函数来处理 POST 请求：</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">from</span> django.shortcuts <span style="color:#ff79c6">import</span> render
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">from</span> django.views.decorators <span style="color:#ff79c6">import</span> csrf
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 接收POST请求数据</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">search_post</span>(request):
+</span></span><span style="display:flex;"><span>    ctx <span style="color:#ff79c6">=</span>{}
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">if</span> request<span style="color:#ff79c6">.</span>POST:
+</span></span><span style="display:flex;"><span>        ctx[<span style="color:#f1fa8c">&#39;rlt&#39;</span>] <span style="color:#ff79c6">=</span> request<span style="color:#ff79c6">.</span>POST[<span style="color:#f1fa8c">&#39;q&#39;</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> render(request, <span style="color:#f1fa8c">&#34;post.html&#34;</span>, ctx)
+</span></span></code></pre></div><p><strong>urls.py</strong>中添加<code>url(r'^search-post/$', search2.search_post),</code></p>
+<p>使用<code>表单</code>后，项目会新增<code>.pyc</code>文件。</p>
+<h3 id="request-对象">Request 对象</h3>
+<p>每个视图函数的第一个参数是一个<code>HttpRequest</code> 对象，即<code>request</code></p>
+<p><code>HttpRequest</code>对象包含当前请求<strong>URL的一些信息</strong>：</p>
+<table>
+<thead>
+<tr>
+<th><strong>属性</strong></th>
+<th style="text-align:left"><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>path</td>
+<td style="text-align:left">请求页面的全路径,不包括域名—例如, &ldquo;/hello/&quot;。</td>
+</tr>
+<tr>
+<td>method</td>
+<td style="text-align:left">请求中使用的HTTP方法的字符串表示。全大写表示。例如:if request.method == &lsquo;GET&rsquo;:   do_something() elif request.method == &lsquo;POST&rsquo;:   do_something_else()</td>
+</tr>
+<tr>
+<td>GET</td>
+<td style="text-align:left">包含所有HTTP GET参数的类字典对象。参见QueryDict 文档。</td>
+</tr>
+<tr>
+<td>POST</td>
+<td style="text-align:left">包含所有HTTP POST参数的类字典对象。参见QueryDict 文档。服务器收到空的POST请求的情况也是有可能发生的。也就是说，表单form通过HTTP POST方法提交请求，但是表单中可以没有数据。因此，不能使用语句if request.POST来判断是否使用HTTP POST方法；应该使用if request.method == &ldquo;POST&rdquo; (参见本表的method属性)。注意: POST不包括file-upload信息。参见FILES属性。</td>
+</tr>
+<tr>
+<td>REQUEST</td>
+<td style="text-align:left">为了方便，该属性是POST和GET属性的集合体，但是有特殊性，先查找POST属性，然后再查找GET属性。借鉴PHP&rsquo;s $_REQUEST。例如，如果GET = {&ldquo;name&rdquo;: &ldquo;john&rdquo;} 和POST = {&ldquo;age&rdquo;: &lsquo;34&rsquo;},则 REQUEST[&ldquo;name&rdquo;] 的值是&quot;john&rdquo;, REQUEST[&ldquo;age&rdquo;]的值是&quot;34&rdquo;.强烈建议使用GET and POST,因为这两个属性更加显式化，写出的代码也更易理解。</td>
+</tr>
+<tr>
+<td>COOKIES</td>
+<td style="text-align:left">包含所有cookies的标准Python字典对象。Keys和values都是字符串。</td>
+</tr>
+<tr>
+<td>FILES</td>
+<td style="text-align:left">包含所有上传文件的类字典对象。FILES中的每个Key都是<input type="file" name="" />标签中name属性的值. FILES中的每个value 同时也是一个标准Python字典对象，包含下面三个Keys:filename: 上传文件名,用Python字符串表示content-type: 上传文件的Content typecontent: 上传文件的原始内容注意：只有在请求方法是POST，并且请求页面中<form>有enctype=&ldquo;multipart/form-data&quot;属性时FILES才拥有数据。否则，FILES 是一个空字典。</td>
+</tr>
+<tr>
+<td>META</td>
+<td style="text-align:left">包含所有可用HTTP头部信息的字典。 例如:CONTENT_LENGTHCONTENT_TYPEQUERY_STRING: 未解析的原始查询字符串REMOTE_ADDR: 客户端IP地址REMOTE_HOST: 客户端主机名SERVER_NAME: 服务器主机名SERVER_PORT: 服务器端口META 中这些头加上前缀 <strong>HTTP_</strong> 为 Key, 冒号(:)后面的为 Value， 例如:HTTP_ACCEPT_ENCODINGHTTP_ACCEPT_LANGUAGEHTTP_HOST: 客户发送的HTTP主机头信息HTTP_REFERER: referring页HTTP_USER_AGENT: 客户端的user-agent字符串HTTP_X_BENDER: X-Bender头信息</td>
+</tr>
+<tr>
+<td>user</td>
+<td style="text-align:left">是一个django.contrib.auth.models.User 对象，代表当前登录的用户。如果访问用户当前没有登录，user将被初始化为django.contrib.auth.models.AnonymousUser的实例。你可以通过user的is_authenticated()方法来辨别用户是否登录：<code>if request.user.is_authenticated():    # Do something for logged-in users. else:    # Do something for anonymous users.</code>只有激活Django中的AuthenticationMiddleware时该属性才可用</td>
+</tr>
+<tr>
+<td>session</td>
+<td style="text-align:left">唯一可读写的属性，代表当前会话的字典对象。只有激活Django中的session支持时该属性才可用。</td>
+</tr>
+<tr>
+<td>raw_post_data</td>
+<td style="text-align:left">原始HTTP POST数据，未解析过。高级处理时会有用处。</td>
+</tr>
+</tbody>
+</table>
+<p>Request对象也有一些有用的<strong>方法</strong>：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">方法</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>__getitem__</code>(key)</td>
+<td style="text-align:left">返回GET/POST的键值,先取POST,后取GET。如果键不存在抛出 KeyError。 这是我们可以使用字典语法访问HttpRequest对象。 例如,request[&ldquo;foo&rdquo;]等同于先request.POST[&ldquo;foo&rdquo;] 然后 request.GET[&ldquo;foo&rdquo;]的操作。</td>
+</tr>
+<tr>
+<td style="text-align:left">has_key()</td>
+<td style="text-align:left">检查request.GET or request.POST中是否包含参数指定的Key。</td>
+</tr>
+<tr>
+<td style="text-align:left">get_full_path()</td>
+<td style="text-align:left">返回包含查询字符串的请求路径。例如， &ldquo;/music/bands/the_beatles/?print=true&rdquo;</td>
+</tr>
+<tr>
+<td style="text-align:left">is_secure()</td>
+<td style="text-align:left">如果请求是安全的，返回True，就是说，发出的是HTTPS请求。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="querydict对象">QueryDict对象</h3>
+<p>在<code>HttpRequest</code>对象中, GET和POST属性是<code>django.http.QueryDict</code>类的实例。</p>
+<p>QueryDict类似字典的自定义类，用来处理<strong>单键对应多值</strong>的情况。</p>
+<p>QueryDict实现所有标准的词典方法。还包括一些特有的方法：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>方法</strong></th>
+<th style="text-align:left"><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>__getitem__</code></td>
+<td style="text-align:left">和标准字典的处理有一点不同，就是，如果Key对应多个Value，<code>__getitem__</code>()返回最后一个value。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>__setitem__</code></td>
+<td style="text-align:left">设置参数指定key的value列表(一个Python list)。注意：它只能在一个mutable QueryDict 对象上被调用(就是通过copy()产生的一个QueryDict对象的拷贝).</td>
+</tr>
+<tr>
+<td style="text-align:left">get()</td>
+<td style="text-align:left">如果key对应多个value，get()返回最后一个value。</td>
+</tr>
+<tr>
+<td style="text-align:left">update()</td>
+<td style="text-align:left">参数可以是QueryDict，也可以是标准字典。和标准字典的update方法不同，该方法添加字典 items，而不是替换它们:<br />&raquo;&gt; <code>q = QueryDict('a=1')</code><br />&raquo;&gt; <code>q = q.copy() # to make it mutable</code> <br />&raquo;&gt; <code>q.update({'a': '2'})</code> <br />&raquo;&gt; <code>q.getlist('a')  ['1', '2']</code> <br />&raquo;&gt; <code>q['a'] # returns the last ['2']</code></td>
+</tr>
+<tr>
+<td style="text-align:left">items()</td>
+<td style="text-align:left">和标准字典的items()方法有一点不同,该方法使用单值逻辑的__getitem__():<code>&gt;&gt;&gt; q = QueryDict('a=1&amp;a=2&amp;a=3') &gt;&gt;&gt; q.items() [('a', '3')]</code></td>
+</tr>
+<tr>
+<td style="text-align:left">values()</td>
+<td style="text-align:left">和标准字典的values()方法有一点不同,该方法使用单值逻辑的<code>__getitem__</code>():</td>
+</tr>
+</tbody>
+</table>
+<p>QueryDict也有一些<strong>方法</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>方法</strong></th>
+<th style="text-align:left"><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">copy()</td>
+<td style="text-align:left">返回对象的拷贝，内部实现是用Python标准库的copy.deepcopy()。该拷贝是mutable(可更改的) — 就是说，可以更改该拷贝的值。</td>
+</tr>
+<tr>
+<td style="text-align:left">getlist(key)</td>
+<td style="text-align:left">返回和参数key对应的所有值，作为一个Python list返回。如果key不存在，则返回空list。 It&rsquo;s guaranteed to return a list of some sort..</td>
+</tr>
+<tr>
+<td style="text-align:left">setlist(key,list_)</td>
+<td style="text-align:left">设置key的值为list_ (unlike <strong>setitem</strong>()).</td>
+</tr>
+<tr>
+<td style="text-align:left">appendlist(key,item)</td>
+<td style="text-align:left">添加item到和key关联的内部list.</td>
+</tr>
+<tr>
+<td style="text-align:left">setlistdefault(key,list)</td>
+<td style="text-align:left">和setdefault有一点不同，它接受list而不是单个value作为参数。</td>
+</tr>
+<tr>
+<td style="text-align:left">lists()</td>
+<td style="text-align:left">和items()有一点不同, 它会返回key的所有值，作为一个list, 例如:<br />&raquo;&gt; <code>q = QueryDict('a=1&amp;a=2&amp;a=3')</code> &raquo;&gt; <code>q.lists() [('a', ['1', '2', '3'])] </code></td>
+</tr>
+<tr>
+<td style="text-align:left">urlencode()</td>
+<td style="text-align:left">返回一个以查询字符串格式进行格式化后的字符串(例如：&ldquo;a=2&amp;b=3&amp;b=5&rdquo;)。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="django-视图">Django 视图</h3>
+<h5 id="视图层">视图层</h5>
+<p>一个视图函数，简称视图，是一个简单的 Python 函数，它接受 Web 请求并且返回 <code>Web 响应</code>。</p>
+<p><code>响应</code>可以是一个 HTML 页面、一个 404 错误页面、重定向页面、XML 文档、或者一张图片&hellip;</p>
+<p>无论视图本身包含什么逻辑，都要返回响应。代码写在哪里都可以，只要在 Python 目录下面，一般放在项目的 views.py 文件中。</p>
+<p>每个视图函数都负责返回一个 HttpResponse 对象，对象中包含生成的响应。</p>
+<p>视图层中有两个重要的对象：请求对象(request)与响应对象(HttpResponse)。</p>
+<h5 id="请求对象-httprequest-对象简称-request-对象">请求对象: HttpRequest 对象（简称 request 对象）</h5>
+<p>以下介绍几个常用的 request 属性。</p>
+<h6 id="1get">1、GET</h6>
+<p>数据类型是<code>QueryDict</code>，一个类似于字典的对象，包含 HTTP GET 的所有参数。</p>
+<p>有相同的键，就把所有的值放到对应的列表里。</p>
+<p>取值格式：<strong>对象.方法</strong>。</p>
+<p><strong>get()</strong>：返回字符串，如果该键对应有多个值，取出该键的最后一个值。</p>
+<h6 id="2post">2、POST</h6>
+<p>数据类型是 <code>QueryDict</code>，一个类似于字典的对象，包含 HTTP POST 的所有参数。</p>
+<p>常用于 form 表单，form 表单里的标签 name 属性对应参数的键，value 属性对应参数的值。</p>
+<p>取值格式： <strong>对象.方法</strong>。</p>
+<p><strong>get()</strong>：返回字符串，如果该键对应有多个值，取出该键的最后一个值。</p>
+<h6 id="3body">3、body</h6>
+<p>数据类型是<strong>二进制字节流</strong>，是原生请求体里的参数内容，在 HTTP 中用于 POST，因为 GET 没有请求体。</p>
+<p>在 HTTP 中不常用，而在处理非 HTTP 形式的报文时非常有用，例如：二进制图片、XML、Json 等。</p>
+<h6 id="4path">4、path</h6>
+<p>获取 URL 中的路径部分，数据类型是<strong>字符串</strong>。</p>
+<h6 id="5method">5、method</h6>
+<p>获取当前请求的方式，数据类型是<strong>字符串</strong>，且结果为大写。</p>
+<h5 id="响应对象httpresponse-对象">响应对象：HttpResponse 对象</h5>
+<p>响应对象主要有三种形式：<code>HttpResponse()</code>、<code>render()</code>、<code>redirect()</code>。</p>
+<ul>
+<li><strong>HttpResponse()</strong>: 返回文本，参数为<strong>字符串</strong>，字符串中写文本内容。如果参数为字符串里含有 html 标签，也可以渲染。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">return</span> HttpResponse(<span style="color:#f1fa8c">&#34;&lt;a href=&#39;https://www.runoob.com/&#39;&gt;菜鸟教程&lt;/a&gt;&#34;</span>)
+</span></span></code></pre></div><ul>
+<li>
+<p><strong>render():</strong> 返回文本，第一个参数为 request，第二个参数为字符串（页面名称），第三个参数为字典（可选参数，向页面传递的参数：键为页面参数名，值为views参数名）。</p>
+</li>
+<li>
+<p><strong>redirect()</strong>：重定向，跳转新页面。参数为字符串，字符串中填写页面路径。一般用于 form 表单提交后，跳转到新页面。</p>
+</li>
+</ul>
+<p><code>render</code> 和 <code>redirect</code>是在 <code>HttpResponse</code> 的基础上进行了封装：</p>
+<ul>
+<li>render：底层返回的也是 HttpResponse 对象</li>
+<li>redirect：底层继承的是 HttpResponse 对象</li>
+</ul>
+<h5 id="应用时的报错">应用时的报错：</h5>
+<ul>
+<li><strong>post 请求返回 403</strong></li>
+</ul>
+<p><strong>解决：</strong></p>
+<p>导入模块：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#ff79c6">from</span> django.views.decorators.csrf <span style="color:#ff79c6">import</span> csrf_exempt
+</span></span></code></pre></div><p>在函数前面添加修饰器：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>@csrf_exempt
+</span></span></code></pre></div><p><strong>原因：</strong></p>
+<p>当采用客户端向 django 的服务器提交 post 请求时，会得到403，权限异常。</p>
+<p>因为 django 针对提交的请求，有校验。所以会如此。</p>
+<p>客户端提交的 post 如果不加这段，会出现 403 error</p>
+<h1 id="django-路由">Django 路由</h1>
+<p><strong>路由</strong>简单的来说就是<u>根据用户请求的 URL 链接来判断对应的处理程序，并返回处理结果</u>，也就是 URL 与 Django 的视图<strong>建立映射关系</strong>。</p>
+<p>Django 路由在 <strong>urls.py</strong> 配置，urls.py 中的每一条配置对应相应的处理方法。</p>
+<h3 id="正则路径中的分组">正则路径中的分组</h3>
+<h5 id="正则路径中的无名分组">正则路径中的无名分组</h5>
+<p>无名分组<strong>按位置传参</strong>，一一对应。</p>
+<p>views 中除了 request，其他<strong>形参的数量</strong>要与 urls 中的<strong>分组数量一致</strong>。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>re_path(<span style="color:#f1fa8c">&#34;^index/([0-9]</span><span style="color:#f1fa8c">{4}</span><span style="color:#f1fa8c">)/$&#34;</span>, views<span style="color:#ff79c6">.</span>index),
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">#()之间表示一个参数</span>
+</span></span></code></pre></div><h5 id="正则路径中的有名分组">正则路径中的有名分组</h5>
+<p>语法：</p>
+<pre tabindex="0"><code>(?P&lt;组名&gt;正则表达式)
+</code></pre><p>有名分组<strong>按关键字传参</strong>，<strong>与位置顺序无关</strong>。</p>
+<p>views 中除了 request，其他形参的数量要与 urls 中的分组数量一致， 并且 views 中的<strong>形参名称</strong>要与 urls 中的<strong>组名</strong>对应。</p>
+<h3 id="路由分发include">路由分发(include)</h3>
+<p><strong>存在问题</strong>：Django 项目里多个app目录共用一个 urls 容易造成混淆，后期维护也不方便。</p>
+<p><strong>解决</strong>：使用路由分发（include），让每个app目录都单独拥有自己的 urls。</p>
+<p><strong>步骤：</strong></p>
+<ul>
+<li>1、在每个 app 目录里都创建一个 urls.py 文件。</li>
+<li>2、在项目名称目录下的 urls 文件里，统一将路径分发给各个 app 目录。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#ff79c6">from</span> django.contrib <span style="color:#ff79c6">import</span> admin
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">from</span> django.urls <span style="color:#ff79c6">import</span> path,include <span style="color:#6272a4"># 从 django.urls 引入 include</span>
+</span></span><span style="display:flex;"><span>urlpatterns <span style="color:#ff79c6">=</span> [
+</span></span><span style="display:flex;"><span>    path(<span style="color:#f1fa8c">&#39;admin/&#39;</span>, admin<span style="color:#ff79c6">.</span>site<span style="color:#ff79c6">.</span>urls),
+</span></span><span style="display:flex;"><span>    path(<span style="color:#f1fa8c">&#34;app01/&#34;</span>, include(<span style="color:#f1fa8c">&#34;app01.urls&#34;</span>)),
+</span></span><span style="display:flex;"><span>    path(<span style="color:#f1fa8c">&#34;app02/&#34;</span>, include(<span style="color:#f1fa8c">&#34;app02.urls&#34;</span>)),
+</span></span><span style="display:flex;"><span>]
+</span></span></code></pre></div><h3 id="反向解析">反向解析</h3>
+<p>随着功能的增加，路由层的 url 发生变化，就需要去更改对应的视图层和模板层的 url，非常麻烦，不便维护。</p>
+<p>这时我们可以利用反向解析，当路由层 url 发生改变，在视图层和模板层<strong>动态反向解析</strong>出更改后的 url，免去修改的操作。</p>
+<p>反向解析一般用在模板中的超链接及视图中的重定向。</p>
+<h5 id="普通路径">普通路径</h5>
+<p>在 <code>urls.py </code>中给路由起别名，<strong>name=&ldquo;路由别名&rdquo;</strong>。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>path(<span style="color:#f1fa8c">&#34;login1/&#34;</span>, views<span style="color:#ff79c6">.</span>login, name<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;login&#34;</span>)
+</span></span></code></pre></div><p>在 <code>views.py</code> 中，从 <code>django.urls</code> 中引入 reverse，利用 <strong>reverse(&ldquo;路由别名&rdquo;)</strong> 反向解析:</p>
+<pre tabindex="0"><code>return redirect(reverse(&#34;login&#34;))
+</code></pre><p>在模板<code>templates</code>中的 HTML 文件中，利用 <strong>{% url &ldquo;路由别名&rdquo; %}</strong> 反向解析。</p>
+<pre tabindex="0"><code>&lt;form action=&#34;{% url &#39;login&#39; %}&#34; method=&#34;post&#34;&gt; 
+</code></pre><h5 id="正则路径无名分组">正则路径（无名分组）</h5>
+<p>在 <code>urls.py</code> 中给路由起别名，<strong>name=&ldquo;路由别名&rdquo;</strong>。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>re_path(<span style="color:#f1fa8c">r</span><span style="color:#f1fa8c">&#34;^login/([0-9]</span><span style="color:#f1fa8c">{2}</span><span style="color:#f1fa8c">)/$&#34;</span>, views<span style="color:#ff79c6">.</span>login, name<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;login&#34;</span>)
+</span></span></code></pre></div><p>在 <code>views.py</code> 中，从 django.urls 中引入 reverse，利用 <strong>reverse(&ldquo;路由别名&rdquo;，args=(符合正则匹配的参数,))</strong> 反向解析。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#ff79c6">return</span> redirect(reverse(<span style="color:#f1fa8c">&#34;login&#34;</span>,args<span style="color:#ff79c6">=</span>(<span style="color:#bd93f9">10</span>,)))
+</span></span></code></pre></div><p>在模板 templates 中的 HTML 文件中利用 <strong>{% url &ldquo;路由别名&rdquo; 符合正则匹配的参数 %}</strong> 反向解析。</p>
+<pre tabindex="0"><code>&lt;form action=&#34;{% url &#39;login&#39; 10 %}&#34; method=&#34;post&#34;&gt; 
+</code></pre><h5 id="正则路径有名分组">正则路径（有名分组）</h5>
+<p>在 <code>urls.py </code>中给路由起别名，<strong>name=&ldquo;路由别名&rdquo;</strong>。</p>
+<p>在 <code>views.py </code>中，从 django.urls 中引入 reverse，利用 <strong>reverse(&ldquo;路由别名&rdquo;，kwargs={&ldquo;分组名&rdquo;:符合正则匹配的参数})</strong> 反向解析。</p>
+<p>在模板 templates 中的 HTML 文件中，利用 <strong>{% url &ldquo;路由别名&rdquo; 分组名=符合正则匹配的参数 %}</strong> 反向解析。</p>
+<h3 id="命名空间">命名空间</h3>
+<p><strong>命名空间</strong>（英语：Namespace）是<strong>表示标识符的可见范围</strong>。</p>
+<p>一个标识符可在多个命名空间中定义，它在不同命名空间中的含义是互不相干的。</p>
+<p>一个新的命名空间中可定义任何标识符，它们不会与任何重复的标识符发生冲突，因为重复的定义都处于其它命名空间中。</p>
+<p><strong>存在问题：<strong>路由别名 name 没有作用域，Django 在反向解析 URL 时，会在项目</strong>全局顺序搜索</strong>，**当查找到第一个路由别名 name 指定 URL 时，立即返回。**当在不同的 app 目录下的urls 中定义相同的路由别名 name 时，可能会导致 URL 反向解析错误。</p>
+<p>**解决：**使用命名空间。</p>
+<h5 id="普通路径-1">普通路径</h5>
+<p>定义命名空间（include 里面是一个元组）格式如下：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>include((<span style="color:#f1fa8c">&#34;app名称.urls&#34;</span>，<span style="color:#f1fa8c">&#34;app名称&#34;</span>))
+</span></span></code></pre></div><p>&ndash; 举例：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>path(<span style="color:#f1fa8c">&#34;app01/&#34;</span>, include((<span style="color:#f1fa8c">&#34;app01.urls&#34;</span>,<span style="color:#f1fa8c">&#34;app01&#34;</span>))) 
+</span></span><span style="display:flex;"><span>path(<span style="color:#f1fa8c">&#34;app02/&#34;</span>, include((<span style="color:#f1fa8c">&#34;app02.urls&#34;</span>,<span style="color:#f1fa8c">&#34;app02&#34;</span>)))
+</span></span></code></pre></div><p>在 <code>app01/urls.py</code> 中起相同的路由别名。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>path(<span style="color:#f1fa8c">&#34;login/&#34;</span>, views<span style="color:#ff79c6">.</span>login, name<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;login&#34;</span>)
+</span></span></code></pre></div><p>在 views.py 中使用名称空间，语法格式如下：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>reverse(<span style="color:#f1fa8c">&#34;app名称：路由别名&#34;</span>)
+</span></span></code></pre></div><p>在 templates 模板的 HTML 文件中使用名称空间，语法格式如下：</p>
+<pre tabindex="0"><code>{% url &#34;app名称：路由别名&#34; %}
+</code></pre><h1 id="django-admin-管理工具">Django Admin 管理工具</h1>
+<p>Django 提供了基于 web 的管理工具。</p>
+<p>Django 自动管理工具是 django.contrib 的一部分。你可以在项目的 <code>settings.py</code> 中的 INSTALLED_APPS 看到它：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>INSTALLED_APPS <span style="color:#ff79c6">=</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#39;django.contrib.admin&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#39;django.contrib.auth&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#39;django.contrib.contenttypes&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#39;django.contrib.sessions&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#39;django.contrib.messages&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#39;django.contrib.staticfiles&#39;</span>,
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><p><code>django.contrib</code>是一套庞大的功能集，它是Django基本代码的组成部分。</p>
+<h3 id="激活管理工具">激活管理工具</h3>
+<p>通常我们在生成项目时会在 <code>urls.py</code> 中自动设置好，我们只需去掉注释即可。</p>
+<p>配置项如下所示：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#6272a4"># urls.py</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">from</span> django.conf.urls <span style="color:#ff79c6">import</span> url
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">from</span> django.contrib <span style="color:#ff79c6">import</span> admin
+</span></span><span style="display:flex;"><span>urlpatterns <span style="color:#ff79c6">=</span> [
+</span></span><span style="display:flex;"><span>    url(<span style="color:#f1fa8c">r</span><span style="color:#f1fa8c">&#39;^admin/&#39;</span>, admin<span style="color:#ff79c6">.</span>site<span style="color:#ff79c6">.</span>urls),
+</span></span><span style="display:flex;"><span>]
+</span></span></code></pre></div><p>当这一切都配置好后，Django 管理工具就可以运行了。</p>
+<h3 id="使用管理工具">使用管理工具</h3>
+<p>启动开发服务器，然后在浏览器中访问 <code>http://127.0.0.1:8000/admin/</code>，得到一个登录界面。</p>
+<p><img alt="img" src="https://www.runoob.com/wp-content/uploads/2015/01/admin1.png"></p>
+<p>可以通过命令 <strong>python manage.py createsuperuser</strong> 来创建超级用户，如下所示：</p>
+<pre tabindex="0"><code># python manage.py createsuperuser
+Username (leave blank to use &#39;root&#39;): admin
+Email address: admin@runoob.com
+Password:
+Password (again):
+Superuser created successfully.
+[root@solar HelloWorld]#
+</code></pre><p>之后输入用户名密码登录，界面如下：</p>
+<p><img alt="img" src="https://www.runoob.com/wp-content/uploads/2015/01/A995340B-8F8C-4777-9B79-846B6A34508A.jpg"></p>
+<p>为了<strong>让 admin 界面管理某个数据模型</strong>，我们需要<strong>先注册该数据模型到 admin</strong>。比如，我们之前在 TestModel 中已经创建了模型 Test 。修改 TestModel/admin.py:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#6272a4"># Register your models here.</span>
+</span></span><span style="display:flex;"><span>admin<span style="color:#ff79c6">.</span>site<span style="color:#ff79c6">.</span>register(Test)
+</span></span></code></pre></div><h3 id="复杂模型">复杂模型</h3>
+<p>管理页面的功能强大，完全有能力处理更加复杂的数据模型。</p>
+<p>先在 TestModel/models.py 中增加一个更复杂的数据模型：</p>
+<h3 id="自定义表单">自定义表单</h3>
+<p>我们可以自定义管理页面，来取代默认的页面。比如上面的 &ldquo;add&rdquo; 页面。我们想只显示 name 和 email 部分。修改 TestModel/admin.py:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#ff79c6">from</span> django.contrib <span style="color:#ff79c6">import</span> admin
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">from</span> TestModel.models <span style="color:#ff79c6">import</span> Test,Contact,Tag
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Register your models here.</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">ContactAdmin</span>(admin<span style="color:#ff79c6">.</span>ModelAdmin):
+</span></span><span style="display:flex;"><span>    fields <span style="color:#ff79c6">=</span> (<span style="color:#f1fa8c">&#39;name&#39;</span>, <span style="color:#f1fa8c">&#39;email&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>admin<span style="color:#ff79c6">.</span>site<span style="color:#ff79c6">.</span>register(Contact, ContactAdmin)
+</span></span><span style="display:flex;"><span>admin<span style="color:#ff79c6">.</span>site<span style="color:#ff79c6">.</span>register([Test, Tag])
+</span></span></code></pre></div><p>以上代码定义了一个 ContactAdmin 类，用以说明管理页面的显示格式。里面的 fields 属性定义了要显示的字段。</p>
+<p>还可以将输入栏分块，每个栏也可以定义自己的格式:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">ContactAdmin</span>(admin<span style="color:#ff79c6">.</span>ModelAdmin):
+</span></span><span style="display:flex;"><span>    fieldsets <span style="color:#ff79c6">=</span> (
+</span></span><span style="display:flex;"><span>        [<span style="color:#f1fa8c">&#39;Main&#39;</span>,{
+</span></span><span style="display:flex;"><span>            <span style="color:#f1fa8c">&#39;fields&#39;</span>:(<span style="color:#f1fa8c">&#39;name&#39;</span>,<span style="color:#f1fa8c">&#39;email&#39;</span>),
+</span></span><span style="display:flex;"><span>        }],
+</span></span><span style="display:flex;"><span>        [<span style="color:#f1fa8c">&#39;Advance&#39;</span>,{
+</span></span><span style="display:flex;"><span>            <span style="color:#f1fa8c">&#39;classes&#39;</span>: (<span style="color:#f1fa8c">&#39;collapse&#39;</span>,), <span style="color:#6272a4"># CSS</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f1fa8c">&#39;fields&#39;</span>: (<span style="color:#f1fa8c">&#39;age&#39;</span>,),
+</span></span><span style="display:flex;"><span>        }]
+</span></span><span style="display:flex;"><span>    )
+</span></span></code></pre></div><h3 id="内联inline显示">内联(Inline)显示</h3>
+<p>上面的 Contact 是 Tag 的外部键，所以有外部参考的关系。</p>
+<p>而在默认的页面显示中，将两者分离开来，无法体现出两者的从属关系。我们可以使用内联显示，让 Tag 附加在 Contact 的编辑页面上显示。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#ff79c6">from</span> django.contrib <span style="color:#ff79c6">import</span> admin
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">from</span> TestModel.models <span style="color:#ff79c6">import</span> Test,Contact,Tag
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Register your models here.</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">TagInline</span>(admin<span style="color:#ff79c6">.</span>TabularInline):
+</span></span><span style="display:flex;"><span>    model <span style="color:#ff79c6">=</span> Tag
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">ContactAdmin</span>(admin<span style="color:#ff79c6">.</span>ModelAdmin):
+</span></span><span style="display:flex;"><span>    inlines <span style="color:#ff79c6">=</span> [TagInline]  <span style="color:#6272a4"># Inline</span>
+</span></span><span style="display:flex;"><span>    fieldsets <span style="color:#ff79c6">=</span> (
+</span></span><span style="display:flex;"><span>        [<span style="color:#f1fa8c">&#39;Main&#39;</span>,{
+</span></span><span style="display:flex;"><span>            <span style="color:#f1fa8c">&#39;fields&#39;</span>:(<span style="color:#f1fa8c">&#39;name&#39;</span>,<span style="color:#f1fa8c">&#39;email&#39;</span>),
+</span></span><span style="display:flex;"><span>        }],
+</span></span><span style="display:flex;"><span>        [<span style="color:#f1fa8c">&#39;Advance&#39;</span>,{
+</span></span><span style="display:flex;"><span>            <span style="color:#f1fa8c">&#39;classes&#39;</span>: (<span style="color:#f1fa8c">&#39;collapse&#39;</span>,),
+</span></span><span style="display:flex;"><span>            <span style="color:#f1fa8c">&#39;fields&#39;</span>: (<span style="color:#f1fa8c">&#39;age&#39;</span>,),
+</span></span><span style="display:flex;"><span>        }]
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>admin<span style="color:#ff79c6">.</span>site<span style="color:#ff79c6">.</span>register(Contact, ContactAdmin)
+</span></span><span style="display:flex;"><span>admin<span style="color:#ff79c6">.</span>site<span style="color:#ff79c6">.</span>register([Test])
+</span></span></code></pre></div><h3 id="列表页的显示">列表页的显示</h3>
+<p>我们也可以自定义该页面的显示，比如在列表中显示更多的栏目，只需要在 <code>ContactAdmin </code>中增加<code>list_display</code>属性:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>list_display <span style="color:#ff79c6">=</span> (<span style="color:#f1fa8c">&#39;name&#39;</span>,<span style="color:#f1fa8c">&#39;age&#39;</span>, <span style="color:#f1fa8c">&#39;email&#39;</span>) <span style="color:#6272a4"># list</span>
+</span></span></code></pre></div><p>搜索功能在管理大量记录时非常有，我们可以使用 search_fields 为该列表页增加搜索栏：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>search_fields <span style="color:#ff79c6">=</span> (<span style="color:#f1fa8c">&#39;name&#39;</span>,)
+</span></span></code></pre></div><h3 id="外键添加时的参数">外键添加时的参数</h3>
+<p><code>on_delete</code> 有 <code>CASCADE</code>、<code>PROTECT</code>、<code>SET_NULL</code>、<code>SET_DEFAULT</code>、<code>SET()</code> 五个可选择的值。</p>
+<ul>
+<li><strong>CASCADE</strong>：此值设置，是级联删除。</li>
+<li><strong>PROTECT</strong>：此值设置，是会报完整性错误。</li>
+<li><strong>SET_NULL</strong>：此值设置，会把外键设置为 null，前提是允许为 null。</li>
+<li><strong>SET_DEFAULT</strong>：此值设置，会把设置为外键的默认值。</li>
+<li><strong>SET()</strong>：此值设置，会调用外面的值，可以是一个函数。一般情况下使用 CASCADE 就可以了。</li>
+</ul>
+
+    </div>
+    <div class="post-footer">
+        <div class="info">
+            
+            
+        </div>
+        
+
+
+    </div>
+    
+        
+    
+</div>
+
+                <div class="grow"></div>
+                <div class="built-with">
+    Built with <a href="https://gohugo.io/">Hugo</a> <b>·</b> Using the <a href="https://github.com/LucasVadilho/heyo-hugo-theme">heyo</a> theme
+</div>
+            </div>
+        </div>
+        
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha512-3M00D/rn8n+2ZVXBO9Hib0GKNpkm8MSUU/e2VNthDyBYxKWG+BftNYYcuEjXlyrSO637tidzMBXfE7sQm0INUg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<script type="text/javascript">
+            
+            
+            window.MathJax = {
+                tex: {
+                    inlineMath: [['$', '$'], ['\\(', '\\)']],
+                    displayMath: [['$$','$$'], ['\\[', '\\]']]
+                },
+                svg: {
+                    scale: 1.25,
+                }
+            };
+        </script><script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.1.0/es5/tex-mml-svg.min.js" integrity="sha512-/mL9Gs6E5Bz6NtPOr9eY&#43;T8IIdJbo2JL3TudApzFFelwBXEc3TeFLU6kPq122TJROv7jkktuBRkz5h8vGzrsyA==" crossorigin="anonymous"></script>
+    </body>
+</html>

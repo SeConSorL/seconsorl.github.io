@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light"><head>
+    <title>Latex · HZW</title>
+    <meta charset="utf-8">
+    
+    <meta name="generator" content="Hugo 0.124.1">
+    <meta property="og:title" content="Latex" />
+<meta property="og:description" content="a note for learning Latex" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://seconsorl.github.io/post/latex/" /><meta property="og:image" content="https://seconsorl.github.io/images/profile.png" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2024-05-06T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-05-06T00:00:00+00:00" /><meta property="og:site_name" content="A junior from NBU" />
+
+
+
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="HZW">
+    
+    
+    
+    <link rel="stylesheet" type="text/css" href="https://seconsorl.github.io/css/style.min.565d8c479597aa43658922d4b31e286529a7525a22c9546fa1018fc5e5ef6d86.css" integrity="sha256-Vl2MR5WXqkNliSLUsx4oZSmnUloiyVRvoQGPxeXvbYY=" crossorigin="anonymous" type="text/css">
+
+    
+    
+    
+    <script type="text/javascript" src="https://seconsorl.github.io/js/heyo-header.min.a3fa728a9f57833a31dfb45c48caaf1e4890c8c97f07bd7133fc2359745edb5d.js" integrity="sha256-o/pyip9Xgzox37RcSMqvHkiQyMl/B71xM/wjWXRe210=" crossorigin="anonymous"></script>
+
+    
+    
+    <link rel="stylesheet" type="text/css" href="https://seconsorl.github.io/css/fonts.9398921f2d404983c2b7f9a68ddc72e3f5e58a3e38b0a8e4a70d75c12ebfb7c5.css" integrity="sha256-k5iSHy1ASYPCt/mmjdxy4/Xlij44sKjkpw11wS6/t8U=" crossorigin="anonymous">
+
+    
+    
+    
+    <script type="text/javascript" src="https://seconsorl.github.io/js/sidebar-toc.min.788b639e2ec681549740b90b3b865d5f9e1789e3ca9c06ccc45d65655434c954.js" integrity="sha256-eItjni7GgVSXQLkLO4ZdX54XiePKnAbMxF1lZVQ0yVQ=" crossorigin="anonymous"></script>
+
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-graph.26b92ed9317bdc6f35642d588bdf3283f40998846e01cf4bee22a126907fbf3b.js" integrity="sha256-Jrku2TF73G81ZC1Yi98yg/QJmIRuAc9L7iKhJpB/vzs=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-digitalRain.af8a7b5c4428cc62d5bf49bf2698d4112c2459ee0c22c1c753ab304aef69888a.js" integrity="sha256-r4p7XEQozGLVv0m/JpjUESwkWe4MIsHHU6swSu9piIo=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-circleBrushStrokes.fe8fc3ee52e1d90e9236be8c36a27711efa024beb4da304829f95dfbb61d6e84.js" integrity="sha256-/o/D7lLh2Q6SNr6MNqJ3Ee&#43;gJL602jBIKfld&#43;7YdboQ=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-meta.71b5202ea881c86ac19e4b55414656a5444204a4ba08ff7368a5aa99c0a60949.js" integrity="sha256-cbUgLqiByGrBnktVQUZWpURCBKS6CP9zaKWqmcCmCUk=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sidebar-sketch.min.2e95015880993ef9abcad62d111decea22406616931bce193254bf8af2339953.js" integrity="sha256-LpUBWICZPvmrytYtER3s6iJAZhaTG84ZMlS/ivIzmVM=" crossorigin="anonymous" defer></script>
+    
+    
+    
+    <link rel="shortcut icon" href="https://seconsorl.github.io/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://seconsorl.github.io/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://seconsorl.github.io/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://seconsorl.github.io/favicons/favicon-16x16.png">
+    <link rel="canonical" href="https://seconsorl.github.io/post/latex/">
+    
+    
+    
+    
+    
+
+    
+    <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://seconsorl.github.io/images/profile.png" /><meta name="twitter:title" content="Latex"/>
+<meta name="twitter:description" content="a note for learning Latex"/>
+
+</head><body>
+        <div class="main">
+            <div class="page-top">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a  href="/"  title="">Home</a></li>
+        
+            
+            <li><a  href="/post/"  title="">Posts</a></li>
+        
+            
+            <li><a  href="/about/"  title="">About</a></li>
+        
+        <li class="grow"></li>
+        
+        <li>
+            <a class="theme-switch" title="Switch Theme">
+                <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+            <div class="sidebar" id="sidebar">
+    <div class="top-toc">
+        <img src="https://seconsorl.github.io/images/profile.png" alt="profile picture">
+        
+        <a href="/">A junior from NBU</a>
+    </div>
+    
+    <div class="middle-sidebar grow" id="middle-sidebar">
+        
+            
+            
+                
+            
+
+            
+        
+    </div>
+
+    <div class="footer">
+        <ul class="social-links">
+            
+            <li>
+                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://github.com/SeConSorL" target="_blank" rel="noopener noreferrer" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" rel="me" aria-label="instagram">
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+            <li>
+                <a href="mailto:216002917@nbu.edu.cn" target="_blank" rel="noopener noreferrer" rel="me" aria-label="e-mail">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+        </ul>
+
+        <div class="by">by HZW <b>·</b> 2024</div>
+    </div>
+</div>
+            <div class="content">
+<div class="post">
+    
+    <div class="post-title">
+        <h1>Latex</h1>
+        
+            <div class="post-header">
+    <div style="padding-top: 10px;">
+        <i class="far fa-calendar"></i><span class="date">May 6, 2024</span>
+        <i class="far fa-clock"></i><span class="reading-time">6 minutes</span>
+        
+
+
+    </div>
+</div>
+        
+    </div>
+    <div class="post-content">
+        <h1 id="一些符号说明">一些符号说明</h1>
+<ul>
+<li>[h]当前位置。
+将图形放置在正文文本中给出该图形环境的地方。
+如果本页所剩的页面不够，这一参数将不起作用。</li>
+<li>[t]顶部。
+将图形放置在页面的顶部。</li>
+<li>[b]底部。
+将图形放置在页面的底部。</li>
+<li>[p]浮动页。
+将图形放置在一只允许有浮动对象的页面上，比如图形和表格。</li>
+</ul>
+<ol>
+<li>加 <code>!</code>是LaTex排版系统忽略“美学”标准，把表格和图片插入到你的代码中，是动的</li>
+<li>但是不加<code>!</code>，图和表按顺序放置，所以<strong>加了<code>!</code>会使图片随着你的代码移动</strong></li>
+</ol>
+<p><strong>h, t, b, p</strong>是可以组合使用的，如：</p>
+<ul>
+<li>[ht]表示当前位置的顶部</li>
+<li>[hb]表示当前位置的底部</li>
+</ul>
+<h3 id="表格">表格</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tex" data-lang="tex"><span style="display:flex;"><span>c居中，l左对齐,r右对齐
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">%长文本情况可以设置列宽度
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\begin</span><span style="color:#8be9fd;font-style:italic">{</span>tabular<span style="color:#8be9fd;font-style:italic">}{</span>c|*<span style="color:#8be9fd;font-style:italic">{</span>3<span style="color:#8be9fd;font-style:italic">}{</span>c|<span style="color:#8be9fd;font-style:italic">}</span>p<span style="color:#8be9fd;font-style:italic">{</span>5cm<span style="color:#8be9fd;font-style:italic">}}</span> 
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">%*{数量}{格式}	当你有许多列时，可以使用这个，并且是限制重复的有效方法
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">%p{宽度}、m{宽度} 和 b{宽度}指定文本宽度，其中p顶对齐，m中对齐，b底对齐
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">%合并行列
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\multirow</span><span style="color:#8be9fd;font-style:italic">{</span>行的数量<span style="color:#8be9fd;font-style:italic">}{</span>宽度<span style="color:#8be9fd;font-style:italic">}{</span>文本<span style="color:#8be9fd;font-style:italic">}</span>  宽度中填 * 会告诉LaTeX自动管理单元格的大小。
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">\multicolumn</span><span style="color:#8be9fd;font-style:italic">{</span>列的数量<span style="color:#8be9fd;font-style:italic">}{</span>单元格选项<span style="color:#8be9fd;font-style:italic">}{</span>位置<span style="color:#8be9fd;font-style:italic">}{</span>文本<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span></code></pre></div><h1 id="常用编辑器">常用编辑器</h1>
+<p><strong>TeXMaker</strong>: <a href="https://link.juejin.cn?target=http%3A%2F%2Fwww.xm1math.net%2Ftexmaker%2F">www.xm1math.net/texmaker/</a> , 全平台，免费</p>
+<p><strong>TeXStudio</strong>: <a href="https://link.juejin.cn?target=http%3A%2F%2Ftexstudio.sourceforge.net%2F">texstudio.sourceforge.net/</a> , 全平台，免费</p>
+<p><strong>WinEdit</strong>: <a href="https://link.juejin.cn?target=http%3A%2F%2Fwww.winedt.com%2Findex.html">www.winedt.com/index.html</a> , 只支持 Windows，收费</p>
+<p><strong>TeXWorks</strong>: <a href="https://link.juejin.cn?target=http%3A%2F%2Fwww.tug.org%2Ftexworks%2F">www.tug.org/texworks/</a> ，<strong>MiKTeX</strong> 自带编辑器，免费👍</p>
+<p><strong>TeXShop</strong>: <a href="https://link.juejin.cn?target=https%3A%2F%2Fpages.uoregon.edu%2Fkoch%2Ftexshop%2F">pages.uoregon.edu/koch/texsho…</a> ，<strong>TeXLive</strong> 自带编辑器，免费</p>
+<p><strong>TeXLive</strong></p>
+<ul>
+<li>Windows: <a href="https://link.juejin.cn/?target=https%3A%2F%2Ftug.org%2Ftexlive%2Fwindows.html">tug.org/texlive/win…</a></li>
+<li>MacOS: <a href="https://link.juejin.cn/?target=https%3A%2F%2Ftug.org%2Fmactex%2F">tug.org/mactex/</a></li>
+<li>Linux: <a href="https://link.juejin.cn/?target=https%3A%2F%2Fwww.tug.org%2Ftexlive%2Fquickinstall.html">www.tug.org/texlive/qui…</a></li>
+</ul>
+<p><strong>MiKTeX</strong>, 这个资源简单，同一个页面选择不同系统即可</p>
+<ul>
+<li>Windows: <a href="https://link.juejin.cn/?target=https%3A%2F%2Fmiktex.org%2Fdownload">miktex.org/download</a></li>
+<li>MacOS: <a href="https://link.juejin.cn/?target=https%3A%2F%2Fmiktex.org%2Fdownload">miktex.org/download</a></li>
+<li>Linux: <a href="https://link.juejin.cn/?target=https%3A%2F%2Fmiktex.org%2Fdownload">miktex.org/download</a></li>
+</ul>
+<p><strong>Lyx</strong>，<a href="https://link.zhihu.com/?target=https%3A//www.lyx.org/">LyX - The Document Processor</a>，使用简单，开箱即用；所见即所得；丰富的公式支持；免费、跨平台；</p>
+<p><strong>TeXworks</strong>，<a href="https://link.zhihu.com/?target=https%3A//tug.org/texworks/">TeXworks</a>，支持代码补全，同时内嵌PDF阅读器，免费。</p>
+<hr>
+<h1 id="常用包和命令">常用包和命令</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#6272a4">% 页面布局：页面宽度, 页面高度, 页眉高度, 页脚高度，各种边距等等 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">% 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\usepackage</span><span style="color:#50fa7b">[a4paper,scale=0.8,hcentering,bindingoffset=8mm]</span><span style="color:#8be9fd;font-style:italic">{</span>geometry<span style="color:#8be9fd;font-style:italic">}</span> <span style="color:#6272a4">% A4纸大小，缩放80%，设置奇数页右边留空多一点 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\usepackage</span><span style="color:#8be9fd;font-style:italic">{</span>geometry<span style="color:#8be9fd;font-style:italic">}</span> <span style="color:#6272a4">% 页面布局 宏包 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">% 定制页眉页脚: \pagestyle, \thispagestyle 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\usepackage</span><span style="color:#8be9fd;font-style:italic">{</span>francyhdr<span style="color:#8be9fd;font-style:italic">}</span> <span style="color:#6272a4">% 页眉页脚高级定制 宏包
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">%
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\usepackage</span><span style="color:#8be9fd;font-style:italic">{</span>amsmath<span style="color:#8be9fd;font-style:italic">}</span> <span style="color:#6272a4">% AMS 数学公式 宏包  
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\usepackage</span><span style="color:#8be9fd;font-style:italic">{</span>amssymb<span style="color:#8be9fd;font-style:italic">}</span> <span style="color:#6272a4">% AMS 数学符号 宏包  
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\usepackage</span><span style="color:#8be9fd;font-style:italic">{</span>amsfonts<span style="color:#8be9fd;font-style:italic">}</span> <span style="color:#6272a4">% AMS 数学字体 宏包 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\usepackage</span><span style="color:#8be9fd;font-style:italic">{</span>amsthm, bm<span style="color:#8be9fd;font-style:italic">}</span> <span style="color:#6272a4">% 数学 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">%
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\usepackage</span><span style="color:#8be9fd;font-style:italic">{</span>algorithm<span style="color:#8be9fd;font-style:italic">}</span> <span style="color:#6272a4">% 算法
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\usepackage</span><span style="color:#8be9fd;font-style:italic">{</span>algpseudocode<span style="color:#8be9fd;font-style:italic">}</span> <span style="color:#6272a4">% 伪代码
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\usepackage</span><span style="color:#8be9fd;font-style:italic">{</span>listings<span style="color:#8be9fd;font-style:italic">}</span> <span style="color:#6272a4">% 各种语言的代码块 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">%
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\usepackage</span><span style="color:#8be9fd;font-style:italic">{</span>graphicx<span style="color:#8be9fd;font-style:italic">}</span>   <span style="color:#6272a4">% 插图 宏包  
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\usepackage</span><span style="color:#8be9fd;font-style:italic">{</span>subfigure<span style="color:#8be9fd;font-style:italic">}</span>  <span style="color:#6272a4">% 使用子图像或者子表格 宏包 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\usepackage</span><span style="color:#8be9fd;font-style:italic">{</span>subcaption<span style="color:#8be9fd;font-style:italic">}</span> <span style="color:#6272a4">% 图片描述 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">% 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\usepackage</span><span style="color:#8be9fd;font-style:italic">{</span>courier<span style="color:#8be9fd;font-style:italic">}</span>    <span style="color:#6272a4">% 字体 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\usepackage</span><span style="color:#8be9fd;font-style:italic">{</span>fontspec<span style="color:#8be9fd;font-style:italic">}</span>   <span style="color:#6272a4">% 字体 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">% 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\usepackage</span><span style="color:#8be9fd;font-style:italic">{</span>titlesec<span style="color:#8be9fd;font-style:italic">}</span> <span style="color:#6272a4">% 章节定制 宏包 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\usepackage</span><span style="color:#8be9fd;font-style:italic">{</span>titletoc<span style="color:#8be9fd;font-style:italic">}</span> <span style="color:#6272a4">% 目录定制 宏包 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\usepackage</span><span style="color:#8be9fd;font-style:italic">{</span>cite<span style="color:#8be9fd;font-style:italic">}</span>     <span style="color:#6272a4">% 引用  宏包 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\usepackage</span><span style="color:#8be9fd;font-style:italic">{</span>natbib<span style="color:#8be9fd;font-style:italic">}</span>   <span style="color:#6272a4">% 参考文件定制 宏包 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\usepackage</span><span style="color:#8be9fd;font-style:italic">{</span>longtable, diagbox, colortbl, booktabs<span style="color:#8be9fd;font-style:italic">}</span> <span style="color:#6272a4">% 表格定制 宏包 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">% 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\usepackage</span><span style="color:#8be9fd;font-style:italic">{</span>list<span style="color:#8be9fd;font-style:italic">}</span>     <span style="color:#6272a4">% 无序列表定制 宏包 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\usepackage</span><span style="color:#8be9fd;font-style:italic">{</span>enumitem<span style="color:#8be9fd;font-style:italic">}</span> <span style="color:#6272a4">% 有序列表定制 宏包 % 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\usepackage</span><span style="color:#50fa7b">[选项列表]</span><span style="color:#8be9fd;font-style:italic">{</span>hyperref<span style="color:#8be9fd;font-style:italic">}</span> <span style="color:#6272a4">% 超链接 宏包 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\usepackage</span><span style="color:#8be9fd;font-style:italic">{</span>xcolor<span style="color:#8be9fd;font-style:italic">}</span>   <span style="color:#6272a4">% 彩色 宏包 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">% 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">% ====================== 常用命令 ================= %%%%%%%%%% 标题部分： 标题, 作者, 日期, 脚注等命令 %%%%%%%%%% \title{标题}  % 标题 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\author</span><span style="color:#8be9fd;font-style:italic">{</span>作者<span style="color:#8be9fd;font-style:italic">}</span> <span style="color:#6272a4">% 作者
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\date</span><span style="color:#8be9fd;font-style:italic">{</span>日期<span style="color:#8be9fd;font-style:italic">}</span>   <span style="color:#6272a4">% 日期 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">%\date{} % 留空则不输出日期，不填则自动加上默认日期，所以要不显示日期需要这句命令 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\thanks</span><span style="color:#8be9fd;font-style:italic">{</span>...<span style="color:#8be9fd;font-style:italic">}</span> <span style="color:#6272a4">% 脚注，这个必须放在上面命令的{}内 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\maketitle</span>   <span style="color:#6272a4">% 必不可少，生成标题命令，以上命令只是声明，这句才可生成 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">%%%%%%%%%%%%% 摘要 %%%%%%%%%%%% 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\begin</span><span style="color:#8be9fd;font-style:italic">{</span>abstract<span style="color:#8be9fd;font-style:italic">}</span> <span style="color:#6272a4">% 开始，book 类型没有摘要 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">%... ... 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\end</span><span style="color:#8be9fd;font-style:italic">{</span>abstract<span style="color:#8be9fd;font-style:italic">}</span>   <span style="color:#6272a4">% 结束 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">%%%%%%%%%%%%% 目录 %%%%%%%%%%%%% 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\tableofcontents</span> <span style="color:#6272a4">% 生成目录 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">% \setcounter{tocdepth}{层次号} % 设置目录中生成的章节层次 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">%%%%%%%%%%% 章节命令 %%%%%%%%%%% 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\part</span> <span style="color:#6272a4">% 篇 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\chapter</span> <span style="color:#6272a4">% 章 : article 中没有 chapter，在 book 中有  
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\section</span>, <span style="color:#ff79c6">\subsection</span>, <span style="color:#ff79c6">\subsubsection</span> <span style="color:#6272a4">% 节
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\paragraph</span>,<span style="color:#ff79c6">\subparagraph</span> <span style="color:#6272a4">% 段落
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">%%%%%%%%%%% 正文 %%%%%%%%%%% 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\vspace</span><span style="color:#8be9fd;font-style:italic">{</span>10pt<span style="color:#8be9fd;font-style:italic">}</span><span style="color:#6272a4">%在两个段落之间添加10pt的额外空间
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\bigskip</span>、<span style="color:#ff79c6">\medskip</span>或<span style="color:#ff79c6">\smallskip</span> <span style="color:#6272a4">%在一个段落后立即添加空白
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">%%%%%%%%%%% 参考文献 %%%%%%%%%%% 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\begin</span><span style="color:#8be9fd;font-style:italic">{</span>thebibliography<span style="color:#8be9fd;font-style:italic">}{</span>编号样本<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">\bibitem</span><span style="color:#50fa7b">[编号]</span><span style="color:#8be9fd;font-style:italic">{</span>标签<span style="color:#8be9fd;font-style:italic">}</span> 文献条目
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">\bibitem</span><span style="color:#50fa7b">[编号]</span><span style="color:#8be9fd;font-style:italic">{</span>标签<span style="color:#8be9fd;font-style:italic">}</span> 文献条
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">\end</span><span style="color:#8be9fd;font-style:italic">{</span>thebibliography<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">%%%%%%%%%%% 表格命令 %%%%%%%%%%%%
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\begin</span><span style="color:#8be9fd;font-style:italic">{</span>tabular<span style="color:#8be9fd;font-style:italic">}</span>[竖向位置]<span style="color:#8be9fd;font-style:italic">{</span>列格式<span style="color:#8be9fd;font-style:italic">}</span>  
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">%first line \\ 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">%last line \\ 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\end</span><span style="color:#8be9fd;font-style:italic">{</span>tabular<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">%%%%%%%%%%% 编号命令 %%%%%%%%%%%% 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">% 无序编号 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\begin</span><span style="color:#8be9fd;font-style:italic">{</span>itemize<span style="color:#8be9fd;font-style:italic">}</span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">\item</span><span style="color:#50fa7b">[标签]</span> 条目内容 
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">\end</span><span style="color:#8be9fd;font-style:italic">{</span>itemize<span style="color:#8be9fd;font-style:italic">}</span> <span style="color:#6272a4">% 有序编号 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\begin</span><span style="color:#8be9fd;font-style:italic">{</span>enumerate<span style="color:#8be9fd;font-style:italic">}</span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">\item</span><span style="color:#50fa7b">[标签]</span> 条目内容 
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">\end</span><span style="color:#8be9fd;font-style:italic">{</span>enumerate<span style="color:#8be9fd;font-style:italic">}</span> 
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">%%%%%%%% 脚注 %%%%%%%%% 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\footnote</span><span style="color:#8be9fd;font-style:italic">{</span>脚注文本<span style="color:#8be9fd;font-style:italic">}</span> <span style="color:#6272a4">% 自动编号脚注，紧接在需要标注的文字之后 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\footnote</span><span style="color:#50fa7b">[标记]</span><span style="color:#8be9fd;font-style:italic">{</span>脚注文本<span style="color:#8be9fd;font-style:italic">}</span> <span style="color:#6272a4">% 手工指定脚注标记
+</span></span></span></code></pre></div><h3 id="特殊说明">特殊说明</h3>
+<ul>
+<li>
+<p><em>短标题: 用于显示在目录和页眉中, 缺省与标题相同</em></p>
+</li>
+<li>
+<p><em>带星号的章节命令: 不参与自动编号</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#ff79c6">\章</span>节命令[短标题]<span style="color:#8be9fd;font-style:italic">{</span>标题<span style="color:#8be9fd;font-style:italic">}</span> 
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">\章</span>节命令*<span style="color:#8be9fd;font-style:italic">{</span>标题<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span></code></pre></div></li>
+<li>
+<p>文本对齐方式 (缺省为左对齐)</p>
+<ul>
+<li>左对齐: <code>\raggedright</code> 或使用 <code>flushleft</code> 环境</li>
+<li>右对齐: <code>\raggedleft</code> 或使用 <code>flushright</code> 环境</li>
+<li>文本居中: <code>\centering</code> 或使用 <code>center</code> 环境</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<p>字体大小</p>
+<pre tabindex="0"><code>在设置字体基本尺寸后（假设为10pt）
+可使用以下声明来改变尺寸大小
+\tiny 5pt
+\scriptsize 7pt
+\footnotesize 8pt
+\small 9pt
+\normalsize 10pt
+\large 12pt
+\Large 14.4pt
+\LARGE 17.28pt
+\huge 20.74pt
+\Huge 24.88pt
+
+%中文字体 ctex 提供的命令和字号命令如下
+\heiti, \songti, \fangsong, \kaishu, \lishu, \youyuan, \yahei
+\zihao{字号}
+0   初号=42磅
+-0  小初=36磅
+1   一号=24磅
+-1  小一=24磅
+2   二号=22磅
+-2  小二=18磅
+依次类推
+1英寸=72磅（pt）=2.54cm
+</code></pre></li>
+</ul>
+<h3 id="超链接">超链接</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#ff79c6">\usepackage</span><span style="color:#50fa7b">[选项列表]</span><span style="color:#8be9fd;font-style:italic">{</span>hyperref<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span></code></pre></div><ul>
+<li>
+<p>在有交叉引用的地方 (如目录, 书签, 参考文献, 公式等) 建立链接</p>
+</li>
+<li>
+<p>提供对外部文件, 互联网网址, 邮件地址的链接</p>
+</li>
+<li>
+<p>常用选项 (也可通过</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#ff79c6">\hypersetup</span><span style="color:#8be9fd;font-style:italic">{</span>选项列表<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">\usepackage</span><span style="color:#8be9fd;font-style:italic">{</span>hyperref<span style="color:#8be9fd;font-style:italic">}</span> 
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">\hypersetup</span><span style="color:#8be9fd;font-style:italic">{</span>CJKbookmarks=true,  <span style="color:#6272a4">% 支持中文书签
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>            colorlinks=true,    <span style="color:#6272a4">% 使用彩色链接
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>            citecolor=blue,     <span style="color:#6272a4">% 引用标记颜色
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>            linkcolor=blue,     <span style="color:#6272a4">% 内部普通链接的颜色
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>            urlcolor=blue,      <span style="color:#6272a4">% url 链接的颜色
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>            breaklinks=true <span style="color:#8be9fd;font-style:italic">}</span>   <span style="color:#6272a4">% 允许在链接处换行
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">%网页链接
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\url</span><span style="color:#8be9fd;font-style:italic">{</span>网址<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">\href</span><span style="color:#8be9fd;font-style:italic">{</span>网址<span style="color:#8be9fd;font-style:italic">}{</span>文本<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span></code></pre></div><p>来设置)</p>
+<ul>
+<li><code>bookmarks</code> → 创建书签, 缺省为 true</li>
+<li><code>CJKbookmarks</code> → 支持中日韩文字的书签</li>
+<li><code>colorlinks</code> → 使用彩色显示链接, 缺省为红色方框</li>
+<li><code>linkcolor</code> → 内部普通链接 (如页码) 的颜色, 缺省为 red</li>
+<li><code>citecolor</code> → 文献引用链接的颜色, 缺省为 green</li>
+<li><code>urlcolor</code> → URL 链接的颜色, 缺省为 magenta</li>
+<li><code>breaklinks</code> → 允许在链接中断行, 缺省不允许</li>
+</ul>
+</li>
+</ul>
+<h3 id="颜色">颜色</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#ff79c6">\usepackage</span><span style="color:#8be9fd;font-style:italic">{</span>xeCJK<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">\usepackage</span><span style="color:#8be9fd;font-style:italic">{</span>mathpazo<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">\usepackage</span><span style="color:#8be9fd;font-style:italic">{</span>color,xcolor<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">\definecolor</span><span style="color:#8be9fd;font-style:italic">{</span>light-gray<span style="color:#8be9fd;font-style:italic">}{</span>gray<span style="color:#8be9fd;font-style:italic">}{</span>0.95<span style="color:#8be9fd;font-style:italic">}</span>    <span style="color:#6272a4">% 1.灰度
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\definecolor</span><span style="color:#8be9fd;font-style:italic">{</span>orange<span style="color:#8be9fd;font-style:italic">}{</span>rgb<span style="color:#8be9fd;font-style:italic">}{</span>1,0.5,0<span style="color:#8be9fd;font-style:italic">}</span>      <span style="color:#6272a4">% 2.rgb
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\definecolor</span><span style="color:#8be9fd;font-style:italic">{</span>orange<span style="color:#8be9fd;font-style:italic">}{</span>RGB<span style="color:#8be9fd;font-style:italic">}{</span>255,127,0<span style="color:#8be9fd;font-style:italic">}</span>    <span style="color:#6272a4">% 3.RGB
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\definecolor</span><span style="color:#8be9fd;font-style:italic">{</span>orange<span style="color:#8be9fd;font-style:italic">}{</span>HTML<span style="color:#8be9fd;font-style:italic">}{</span>FF7F00<span style="color:#8be9fd;font-style:italic">}</span>      <span style="color:#6272a4">% 4.HTML
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\definecolor</span><span style="color:#8be9fd;font-style:italic">{</span>orange<span style="color:#8be9fd;font-style:italic">}{</span>cmyk<span style="color:#8be9fd;font-style:italic">}{</span>0,0.5,1,0<span style="color:#8be9fd;font-style:italic">}</span>   <span style="color:#6272a4">% 5.cmyk
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">\begin</span><span style="color:#8be9fd;font-style:italic">{</span>document<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">%\pagecolor{yellow}          %设置背景色为黄色
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\textcolor</span><span style="color:#8be9fd;font-style:italic">{</span>green<span style="color:#8be9fd;font-style:italic">}{</span>绿色<span style="color:#8be9fd;font-style:italic">}</span>     <span style="color:#6272a4">%1.方法一
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">{</span><span style="color:#ff79c6">\color</span><span style="color:#8be9fd;font-style:italic">{</span>orange<span style="color:#8be9fd;font-style:italic">}</span> 橙色<span style="color:#8be9fd;font-style:italic">}</span>       <span style="color:#6272a4">%2.方法二
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">\colorbox</span><span style="color:#8be9fd;font-style:italic">{</span>red<span style="color:#8be9fd;font-style:italic">}{</span><span style="color:#ff79c6">\color</span><span style="color:#8be9fd;font-style:italic">{</span>black<span style="color:#8be9fd;font-style:italic">}</span>红底黑字<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">\fcolorbox</span><span style="color:#8be9fd;font-style:italic">{</span>red<span style="color:#8be9fd;font-style:italic">}{</span>green<span style="color:#8be9fd;font-style:italic">}{</span>红框绿背景<span style="color:#8be9fd;font-style:italic">}</span> <span style="color:#6272a4">%框色+背景色
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">\color</span><span style="color:#8be9fd;font-style:italic">{</span>blue!20<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">\color</span><span style="color:#8be9fd;font-style:italic">{</span>blue!20!black<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">\color</span><span style="color:#8be9fd;font-style:italic">{</span>blue!20!black!30!green<span style="color:#8be9fd;font-style:italic">}</span>  
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">%a mixture of (20*0.3) percent blue, ((100-20)*0.3) percent black and (100-30) percent green
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">{</span><span style="color:#ff79c6">\color</span><span style="color:#50fa7b">[rgb]</span><span style="color:#8be9fd;font-style:italic">{</span>1,0,0<span style="color:#8be9fd;font-style:italic">}</span> This text will appear red-colored<span style="color:#8be9fd;font-style:italic">}</span>   <span style="color:#6272a4">% 直接使用
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\textcolor</span><span style="color:#50fa7b">[rgb]</span><span style="color:#8be9fd;font-style:italic">{</span>0,1,0<span style="color:#8be9fd;font-style:italic">}{</span>This text will appear green-colored<span style="color:#8be9fd;font-style:italic">}</span><span style="color:#6272a4">% 直接使用
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">\end</span><span style="color:#8be9fd;font-style:italic">{</span>document<span style="color:#8be9fd;font-style:italic">}</span> 
+</span></span></code></pre></div><h1 id="相关资源">相关资源</h1>
+<ul>
+<li><strong>LaTeX 工作室</strong> : <a href="https://link.juejin.cn?target=http%3A%2F%2Fwww.latexstudio.net">www.latexstudio.net</a> (模板、方法、教程)</li>
+<li><strong>LaTeX 模板收集</strong> : <a href="https://link.juejin.cn?target=http%3A%2F%2Fwww.latextemplates.co">www.latextemplates.com</a> (各种模板)</li>
+<li><strong>LaTeX 颜色定义</strong> : <a href="https://link.juejin.cn?target=http%3A%2F%2Flatexcolor.com">latexcolor.com</a></li>
+<li><strong>华东师大 LaTeX 官网</strong> : <a href="https://link.juejin.cn?target=http%3A%2F%2Fmath.ecnu.edu.cn%2F~latex">math.ecnu.edu.cn/~latex</a> (丰富教学资源)</li>
+<li><strong>华东师大&ndash;潘建瑜</strong> : <a href="https://link.juejin.cn/?target=http%3A%2F%2Fmath.ecnu.edu.cn%2F~jypan%2FTeaching%2FLatex">math.ecnu.edu.cn/~jypan/Teac…</a> (各种分享、教程、资料) 👍👍👍</li>
+<li><strong>武汉大学&ndash;黄正华</strong> : <a href="https://link.juejin.cn?target=http%3A%2F%2Faff.whu.edu.cn%2Fhuangzh">aff.whu.edu.cn/huangzh</a> (各种教学资料)</li>
+<li><strong>[英] LaTeX 使用技巧</strong> : <a href="https://link.juejin.cn?target=http%3A%2F%2Flatex-cookbook.net">latex-cookbook.net</a></li>
+<li><strong>[英] TeX Users Group</strong> : <a href="https://link.juejin.cn?target=http%3A%2F%2Fwww.tug.org">www.tug.org</a></li>
+<li><strong>[英] LaTeX Packages</strong> : <a href="https://link.juejin.cn?target=https%3A%2F%2Fwww.ctan.org">www.ctan.org</a></li>
+</ul>
+<h1 id="排版命令">排版命令</h1>
+<ul>
+<li>
+<p>方括号中的是<strong>可选</strong>的 (称为选项), 花括号中的参数是<strong>必需</strong>的</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#ff79c6">\command</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">\command</span><span style="color:#50fa7b">[option]</span><span style="color:#8be9fd;font-style:italic">{</span>arguments<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">% 一些常用命令：
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\documentcalss</span>, <span style="color:#ff79c6">\title</span>, <span style="color:#ff79c6">\author</span>, <span style="color:#ff79c6">\date</span>, <span style="color:#ff79c6">\usepackage</span> 
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">\begin</span><span style="color:#8be9fd;font-style:italic">{</span>环境名<span style="color:#8be9fd;font-style:italic">}</span>, <span style="color:#ff79c6">\end</span><span style="color:#8be9fd;font-style:italic">{</span>环境名<span style="color:#8be9fd;font-style:italic">}</span> <span style="color:#6272a4">% 组成一个环境
+</span></span></span></code></pre></div></li>
+<li>
+<p>定义新命令</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#ff79c6">\newcommand</span><span style="color:#8be9fd;font-style:italic">{</span>新命令<span style="color:#8be9fd;font-style:italic">}{</span>命令内容<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">\renewcommand</span><span style="color:#8be9fd;font-style:italic">{</span>已有命令<span style="color:#8be9fd;font-style:italic">}{</span>命令内容<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">% 举例
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\newcommand</span><span style="color:#8be9fd;font-style:italic">{</span><span style="color:#ff79c6">\eps</span><span style="color:#8be9fd;font-style:italic">}{</span><span style="color:#ff79c6">\varepsilon</span><span style="color:#8be9fd;font-style:italic">}</span> <span style="color:#6272a4">% $\eps$ → ε
+</span></span></span></code></pre></div></li>
+</ul>
+<p>文档类型：<code>\documentclass[选项]{文档类}</code></p>
+<ul>
+<li>
+<p>位于源文件的最前面, 用于指定文档的整体结构和布局, 必须且只能选一种</p>
+<ul>
+<li>
+<p>常用 <strong>文档类</strong>: article, book, beamer, ctexart, ctexbook, ctexbeamer</p>
+</li>
+<li>
+<p>常用 <strong>选项</strong>如下：</p>
+</li>
+<li>
+<p><em>10pt(<strong>缺省值</strong>), 11pt, 12pt → 指定基本字体的大小</em></p>
+</li>
+<li>
+<p><em>letterpaper(<strong>缺省值</strong>), a4paper, a5paper, &hellip; → 指定纸张的大小</em></p>
+</li>
+<li>
+<p><em>单双面选项: oneside, twoside, openright, openany</em></p>
+</li>
+<li>
+<p><em>数学公式: leqno (公式编号在左边), fleqn (靠左显示行间公式)</em></p>
+</li>
+</ul>
+</li>
+<li>
+<p>导言区: <strong>\documentclass</strong> 和 <strong>\begin{document}</strong> 之间的区域</p>
+<ul>
+<li>导言区用于放置 全局控制命令, 如: 调用宏包, 设置页面大小, &hellip;</li>
+<li>放在导言区的命令对整个文档都起作用</li>
+</ul>
+</li>
+</ul>
+<h3 id="中文排版">中文排版</h3>
+<ul>
+<li><strong>CTEX</strong> 宏集中提供了三个中文文档类: <strong>texart, ctexbook, ctexbeamer</strong></li>
+<li>用 <code>xelatex</code> 编译! 用 <code>xelatex</code> 编译! 用 <code>xelatex</code> 编译!</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#ff79c6">\documentclass</span><span style="color:#50fa7b">[12pt,a4paper]</span><span style="color:#8be9fd;font-style:italic">{</span>ctexart<span style="color:#8be9fd;font-style:italic">}</span> <span style="color:#ff79c6">\usepackage</span><span style="color:#8be9fd;font-style:italic">{</span>amsmath<span style="color:#8be9fd;font-style:italic">}</span>  <span style="color:#6272a4">% AMS 数学公式 宏包 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\usepackage</span><span style="color:#8be9fd;font-style:italic">{</span>amssymb<span style="color:#8be9fd;font-style:italic">}</span>  <span style="color:#6272a4">% AMS 数学符号 宏包
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\usepackage</span><span style="color:#8be9fd;font-style:italic">{</span>amsfonts<span style="color:#8be9fd;font-style:italic">}</span> <span style="color:#6272a4">% AMS 数学字体 宏包  
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\usepackage</span><span style="color:#8be9fd;font-style:italic">{</span>graphicx<span style="color:#8be9fd;font-style:italic">}</span> <span style="color:#6272a4">% 插图 宏包  
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\usepackage</span><span style="color:#8be9fd;font-style:italic">{</span>xcolor<span style="color:#8be9fd;font-style:italic">}</span>   <span style="color:#6272a4">% 彩色 宏包 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\begin</span><span style="color:#8be9fd;font-style:italic">{</span>document<span style="color:#8be9fd;font-style:italic">}</span>  
+</span></span><span style="display:flex;"><span>欧拉公式是 <span style="color:#f1fa8c">$$</span><span style="color:#8be9fd;font-style:italic"> e^{ix} </span><span style="color:#ff79c6">=</span><span style="color:#8be9fd;font-style:italic"> </span><span style="color:#8be9fd;font-style:italic">\cos</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd;font-style:italic">x</span><span style="color:#ff79c6">)</span><span style="color:#8be9fd;font-style:italic"> </span><span style="color:#ff79c6">+</span><span style="color:#8be9fd;font-style:italic"> i</span><span style="color:#8be9fd;font-style:italic">\sin</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd;font-style:italic">x</span><span style="color:#ff79c6">)</span><span style="color:#8be9fd;font-style:italic">.</span><span style="color:#f1fa8c">$$</span> 
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">\end</span><span style="color:#8be9fd;font-style:italic">{</span>document<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span></code></pre></div><h1 id="1整体概述">1、整体概述</h1>
+<p><strong>Latex主要分为导言区与正文区。</strong></p>
+<p>导言区首先需要引入一个类，用于全局设置，还可以进行一些命令的定义，如果需要用一些自定义符号的话。 <strong>代码如下（示例）：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tex" data-lang="tex"><span style="display:flex;"><span><span style="color:#ff79c6">\documentclass</span><span style="color:#50fa7b">[10pt]</span><span style="color:#8be9fd;font-style:italic">{</span>article<span style="color:#8be9fd;font-style:italic">}</span> 
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">% book,report,letter 方括号里面有个可选参数来表示基础字体大小
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\usepackage</span><span style="color:#8be9fd;font-style:italic">{</span>ctex<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">%导言区还要进行命令的定义，如果在正文区中要使用一些自定义的符号的话
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\newcommand\degree</span><span style="color:#8be9fd;font-style:italic">{^</span><span style="color:#ff79c6">\circ</span><span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">\title</span><span style="color:#8be9fd;font-style:italic">{</span><span style="color:#ff79c6">\heiti</span> My First Document<span style="color:#8be9fd;font-style:italic">}</span> <span style="color:#6272a4">%标题
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\author</span><span style="color:#8be9fd;font-style:italic">{</span><span style="color:#ff79c6">\kaishu</span> Ali Chen<span style="color:#8be9fd;font-style:italic">}</span>   <span style="color:#6272a4">%作者
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\date</span><span style="color:#8be9fd;font-style:italic">{</span><span style="color:#ff79c6">\today</span><span style="color:#8be9fd;font-style:italic">}</span>        <span style="color:#6272a4">%日期
+</span></span></span></code></pre></div><p>正文区则是我们需要进行编辑的内容区域，用begin与end输入一个环境，里面是环境名称，有且只有一个document环境 <strong>代码如下（示例）：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tex" data-lang="tex"><span style="display:flex;"><span><span style="color:#ff79c6">\begin</span><span style="color:#8be9fd;font-style:italic">{</span>document<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">\maketitle</span> <span style="color:#6272a4">%letter类里面没有maketitle
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    Hello World!
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">\end</span><span style="color:#8be9fd;font-style:italic">{</span>document<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span></code></pre></div><h1 id="2字体格式">2、字体格式</h1>
+<p>在Latex中，字体共有五个属性，分别为字体编码，字体族，字体系列，字体形状，字体大小</p>
+<h3 id="字体族罗马字体无衬线字体打字机字体">字体族（罗马字体，无衬线字体，打字机字体）</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tex" data-lang="tex"><span style="display:flex;"><span><span style="color:#ff79c6">\textrm</span><span style="color:#8be9fd;font-style:italic">{</span>Roman Family<span style="color:#8be9fd;font-style:italic">}</span> <span style="color:#ff79c6">\textsf</span><span style="color:#8be9fd;font-style:italic">{</span>Sans Serif Family<span style="color:#8be9fd;font-style:italic">}</span> <span style="color:#ff79c6">\texttt</span><span style="color:#8be9fd;font-style:italic">{</span>Typewriter Family<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">\rmfamily</span> Roman Family <span style="color:#8be9fd;font-style:italic">{</span><span style="color:#ff79c6">\sffamily</span> Sans Serif Family<span style="color:#8be9fd;font-style:italic">}</span> <span style="color:#8be9fd;font-style:italic">{</span><span style="color:#ff79c6">\ttfamily</span> Typewriter Family<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span></code></pre></div><h3 id="字体系列字体的粗细与宽度">字体系列（字体的粗细与宽度）</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tex" data-lang="tex"><span style="display:flex;"><span><span style="color:#6272a4">%中等
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\textmd</span><span style="color:#8be9fd;font-style:italic">{</span>Medium Series<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">{</span><span style="color:#ff79c6">\mdseries</span> Medium Series<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">%粗体
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\textbf</span><span style="color:#8be9fd;font-style:italic">{</span>Boldface Series<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">{</span><span style="color:#ff79c6">\bfseries</span> Boldface Series<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span></code></pre></div><h3 id="字体形状直立斜体伪斜体小型大写">字体形状（直立，斜体，伪斜体，小型大写）</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tex" data-lang="tex"><span style="display:flex;"><span><span style="color:#6272a4">%直立
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\textup</span><span style="color:#8be9fd;font-style:italic">{</span>Upright Shape<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">{</span><span style="color:#ff79c6">\upshape</span> Uprigjt Shape<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">%斜体
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\textit</span><span style="color:#8be9fd;font-style:italic">{</span>Italic Shape<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">{</span><span style="color:#ff79c6">\itshape</span> Italic Shape<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">%伪斜体
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\textsl</span><span style="color:#8be9fd;font-style:italic">{</span>Slanted Shape<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">{</span><span style="color:#ff79c6">\slshape</span> Slanted Shape<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">%小型大写
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\textsc</span><span style="color:#8be9fd;font-style:italic">{</span>Small Caps Shape<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">{</span><span style="color:#ff79c6">\scshape</span> Small Caps Shape<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span></code></pre></div><h3 id="字体大小">字体大小</h3>
+<p><em>下面仅仅列举了几种常见的控制大小的命令，他与导言区设置的基础字体大小合用，共同发挥出作用</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tex" data-lang="tex"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">{</span><span style="color:#ff79c6">\tiny</span>  Hello<span style="color:#8be9fd;font-style:italic">}</span><span style="color:#ff79c6">\\</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">{</span><span style="color:#ff79c6">\small</span> Hello<span style="color:#8be9fd;font-style:italic">}</span><span style="color:#ff79c6">\\</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">{</span><span style="color:#ff79c6">\large</span> Hello<span style="color:#8be9fd;font-style:italic">}</span><span style="color:#ff79c6">\\</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">{</span><span style="color:#ff79c6">\huge</span>  Hello<span style="color:#8be9fd;font-style:italic">}</span><span style="color:#ff79c6">\\</span>
+</span></span></code></pre></div><h3 id="导言区字体设置">导言区字体设置</h3>
+<p>建议采用一个newcommand命令去进行去设置基础字体，避免正文部分命令过多，这样不符合Latex的原意，所以我们可以在导言区这样设置</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tex" data-lang="tex"><span style="display:flex;"><span><span style="color:#ff79c6">\newcommand</span><span style="color:#8be9fd;font-style:italic">{</span><span style="color:#ff79c6">\myfont</span><span style="color:#8be9fd;font-style:italic">}{</span><span style="color:#ff79c6">\textbf</span><span style="color:#8be9fd;font-style:italic">{</span><span style="color:#ff79c6">\textsf</span><span style="color:#8be9fd;font-style:italic">{</span>Fancy Text<span style="color:#8be9fd;font-style:italic">}}}</span>
+</span></span></code></pre></div><p>我们只需要在正文区去调用<strong>myfont</strong>即可。</p>
+<h1 id="3小标题与常见字符">3、小标题与常见字符</h1>
+<h3 id="小标题">小标题</h3>
+<p>我们可以使用<strong>section</strong>与<strong>subsection</strong>等设置大纲级别而完成标题的标写</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tex" data-lang="tex"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">{</span><span style="color:#ff79c6">\section</span><span style="color:#8be9fd;font-style:italic">{</span>空白符号<span style="color:#8be9fd;font-style:italic">}}</span>
+</span></span><span style="display:flex;"><span>    可采用quad产生空格，一个quad产生1em的宽度
+</span></span><span style="display:flex;"><span>    一个qquad产生2em的宽度
+</span></span><span style="display:flex;"><span>    一个enspace产生0.5em的宽度
+</span></span><span style="display:flex;"><span>    一个hfill命令用于实现弹性长度，占满整行
+</span></span><span style="display:flex;"><span>    第一段
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">\subsection</span><span style="color:#8be9fd;font-style:italic">{</span>段落符<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">\par</span> 这个命令产生新的段落
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">{</span><span style="color:#ff79c6">\section</span><span style="color:#8be9fd;font-style:italic">{</span><span style="color:#ff79c6">\ </span>LaTex 控制符<span style="color:#8be9fd;font-style:italic">}}</span>
+</span></span></code></pre></div><p>二级标题用<code>\subsection{xxx}</code></p>
+<p>三级标题用<code>\subsubsection{xxx}</code></p>
+<p>如果多级标题没有定义，应该用<code>\paragraph{(1)Detection Performance Comparison}</code></p>
+<h3 id="字符">字符</h3>
+<h5 id="常见字符会用会看即可">常见字符(会用会看即可)</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tex" data-lang="tex"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">{</span><span style="color:#ff79c6">\section</span><span style="color:#8be9fd;font-style:italic">{</span><span style="color:#ff79c6">\ </span>LaTex 控制符<span style="color:#8be9fd;font-style:italic">}}</span>
+</span></span><span style="display:flex;"><span>    反斜杠为<span style="color:#ff79c6">\textbackslash</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">{</span><span style="color:#ff79c6">\section</span><span style="color:#8be9fd;font-style:italic">{</span>排版符号<span style="color:#8be9fd;font-style:italic">}}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">\S</span> <span style="color:#ff79c6">\P</span> <span style="color:#ff79c6">\dag</span> <span style="color:#ff79c6">\ddag</span> <span style="color:#ff79c6">\copyright</span> <span style="color:#ff79c6">\pounds</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">{</span><span style="color:#ff79c6">\section</span><span style="color:#8be9fd;font-style:italic">{</span><span style="color:#ff79c6">\ </span>Tex 标准符号<span style="color:#8be9fd;font-style:italic">}}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">\LaTeXe</span><span style="color:#8be9fd;font-style:italic">{}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">{</span><span style="color:#ff79c6">\section</span><span style="color:#8be9fd;font-style:italic">{</span>引号<span style="color:#8be9fd;font-style:italic">}}</span>
+</span></span><span style="display:flex;"><span>    ``左单引号      &#39;&#39;右单引号
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">{</span><span style="color:#ff79c6">\section</span><span style="color:#8be9fd;font-style:italic">{</span>连字符<span style="color:#8be9fd;font-style:italic">}}</span>
+</span></span><span style="display:flex;"><span>    - -- ---  <span style="color:#6272a4">%短-长横线
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">{</span><span style="color:#ff79c6">\section</span><span style="color:#8be9fd;font-style:italic">{</span>非英文字符<span style="color:#8be9fd;font-style:italic">}}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">\oe</span> <span style="color:#ff79c6">\OE</span> <span style="color:#ff79c6">\ae</span> <span style="color:#ff79c6">\AE</span> <span style="color:#ff79c6">\aa</span> <span style="color:#ff79c6">\AA</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">{</span><span style="color:#ff79c6">\section</span><span style="color:#8be9fd;font-style:italic">{</span>重音符号<span style="color:#8be9fd;font-style:italic">}}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">\r</span><span style="color:#8be9fd;font-style:italic">{</span>o<span style="color:#8be9fd;font-style:italic">}</span> <span style="color:#ff79c6">\t</span><span style="color:#8be9fd;font-style:italic">{</span>o<span style="color:#8be9fd;font-style:italic">}</span> <span style="color:#ff79c6">\b</span><span style="color:#8be9fd;font-style:italic">{</span>o<span style="color:#8be9fd;font-style:italic">}</span> <span style="color:#ff79c6">\c</span><span style="color:#8be9fd;font-style:italic">{</span>o<span style="color:#8be9fd;font-style:italic">}</span> <span style="color:#ff79c6">\d</span><span style="color:#8be9fd;font-style:italic">{</span>o<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span></code></pre></div><h5 id="目录与章节">目录与章节</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tex" data-lang="tex"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">{</span><span style="color:#ff79c6">\tableofcontents</span><span style="color:#8be9fd;font-style:italic">}</span> <span style="color:#6272a4">%用于产生目录
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">{</span><span style="color:#ff79c6">\chapter</span><span style="color:#8be9fd;font-style:italic">{</span>绪论<span style="color:#8be9fd;font-style:italic">}}</span><span style="color:#6272a4">%用于产生章节大纲
+</span></span></span></code></pre></div><h1 id="4插图与表格">4、插图与表格</h1>
+<h3 id="导言区准备">导言区准备</h3>
+<p>想要引用插图，在导言区就要导入这几个宏</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tex" data-lang="tex"><span style="display:flex;"><span><span style="color:#ff79c6">\usepackage</span><span style="color:#8be9fd;font-style:italic">{</span>graphicx<span style="color:#8be9fd;font-style:italic">}</span>  <span style="color:#6272a4">%引入插图
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">% 语法 \includegraphics[&lt;选项&gt;]{文件名}
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">% 格式:EPS,PDF,PNG,JPEG,BMP
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\graphicspath</span><span style="color:#8be9fd;font-style:italic">{{</span>figures/<span style="color:#8be9fd;font-style:italic">}</span>,<span style="color:#8be9fd;font-style:italic">{</span>pics/<span style="color:#8be9fd;font-style:italic">}}</span> <span style="color:#6272a4">%图片在当前目录下的figures目录,pics目录
+</span></span></span></code></pre></div><h3 id="插图">插图</h3>
+<p>在正文区还有一些其他的标签需要去辅助插图与表格，在浮动体里面设置会自动给图片或者表格进行标号</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tex" data-lang="tex"><span style="display:flex;"><span><span style="color:#ff79c6">\begin</span><span style="color:#8be9fd;font-style:italic">{</span>figure<span style="color:#8be9fd;font-style:italic">}</span> <span style="color:#6272a4">%浮动体环境
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">\centering</span> <span style="color:#6272a4">%进行居中排版
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">\includegraphics</span><span style="color:#50fa7b">[scale=0.3,height=2cm,width=2cm,angle=-45]</span><span style="color:#8be9fd;font-style:italic">{</span>pic01<span style="color:#8be9fd;font-style:italic">}</span><span style="color:#ff79c6">\\</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">%pic01为图片名
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">\caption</span><span style="color:#8be9fd;font-style:italic">{</span>Aliforever<span style="color:#8be9fd;font-style:italic">}</span> <span style="color:#6272a4">%caption命令设置图片的标题
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">\end</span><span style="color:#8be9fd;font-style:italic">{</span>figure<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span></code></pre></div><h3 id="表格-1">表格</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tex" data-lang="tex"><span style="display:flex;"><span>下面是考试表格<span style="color:#ff79c6">\ref</span><span style="color:#8be9fd;font-style:italic">{</span>fig-profile<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">\begin</span><span style="color:#8be9fd;font-style:italic">{</span>table<span style="color:#8be9fd;font-style:italic">}</span>[htbp] <span style="color:#6272a4">%table浮动体环境
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">\centering</span> <span style="color:#6272a4">%进行居中排版
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">\caption</span><span style="color:#8be9fd;font-style:italic">{</span>考试<span style="color:#8be9fd;font-style:italic">}</span><span style="color:#ff79c6">\label</span><span style="color:#8be9fd;font-style:italic">{</span>fig-profile<span style="color:#8be9fd;font-style:italic">}</span><span style="color:#6272a4">%这个用于回引，与前面的ref呼应
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">\begin</span><span style="color:#8be9fd;font-style:italic">{</span>tabular<span style="color:#8be9fd;font-style:italic">}{</span>l||c |c |c |rp<span style="color:#8be9fd;font-style:italic">{</span>1.5cm<span style="color:#8be9fd;font-style:italic">}</span>|<span style="color:#8be9fd;font-style:italic">}</span><span style="color:#6272a4">%可以用|产生单竖线或者双竖线,p可以指定宽度
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">\hline</span> <span style="color:#6272a4">%该命令产生表格横线
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    姓名 <span style="color:#8be9fd;font-style:italic">&amp;</span> 语文 <span style="color:#8be9fd;font-style:italic">&amp;</span> 数学 <span style="color:#8be9fd;font-style:italic">&amp;</span> 外语 <span style="color:#8be9fd;font-style:italic">&amp;</span> 备注 <span style="color:#ff79c6">\\</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">\hline</span> <span style="color:#ff79c6">\hline</span>
+</span></span><span style="display:flex;"><span>    张三 <span style="color:#8be9fd;font-style:italic">&amp;</span> 87 <span style="color:#8be9fd;font-style:italic">&amp;</span> 100 <span style="color:#8be9fd;font-style:italic">&amp;</span> 93 <span style="color:#8be9fd;font-style:italic">&amp;</span>优秀<span style="color:#ff79c6">\\</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">\hline</span>
+</span></span><span style="display:flex;"><span>    李四 <span style="color:#8be9fd;font-style:italic">&amp;</span> 88 <span style="color:#8be9fd;font-style:italic">&amp;</span> 75 <span style="color:#8be9fd;font-style:italic">&amp;</span> 87 <span style="color:#8be9fd;font-style:italic">&amp;</span>一般<span style="color:#ff79c6">\\</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">\hline</span>
+</span></span><span style="display:flex;"><span>    钟婷 <span style="color:#8be9fd;font-style:italic">&amp;</span> 58 <span style="color:#8be9fd;font-style:italic">&amp;</span> 65 <span style="color:#8be9fd;font-style:italic">&amp;</span> 47 <span style="color:#8be9fd;font-style:italic">&amp;</span>补考<span style="color:#ff79c6">\\</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">\hline</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">\end</span><span style="color:#8be9fd;font-style:italic">{</span>tabular<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">\end</span><span style="color:#8be9fd;font-style:italic">{</span>table<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span></code></pre></div><p>一些在线网址:</p>
+<p><a href="https://www.tablesgenerator.com/">https://www.tablesgenerator.com/</a></p>
+<p><a href="https://tableconvert.com/excel-to-latex">https://tableconvert.com/excel-to-latex</a></p>
+<h1 id="5数学公式与符号">5.数学公式与符号</h1>
+<p>与前面相似，想要引入数学公式与符号，有必要引入这几个宏</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tex" data-lang="tex"><span style="display:flex;"><span><span style="color:#ff79c6">\usepackage</span><span style="color:#8be9fd;font-style:italic">{</span>amsmath<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">\usepackage</span><span style="color:#8be9fd;font-style:italic">{</span>amssymb<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span></code></pre></div><h3 id="数学公式">数学公式</h3>
+<p>行内公式可以用三个方式:分别用美元符号<code>$</code>,小括号<code>()</code>，还有<strong>math</strong>环境</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tex" data-lang="tex"><span style="display:flex;"><span><span style="color:#ff79c6">\section</span><span style="color:#8be9fd;font-style:italic">{</span>行内公式<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">\subsection</span><span style="color:#8be9fd;font-style:italic">{</span>美元符号<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>    change:<span style="color:#f1fa8c">$</span><span style="color:#bd93f9">3</span><span style="color:#ff79c6">+</span><span style="color:#bd93f9">2</span><span style="color:#ff79c6">=</span><span style="color:#bd93f9">5</span><span style="color:#f1fa8c">$</span>,and <span style="color:#f1fa8c">$</span><span style="color:#bd93f9">2</span><span style="color:#ff79c6">+</span><span style="color:#bd93f9">3</span><span style="color:#ff79c6">=</span><span style="color:#bd93f9">5</span><span style="color:#f1fa8c">$</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">\subsection</span><span style="color:#8be9fd;font-style:italic">{</span>小括号<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>    change:<span style="color:#f1fa8c">\(</span><span style="color:#bd93f9">3</span><span style="color:#ff79c6">+</span><span style="color:#bd93f9">2</span><span style="color:#ff79c6">=</span><span style="color:#bd93f9">5</span><span style="color:#f1fa8c">\)</span>,and <span style="color:#f1fa8c">\(</span><span style="color:#bd93f9">2</span><span style="color:#ff79c6">+</span><span style="color:#bd93f9">3</span><span style="color:#ff79c6">=</span><span style="color:#bd93f9">5</span><span style="color:#f1fa8c">\)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">\subsection</span><span style="color:#8be9fd;font-style:italic">{</span>数学环境<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>    change:<span style="color:#ff79c6">\begin</span><span style="color:#8be9fd;font-style:italic">{</span>math<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>        3+2=5
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">\end</span><span style="color:#8be9fd;font-style:italic">{</span>math<span style="color:#8be9fd;font-style:italic">}</span>,and
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">\begin</span><span style="color:#8be9fd;font-style:italic">{</span>math<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>        2+3=5
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">\end</span><span style="color:#8be9fd;font-style:italic">{</span>math<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span></code></pre></div><h3 id="上下标">上下标</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tex" data-lang="tex"><span style="display:flex;"><span><span style="color:#ff79c6">\section</span><span style="color:#8be9fd;font-style:italic">{</span>上下标<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">\subsection</span><span style="color:#8be9fd;font-style:italic">{</span>上标<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">$</span><span style="color:#bd93f9">3</span><span style="color:#8be9fd;font-style:italic">x^{</span><span style="color:#bd93f9">20</span><span style="color:#8be9fd;font-style:italic">}</span><span style="color:#ff79c6">+</span><span style="color:#bd93f9">5</span><span style="color:#8be9fd;font-style:italic">x</span><span style="color:#ff79c6">+</span><span style="color:#bd93f9">8</span><span style="color:#ff79c6">=</span><span style="color:#bd93f9">0</span><span style="color:#f1fa8c">$</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">\subsection</span><span style="color:#8be9fd;font-style:italic">{</span>下标<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">$</span><span style="color:#8be9fd;font-style:italic">a_</span><span style="color:#bd93f9">0</span><span style="color:#8be9fd;font-style:italic">,a_</span><span style="color:#bd93f9">1</span><span style="color:#8be9fd;font-style:italic">,a_</span><span style="color:#bd93f9">2</span><span style="color:#f1fa8c">$</span>
+</span></span></code></pre></div><h3 id="希腊字母">希腊字母</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tex" data-lang="tex"><span style="display:flex;"><span><span style="color:#ff79c6">\section</span><span style="color:#8be9fd;font-style:italic">{</span>希腊字母<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">$</span><span style="color:#8be9fd;font-style:italic">\alpha</span><span style="color:#f1fa8c">$</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">$</span><span style="color:#8be9fd;font-style:italic">\beta</span><span style="color:#f1fa8c">$</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">$</span><span style="color:#8be9fd;font-style:italic">\gamma</span><span style="color:#f1fa8c">$</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">$</span><span style="color:#8be9fd;font-style:italic">\epsilon</span><span style="color:#f1fa8c">$</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">$</span><span style="color:#8be9fd;font-style:italic">\pi</span><span style="color:#f1fa8c">$</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">$</span><span style="color:#8be9fd;font-style:italic">\omega</span><span style="color:#f1fa8c">$</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">$</span><span style="color:#8be9fd;font-style:italic">\Gamma</span><span style="color:#f1fa8c">$</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">$</span><span style="color:#8be9fd;font-style:italic">\Delta</span><span style="color:#f1fa8c">$</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">$</span><span style="color:#8be9fd;font-style:italic">\Theta</span><span style="color:#f1fa8c">$</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">$</span><span style="color:#8be9fd;font-style:italic">\Pi</span><span style="color:#f1fa8c">$</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">$</span><span style="color:#8be9fd;font-style:italic">\Omega</span><span style="color:#f1fa8c">$</span>
+</span></span></code></pre></div><h3 id="数学函数">数学函数</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tex" data-lang="tex"><span style="display:flex;"><span><span style="color:#ff79c6">\section</span><span style="color:#8be9fd;font-style:italic">{</span>数学函数<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">$</span><span style="color:#8be9fd;font-style:italic">\log</span><span style="color:#f1fa8c">$</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">$</span><span style="color:#8be9fd;font-style:italic">\sin</span><span style="color:#f1fa8c">$</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">$</span><span style="color:#8be9fd;font-style:italic">\cos</span><span style="color:#f1fa8c">$</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">$</span><span style="color:#8be9fd;font-style:italic">\arcsin</span><span style="color:#f1fa8c">$</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">$</span><span style="color:#8be9fd;font-style:italic">\ln</span><span style="color:#f1fa8c">$</span><span style="color:#ff79c6">\\</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">$$</span><span style="color:#8be9fd;font-style:italic">\log</span><span style="color:#bd93f9">5</span><span style="color:#ff79c6">+</span><span style="color:#8be9fd;font-style:italic">\sin</span><span style="color:#8be9fd;font-style:italic">^</span><span style="color:#bd93f9">230</span><span style="color:#ff79c6">=</span><span style="color:#8be9fd;font-style:italic">\arctan</span><span style="color:#bd93f9">55</span><span style="color:#f1fa8c">$$</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">$</span><span style="color:#8be9fd;font-style:italic">\sqrt</span><span style="color:#ff79c6">[</span><span style="color:#bd93f9">4</span><span style="color:#ff79c6">]</span><span style="color:#8be9fd;font-style:italic">{x}</span><span style="color:#f1fa8c">$</span>
+</span></span></code></pre></div><h3 id="分式">分式</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tex" data-lang="tex"><span style="display:flex;"><span><span style="color:#ff79c6">\section</span><span style="color:#8be9fd;font-style:italic">{</span>分式<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">$</span><span style="color:#bd93f9">3</span><span style="color:#ff79c6">/</span><span style="color:#bd93f9">4</span><span style="color:#f1fa8c">$</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">$</span><span style="color:#8be9fd;font-style:italic">\frac</span><span style="color:#8be9fd;font-style:italic">{</span><span style="color:#bd93f9">55</span><span style="color:#8be9fd;font-style:italic">}{</span><span style="color:#bd93f9">66</span><span style="color:#8be9fd;font-style:italic">}</span><span style="color:#f1fa8c">$</span>
+</span></span></code></pre></div><h3 id="行间公式">行间公式</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tex" data-lang="tex"><span style="display:flex;"><span><span style="color:#ff79c6">\section</span><span style="color:#8be9fd;font-style:italic">{</span>行间公式<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">\subsection</span><span style="color:#8be9fd;font-style:italic">{</span>美元符号<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">$$</span><span style="color:#8be9fd;font-style:italic">  </span><span style="color:#bd93f9">8</span><span style="color:#ff79c6">+</span><span style="color:#bd93f9">8</span><span style="color:#ff79c6">=</span><span style="color:#bd93f9">16</span><span style="color:#8be9fd;font-style:italic">  </span><span style="color:#f1fa8c">$$</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">\subsection</span><span style="color:#8be9fd;font-style:italic">{</span>中括号<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">\[</span><span style="color:#8be9fd;font-style:italic">  </span><span style="color:#bd93f9">8</span><span style="color:#ff79c6">+</span><span style="color:#bd93f9">8</span><span style="color:#ff79c6">=</span><span style="color:#bd93f9">16</span><span style="color:#8be9fd;font-style:italic">  </span><span style="color:#f1fa8c">\]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">\subsection</span><span style="color:#8be9fd;font-style:italic">{</span>displaymath环境<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">\begin</span><span style="color:#8be9fd;font-style:italic">{</span>displaymath<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>        8+8=16
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">\end</span><span style="color:#8be9fd;font-style:italic">{</span>displaymath<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">\subsection</span><span style="color:#8be9fd;font-style:italic">{</span>自动编号公式equation<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>    交换律公式<span style="color:#ff79c6">\ref</span><span style="color:#8be9fd;font-style:italic">{</span>eq:commutaive<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">\begin</span><span style="color:#8be9fd;font-style:italic">{</span>equation<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>        a+b=c <span style="color:#ff79c6">\\</span>
+</span></span><span style="display:flex;"><span>        a*d=e <span style="color:#ff79c6">\label</span><span style="color:#8be9fd;font-style:italic">{</span>eq:commutaive<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">\end</span><span style="color:#8be9fd;font-style:italic">{</span>equation<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">\subsection</span><span style="color:#8be9fd;font-style:italic">{</span>不自动编号公式equation*<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span></code></pre></div><h3 id="矩阵">矩阵</h3>
+<p>由于矩阵过于复杂，这里只介绍较为简单的矩阵，能使用即可</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tex" data-lang="tex"><span style="display:flex;"><span><span style="color:#ff79c6">\section</span><span style="color:#8be9fd;font-style:italic">{</span>矩阵<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">\subsection</span><span style="color:#8be9fd;font-style:italic">{</span>普通矩阵<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">\[</span><span style="color:#8be9fd;font-style:italic">\begin</span><span style="color:#8be9fd;font-style:italic">{bmatrix}
+</span></span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">        a_{</span><span style="color:#bd93f9">11</span><span style="color:#8be9fd;font-style:italic">}^</span><span style="color:#bd93f9">2</span><span style="color:#8be9fd;font-style:italic">&amp;a_{</span><span style="color:#bd93f9">12</span><span style="color:#8be9fd;font-style:italic">}^</span><span style="color:#bd93f9">2</span><span style="color:#8be9fd;font-style:italic">\\</span><span style="color:#8be9fd;font-style:italic">
+</span></span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">        </span><span style="color:#bd93f9">0</span><span style="color:#8be9fd;font-style:italic">&amp;a_{</span><span style="color:#bd93f9">22</span><span style="color:#8be9fd;font-style:italic">}^</span><span style="color:#bd93f9">3</span><span style="color:#8be9fd;font-style:italic">\\</span><span style="color:#8be9fd;font-style:italic">
+</span></span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">    </span><span style="color:#8be9fd;font-style:italic">\end</span><span style="color:#8be9fd;font-style:italic">{bmatrix}</span><span style="color:#f1fa8c">\]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">\subsection</span><span style="color:#8be9fd;font-style:italic">{</span>省略符号<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">%\dots \vdots $\ddots$
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#f1fa8c">\[</span><span style="color:#8be9fd;font-style:italic">
+</span></span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">    A </span><span style="color:#ff79c6">=</span><span style="color:#8be9fd;font-style:italic"> </span><span style="color:#8be9fd;font-style:italic">\begin</span><span style="color:#8be9fd;font-style:italic">{bmatrix}
+</span></span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">        a_{</span><span style="color:#bd93f9">11</span><span style="color:#8be9fd;font-style:italic">}&amp;</span><span style="color:#8be9fd;font-style:italic">\dots</span><span style="color:#8be9fd;font-style:italic"> &amp;a_{</span><span style="color:#bd93f9">1</span><span style="color:#8be9fd;font-style:italic">n}</span><span style="color:#8be9fd;font-style:italic">\\</span><span style="color:#8be9fd;font-style:italic">
+</span></span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">        &amp;</span><span style="color:#8be9fd;font-style:italic">\ddots</span><span style="color:#8be9fd;font-style:italic"> &amp;</span><span style="color:#8be9fd;font-style:italic">\vdots</span><span style="color:#8be9fd;font-style:italic"> </span><span style="color:#8be9fd;font-style:italic">\\</span><span style="color:#8be9fd;font-style:italic">
+</span></span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">        </span><span style="color:#bd93f9">0</span><span style="color:#8be9fd;font-style:italic">&amp;&amp;a_{nn}
+</span></span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">    </span><span style="color:#8be9fd;font-style:italic">\end</span><span style="color:#8be9fd;font-style:italic">{bmatrix}_{n</span><span style="color:#8be9fd;font-style:italic">\times</span><span style="color:#8be9fd;font-style:italic"> n}
+</span></span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">    </span><span style="color:#f1fa8c">\]</span>
+</span></span></code></pre></div><h3 id="多行公式">多行公式</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tex" data-lang="tex"><span style="display:flex;"><span><span style="color:#ff79c6">\section</span><span style="color:#8be9fd;font-style:italic">{</span>多行公式<span style="color:#8be9fd;font-style:italic">}</span> <span style="color:#6272a4">%带编号 gather*不带编号
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">\begin</span><span style="color:#8be9fd;font-style:italic">{</span>gather<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>        a+b = b+a <span style="color:#ff79c6">\\</span>
+</span></span><span style="display:flex;"><span>        ab ba <span style="color:#ff79c6">\notag</span> <span style="color:#ff79c6">\\</span> <span style="color:#6272a4">%notag可以阻止编号
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        ca ac
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">\end</span><span style="color:#8be9fd;font-style:italic">{</span>gather<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">\begin</span><span style="color:#8be9fd;font-style:italic">{</span>align<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>        x<span style="color:#8be9fd;font-style:italic">&amp;</span>=t+<span style="color:#ff79c6">\cos</span> t +1<span style="color:#ff79c6">\\</span>
+</span></span><span style="display:flex;"><span>        y<span style="color:#8be9fd;font-style:italic">&amp;</span>=2<span style="color:#ff79c6">\sin</span> t +1
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">\end</span><span style="color:#8be9fd;font-style:italic">{</span>align<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">\begin</span><span style="color:#8be9fd;font-style:italic">{</span>equation<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">\begin</span><span style="color:#8be9fd;font-style:italic">{</span>split<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">\cos</span> 2x<span style="color:#8be9fd;font-style:italic">&amp;</span>=<span style="color:#ff79c6">\cos</span> 2x+<span style="color:#ff79c6">\sin</span> x +5<span style="color:#ff79c6">\\</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd;font-style:italic">&amp;</span>=2<span style="color:#ff79c6">\cos</span> x + 5
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">\end</span><span style="color:#8be9fd;font-style:italic">{</span>split<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">\end</span><span style="color:#8be9fd;font-style:italic">{</span>equation<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">\begin</span><span style="color:#8be9fd;font-style:italic">{</span>equation<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>        D(x)=<span style="color:#ff79c6">\begin</span><span style="color:#8be9fd;font-style:italic">{</span>cases<span style="color:#8be9fd;font-style:italic">}</span> <span style="color:#6272a4">%实现分段函数
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>            1,<span style="color:#8be9fd;font-style:italic">&amp;</span><span style="color:#ff79c6">\text</span><span style="color:#8be9fd;font-style:italic">{</span>如果<span style="color:#8be9fd;font-style:italic">}</span> x <span style="color:#ff79c6">\in</span> <span style="color:#ff79c6">\mathbb</span><span style="color:#8be9fd;font-style:italic">{</span>Q<span style="color:#8be9fd;font-style:italic">}</span>;<span style="color:#ff79c6">\\</span>
+</span></span><span style="display:flex;"><span>            0,<span style="color:#8be9fd;font-style:italic">&amp;</span><span style="color:#ff79c6">\text</span><span style="color:#8be9fd;font-style:italic">{</span>如果<span style="color:#8be9fd;font-style:italic">}</span> x <span style="color:#ff79c6">\in</span> <span style="color:#ff79c6">\mathbb</span><span style="color:#8be9fd;font-style:italic">{</span>R<span style="color:#8be9fd;font-style:italic">}</span><span style="color:#ff79c6">\setminus\mathbb</span><span style="color:#8be9fd;font-style:italic">{</span>Q<span style="color:#8be9fd;font-style:italic">}</span>;<span style="color:#ff79c6">\\</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">\end</span><span style="color:#8be9fd;font-style:italic">{</span>cases<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">\end</span><span style="color:#8be9fd;font-style:italic">{</span>equation<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span></code></pre></div><p>一些在线网址:</p>
+<p><a href="https://www.latexlive.com/#%23">https://www.latexlive.com/##</a></p>
+<p>或者Mathtype复制粘贴导入</p>
+<p>其他网址https://mbd.baidu.com/newspage/data/dtlandingsuper?nid=dt_4644701467263335705</p>
+<h3 id="其他常用">其他常用</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span>大写<span style="color:#ff79c6">\uppercase\expandafter</span><span style="color:#8be9fd;font-style:italic">{</span><span style="color:#ff79c6">\romannumeral</span>2<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>小写<span style="color:#ff79c6">\romannumeral</span>2
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>输入空心字
+</span></span><span style="display:flex;"><span><span style="color:#f1fa8c">$</span><span style="color:#8be9fd;font-style:italic">\mathbb</span><span style="color:#8be9fd;font-style:italic">{S}</span><span style="color:#f1fa8c">$</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>输入花体
+</span></span><span style="display:flex;"><span><span style="color:#f1fa8c">$</span><span style="color:#8be9fd;font-style:italic"> </span><span style="color:#8be9fd;font-style:italic">\mathcal</span><span style="color:#8be9fd;font-style:italic">{ABCDEFGHIJKLMNOPQRSTUVWXYZ}</span><span style="color:#f1fa8c">$</span> 无需宏包
+</span></span><span style="display:flex;"><span>  添加宏包
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">\usepackage</span><span style="color:#50fa7b">[mathscr]</span><span style="color:#8be9fd;font-style:italic">{</span>euscript<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>  写法
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">$</span><span style="color:#8be9fd;font-style:italic"> </span><span style="color:#8be9fd;font-style:italic">\mathscr</span><span style="color:#8be9fd;font-style:italic">{ABCDEFGHIJKLMNOPQRSTUVWXYZ}</span><span style="color:#f1fa8c">$</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">\usepackage</span><span style="color:#8be9fd;font-style:italic">{</span>mathrsfs<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>  写法
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">$</span><span style="color:#8be9fd;font-style:italic"> </span><span style="color:#8be9fd;font-style:italic">\mathscr</span><span style="color:#8be9fd;font-style:italic">{ABCDEFGHIJKLMNOPQRSTUVWXYZ}</span><span style="color:#f1fa8c">$</span>
+</span></span></code></pre></div><h1 id="6参考文献">6、参考文献</h1>
+<h3 id="jabref">JabRef</h3>
+<p>是通过<strong>JabRef</strong>, 在google上下载<strong>bibtxt</strong>文件, 保存到<strong>jabref</strong>的库中, 保存为<strong>bib</strong>文件,通过<strong>jabref</strong>菜单中的插入<strong>winedit</strong>进行插入, 在<strong>tex</strong>文件中写入</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tex" data-lang="tex"><span style="display:flex;"><span><span style="color:#ff79c6">\bibliographystyle</span><span style="color:#8be9fd;font-style:italic">{</span>elsarticle-num<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">\bibliography</span><span style="color:#8be9fd;font-style:italic">{</span>ref<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span></code></pre></div><h3 id="直接放入">直接放入</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tex" data-lang="tex"><span style="display:flex;"><span><span style="color:#ff79c6">\bibliographystyle</span><span style="color:#8be9fd;font-style:italic">{</span>named<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">\begin</span><span style="color:#8be9fd;font-style:italic">{</span>thebibliography<span style="color:#8be9fd;font-style:italic">}{}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">\bibitem</span><span style="color:#8be9fd;font-style:italic">{</span>Password1<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>Klein D V. Foiling the cracker: A survey of, and improvements to, password security[C]//Proceedings of the 2nd USENIX Security Workshop. 1990: 5-14.
+</span></span></code></pre></div><h1 id="7伪代码">7、伪代码</h1>
+<h3 id="algorithmalgorithmic">algorithm+algorithmic</h3>
+<p><code>algorithm</code>：用于给伪代码提供一个浮动体环境，防止其换页或其他因素导致的内容中断，从而跨页显示。</p>
+<p><code>algorithmic</code>：用于编辑伪代码的内容，一些for、while、if等语句通过该包中的命令进行编写。</p>
+<p>所以一定要记得引入这两个包</p>
+<pre><code>\documentclass[UTF8]{ctexart}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\begin{document}
+
+    \begin{algorithm}[H]
+    \caption{区块生成算法}%标题
+        输入：生成的区块数n
+        输出：最后一个区块
+    \label{alg1}%标签
+        \begin{algorithmic}
+        \FOR{each in range(1,n)}
+          \IF{each=1}
+            \STATE block.prehash=null
+          \ELSE
+            \STATE block.prehash=hash
+          \ENDIF
+            \STATE block.timestamp=time.Now()
+            \STATE block.datas=f(data) //随机生成溯源元数据，存在block的交易列表中
+            \STATE block.merkleRoot=(data) //通过溯源元数据生成默克尔跟
+            \STATE hash=sha256(block) //计算哈希值
+        \ENDFOR
+        \RETURN block
+        \end{algorithmic}
+    \end{algorithm}
+</code></pre>
+<p>注意：</p>
+<ul>
+<li>
+<p>一定要在\begin{algorithm}[H]的环境里写caption，表示算法名称</p>
+</li>
+<li>
+<p>无论是for还是if都要有结束ENDFOR、ENDIF</p>
+</li>
+<li>
+<p>普通的语句前面要加**\STATE**</p>
+</li>
+<li>
+<p>如果要写中文注释的话，注意代码第一行是\documentclass[UTF8]{ctexart}</p>
+</li>
+</ul>
+<h3 id="algorithm2">algorithm2</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tex" data-lang="tex"><span style="display:flex;"><span><span style="color:#ff79c6">\documentclass</span><span style="color:#50fa7b">[12pt]</span><span style="color:#8be9fd;font-style:italic">{</span>article<span style="color:#8be9fd;font-style:italic">}</span>  
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">\usepackage</span><span style="color:#50fa7b">[ruled,linesnumbered]</span><span style="color:#8be9fd;font-style:italic">{</span>algorithm2e<span style="color:#8be9fd;font-style:italic">}</span> 
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">\usepackage</span><span style="color:#8be9fd;font-style:italic">{</span>amsmath<span style="color:#8be9fd;font-style:italic">}</span> 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">\begin</span><span style="color:#8be9fd;font-style:italic">{</span>document<span style="color:#8be9fd;font-style:italic">}</span>  
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">\begin</span><span style="color:#8be9fd;font-style:italic">{</span>algorithm<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#ff79c6">\label</span><span style="color:#8be9fd;font-style:italic">{</span>alg1<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">\Repeat</span><span style="color:#8be9fd;font-style:italic">{</span>converged<span style="color:#8be9fd;font-style:italic">}{</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f1fa8c">$</span><span style="color:#8be9fd;font-style:italic">\mathbf</span><span style="color:#8be9fd;font-style:italic">{x}_</span><span style="color:#bd93f9">0</span><span style="color:#8be9fd;font-style:italic"> </span><span style="color:#8be9fd;font-style:italic">\sim</span><span style="color:#8be9fd;font-style:italic"> q</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd;font-style:italic">\mathbf</span><span style="color:#8be9fd;font-style:italic">{x}_</span><span style="color:#bd93f9">0</span><span style="color:#ff79c6">)</span><span style="color:#f1fa8c">$</span><span style="color:#ff79c6">\\</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f1fa8c">$</span><span style="color:#8be9fd;font-style:italic">t </span><span style="color:#8be9fd;font-style:italic">\sim</span><span style="color:#8be9fd;font-style:italic"> Uniform</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd;font-style:italic">\{</span><span style="color:#bd93f9">1</span><span style="color:#8be9fd;font-style:italic">,</span><span style="color:#8be9fd;font-style:italic">\dots</span><span style="color:#8be9fd;font-style:italic">,T</span><span style="color:#8be9fd;font-style:italic">\}</span><span style="color:#ff79c6">)</span><span style="color:#f1fa8c">$</span> <span style="color:#ff79c6">\\</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f1fa8c">$</span><span style="color:#8be9fd;font-style:italic">\boldsymbol</span><span style="color:#8be9fd;font-style:italic">{</span><span style="color:#8be9fd;font-style:italic">\epsilon</span><span style="color:#8be9fd;font-style:italic">} </span><span style="color:#8be9fd;font-style:italic">\sim</span><span style="color:#8be9fd;font-style:italic"> </span><span style="color:#8be9fd;font-style:italic">\mathcal</span><span style="color:#8be9fd;font-style:italic">{N}</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd;font-style:italic">\mathbf</span><span style="color:#8be9fd;font-style:italic">{</span><span style="color:#bd93f9">0</span><span style="color:#8be9fd;font-style:italic">}, </span><span style="color:#8be9fd;font-style:italic">\mathbf</span><span style="color:#8be9fd;font-style:italic">{I}</span><span style="color:#ff79c6">)</span><span style="color:#f1fa8c">$</span> <span style="color:#ff79c6">\\</span>
+</span></span><span style="display:flex;"><span>          Take gradient descent step on 
+</span></span><span style="display:flex;"><span>          <span style="color:#f1fa8c">$</span><span style="color:#8be9fd;font-style:italic">\nabla</span><span style="color:#8be9fd;font-style:italic">_</span><span style="color:#8be9fd;font-style:italic">\theta</span><span style="color:#8be9fd;font-style:italic"> </span><span style="color:#8be9fd;font-style:italic">\left</span><span style="color:#8be9fd;font-style:italic"> </span><span style="color:#8be9fd;font-style:italic">\|\boldsymbol</span><span style="color:#8be9fd;font-style:italic">{</span><span style="color:#8be9fd;font-style:italic">\epsilon</span><span style="color:#8be9fd;font-style:italic">} </span><span style="color:#ff79c6">-</span><span style="color:#8be9fd;font-style:italic"> </span><span style="color:#8be9fd;font-style:italic">\boldsymbol</span><span style="color:#8be9fd;font-style:italic">{</span><span style="color:#8be9fd;font-style:italic">\epsilon</span><span style="color:#8be9fd;font-style:italic">}_</span><span style="color:#8be9fd;font-style:italic">\theta</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd;font-style:italic">\sqrt</span><span style="color:#8be9fd;font-style:italic">{</span><span style="color:#8be9fd;font-style:italic">\Bar</span><span style="color:#8be9fd;font-style:italic">{</span><span style="color:#8be9fd;font-style:italic">\alpha</span><span style="color:#8be9fd;font-style:italic">}_t}</span><span style="color:#8be9fd;font-style:italic">\mathbf</span><span style="color:#8be9fd;font-style:italic">{x}_</span><span style="color:#bd93f9">0</span><span style="color:#8be9fd;font-style:italic"> </span><span style="color:#ff79c6">+</span><span style="color:#8be9fd;font-style:italic"> </span><span style="color:#8be9fd;font-style:italic">\sqrt</span><span style="color:#8be9fd;font-style:italic">{</span><span style="color:#bd93f9">1</span><span style="color:#ff79c6">-</span><span style="color:#8be9fd;font-style:italic">\Bar</span><span style="color:#8be9fd;font-style:italic">{</span><span style="color:#8be9fd;font-style:italic">\alpha</span><span style="color:#8be9fd;font-style:italic">}_t}</span><span style="color:#8be9fd;font-style:italic">\boldsymbol</span><span style="color:#8be9fd;font-style:italic">{</span><span style="color:#8be9fd;font-style:italic">\epsilon</span><span style="color:#8be9fd;font-style:italic">}, t</span><span style="color:#ff79c6">)</span><span style="color:#8be9fd;font-style:italic"> </span><span style="color:#8be9fd;font-style:italic">\right</span><span style="color:#8be9fd;font-style:italic"> </span><span style="color:#8be9fd;font-style:italic">\|</span><span style="color:#8be9fd;font-style:italic">^</span><span style="color:#bd93f9">2</span><span style="color:#f1fa8c">$</span> <span style="color:#ff79c6">\\</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">\caption</span><span style="color:#8be9fd;font-style:italic">{</span>Training<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">\end</span><span style="color:#8be9fd;font-style:italic">{</span>algorithm<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">\begin</span><span style="color:#8be9fd;font-style:italic">{</span>algorithm<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#ff79c6">\label</span><span style="color:#8be9fd;font-style:italic">{</span>alg2<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f1fa8c">$</span><span style="color:#8be9fd;font-style:italic">\textbf</span><span style="color:#8be9fd;font-style:italic">{x}_T </span><span style="color:#8be9fd;font-style:italic">\sim</span><span style="color:#8be9fd;font-style:italic"> </span><span style="color:#8be9fd;font-style:italic">\mathcal</span><span style="color:#8be9fd;font-style:italic">{N}</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd;font-style:italic">\mathbf</span><span style="color:#8be9fd;font-style:italic">{</span><span style="color:#bd93f9">0</span><span style="color:#8be9fd;font-style:italic">}, </span><span style="color:#8be9fd;font-style:italic">\mathbf</span><span style="color:#8be9fd;font-style:italic">{I}</span><span style="color:#ff79c6">)</span><span style="color:#f1fa8c">$</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">\For</span><span style="color:#8be9fd;font-style:italic">{</span><span style="color:#f1fa8c">$</span><span style="color:#8be9fd;font-style:italic">t </span><span style="color:#ff79c6">=</span><span style="color:#8be9fd;font-style:italic"> T,</span><span style="color:#8be9fd;font-style:italic">\dots</span><span style="color:#8be9fd;font-style:italic">,</span><span style="color:#bd93f9">1</span><span style="color:#f1fa8c">$</span><span style="color:#8be9fd;font-style:italic">}{</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f1fa8c">$</span><span style="color:#8be9fd;font-style:italic">\mathbf</span><span style="color:#8be9fd;font-style:italic">{z} </span><span style="color:#8be9fd;font-style:italic">\sim</span><span style="color:#8be9fd;font-style:italic"> </span><span style="color:#8be9fd;font-style:italic">\mathcal</span><span style="color:#8be9fd;font-style:italic">{N}</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd;font-style:italic">\mathbf</span><span style="color:#8be9fd;font-style:italic">{</span><span style="color:#bd93f9">0</span><span style="color:#8be9fd;font-style:italic">}, </span><span style="color:#8be9fd;font-style:italic">\mathbf</span><span style="color:#8be9fd;font-style:italic">{I}</span><span style="color:#ff79c6">)</span><span style="color:#f1fa8c">$</span> if t &gt; 1, else <span style="color:#f1fa8c">$</span><span style="color:#8be9fd;font-style:italic">\mathbf</span><span style="color:#8be9fd;font-style:italic">{z} </span><span style="color:#ff79c6">=</span><span style="color:#8be9fd;font-style:italic"> </span><span style="color:#8be9fd;font-style:italic">\mathbf</span><span style="color:#8be9fd;font-style:italic">{</span><span style="color:#bd93f9">0</span><span style="color:#8be9fd;font-style:italic">}</span><span style="color:#f1fa8c">$</span><span style="color:#ff79c6">\\</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f1fa8c">$</span><span style="color:#8be9fd;font-style:italic">\mathbf</span><span style="color:#8be9fd;font-style:italic">{x}_{t</span><span style="color:#ff79c6">-</span><span style="color:#bd93f9">1</span><span style="color:#8be9fd;font-style:italic">} </span><span style="color:#ff79c6">=</span><span style="color:#8be9fd;font-style:italic"> </span><span style="color:#8be9fd;font-style:italic">\dfrac</span><span style="color:#8be9fd;font-style:italic">{</span><span style="color:#bd93f9">1</span><span style="color:#8be9fd;font-style:italic">}{</span><span style="color:#8be9fd;font-style:italic">\sqrt</span><span style="color:#8be9fd;font-style:italic">{</span><span style="color:#8be9fd;font-style:italic">\alpha</span><span style="color:#8be9fd;font-style:italic">_t}}</span><span style="color:#8be9fd;font-style:italic">\left</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd;font-style:italic">\mathbf</span><span style="color:#8be9fd;font-style:italic">{x}_t </span><span style="color:#ff79c6">-</span><span style="color:#8be9fd;font-style:italic"> </span><span style="color:#8be9fd;font-style:italic">\dfrac</span><span style="color:#8be9fd;font-style:italic">{</span><span style="color:#bd93f9">1</span><span style="color:#ff79c6">-</span><span style="color:#8be9fd;font-style:italic">\alpha</span><span style="color:#8be9fd;font-style:italic">_t}{</span><span style="color:#8be9fd;font-style:italic">\sqrt</span><span style="color:#8be9fd;font-style:italic">{</span><span style="color:#bd93f9">1</span><span style="color:#ff79c6">-</span><span style="color:#8be9fd;font-style:italic">\Bar</span><span style="color:#8be9fd;font-style:italic">{</span><span style="color:#8be9fd;font-style:italic">\alpha</span><span style="color:#8be9fd;font-style:italic">}_t}}</span><span style="color:#8be9fd;font-style:italic">\boldsymbol</span><span style="color:#8be9fd;font-style:italic">{</span><span style="color:#8be9fd;font-style:italic">\epsilon</span><span style="color:#8be9fd;font-style:italic">}_</span><span style="color:#8be9fd;font-style:italic">\theta</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd;font-style:italic">\textbf</span><span style="color:#8be9fd;font-style:italic">{x}_t, t</span><span style="color:#ff79c6">)</span><span style="color:#8be9fd;font-style:italic">\right</span><span style="color:#ff79c6">)</span><span style="color:#8be9fd;font-style:italic"> </span><span style="color:#ff79c6">+</span><span style="color:#8be9fd;font-style:italic"> </span><span style="color:#8be9fd;font-style:italic">\sigma</span><span style="color:#8be9fd;font-style:italic">_t</span><span style="color:#8be9fd;font-style:italic">\mathbf</span><span style="color:#8be9fd;font-style:italic">{z}</span><span style="color:#f1fa8c">$</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">\Return</span> <span style="color:#f1fa8c">$</span><span style="color:#8be9fd;font-style:italic">\mathbf</span><span style="color:#8be9fd;font-style:italic">{x}_</span><span style="color:#bd93f9">0</span><span style="color:#f1fa8c">$</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">\caption</span><span style="color:#8be9fd;font-style:italic">{</span>Sampling<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">\end</span><span style="color:#8be9fd;font-style:italic">{</span>algorithm<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">\end</span><span style="color:#8be9fd;font-style:italic">{</span>document<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span></code></pre></div>
+    </div>
+    <div class="post-footer">
+        <div class="info">
+            
+            
+        </div>
+        
+
+
+    </div>
+    
+        
+    
+</div>
+
+                <div class="grow"></div>
+                <div class="built-with">
+    Built with <a href="https://gohugo.io/">Hugo</a> <b>·</b> Using the <a href="https://github.com/LucasVadilho/heyo-hugo-theme">heyo</a> theme
+</div>
+            </div>
+        </div>
+        
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha512-3M00D/rn8n+2ZVXBO9Hib0GKNpkm8MSUU/e2VNthDyBYxKWG+BftNYYcuEjXlyrSO637tidzMBXfE7sQm0INUg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<script type="text/javascript">
+            
+            
+            window.MathJax = {
+                tex: {
+                    inlineMath: [['$', '$'], ['\\(', '\\)']],
+                    displayMath: [['$$','$$'], ['\\[', '\\]']]
+                },
+                svg: {
+                    scale: 1.25,
+                }
+            };
+        </script><script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.1.0/es5/tex-mml-svg.min.js" integrity="sha512-/mL9Gs6E5Bz6NtPOr9eY&#43;T8IIdJbo2JL3TudApzFFelwBXEc3TeFLU6kPq122TJROv7jkktuBRkz5h8vGzrsyA==" crossorigin="anonymous"></script>
+    </body>
+</html>

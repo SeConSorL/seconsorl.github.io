@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light"><head>
+    <title>JS · HZW</title>
+    <meta charset="utf-8">
+    
+    <meta name="generator" content="Hugo 0.124.1">
+    <meta property="og:title" content="JS" />
+<meta property="og:description" content="a manual for javascript" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://seconsorl.github.io/post/javascript_manual/" /><meta property="og:image" content="https://seconsorl.github.io/images/profile.png" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2024-05-06T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-05-06T00:00:00+00:00" /><meta property="og:site_name" content="A junior from NBU" />
+
+
+
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="HZW">
+    
+    
+    
+    <link rel="stylesheet" type="text/css" href="https://seconsorl.github.io/css/style.min.565d8c479597aa43658922d4b31e286529a7525a22c9546fa1018fc5e5ef6d86.css" integrity="sha256-Vl2MR5WXqkNliSLUsx4oZSmnUloiyVRvoQGPxeXvbYY=" crossorigin="anonymous" type="text/css">
+
+    
+    
+    
+    <script type="text/javascript" src="https://seconsorl.github.io/js/heyo-header.min.a3fa728a9f57833a31dfb45c48caaf1e4890c8c97f07bd7133fc2359745edb5d.js" integrity="sha256-o/pyip9Xgzox37RcSMqvHkiQyMl/B71xM/wjWXRe210=" crossorigin="anonymous"></script>
+
+    
+    
+    <link rel="stylesheet" type="text/css" href="https://seconsorl.github.io/css/fonts.9398921f2d404983c2b7f9a68ddc72e3f5e58a3e38b0a8e4a70d75c12ebfb7c5.css" integrity="sha256-k5iSHy1ASYPCt/mmjdxy4/Xlij44sKjkpw11wS6/t8U=" crossorigin="anonymous">
+
+    
+    
+    
+    <script type="text/javascript" src="https://seconsorl.github.io/js/sidebar-toc.min.788b639e2ec681549740b90b3b865d5f9e1789e3ca9c06ccc45d65655434c954.js" integrity="sha256-eItjni7GgVSXQLkLO4ZdX54XiePKnAbMxF1lZVQ0yVQ=" crossorigin="anonymous"></script>
+
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-graph.26b92ed9317bdc6f35642d588bdf3283f40998846e01cf4bee22a126907fbf3b.js" integrity="sha256-Jrku2TF73G81ZC1Yi98yg/QJmIRuAc9L7iKhJpB/vzs=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-digitalRain.af8a7b5c4428cc62d5bf49bf2698d4112c2459ee0c22c1c753ab304aef69888a.js" integrity="sha256-r4p7XEQozGLVv0m/JpjUESwkWe4MIsHHU6swSu9piIo=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-circleBrushStrokes.fe8fc3ee52e1d90e9236be8c36a27711efa024beb4da304829f95dfbb61d6e84.js" integrity="sha256-/o/D7lLh2Q6SNr6MNqJ3Ee&#43;gJL602jBIKfld&#43;7YdboQ=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-meta.71b5202ea881c86ac19e4b55414656a5444204a4ba08ff7368a5aa99c0a60949.js" integrity="sha256-cbUgLqiByGrBnktVQUZWpURCBKS6CP9zaKWqmcCmCUk=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sidebar-sketch.min.2e95015880993ef9abcad62d111decea22406616931bce193254bf8af2339953.js" integrity="sha256-LpUBWICZPvmrytYtER3s6iJAZhaTG84ZMlS/ivIzmVM=" crossorigin="anonymous" defer></script>
+    
+    
+    
+    <link rel="shortcut icon" href="https://seconsorl.github.io/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://seconsorl.github.io/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://seconsorl.github.io/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://seconsorl.github.io/favicons/favicon-16x16.png">
+    <link rel="canonical" href="https://seconsorl.github.io/post/javascript_manual/">
+    
+    
+    
+    
+    
+
+    
+    <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://seconsorl.github.io/images/profile.png" /><meta name="twitter:title" content="JS"/>
+<meta name="twitter:description" content="a manual for javascript"/>
+
+</head><body>
+        <div class="main">
+            <div class="page-top">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a  href="/"  title="">Home</a></li>
+        
+            
+            <li><a  href="/post/"  title="">Posts</a></li>
+        
+            
+            <li><a  href="/about/"  title="">About</a></li>
+        
+        <li class="grow"></li>
+        
+        <li>
+            <a class="theme-switch" title="Switch Theme">
+                <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+            <div class="sidebar" id="sidebar">
+    <div class="top-toc">
+        <img src="https://seconsorl.github.io/images/profile.png" alt="profile picture">
+        
+        <a href="/">A junior from NBU</a>
+    </div>
+    
+    <div class="middle-sidebar grow" id="middle-sidebar">
+        
+            
+            
+                
+            
+
+            
+        
+    </div>
+
+    <div class="footer">
+        <ul class="social-links">
+            
+            <li>
+                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://github.com/SeConSorL" target="_blank" rel="noopener noreferrer" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" rel="me" aria-label="instagram">
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+            <li>
+                <a href="mailto:216002917@nbu.edu.cn" target="_blank" rel="noopener noreferrer" rel="me" aria-label="e-mail">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+        </ul>
+
+        <div class="by">by HZW <b>·</b> 2024</div>
+    </div>
+</div>
+            <div class="content">
+<div class="post">
+    
+    <div class="post-title">
+        <h1>JS</h1>
+        
+            <div class="post-header">
+    <div style="padding-top: 10px;">
+        <i class="far fa-calendar"></i><span class="date">May 6, 2024</span>
+        <i class="far fa-clock"></i><span class="reading-time">2 minutes</span>
+        
+
+
+    </div>
+</div>
+        
+    </div>
+    <div class="post-content">
+        <h1 id="用法">用法</h1>
+<p>HTML 中的 <code>Javascript</code> 脚本代码必须位于 <code>&lt;script&gt;</code> 与 <code>&lt;/script&gt;</code> 标签之间。脚本可位于 HTML 的 <code>&lt;body&gt;</code> 或 <code>&lt;head&gt;</code> 部分中，或者同时存在于两个部分中。</p>
+<p>可以在 HTML 文档中放入不限数量的脚本。</p>
+<p>通常的做法是把函数放入 <code>&lt;head&gt;</code> 部分中，或者放在页面底部。这样就可以把它们安置到同一处位置，不会干扰页面的内容。</p>
+<h1 id="外部的-javascript">外部的 JavaScript</h1>
+<p>可以把脚本保存到外部文件中。外部文件通常包含被多个网页使用的代码。外部 JavaScript 文件的文件扩展名是 <code>.js</code>。</p>
+<p>如需使用外部文件，请在 <code>&lt;script&gt;</code> 标签的 <code>src</code> 属性中设置该 <code>.js</code> 文件的路径。</p>
+<p>外部<code>js</code>文件<strong>不使用</strong> <code>&lt;script&gt;</code>标签，直接写 <code>js</code> 代码。</p>
+<h1 id="在chrome中查看">在Chrome中查看</h1>
+<h3 id="1console-窗口调试-javascript-代码">1、Console 窗口调试 JavaScript 代码</h3>
+<p><code>F12</code>的<code>Console</code> 窗口（<strong>控制台</strong>）调试 JavaScript代码，在 <code>&gt;</code> 符号后输入我们要执行的代码。</p>
+<p>点击<strong>禁止的图标</strong>，可以清空<code> Console</code> 窗口的内容</p>
+<h3 id="2chrome-snippets-小脚本">2、Chrome snippets 小脚本</h3>
+<p>在 <code>Sources</code> （<strong>源</strong>）面板，选择<code> Snippets</code> （<strong>代码段</strong>）选项卡可以创建脚本文件</p>
+<h1 id="输出显示">输出/显示</h1>
+<p>JavaScript 可以通过不同的方式来输出数据：</p>
+<ul>
+<li>使用 <strong>window.alert()</strong> 弹出警告框。</li>
+<li>使用 <strong>document.write()</strong> 方法将内容写到 HTML 文档中。</li>
+<li>使用 <strong>innerHTML</strong> 写入到 HTML 元素。</li>
+<li>使用 <strong>console.log()</strong> 写入到浏览器的控制台。</li>
+</ul>
+<h3 id="documentwrite--写到-html-文档">document.write()  //写到 HTML 文档</h3>
+<p>HTML 输出流中使用 <code>document.write</code>，相当于添加在原有html代码中添加一串html代码。</p>
+<p>而如果在文档<strong>加载后</strong>使用（如使用函数），会<strong>覆盖整个文档</strong>。</p>
+<p><strong>原因</strong>：如果在写之前没有调用<code>document.open</code>, 浏览器会自动调用<code>open</code>。每次写完关闭之后<strong>重新调用</strong>该函数，会导致页面被重写。</p>
+<h3 id="alertwindowalert">alert()/window.alert()</h3>
+<p><code>alert()</code> 函数在<code> JavaScript</code> 中并不常用，但它对于代码测试非常方便。</p>
+<p>括号里面添加数据，使用的时候页面会出现<strong>警告框</strong>，<u>提示内容即为括号内容</u>。</p>
+<h3 id="查找修改-html-元素">查找/修改 HTML 元素</h3>
+<p>如需从 JavaScript 访问某个 HTML 元素，您可以使用 <code>document.getElementById(id) </code><strong>等</strong>方法。</p>
+<h4 id="innerhtml">innerHTML</h4>
+<p>是DOM（文档对象模型）页面元素的一个属性，可以获取或插入元素内容。</p>
+<p>还有其他的属性如<code>innerText</code>、<code>innerElement</code>等，可以<strong>精确</strong>到某一个具体的元素来进行更改。</p>
+<h3 id="consolelog---写到控制台"><strong>console.log()</strong>   //写到控制台</h3>
+<p>用法类似<code>alert()</code>。可以添加显示样式。可以像 C 语言用 <strong>%</strong> 来格式化输出变量</p>
+<h5 id="consolelog的用处">console.log()的用处</h5>
+<p>主要是方便调试javascript用的, 可以看到你在页面中输出的内容。</p>
+<p>他能看到结构化的东西，如果是<code>alert</code>，弹出一个对象就是[object object]，但是console<u>能看到对象的内容</u>。</p>
+<p>console<strong>不会打断</strong>你页面的操作，如果用alert弹出来内容，那么页面就死了，但是console输出内容后你页面还可以正常操作。</p>
+<h1 id="语法">语法</h1>
+<h3 id="字面量">字面量</h3>
+<p>在编程语言中，一般固定值称为字面量。</p>
+<ul>
+<li><strong>数字（Number）</strong></li>
+</ul>
+<p>3.14、1001、123e5（显示为12300000）</p>
+<ul>
+<li><strong>字符串（String）</strong></li>
+</ul>
+<p>可以使用单引号或双引号</p>
+<ul>
+<li><strong>表达式</strong></li>
+</ul>
+<p>表达式计算</p>
+<ul>
+<li><strong>数组（Array）</strong></li>
+</ul>
+<p><code>[ ]</code>里面添加数据，显示时不会显示**[]**</p>
+<ul>
+<li><strong>对象（Object）</strong></li>
+</ul>
+<p><code>{ }</code>字典里加键值对，<code>{firstName:&quot;John&quot;, lastName:&quot;Doe&quot;, age:50, eyeColor:&quot;blue&quot;}</code></p>
+<p>内部定义成员时，类似<code>PASCAL</code>，成员名+<code>:</code>+具体内容</p>
+<ul>
+<li><strong>函数（Function）</strong></li>
+</ul>
+<p>比如<code>function myFunction(a, b) { return a * b;}</code></p>
+<p>使用时要添加<code> ()</code> 调用，否则会认为是对象的属性，返回定义函数的字符串</p>
+<h3 id="变量">变量</h3>
+<p>使用关键字 <strong>var</strong> 来定义变量， 使用等号来为变量赋值。可以重复定义同一个变量名，但是只是把原变量去掉，加入一个新变量。</p>
+<p>如果把值赋给<strong>尚未声明</strong>的变量，该变量将被自动作为 <code>window</code> 的一个属性。<u>非严格模式</u>下，它是全局对象的可配置属性，可以删除。</p>
+<p>变量可以通过<strong>变量名</strong>访问。</p>
+<p>拥有<strong>动态</strong>类型。这意味着相同的变量可用作不同的类型（<strong>Python</strong>）</p>
+<p>当声明新变量时，可以使用关键词 &ldquo;new&rdquo; 来声明其类型：如<code>var carname=new String;</code></p>
+<h3 id="操作符">操作符</h3>
+<p>使用<strong>算术运算符</strong>来计算值，<code>\+ - * /</code>等</p>
+<p>使用<strong>赋值运算符</strong>给变量赋值，<code>=</code></p>
+<p>使用<strong>比较运算符</strong>来判断逻辑，<code>== != &lt; &gt; </code></p>
+<h3 id="语句">语句</h3>
+<p>语句是用分号<code>;</code>分隔</p>
+<h3 id="关键字">关键字</h3>
+<table>
+<thead>
+<tr>
+<th>abstract</th>
+<th>else</th>
+<th>instanceof</th>
+<th>super</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>boolean</td>
+<td>enum</td>
+<td>int</td>
+<td>switch</td>
+</tr>
+<tr>
+<td>break</td>
+<td>export</td>
+<td>interface</td>
+<td>synchronized</td>
+</tr>
+<tr>
+<td>byte</td>
+<td>extends</td>
+<td>let</td>
+<td>this</td>
+</tr>
+<tr>
+<td>case</td>
+<td>false</td>
+<td>long</td>
+<td>throw</td>
+</tr>
+<tr>
+<td>catch</td>
+<td>final</td>
+<td>native</td>
+<td>throws</td>
+</tr>
+<tr>
+<td>char</td>
+<td>finally</td>
+<td>new</td>
+<td>transient</td>
+</tr>
+<tr>
+<td>class</td>
+<td>float</td>
+<td>null</td>
+<td>true</td>
+</tr>
+<tr>
+<td>const</td>
+<td>for</td>
+<td>package</td>
+<td>try</td>
+</tr>
+<tr>
+<td>continue</td>
+<td>function</td>
+<td>private</td>
+<td>typeof</td>
+</tr>
+<tr>
+<td>debugger</td>
+<td>goto</td>
+<td>protected</td>
+<td>var</td>
+</tr>
+<tr>
+<td>default</td>
+<td>if</td>
+<td>public</td>
+<td>void</td>
+</tr>
+<tr>
+<td>delete</td>
+<td>implements</td>
+<td>return</td>
+<td>volatile</td>
+</tr>
+<tr>
+<td>do</td>
+<td>import</td>
+<td>short</td>
+<td>while</td>
+</tr>
+<tr>
+<td>double</td>
+<td>in</td>
+<td>static</td>
+<td>with</td>
+</tr>
+</tbody>
+</table>
+<p>JavaScript 是脚本语言，浏览器会在读取代码时，<strong>逐行地</strong>执行脚本代码。而对于传统编程来说，会在执行前对所有代码进行编译。</p>
+<h3 id="换行">换行</h3>
+<p><strong>可以</strong>在<strong>文本字符串</strong>中使用反斜杠<code>\</code>对代码行进行换行</p>
+<p><strong>注意：<strong>不能破坏</strong>变量</strong>、<strong>函数</strong>等的整体性</p>
+<p>在保证单个整体性时，可以换行，比如定义对象时。</p>
+<h3 id="注释">注释</h3>
+<p><strong>单行：</strong></p>
+<p>双斜杠 <strong>//</strong> 后的内容将会被浏览器忽略</p>
+<p><strong>多行：</strong></p>
+<p>以 <code>/*</code> 开始，以 <code>*/</code> 结尾</p>
+<p>如果用户不能确定浏览器是否支持JavaScript脚本，那么可以应用HTML提供的注释符号进行验证。以 <code>&lt;--</code> 开始以 <code>--&gt;</code> 结束</p>
+<p>如果浏览器支持JavaScript脚本，则加单行或多行注释会起作用。</p>
+<h3 id="数据类型">数据类型</h3>
+<p>数字，字符串，数组，对象等等，可以通过字面量赋值。</p>
+<p><em>Symbol 是 ES6 引入了一种新的原始数据类型，表示独一无二的值。</em></p>
+<p><strong>使用规则同C</strong></p>
+<p>可以使用 <strong>typeof</strong> 操作符来查看类型。</p>
+<h5 id="undefined-和-null">Undefined 和 Null</h5>
+<p><code>Undefined</code> 表示变量不含有值，即<code>未赋值</code></p>
+<p>可以通过将变量的值设置为 null 来清空变量。</p>
+<h3 id="函数">函数</h3>
+<p>函数可以重复引用。<strong>引用一个函数</strong> = 调用函数(执行函数内的语句)。</p>
+<p>语法，我的理解是<code>PASCAL</code>加<code>C</code>。使用<code>PASCAL</code>里的函数关键字<code>function</code>，其余同C的语法。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">function</span> myFunction(var1,var2) <span style="color:#6272a4">//传参时，按顺序
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>{
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">//代码
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>}
+</span></span></code></pre></div><p>可以加<code>return</code>，但是<strong>不是必须</strong>的，因为它也没有规定返回值的类型等。</p>
+<p>ES6 新增箭头函数<code>=&gt;</code>，在使用时可以省略<code> function</code> 关键字，且当只有一个参数时可以把括号<code>()</code>去掉。</p>
+<h3 id="大小写">大小写</h3>
+<p>JavaScript 对大小写是<strong>敏感</strong>的。</p>
+<h3 id="字符集">字符集</h3>
+<p>使用 Unicode 字符集。</p>
+
+    </div>
+    <div class="post-footer">
+        <div class="info">
+            
+            
+        </div>
+        
+
+
+    </div>
+    
+        
+    
+</div>
+
+                <div class="grow"></div>
+                <div class="built-with">
+    Built with <a href="https://gohugo.io/">Hugo</a> <b>·</b> Using the <a href="https://github.com/LucasVadilho/heyo-hugo-theme">heyo</a> theme
+</div>
+            </div>
+        </div>
+        
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha512-3M00D/rn8n+2ZVXBO9Hib0GKNpkm8MSUU/e2VNthDyBYxKWG+BftNYYcuEjXlyrSO637tidzMBXfE7sQm0INUg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<script type="text/javascript">
+            
+            
+            window.MathJax = {
+                tex: {
+                    inlineMath: [['$', '$'], ['\\(', '\\)']],
+                    displayMath: [['$$','$$'], ['\\[', '\\]']]
+                },
+                svg: {
+                    scale: 1.25,
+                }
+            };
+        </script><script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.1.0/es5/tex-mml-svg.min.js" integrity="sha512-/mL9Gs6E5Bz6NtPOr9eY&#43;T8IIdJbo2JL3TudApzFFelwBXEc3TeFLU6kPq122TJROv7jkktuBRkz5h8vGzrsyA==" crossorigin="anonymous"></script>
+    </body>
+</html>

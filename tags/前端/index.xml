@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>前端 on My Blog</title>
+    <link>https://seconsorl.github.io/tags/%E5%89%8D%E7%AB%AF/</link>
+    <description>Recent content in 前端 on My Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>216002917@nbu.edu.cn (HZW)</managingEditor>
+    <webMaster>216002917@nbu.edu.cn (HZW)</webMaster>
+    <lastBuildDate>Mon, 06 May 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://seconsorl.github.io/tags/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CSS</title>
+      <link>https://seconsorl.github.io/post/css/</link>
+      <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
+      <guid>https://seconsorl.github.io/post/css/</guid>
+      <description>CSS(Cascading Style Sheet)层叠样式表 TIPS 链接 CSS_菜鸟教程 W3school&#xA;查看网页样式 审查元素|开发者模式（F12） -&amp;gt; 元素 -&amp;gt; 右边的样式&#xA;正则 = 绝对等于 *= 包含这个元素 ^=以这个开头 $=以这个结尾 div 主要用来设置一块一块区域的&#xA;不加宽度设置，默认和上一级一样宽&#xA;img 默认内联元素&#xA;图片居中可以设置为在外面套一个div，设置display:block；再margin:0 auto;即可 或者 外层添加text-align属性 center&#xA;span 主要用于设置一段文字&#xA;CSS预处理器 CSS预处理器定义了一种新的语言，其基本思想是，用一种专门的编程语言，为CSS加了一些编程的特性，将CSS作为目标生成文件，然后开发者就只要使用这种语言进行CSS的编码工作。就是用一种专门的编程语言，进行Web页面样式设计，再通过编译器转化为正常的CSS文件，以供项目使用。&#xA;SASS：基于Ruby，通过服务端处理，功能强大。解析效率高。需要学习Ruby语言，上手难度高于LESS。&#xA;LESS：基于NodeJS，通过客户端处理，使用简单。功能比SASS简单，解析效率也低于SASS，但在实际开发中足够了，所以我们后台人员如果需要的话，建议使用LESS。&#xA;简介 发展史 CSS 1.0：基本&#xA;CSS 2.0：DIV（块）+CSS，HTML 与 CSS 结构分离的思想，利于SEO&#xA;CSS 2.1：浮动，定位&#xA;CSS 3.0：圆角边框，阴影，动画&amp;hellip; 浏览器兼容性~&#xA;格式 文件目录格式 CSS-&amp;gt; .css文件&#xA;.html文件&#xA;内容格式 行内样式 在标签中写style=&amp;quot; &amp;ldquo;，仅对当前标签生效 &amp;lt;h1 style=&amp;#34;color:red&amp;#34;&amp;gt; 1 &amp;lt;/h1&amp;gt; 内部样式 在HTML文件中写：在head标签里加入style标签，在style中写CSS代码 style标签中加CSS代码，和HTML不同 style标签中的注释格式 /* */ &amp;lt;style&amp;gt; h1{ color:red; border-radius:10px; } &amp;lt;/style&amp;gt; 外部样式 在CSS文件中写：不需要加style标签，直接写。 HTML引用CSS（在head标签）： &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;文件路径&amp;#34;&amp;gt; &amp;lt;style&amp;gt; @import url(&amp;#34;路径&amp;#34;); /*CSS2.1 特有 不建议*/ &amp;lt;/style&amp;gt; 语法 样式的优先级：行内样式 &amp;gt; （就近原则）内部样式、外部样式&#xA;选择器1 [选择器2 [选择器3]] { 声明1; 声明2; } color:#6位16进制数; (RGB) &amp;lt;!</description>
+    </item>
+    <item>
+      <title>HTML5</title>
+      <link>https://seconsorl.github.io/post/html5/</link>
+      <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
+      <guid>https://seconsorl.github.io/post/html5/</guid>
+      <description>TIPS HTML5_菜鸟教程&#xA;W3C标准 结构化标准语言（HTML、XML）&#xA;表现标准语言（CSS）&#xA;行为标准（DOM、ECMAScript）&#xA;行内元素和块元素 块元素：会另起一个行。无论内容多少，该元素会独占一行。 行内元素：内容撑开宽度，左右都是行元素的可以排成一行。 NAME属性 name相同表示同一个组&#xA;nav &amp;lt;nav&amp;gt;标签定义导航链接的部分。&#xA;并不是所有的 HTML 文档都要使用到&amp;lt;nav&amp;gt; 元素。&amp;lt;nav&amp;gt;元素只是作为标注一个导航链接的区域。&#xA;在不同设备上（手机或者PC）可以制定导航链接是否显示，以适应不同屏幕的需求。&#xA;结构 基本结构 DOCTYPE声明 网页头部&amp;lt;head&amp;gt; &amp;lt;/head&amp;gt; 网页主体&amp;lt;body&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;!-- &amp;lt;body&amp;gt; &amp;lt;/body&amp;gt; 开放标签和闭合标签 --&amp;gt; &amp;lt;!-- &amp;lt;hr/&amp;gt;关闭空元素 --&amp;gt; &amp;lt;!-- HTML注释 --&amp;gt; &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;!-- DOCTYPE: 告诉网页用什么规范&amp;gt; --&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;!-- head 网页头部 --&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;!-- meta描述性标签，用来做SEO--&amp;gt; &amp;lt;meta name=&amp;#34;Keywords&amp;#34; content=&amp;#34;...&amp;#34; /&amp;gt; &amp;lt;meta name=&amp;#34;description&amp;#34; content=&amp;#34;...&amp;#34; /&amp;gt; &amp;lt;title&amp;gt;Document&amp;lt;/title&amp;gt; &amp;lt;!-- title网页标题 --&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;!-- body 网页主体 --&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; 结构分析 元素名 描述 header 标题头部区域的内容（用于页面或页面中的一块区域） footer 标记脚部区域的内容（用于整个页面或页面的一块区域） section Web页面中的一块独立区域 article 独立的文章内容 aside 相关内容或应用（常用于侧边栏） nav 导航类辅助内容 基本标签和特殊符号 html里面换行是没用的&#xA;连续的空格符被认为是一个空格&#xA;标签和符号 HTML代码 标题 &amp;lt;h1&amp;gt;一级标签&amp;lt;/h1&amp;gt;&amp;lt;h2&amp;gt;二级标签&amp;lt;/h2&amp;gt;&amp;lt;h3&amp;gt;三级标签&amp;lt;/h3&amp;gt;&amp;lt;h4&amp;gt;四级标签&amp;lt;/h4&amp;gt;&amp;lt;h5&amp;gt;五级标签&amp;lt;/h5&amp;gt;&amp;lt;h6&amp;gt;六级标签&amp;lt;/h6&amp;gt; 段落 &amp;lt;p&amp;gt; 内容 &amp;lt;/p&amp;gt; 换行 &amp;lt;br /&amp;gt; 水平线 &amp;lt;hr /&amp;gt; 字体样式 粗体: &amp;lt;strong&amp;gt; &amp;lt;/strong&amp;gt;斜体: &amp;lt;em&amp;gt; &amp;lt;/em&amp;gt; 空格 &amp;amp;nbsp; 大于&amp;gt; &amp;amp;gt; 小于&amp;lt; &amp;amp;lt; 版权符号© &amp;amp;copy; 注释（多行） &amp;lt;!</description>
+    </item>
+  </channel>
+</rss>

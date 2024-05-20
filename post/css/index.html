@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light"><head>
+    <title>CSS · HZW</title>
+    <meta charset="utf-8">
+    
+    <meta name="generator" content="Hugo 0.124.1">
+    <meta property="og:title" content="CSS" />
+<meta property="og:description" content="a note for learning CSS" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://seconsorl.github.io/post/css/" /><meta property="og:image" content="https://seconsorl.github.io/images/profile.png" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2024-05-06T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-05-06T00:00:00+00:00" /><meta property="og:site_name" content="A junior from NBU" />
+
+
+
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="HZW">
+    
+    
+    
+    <link rel="stylesheet" type="text/css" href="https://seconsorl.github.io/css/style.min.565d8c479597aa43658922d4b31e286529a7525a22c9546fa1018fc5e5ef6d86.css" integrity="sha256-Vl2MR5WXqkNliSLUsx4oZSmnUloiyVRvoQGPxeXvbYY=" crossorigin="anonymous" type="text/css">
+
+    
+    
+    
+    <script type="text/javascript" src="https://seconsorl.github.io/js/heyo-header.min.a3fa728a9f57833a31dfb45c48caaf1e4890c8c97f07bd7133fc2359745edb5d.js" integrity="sha256-o/pyip9Xgzox37RcSMqvHkiQyMl/B71xM/wjWXRe210=" crossorigin="anonymous"></script>
+
+    
+    
+    <link rel="stylesheet" type="text/css" href="https://seconsorl.github.io/css/fonts.9398921f2d404983c2b7f9a68ddc72e3f5e58a3e38b0a8e4a70d75c12ebfb7c5.css" integrity="sha256-k5iSHy1ASYPCt/mmjdxy4/Xlij44sKjkpw11wS6/t8U=" crossorigin="anonymous">
+
+    
+    
+    
+    <script type="text/javascript" src="https://seconsorl.github.io/js/sidebar-toc.min.788b639e2ec681549740b90b3b865d5f9e1789e3ca9c06ccc45d65655434c954.js" integrity="sha256-eItjni7GgVSXQLkLO4ZdX54XiePKnAbMxF1lZVQ0yVQ=" crossorigin="anonymous"></script>
+
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-graph.26b92ed9317bdc6f35642d588bdf3283f40998846e01cf4bee22a126907fbf3b.js" integrity="sha256-Jrku2TF73G81ZC1Yi98yg/QJmIRuAc9L7iKhJpB/vzs=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-digitalRain.af8a7b5c4428cc62d5bf49bf2698d4112c2459ee0c22c1c753ab304aef69888a.js" integrity="sha256-r4p7XEQozGLVv0m/JpjUESwkWe4MIsHHU6swSu9piIo=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-circleBrushStrokes.fe8fc3ee52e1d90e9236be8c36a27711efa024beb4da304829f95dfbb61d6e84.js" integrity="sha256-/o/D7lLh2Q6SNr6MNqJ3Ee&#43;gJL602jBIKfld&#43;7YdboQ=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-meta.71b5202ea881c86ac19e4b55414656a5444204a4ba08ff7368a5aa99c0a60949.js" integrity="sha256-cbUgLqiByGrBnktVQUZWpURCBKS6CP9zaKWqmcCmCUk=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sidebar-sketch.min.2e95015880993ef9abcad62d111decea22406616931bce193254bf8af2339953.js" integrity="sha256-LpUBWICZPvmrytYtER3s6iJAZhaTG84ZMlS/ivIzmVM=" crossorigin="anonymous" defer></script>
+    
+    
+    
+    <link rel="shortcut icon" href="https://seconsorl.github.io/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://seconsorl.github.io/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://seconsorl.github.io/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://seconsorl.github.io/favicons/favicon-16x16.png">
+    <link rel="canonical" href="https://seconsorl.github.io/post/css/">
+    
+    
+    
+    
+    
+
+    
+    <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://seconsorl.github.io/images/profile.png" /><meta name="twitter:title" content="CSS"/>
+<meta name="twitter:description" content="a note for learning CSS"/>
+
+</head><body>
+        <div class="main">
+            <div class="page-top">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a  href="/"  title="">Home</a></li>
+        
+            
+            <li><a  href="/post/"  title="">Posts</a></li>
+        
+            
+            <li><a  href="/about/"  title="">About</a></li>
+        
+        <li class="grow"></li>
+        
+        <li>
+            <a class="theme-switch" title="Switch Theme">
+                <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+            <div class="sidebar" id="sidebar">
+    <div class="top-toc">
+        <img src="https://seconsorl.github.io/images/profile.png" alt="profile picture">
+        
+        <a href="/">A junior from NBU</a>
+    </div>
+    
+    <div class="middle-sidebar grow" id="middle-sidebar">
+        
+            
+            
+                
+            
+
+            
+        
+    </div>
+
+    <div class="footer">
+        <ul class="social-links">
+            
+            <li>
+                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://github.com/SeConSorL" target="_blank" rel="noopener noreferrer" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" rel="me" aria-label="instagram">
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+            <li>
+                <a href="mailto:216002917@nbu.edu.cn" target="_blank" rel="noopener noreferrer" rel="me" aria-label="e-mail">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+        </ul>
+
+        <div class="by">by HZW <b>·</b> 2024</div>
+    </div>
+</div>
+            <div class="content">
+<div class="post">
+    
+    <div class="thumbnail" style="box-shadow: var(--box-shadow); height: 350px;">
+        <img src=https://seconsorl.github.io/images/CSS.jpg style="object-position: 50% 100%;" title=CSS alt=CSS loading="lazy">
+    </div>
+    
+    <div class="post-title">
+        <h1>CSS</h1>
+        
+            <div class="post-header">
+    <div style="padding-top: 10px;">
+        <i class="far fa-calendar"></i><span class="date">May 6, 2024</span>
+        <i class="far fa-clock"></i><span class="reading-time">7 minutes</span>
+        
+
+
+    </div>
+</div>
+        
+    </div>
+    <div class="post-content">
+        <h1 id="csscascading-style-sheet层叠样式表">CSS(Cascading Style Sheet)层叠样式表</h1>
+<h2 id="tips">TIPS</h2>
+<h3 id="链接">链接</h3>
+<p><a href="https://www.runoob.com/css3/css3-tutorial.html">CSS_菜鸟教程 </a></p>
+<p><a href="https://www.w3school.com.cn/css/index.asp">W3school</a></p>
+<h3 id="查看网页样式">查看网页样式</h3>
+<p>审查元素|开发者模式（F12） -&gt; 元素 -&gt; 右边的样式</p>
+<h3 id="正则">正则</h3>
+<ul>
+<li>= 绝对等于</li>
+<li>*= 包含这个元素</li>
+<li>^=以这个开头</li>
+<li>$=以这个结尾</li>
+</ul>
+<h3 id="div">div</h3>
+<p>主要用来设置一块一块区域的</p>
+<p>不加宽度设置，默认和上一级一样宽</p>
+<h3 id="img">img</h3>
+<p>默认内联元素</p>
+<p>图片居中可以设置为在外面套一个div，设置display:block；再margin:0 auto;即可       或者     外层添加text-align属性 center</p>
+<h3 id="span">span</h3>
+<p>主要用于设置一段文字</p>
+<h2 id="css预处理器">CSS预处理器</h2>
+<p>CSS预处理器定义了一种新的语言，其基本思想是，用一种专门的编程语言，为CSS加了一些编程的特性，将CSS作为目标生成文件，然后开发者就只要使用这种语言进行CSS的编码工作。就是<strong>用一种专门的编程语言</strong>，进行Web页面<strong>样式设计</strong>，再<strong>通过编译器转化为正常的CSS文件</strong>，以供项目使用。</p>
+<p><strong>SASS</strong>：基于Ruby，通过服务端处理，功能强大。解析效率高。需要学习Ruby语言，上手难度高于LESS。</p>
+<p><strong>LESS</strong>：基于NodeJS，通过客户端处理，使用简单。功能比SASS简单，解析效率也低于SASS，但在实际开发中足够了，所以我们后台人员如果需要的话，<strong>建议使用LESS</strong>。</p>
+<h2 id="简介">简介</h2>
+<h3 id="发展史">发展史</h3>
+<p>CSS 1.0：基本</p>
+<p>CSS 2.0：DIV（块）+CSS，HTML 与 CSS 结构分离的思想，利于SEO</p>
+<p>CSS 2.1：浮动，定位</p>
+<p>CSS 3.0：圆角边框，阴影，动画&hellip; 浏览器兼容性~</p>
+<h3 id="格式">格式</h3>
+<h4 id="文件目录格式">文件目录格式</h4>
+<ul>
+<li>
+<p>CSS-&gt; .css文件</p>
+</li>
+<li>
+<p>.html文件</p>
+</li>
+</ul>
+<h4 id="内容格式">内容格式</h4>
+<h5 id="行内样式">行内样式</h5>
+<ul>
+<li>在<strong>标签</strong>中写<strong>style=&quot; &ldquo;</strong>，仅对当前标签生效</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">h1</span> <span style="color:#50fa7b">style</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;color:red&#34;</span>&gt; 1 &lt;/<span style="color:#ff79c6">h1</span>&gt;
+</span></span></code></pre></div><h5 id="内部样式">内部样式</h5>
+<ul>
+<li>在<strong>HTML</strong>文件中写：在<strong>head</strong>标签里加入<strong>style</strong>标签，在<strong>style</strong>中写CSS代码</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>style标签中加CSS代码，和HTML不同
+</span></span><span style="display:flex;"><span>style标签中的注释格式  /* */
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">style</span>&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">h1</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">color</span>:<span style="color:#ff79c6">red</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">border-radius</span>:<span style="color:#bd93f9">10</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">style</span>&gt;
+</span></span></code></pre></div><h5 id="外部样式">外部样式</h5>
+<ul>
+<li>在<strong>CSS</strong>文件中写：不需要加<strong>style</strong>标签，直接写。</li>
+<li>HTML引用CSS（在<strong>head</strong>标签）：</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">link</span> <span style="color:#50fa7b">rel</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;stylesheet&#34;</span> <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;文件路径&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">style</span>&gt;
+</span></span><span style="display:flex;"><span>  @<span style="color:#ff79c6">import</span> <span style="color:#ff79c6">url</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;路径&#34;</span><span style="color:#ff79c6">)</span>;  <span style="color:#6272a4">/*CSS2.1 特有 不建议*/</span>
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">style</span>&gt;
+</span></span></code></pre></div><h3 id="语法">语法</h3>
+<p><strong>样式的优先级</strong>：行内样式 &gt; （<strong>就近原则</strong>）内部样式、外部样式</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>选择器1 [选择器2 [选择器3]] {
+</span></span><span style="display:flex;"><span>  声明1;
+</span></span><span style="display:flex;"><span>  声明2;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>color:#6位16进制数; (RGB)
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">&lt;!-- 每一个声明最好以;结尾--&gt;</span>
+</span></span></code></pre></div><h3 id="特点">特点</h3>
+<p>1、内容和表现分离</p>
+<p>2、网页结构表现统一，可以实现复用</p>
+<p>3、样式丰富</p>
+<p>4、利于SEO（Vue不好）</p>
+<p>5、建议使用独立于HTML的CSS文件</p>
+<h2 id="选择器">选择器</h2>
+<h3 id="基本选择器">基本选择器</h3>
+<p><strong>标签选择器</strong>：会选择到页面上<strong>所有的这个标签</strong>的元素</p>
+<p><strong>类选择器</strong>：选择<strong>所有class属性一致</strong>的标签，可以多个标签归类（不要<u>数字</u>开头）</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>/*
+</span></span><span style="display:flex;"><span>.class的名称{
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>*/
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">h1</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;class的名称&#34;</span>&gt; &lt;/<span style="color:#ff79c6">h1</span>&gt;
+</span></span></code></pre></div><p><strong>id选择器</strong>：会选择该id的标签   <u>id必须全局唯一</u></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>/*
+</span></span><span style="display:flex;"><span>#id的名称{
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>*/
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">h1</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;id的名称&#34;</span>&gt; &lt;/<span style="color:#ff79c6">h1</span>&gt;
+</span></span></code></pre></div><p>*****表示通配，即所有选择器</p>
+<h4 id="优先级">优先级</h4>
+<p><strong>不遵循就近原则</strong>，固定的</p>
+<p><strong>id</strong>选择器 &gt; <strong>class</strong>选择器 &gt; <strong>标签</strong>选择器</p>
+<h3 id="层次选择器">层次选择器</h3>
+<p><strong>后代选择器</strong>：（空格）在某个元素的后面</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>body p{
+</span></span><span style="display:flex;"><span>  background:red;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">&lt;!-- body标签下的所有p标签 --&gt;</span>
+</span></span></code></pre></div><p><strong>子选择器</strong>：（&gt;）后面一代</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>body&gt;p{
+</span></span><span style="display:flex;"><span>  background:red;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">&lt;!-- body标签下的一级p标签 --&gt;</span>
+</span></span></code></pre></div><p><strong>相邻选择器</strong>：（+）向下同辈的一个</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>.active + p{
+</span></span><span style="display:flex;"><span>  background:red;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">&lt;!-- active类标签后面的同级的最近的p标签 --&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">p</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;active&#34;</span>&gt;p1&lt;/<span style="color:#ff79c6">p</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">p</span>&gt;p2&lt;/<span style="color:#ff79c6">p</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">p</span>&gt;p3&lt;/<span style="color:#ff79c6">p</span>&gt;
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">&lt;!--只有p2变红--&gt;</span>
+</span></span></code></pre></div><p><strong>通用选择器</strong>：（~）向下同辈的所有</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>#id名 ~ p{
+</span></span><span style="display:flex;"><span>  background:red;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">&lt;!-- id为&#34;id名&#34;的标签后面所有同级的p标签 --&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">p</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;id名&#34;</span>&gt;p1&lt;/<span style="color:#ff79c6">p</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">p</span>&gt;p2&lt;/<span style="color:#ff79c6">p</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">p</span>&gt;p3&lt;/<span style="color:#ff79c6">p</span>&gt;
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">&lt;!--p2、p3变红--&gt;</span>
+</span></span></code></pre></div><h3 id="伪类选择器">伪类选择器</h3>
+<p>伪类：加了条件或者动作，触发条件或动作时才触发</p>
+<p>伪类的语法：</p>
+<pre tabindex="0"><code>selector:pseudo-class {property:value;}
+</code></pre><p>CSS类也可以使用伪类：</p>
+<pre tabindex="0"><code>selector.class:pseudo-class {property:value;}
+</code></pre><h4 id="first-child-伪类">first-child 伪类</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#ff79c6">&lt;!</span><span style="color:#ff79c6">--任何元素的第一个子元素且是p标签的</span> <span style="color:#ff79c6">--</span><span style="color:#ff79c6">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">p</span>:first-child{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">color</span>:<span style="color:#ff79c6">blue</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">&lt;!</span><span style="color:#ff79c6">--ul的第一个子元素--</span><span style="color:#ff79c6">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">ul</span> <span style="color:#ff79c6">li</span>:first-child{
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">background</span>:<span style="color:#ff79c6">red</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">&lt;!</span><span style="color:#ff79c6">--ul的最后一个子元素--</span><span style="color:#ff79c6">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">ul</span> <span style="color:#ff79c6">li</span>:last-child{
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">background</span>:<span style="color:#ff79c6">red</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">&lt;!</span><span style="color:#ff79c6">--选中p1--</span><span style="color:#ff79c6">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">&lt;!</span><span style="color:#ff79c6">--</span> <span style="color:#ff79c6">定位到父元素</span>，<span style="color:#ff79c6">选择当前的第n个子元素</span>，
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">并且是当前类型的元素才生效</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">有body的话</span>，<span style="color:#ff79c6">可加可不加</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">--</span><span style="color:#ff79c6">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">(</span><span style="color:#ff79c6">body</span> <span style="color:#ff79c6">)</span><span style="color:#ff79c6">p</span>:nth-child<span style="color:#ff79c6">(</span><span style="color:#ff79c6">1</span><span style="color:#ff79c6">)</span>{
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">&lt;!</span><span style="color:#ff79c6">--</span> <span style="color:#ff79c6">选择父元素下的属于p元素的第n个--</span><span style="color:#ff79c6">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">(</span><span style="color:#ff79c6">body</span> <span style="color:#ff79c6">)</span><span style="color:#ff79c6">p</span>:nth-of-type<span style="color:#ff79c6">(</span><span style="color:#ff79c6">1</span><span style="color:#ff79c6">)</span>{
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="anchor伪类">anchor伪类</h4>
+<p>在支持 CSS 的浏览器中，链接的不同状态都可以以不同的方式显示</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#ff79c6">a</span>:link {<span style="color:#ff79c6">color</span>:<span style="color:#bd93f9">#FF0000</span>;} <span style="color:#6272a4">/* 未访问的链接 */</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">a</span>:visited {<span style="color:#ff79c6">color</span>:<span style="color:#bd93f9">#00FF00</span>;} <span style="color:#6272a4">/* 已访问的链接 */</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">a</span>:hover {<span style="color:#ff79c6">color</span>:<span style="color:#bd93f9">#FF00FF</span>;} <span style="color:#6272a4">/* 鼠标划过链接 */</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">a</span>:active {<span style="color:#ff79c6">color</span>:<span style="color:#bd93f9">#0000FF</span>;} <span style="color:#6272a4">/* 已选中的链接 */</span>
+</span></span></code></pre></div><h4 id="lang伪类">lang伪类</h4>
+<p>下面例子中，lang 类为属性值为 no 的q元素定义引号的类型：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">style</span>&gt;
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">q</span>:lang<span style="color:#ff79c6">(</span><span style="color:#ff79c6">no</span><span style="color:#ff79c6">)</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">quotes</span>: <span style="color:#f1fa8c">&#34;~&#34;</span> <span style="color:#f1fa8c">&#34;~&#34;</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">style</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">p</span>&gt;Some text &lt;<span style="color:#ff79c6">q</span> <span style="color:#50fa7b">lang</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;no&#34;</span>&gt;A quote in a paragraph&lt;/<span style="color:#ff79c6">q</span>&gt; Some text.&lt;/<span style="color:#ff79c6">p</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Some text ~ A quote in a paragraph ~ Some text.
+</span></span></code></pre></div><h3 id="属性选择器">属性选择器</h3>
+<p>标签[属性名 | 属性名=属性值(可以是正则)]{}</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">style</span>&gt;
+</span></span><span style="display:flex;"><span>  .<span style="color:#50fa7b">demo</span> <span style="color:#ff79c6">a</span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">float</span>:<span style="color:#ff79c6">left</span>;<span style="color:#6272a4">/* 浮动 */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">display</span>:<span style="color:#ff79c6">block</span>; <span style="color:#6272a4">/* 显示为块 */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">height</span>:<span style="color:#bd93f9">50</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">width</span>:<span style="color:#bd93f9">50</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">border-radius</span>:<span style="color:#bd93f9">10</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">background</span>:<span style="color:#bd93f9">#2700ff</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">text</span><span style="color:#ff79c6">-</span>align<span style="color:#ff79c6">:</span><span style="color:#ff79c6">center</span>;  <span style="color:#6272a4">/* 文字位置居中 */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">color</span>:<span style="color:#ff79c6">gainsboro</span>; <span style="color:#6272a4">/* 灰色 */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">text-decoration</span>:<span style="color:#ff79c6">none</span>;  <span style="color:#6272a4">/* 去下划线 */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">margin-right</span>:<span style="color:#bd93f9">5</span><span style="color:#8be9fd">px</span>;  <span style="color:#6272a4">/* 向右偏移 */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">font</span>:<span style="color:#ff79c6">bold</span> <span style="color:#bd93f9">20</span><span style="color:#8be9fd">px</span><span style="color:#ff79c6">/</span><span style="color:#bd93f9">50</span><span style="color:#8be9fd">px</span> Arial;<span style="color:#6272a4">/* 粗细 字体大小/行高 字体 */</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">/*----------------------------------------------*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4">/* 标签[属性名 | 属性名=属性值(可以是正则)]{}
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">  = 绝对等于
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">  *= 包含这个元素
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">  ^=以这个开头
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">  $=以这个结尾
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">  */</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">a</span><span style="color:#ff79c6">[</span><span style="color:#ff79c6">id</span><span style="color:#ff79c6">]</span>{  
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">/* a标签的有id属性的  */</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">a</span><span style="color:#ff79c6">[</span><span style="color:#ff79c6">id</span><span style="color:#ff79c6">=</span><span style="color:#ff79c6">first</span><span style="color:#ff79c6">]</span>{  
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">/*  a标签的有id属性为first的 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">                id是唯一的所以不需要加&#34;&#34;  */</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">a</span><span style="color:#ff79c6">[</span><span style="color:#ff79c6">class</span><span style="color:#ff79c6">*=</span><span style="color:#f1fa8c">&#34;links&#34;</span><span style="color:#ff79c6">]</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">/* 不加*,要全部匹配;加了*,只要有一个类别是即可 */</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">a</span><span style="color:#ff79c6">[</span><span style="color:#ff79c6">href</span><span style="color:#ff79c6">^=</span><span style="color:#ff79c6">http</span><span style="color:#ff79c6">]</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">/* href以http开头 */</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">/*----------------------------------------------*/</span>
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">style</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">p</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;demo&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#ff79c6">a</span> <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;http://www.baidu.com&#34;</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;links item first&#34;</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;first&#34;</span>&gt;1&lt;/<span style="color:#ff79c6">a</span>&gt;   <span style="color:#6272a4">&lt;!-- class有links、item、first --&gt;</span>
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#ff79c6">a</span> <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;&#34;</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;links item active&#34;</span><span style="color:#50fa7b">target</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;blank&#34;</span><span style="color:#50fa7b">title</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;test&#34;</span>&gt;2&lt;/<span style="color:#ff79c6">a</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#ff79c6">a</span> <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;images/123.html&#34;</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;links item&#34;</span>&gt;3&lt;/<span style="color:#ff79c6">a</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#ff79c6">a</span> <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;images/123.png&#34;</span><span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;links item&#34;</span>&gt;4&lt;/<span style="color:#ff79c6">a</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#ff79c6">a</span> <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;images/123.jpg&#34;</span><span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;links item&#34;</span>&gt;5&lt;/<span style="color:#ff79c6">a</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#ff79c6">a</span> <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;abc&#34;</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;links item&#34;</span>&gt;6&lt;/<span style="color:#ff79c6">a</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#ff79c6">a</span> <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;/a.pdf&#34;</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;links item&#34;</span>&gt;7&lt;/<span style="color:#ff79c6">a</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#ff79c6">a</span> <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;/abc&#34;</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;links item&#34;</span>&gt;8&lt;/<span style="color:#ff79c6">a</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#ff79c6">a</span> <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;abc.doc&#34;</span><span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;links item&#34;</span>&gt;9&lt;/<span style="color:#ff79c6">a</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#ff79c6">a</span> <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;abcd.doc&#34;</span><span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;links item last&#34;</span>&gt;1&lt;/<span style="color:#ff79c6">a</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">p</span>&gt;
+</span></span></code></pre></div><h2 id="美化网页元素">美化网页元素</h2>
+<h3 id="css作用">CSS作用</h3>
+<p>1、有效传递页面信息</p>
+<p>2、美化网页，吸引用户</p>
+<p>3、凸显页面主题</p>
+<p>4、提高用户体验</p>
+<h3 id="字体样式">字体样式</h3>
+<p><strong>px</strong>：像素</p>
+<p><strong>em</strong>：一个字大小</p>
+<p><strong>span标签</strong>：重点要突出的字，用<strong>span</strong>套起来（<u>约定俗成</u> <strong>div</strong>也是）</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#ff79c6">body</span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">font-family</span>:<span style="color:#f1fa8c">&#34;Arial Black&#34;</span>, 楷体;<span style="color:#6272a4">/* 字体 可以中英文分开*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">color</span>:<span style="color:#ff79c6">red</span>;     <span style="color:#6272a4">/* 颜色 单词或者#RGB或者rgb()或者rgba() */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">font-size</span>:<span style="color:#bd93f9">50</span><span style="color:#8be9fd">px</span>;  <span style="color:#6272a4">/* 字体大小 */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">font-weight</span>:<span style="color:#ff79c6">bold</span>;<span style="color:#6272a4">/* 字体粗细 */</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4">/* 或者直接 */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">font</span>:<span style="color:#ff79c6">bold</span> <span style="color:#bd93f9">20</span><span style="color:#8be9fd">px</span><span style="color:#ff79c6">/</span><span style="color:#bd93f9">50</span><span style="color:#8be9fd">px</span> <span style="color:#f1fa8c">&#34;楷体&#34;</span>;<span style="color:#6272a4">/* 粗体 字体大小/行高  字体类型 */</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="文本样式">文本样式</h3>
+<p>1、颜色  color  rgb()   rgba()</p>
+<p>2、文本对齐方式  text-align</p>
+<p>3、首行缩进  text-indent</p>
+<p>4、行高  line-height</p>
+<p>5、装饰  text-decoration</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#ff79c6">body</span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">color</span>:<span style="color:#ff79c6">red</span>; <span style="color:#6272a4">/* 颜色 单词或者#RGB或者rgb()或者rgba() */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">text-align</span>:<span style="color:#ff79c6">left</span>;<span style="color:#6272a4">/* 文本对齐方式 center、right */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">text-indent</span>:<span style="color:#bd93f9">2</span><span style="color:#8be9fd">em</span>;<span style="color:#6272a4">/* 段落首行缩进 */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">background</span>:<span style="color:#ff79c6">blue</span>;<span style="color:#6272a4">/* 背景色 */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">line-height</span>:<span style="color:#bd93f9">300</span><span style="color:#8be9fd">px</span>;<span style="color:#6272a4">/* 行高 和块的高度height的值一样就会居中 */</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">text-decoration</span>:<span style="color:#ff79c6">underline</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4">/*下划线  中划线line-through 上划线overline */</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">text-shadow</span>:<span style="color:#bd93f9">50</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">5</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">5</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">#ff0000</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4">/*水平位置(可负) 垂直位置(可负) 模糊距离blur 阴影颜色color*/</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">/* 水平对齐 要有参照物 */</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">img</span><span style="color:#ff79c6">,</span><span style="color:#ff79c6">span</span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">vertical-align</span>:<span style="color:#ff79c6">middle</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="超链接伪类">超链接伪类</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#6272a4">/* 伪类 会叠加 */</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">a</span>:link{  <span style="color:#6272a4">/* 未访问的状态，也是默认的状态 */</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">a</span>:hover{   <span style="color:#6272a4">/* 鼠标悬浮的状态 */</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">a</span>:active{  <span style="color:#6272a4">/* 鼠标点击没有释放的状态 */</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">a</span>:visited{  <span style="color:#6272a4">/* 访问过的状态 */</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="列表">列表</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">style</span>&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">ul</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">background</span>:<span style="color:#ff79c6">red</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">ul</span> <span style="color:#ff79c6">li</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">height</span>:<span style="color:#bd93f9">30</span><span style="color:#8be9fd">px</span>;<span style="color:#6272a4">/* 行高 */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">list-style</span>:<span style="color:#ff79c6">none</span>;<span style="color:#6272a4">/*去掉圆点或数字 circle-空心圆 decimal-数字 square-正方形*/</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">text-indent</span>:<span style="color:#bd93f9">1</span><span style="color:#8be9fd">em</span>;<span style="color:#6272a4">/* 缩进 */</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">style</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">ul</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#ff79c6">li</span>&gt; 
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">a</span> <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;#&#34;</span>&gt;图&lt;/<span style="color:#ff79c6">a</span>&gt;&amp;nbsp;&amp;nbsp;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">a</span> <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;#&#34;</span>&gt;fiff&lt;/<span style="color:#ff79c6">a</span>&gt;&amp;nbsp;&amp;nbsp;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#ff79c6">li</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#ff79c6">li</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">a</span> <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;#&#34;</span>&gt;家用电器&lt;/<span style="color:#ff79c6">a</span>&gt;&amp;nbsp;&amp;nbsp;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">a</span> <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;#&#34;</span>&gt;手机&lt;/<span style="color:#ff79c6">a</span>&gt;&amp;nbsp;&amp;nbsp;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">a</span> <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;#&#34;</span>&gt;办公&lt;/<span style="color:#ff79c6">a</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#ff79c6">li</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#ff79c6">li</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">a</span> <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;#&#34;</span>&gt;电脑&lt;/<span style="color:#ff79c6">a</span>&gt;&amp;nbsp;&amp;nbsp;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#ff79c6">li</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#ff79c6">1i</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">a</span> <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;#&#34;</span>&gt;家居&lt;/<span style="color:#ff79c6">a</span>&gt;&amp;nbsp;&amp;nbsp;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">a</span> <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;#&#34;</span>&gt;家%&lt;/<span style="color:#ff79c6">a</span>&gt;&amp;nbsp;&amp;nbsp;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#ff79c6">li</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#ff79c6">1i</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">a</span> <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;#&#34;</span>&gt;礼品箱包&lt;/<span style="color:#ff79c6">a</span>&gt;&amp;nbsp;&amp;nbsp;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">a</span> <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;#&#34;</span>&gt;钟表&lt;/<span style="color:#ff79c6">a</span>&gt;&amp;nbsp;&amp;nbsp;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#ff79c6">1i</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">ul</span>&gt;
+</span></span></code></pre></div><h2 id="背景">背景</h2>
+<h3 id="基本">基本</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">style</span>&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">div</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">width</span>:<span style="color:#bd93f9">1000</span>p×;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">height</span>:<span style="color:#bd93f9">700</span>p×;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">border</span>:<span style="color:#bd93f9">1</span><span style="color:#8be9fd">px</span> <span style="color:#ff79c6">solid</span> <span style="color:#ff79c6">red</span>;<span style="color:#6272a4">/*粗细  实线  颜色*/</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">background-image</span>:<span style="color:#8be9fd;font-style:italic">url</span>(<span style="color:#f1fa8c">&#34;图片路径&#34;</span>);<span style="color:#6272a4">/* 默认全部平铺满*/</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">background-repeat</span>:<span style="color:#ff79c6">repeat-x</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">/*横着平铺   repeat-y 竖着平铺  no-repeat 不平铺*/</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">background</span>:<span style="color:#ff79c6">red</span> <span style="color:#8be9fd;font-style:italic">url</span>(<span style="color:#f1fa8c">&#34;路径&#34;</span>) <span style="color:#bd93f9">200</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">10</span><span style="color:#8be9fd">px</span> <span style="color:#ff79c6">no-repeat</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">/*背景颜色  图片路径  图片的位置  平铺方式*/</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">style</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;divl&#34;</span>&gt;&lt;/<span style="color:#ff79c6">div</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;div2&#34;</span>&gt;&lt;/<span style="color:#ff79c6">div</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;div3&#34;</span>&gt;&lt;/<span style="color:#ff79c6">div</span>&gt;
+</span></span></code></pre></div><h3 id="其他">其他</h3>
+<p><strong>background-image</strong>：</p>
+<p>CSS3中可以通过background-image属性添加多个背景图片。</p>
+<p>不同的背景图像和图像用逗号隔开，所有的图片中显示在<strong>最顶端的为第一张</strong>。</p>
+<p>可以给不同的图片设置多个不同的属性</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#6272a4">/*统一设置属性*/</span>
+</span></span><span style="display:flex;"><span>#example1 { 
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">background-image</span>: <span style="color:#8be9fd;font-style:italic">url</span>(<span style="color:#f1fa8c">img_flwr.gif</span>), <span style="color:#8be9fd;font-style:italic">url</span>(<span style="color:#f1fa8c">paper.gif</span>); 
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">background-position</span>: <span style="color:#ff79c6">right</span> <span style="color:#ff79c6">bottom</span>, <span style="color:#ff79c6">left</span> <span style="color:#ff79c6">top</span>; 
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">background-repeat</span>: <span style="color:#ff79c6">no-repeat</span>, <span style="color:#ff79c6">repeat</span>; 
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">/*设置多个不同的属性*/</span>
+</span></span><span style="display:flex;"><span>#example1 {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">background</span>: <span style="color:#8be9fd;font-style:italic">url</span>(<span style="color:#f1fa8c">img_flwr.gif</span>) <span style="color:#ff79c6">right</span> <span style="color:#ff79c6">bottom</span> <span style="color:#ff79c6">no-repeat</span>, <span style="color:#8be9fd;font-style:italic">url</span>(<span style="color:#f1fa8c">paper.gif</span>) <span style="color:#ff79c6">left</span> <span style="color:#ff79c6">top</span> <span style="color:#ff79c6">repeat</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>background-size</strong> ：</p>
+<p>CSS3以前，背景图像大小由图像的实际大小决定。</p>
+<p>CSS3中可以在不同的环境中指定背景图片的大小。可以指定像素或百分比大小。</p>
+<p>你指定的大小是相对于父元素的宽度和高度的百分比的大小。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#ff79c6">div</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">background</span>:<span style="color:#8be9fd;font-style:italic">url</span>(<span style="color:#f1fa8c">img_flwr.gif</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">background-size</span>:<span style="color:#bd93f9">80</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">60</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">background-repeat</span>:<span style="color:#ff79c6">no-repeat</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">div</span>  <span style="color:#6272a4">/*伸展背景图像完全填充内容区域：*/</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">background</span>:<span style="color:#8be9fd;font-style:italic">url</span>(<span style="color:#f1fa8c">img_flwr.gif</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">background-size</span>:<span style="color:#bd93f9">100</span><span style="color:#8be9fd">%</span> <span style="color:#bd93f9">100</span><span style="color:#8be9fd">%</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">background-repeat</span>:<span style="color:#ff79c6">no-repeat</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>background-origin</strong>：</p>
+<p>background-origin 属性指定了背景图像的位置区域。</p>
+<p>content-box, padding-box,和 border-box区域内可以放置背景图像。</p>
+<p>内容方位、     内边框范围、     外边框范围</p>
+<p><strong>background-clip</strong>：</p>
+<p>background-clip背景从指定位置开始绘制。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#ff79c6">div</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">background</span>:<span style="color:#8be9fd;font-style:italic">url</span>(<span style="color:#f1fa8c">img_flwr.gif</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">background-repeat</span>:<span style="color:#ff79c6">no-repeat</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">background-size</span>:<span style="color:#bd93f9">100</span><span style="color:#8be9fd">%</span> <span style="color:#bd93f9">100</span><span style="color:#8be9fd">%</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">background-origin</span>:<span style="color:#ff79c6">content-box</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">/*在 content-box 中定位背景图片*/</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>#example1 { 
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">border</span>: <span style="color:#bd93f9">10</span><span style="color:#8be9fd">px</span> <span style="color:#ff79c6">dotted</span> <span style="color:#ff79c6">black</span>; 
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">padding</span>: <span style="color:#bd93f9">35</span><span style="color:#8be9fd">px</span>; 
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">background</span>: <span style="color:#ff79c6">yellow</span>; 
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">background-clip</span>: <span style="color:#ff79c6">content-box</span>; 
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="渐变gradients">渐变（gradients）</h2>
+<p><a href="https://blog.csdn.net/HU_YEWEN/article/details/90604792">https://blog.csdn.net/HU_YEWEN/article/details/90604792</a>   博客）</p>
+<p><a href="https://www.grabient.com/">https://www.grabient.com/</a>    配色网站（提供CSS代码）</p>
+<p>渐变（gradients）可以让你在两个或多个指定的颜色之间显示平稳的过渡。可以减少下载的时间和宽带的使用，因为渐变是由浏览器生成的</p>
+<p>CSS3 定义了两种类型的渐变（gradients）：</p>
+<ul>
+<li><strong>线性渐变（Linear Gradients）- 向下/向上/向左/向右/对角方向</strong></li>
+<li><strong>径向渐变（Radial Gradients）- 由它们的中心定义</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">style</span>&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">body</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">background</span>:<span style="color:#50fa7b">linear-grabient</span>(<span style="color:#bd93f9">19</span><span style="color:#8be9fd">deg</span>,<span style="color:#bd93f9">#21D4FD</span> <span style="color:#bd93f9">0</span><span style="color:#8be9fd">%</span>,<span style="color:#bd93f9">#B721FF</span> <span style="color:#bd93f9">100</span><span style="color:#8be9fd">%</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">/*或者*/</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">background-image</span>:<span style="color:#50fa7b">linear-grabient</span>(<span style="color:#bd93f9">19</span><span style="color:#8be9fd">deg</span>,<span style="color:#bd93f9">#21D4FD</span> <span style="color:#bd93f9">0</span><span style="color:#8be9fd">%</span>,<span style="color:#bd93f9">#B721FF</span> <span style="color:#bd93f9">100</span><span style="color:#8be9fd">%</span>);<span style="color:#6272a4">/* 加入文字后会有一条一条的出现条纹 */</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">style</span>&gt;
+</span></span></code></pre></div><h3 id="线性渐变">线性渐变</h3>
+<p><strong>语法</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSS" data-lang="CSS"><span style="display:flex;"><span><span style="color:#ff79c6">background-image</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">linear-gradient</span><span style="color:#ff79c6">(</span><span style="color:#ff79c6">direction</span><span style="color:#ff79c6">/</span><span style="color:#ff79c6">angle</span><span style="color:#ff79c6">,</span> <span style="color:#ff79c6">color-stop1</span><span style="color:#ff79c6">,</span> <span style="color:#ff79c6">color-stop2</span><span style="color:#ff79c6">,</span> <span style="color:#ff79c6">...);</span>
+</span></span></code></pre></div><p>angle表示角度，指水平线和渐变线之间的角度，<strong>逆时针方向</strong>计算。
+0deg 将创建一个从下到上的渐变，90deg 将创建一个从左到右的渐变。以此类推
+很多浏览器（Chrome、Safari、firefox等）的使用了旧的标准，即 0deg 将创建一个从左到右的渐变，90deg 将创建一个从下到上的渐变。换算公式 90 - x = y 其中 x 为标准角度，y为非标准角度。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSS" data-lang="CSS"><span style="display:flex;"><span><span style="color:#6272a4">/*默认从上到下,180/0deg*/</span>
+</span></span><span style="display:flex;"><span>#grad {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">height</span>: <span style="color:#bd93f9">200</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">background-color</span>: <span style="color:#ff79c6">red</span>; <span style="color:#6272a4">/* 浏览器不支持的时候显示 */</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">background-image</span>: <span style="color:#8be9fd;font-style:italic">linear-gradient</span>(<span style="color:#ff79c6">red</span> <span style="color:#bd93f9">10</span><span style="color:#8be9fd">%</span>, <span style="color:#ff79c6">green</span> <span style="color:#bd93f9">85</span><span style="color:#8be9fd">%</span>, <span style="color:#ff79c6">blue</span> <span style="color:#bd93f9">90</span><span style="color:#8be9fd">%</span>); <span style="color:#6272a4">/* 标准的语法（必须放在最后） */</span>
+</span></span><span style="display:flex;"><span>} <span style="color:#6272a4">/* 多个颜色节点 */</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">/*百分比表示指定颜色的标准中心线位置，百分比之间是过渡色，如果百分比位置之间有重叠会失去渐变过渡色。
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">10% 表示 red 的颜色中心线在线性渐变方向的 10% 的位置。
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">85% 表示 green 的颜色中心线在线性渐变方向的 85% 的位置。
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">90% 表示 blue 的颜色中心线在线性渐变方向的 90% 的位置。*/</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>#grad {  <span style="color:#6272a4">/*从左到右*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">height</span>: <span style="color:#bd93f9">200</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">background-image</span>: <span style="color:#8be9fd;font-style:italic">linear-gradient</span>(<span style="color:#ff79c6">to</span> <span style="color:#ff79c6">right</span>, <span style="color:#ff79c6">red</span> , <span style="color:#ff79c6">yellow</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>#grad { <span style="color:#6272a4">/*从左上角到右下角*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">height</span>: <span style="color:#bd93f9">200</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">background-image</span>: <span style="color:#8be9fd;font-style:italic">linear-gradient</span>(<span style="color:#ff79c6">to</span> <span style="color:#ff79c6">bottom</span> <span style="color:#ff79c6">right</span>, <span style="color:#ff79c6">red</span>, <span style="color:#ff79c6">yellow</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>#grad { <span style="color:#6272a4">/*带有指定的角度*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">background-image</span>: <span style="color:#8be9fd;font-style:italic">linear-gradient</span>(<span style="color:#bd93f9">-90</span><span style="color:#8be9fd">deg</span>, <span style="color:#ff79c6">red</span>, <span style="color:#ff79c6">yellow</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">/* 使用透明度（transparent）*/</span>
+</span></span><span style="display:flex;"><span>#grad {
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">background-image</span>: <span style="color:#8be9fd;font-style:italic">linear-gradient</span>(<span style="color:#ff79c6">to</span> <span style="color:#ff79c6">right</span>, <span style="color:#8be9fd;font-style:italic">rgba</span>(<span style="color:#bd93f9">255</span>,<span style="color:#bd93f9">0</span>,<span style="color:#bd93f9">0</span>,<span style="color:#bd93f9">0</span>), <span style="color:#8be9fd;font-style:italic">rgba</span>(<span style="color:#bd93f9">255</span>,<span style="color:#bd93f9">0</span>,<span style="color:#bd93f9">0</span>,<span style="color:#bd93f9">1</span>));
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">/* 有重复的 */</span>
+</span></span><span style="display:flex;"><span>#grad {
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4">/* 标准的语法 */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">background-image</span>: <span style="color:#8be9fd;font-style:italic">repeating-linear-gradient</span>(<span style="color:#ff79c6">red</span>, <span style="color:#ff79c6">yellow</span> <span style="color:#bd93f9">10</span><span style="color:#8be9fd">%</span>, <span style="color:#ff79c6">green</span> <span style="color:#bd93f9">20</span><span style="color:#8be9fd">%</span>);<span style="color:#6272a4">/* 第一个没有%，后面有% */</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="径向渐变">径向渐变</h3>
+<p>至少定义两种颜色节点。颜色节点即你想要呈现平稳过渡的颜色。</p>
+<p>同时，你也可以指定渐变的中心、形状（圆形或椭圆形）、大小。</p>
+<p>默认情况下，渐变的中心是 center（表示在中心点），渐变的形状是 ellipse（表示椭圆形），渐变的大小是 farthest-corner（表示到最远的角落）。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSS" data-lang="CSS"><span style="display:flex;"><span>#grad { <span style="color:#6272a4">/* 颜色节点均匀分布（默认情况下）*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">background-image</span>: <span style="color:#8be9fd;font-style:italic">radial-gradient</span>(<span style="color:#ff79c6">red</span>, <span style="color:#ff79c6">yellow</span>, <span style="color:#ff79c6">green</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>#grad {  <span style="color:#6272a4">/*颜色节点不均匀分布*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">background-image</span>: <span style="color:#8be9fd;font-style:italic">radial-gradient</span>(<span style="color:#ff79c6">red</span> <span style="color:#bd93f9">5</span><span style="color:#8be9fd">%</span>, <span style="color:#ff79c6">yellow</span> <span style="color:#bd93f9">15</span><span style="color:#8be9fd">%</span>, <span style="color:#ff79c6">green</span> <span style="color:#bd93f9">60</span><span style="color:#8be9fd">%</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>#grad { <span style="color:#6272a4">/*circle 表示圆形，ellipse 表示椭圆形。默认值是 ellipse*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">background-image</span>: <span style="color:#8be9fd;font-style:italic">radial-gradient</span>(<span style="color:#ff79c6">circle</span>, <span style="color:#ff79c6">red</span>, <span style="color:#ff79c6">yellow</span>, <span style="color:#ff79c6">green</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">/* size 参数定义了渐变的大小。它可以是以下四个值：
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">closest-side（渐变扩展到最近的边就停止）、
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">farthest-side（渐变扩展到最远的边就停止）、
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">closest-corner（渐变扩展到最近的角就停止）、
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">farthest-corner（渐变扩展到最远的角就停止） 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">后面的百分号表示 和边框左边的距离  和边框上边的距离
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">*/</span>
+</span></span><span style="display:flex;"><span>#grad1 {
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">background-image</span>: <span style="color:#8be9fd;font-style:italic">radial-gradient</span>(closest<span style="color:#ff79c6">-</span>side at <span style="color:#bd93f9">60</span><span style="color:#8be9fd">%</span> <span style="color:#bd93f9">55</span><span style="color:#8be9fd">%</span>, <span style="color:#ff79c6">red</span>, <span style="color:#ff79c6">yellow</span>, <span style="color:#ff79c6">black</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>#grad {
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">background-image</span>: <span style="color:#8be9fd;font-style:italic">repeating-radial-gradient</span>(<span style="color:#ff79c6">red</span>, <span style="color:#ff79c6">yellow</span> <span style="color:#bd93f9">10</span><span style="color:#8be9fd">%</span>, <span style="color:#ff79c6">green</span> <span style="color:#bd93f9">15</span><span style="color:#8be9fd">%</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="盒子模型">盒子模型</h2>
+<p>审查元素|开发者模式（F12） -&gt; 元素 -&gt; 右边的计算样式</p>
+<p><strong>position</strong>：位置</p>
+<p><strong>margin</strong>：外边距</p>
+<p><strong>border</strong>：边框</p>
+<p><strong>padding</strong>：内边距</p>
+<h3 id="边框">边框</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">style</span>&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4">/*body总有一个默认的外边距margin:0 */</span>
+</span></span><span style="display:flex;"><span>  #box{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">width</span>:<span style="color:#bd93f9">300</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">border</span>:<span style="color:#bd93f9">1</span><span style="color:#8be9fd">px</span> <span style="color:#ff79c6">solid</span> <span style="color:#ff79c6">red</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">/*粗细，样式(实线)，颜色*/</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    div:<span style="color:#50fa7b">nth-of-type</span>(<span style="color:#bd93f9">1</span>) input{
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">border</span><span style="color:#ff79c6">:</span><span style="color:#bd93f9">3</span><span style="color:#8be9fd">px</span> <span style="color:#ff79c6">dashed</span> <span style="color:#ff79c6">black</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">/*粗细，样式(虚线)，颜色*/</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">style</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">body</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;box&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#ff79c6">h2</span>&gt;登录&lt;/<span style="color:#ff79c6">h2</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#ff79c6">form</span> <span style="color:#50fa7b">action</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;#&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">div</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#ff79c6">span</span>&gt;姓名：&lt;/<span style="color:#ff79c6">span</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#ff79c6">input</span> <span style="color:#50fa7b">type</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;text&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#ff79c6">div</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#ff79c6">form</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">body</span>&gt;
+</span></span></code></pre></div><h4 id="边界图片">边界图片</h4>
+<p>CSS3 的 <strong>border-image</strong> 属性，可以使用图像创建一个边框：</p>
+<p><strong>Internet Explorer 不支持 border-image 属性。</strong></p>
+<p>**stretch **表示被拉伸以填充区域</p>
+<p>**round **表示平铺（重复）来填充该区域。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSS" data-lang="CSS"><span style="display:flex;"><span><span style="color:#ff79c6">-webkit-border-image</span>:url<span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;图片路径&#34;</span><span style="color:#ff79c6">)</span> <span style="color:#ff79c6">30</span> <span style="color:#ff79c6">30</span> <span style="color:#ff79c6">round</span><span style="color:#ff79c6">;</span> <span style="color:#6272a4">/* Safari 5 and older */</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">-o-border-image</span>:url<span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;图片路径&#34;</span><span style="color:#ff79c6">)</span> <span style="color:#ff79c6">30</span> <span style="color:#ff79c6">30</span> <span style="color:#ff79c6">stretch</span><span style="color:#ff79c6">;</span> <span style="color:#6272a4">/* Opera */</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">border-image</span>:url<span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;图片路径&#34;</span><span style="color:#ff79c6">)</span> <span style="color:#ff79c6">30</span> <span style="color:#ff79c6">30</span> <span style="color:#ff79c6">round</span><span style="color:#ff79c6">;</span>
+</span></span></code></pre></div><h3 id="边距">边距</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#6272a4">/* 边距 */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">padding-top</span>:0px<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">margin-left</span>:0px<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">margin</span>:0 <span style="color:#ff79c6">0</span> <span style="color:#ff79c6">0</span> <span style="color:#ff79c6">0</span><span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">/* top right bottom left  顺时针*/</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">/***** body边距是无限的，无法直接将内部元素居中  ******/</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">/*外边距实现居中*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">margin</span>:0 <span style="color:#ff79c6">auto</span><span style="color:#ff79c6">;</span><span style="color:#6272a4">/* 上下为0  左右为auto(自动) */</span>
+</span></span></code></pre></div><p>整个宽度 = margin + border + padding + 内容宽度（设计时需要注意）</p>
+<h3 id="圆角边框阴影">圆角边框、阴影</h3>
+<p><strong>border-radius</strong> - 指定每个圆角</p>
+<ul>
+<li><strong>四个值:</strong> 第一个值为左上角，第二个值为右上角，第三个值为右下角，第四个值为左下角。</li>
+<li><strong>三个值:</strong> 第一个值为左上角, 第二个值为右上角和左下角，第三个值为右下角</li>
+<li><strong>两个值:</strong> 第一个值为左上角与右下角，第二个值为右上角与左下角</li>
+<li><strong>一个值：</strong> 四个圆角值相同</li>
+</ul>
+<p><strong>border-radius</strong> 的值如果为百分比，则为圆角的大小将始终是盒子的<code>width</code> 和 <code>height</code>乘上百分比。</p>
+<p>在 W3C 中，如果两个相邻角的半径之和超过了相应盒子边的长度，那么浏览器要重新计算，以保证两者不会重合。计算的规则就是<strong>同时缩放两个圆角的半径</strong>，直至两个相邻角的半径和为盒子的长度。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">style</span>&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">div</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">border</span>:<span style="color:#bd93f9">10</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">border-radius</span>:<span style="color:#bd93f9">100</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">/* 左上 右上 右下 左下 顺时针*/</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">border-radius</span>:<span style="color:#bd93f9">50</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">20</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">10</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">1</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">/* 圆角 = 半径 */</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">/* 横向  竖线  模糊 */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">box-shadow</span>:<span style="color:#bd93f9">10</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">50</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">100</span><span style="color:#8be9fd">px</span> <span style="color:#ff79c6">yellow</span>;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">style</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">div</span>&gt;&lt;/<span style="color:#ff79c6">div</span>&gt;
+</span></span></code></pre></div><h2 id="浮动">浮动</h2>
+<h3 id="标准文档流"><strong>标准文档流</strong></h3>
+<p>块级元素：独占一行</p>
+<pre tabindex="0"><code>h1-h6 p div 列表
+</code></pre><p>行内元素：不独占一行</p>
+<pre tabindex="0"><code>span a img strong ...
+</code></pre><p>行内元素可以被包含在块级元素中、</p>
+<h3 id="display">display</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">style</span>&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">div</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">width</span>:<span style="color:#bd93f9">100</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">height</span>:<span style="color:#bd93f9">100</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">border</span>:<span style="color:#bd93f9">1</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>  }  
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">span</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">width</span>:<span style="color:#bd93f9">100</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">height</span>:<span style="color:#bd93f9">100</span><span style="color:#8be9fd">px</span>;<span style="color:#6272a4">/* 对行内元素来说，无效，height只与字的高度有关 */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">border</span>:<span style="color:#bd93f9">1</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">display</span>:<span style="color:#ff79c6">block</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">/* inline-block 是块元素，但是可以内联
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">    inline 行内元素
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">    block 块元素
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">    none 不显示
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">    */</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">style</span>&gt;
+</span></span></code></pre></div><h3 id="floatclear">float、clear</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#ff79c6">div</span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">float</span>:<span style="color:#ff79c6">left</span>;<span style="color:#6272a4">/* 向左浮动，直到它的边缘碰到父级盒子或者另一个浮动的盒子*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4">/* 浮动的元素不在父级盒子内部，在其上方
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">  会产生两个层级 会挤开下一级的盒子*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4">/*left right top bottom*/</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">clear</span>:<span style="color:#ff79c6">right</span>;<span style="color:#6272a4">/* 右侧不允许有浮动元素，如果有会让当前元素排到下面一行去 */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4">/* left right none both-两侧不允许有浮动 */</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span></code></pre></div><h4 id="父级边框塌陷问题overflow">父级边框塌陷问题、overflow</h4>
+<p>**1、**增加父级元素高度（low，不建议）</p>
+<p><strong>2、<strong>增加一个空的</strong>div</strong>标签，清除浮动 <strong>clear:none;</strong></p>
+<p>（实际中尽量避免空div）</p>
+<p>**3、**overflow</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">style</span>&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">div</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">width</span>:<span style="color:#bd93f9">100</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">height</span>:<span style="color:#bd93f9">150</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">overflow</span>:<span style="color:#ff79c6">scroll</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">/* 当内容超过width、height的限制
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">       不加overflow的话，会向下溢出
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">           scroll会再旁边有滚动条
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">           hidden会只显示左上部分
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">           auto
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">    */</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">style</span>&gt;
+</span></span></code></pre></div><p>下拉的一些场景避免使用</p>
+<p>**4、**在父类添加一个伪类</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">style</span>&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">div</span>:after{   <span style="color:#6272a4">/*在元素之后添加内容*/</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">content</span>: <span style="color:#f1fa8c">&#39;&#39;</span>;  <span style="color:#6272a4">/*内容 一定要设置,不然伪类不生效。可以设置为空*/</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#ff79c6">display</span>:<span style="color:#ff79c6">block</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">clear</span>:<span style="color:#ff79c6">both</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4">/*会在div元素后面添加一个&#39;&#39;的内容，且这个内容显示为block,左右无浮动元素。这样原理同上*/</span>
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">style</span>&gt;
+</span></span></code></pre></div><h3 id="对比">对比</h3>
+<ul>
+<li><strong>display</strong></li>
+</ul>
+<p>方向不可控</p>
+<ul>
+<li><strong>float</strong></li>
+</ul>
+<p>浮动起来会脱离标准文档流，需要考虑父级边框塌陷问题</p>
+<h2 id="定位">定位</h2>
+<h3 id="相对定位绝对定位固定定位">相对定位、绝对定位、固定定位</h3>
+<p><strong>position</strong>：一定要有。relative、absolute、fixed</p>
+<p><strong>相对定位（relative）</strong>：相对于自己原来的位置进行偏移，仍然在标准文档流，原来的位置会被保留。</p>
+<p><strong>绝对定位（absolute）</strong>：默认位置根据父级元素决定，不在标准文档流，原来的位置不会被保留。</p>
+<p>1、没有父级元素定位的前提下，相对于浏览器定位</p>
+<p>2、父级元素存在定位，我们通常会相对于父级元素进行偏移</p>
+<p><strong>固定定位(fixed)</strong>：相对于浏览器窗口进行偏移，（返回顶部就是这样设置的）</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">style</span>&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">div</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">margin</span>:lepx;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">padding</span>:<span style="color:#bd93f9">5</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">font-size</span>:<span style="color:#bd93f9">12</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">line-height</span>:<span style="color:#bd93f9">25</span>p×;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  #first{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">position</span>:<span style="color:#ff79c6">relative</span>;<span style="color:#6272a4">/* 相对定位:上 下 左 右*/</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">top</span>:<span style="color:#bd93f9">-20</span><span style="color:#8be9fd">px</span>;<span style="color:#6272a4">/*上边距离父级元素上边-20px*/</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">left</span>:<span style="color:#bd93f9">20</span><span style="color:#8be9fd">px</span>;<span style="color:#6272a4">/*左边距离父级元素左边20px*/</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  #second{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">position</span>:<span style="color:#ff79c6">absolute</span>;<span style="color:#6272a4">/* 绝对定位*/</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">left</span>:<span style="color:#bd93f9">-10</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">right</span>:<span style="color:#bd93f9">10</span><span style="color:#8be9fd">px</span>;<span style="color:#6272a4">/* 相反的两个方向都有，会使其拉伸*/</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  #third{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">position</span>:<span style="color:#ff79c6">fixed</span>;<span style="color:#6272a4">/* 固定定位*/</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">style</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;first&#34;</span>&gt;&lt;/<span style="color:#ff79c6">div</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;second&#34;</span>&gt;&lt;/<span style="color:#ff79c6">div</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;third&#34;</span>&gt;&lt;/<span style="color:#ff79c6">div</span>&gt;
+</span></span></code></pre></div><h3 id="z-index透明度">z-index、透明度</h3>
+<p>图层概念，0层为底</p>
+<p>z-index:0;</p>
+<p>opacity:0.5; 背景透明度</p>
+<p>filter:Alpha(opacity=50);</p>
+<h2 id="2d-转换">2D 转换</h2>
+<p><strong>translate()方法</strong>：根据左(X轴)和顶部(Y轴)位置给定的参数，从当前元素位置移动。  translate值（50px，100px）是从左边元素移动50个像素，并从顶部移动100像素。</p>
+<p><strong>rotate()方法</strong>：在一个给定度数顺时针旋转的元素。负值是允许的，这样是元素逆时针旋转。</p>
+<p><strong>scale()方法</strong>：该元素增加或减少的大小，取决于宽度（X轴）和高度（Y轴）的参数。scale（2,3）转变宽度为原来的大小的2倍，和其原始大小3倍的高度。</p>
+<p><strong>skew() 方法</strong>：表示X轴和Y轴倾斜的角度，如果第二个参数为空，则默认为0，参数为负表示向相反方向倾斜。</p>
+<p><strong>matrix() 方法</strong>：有六个参数，包含旋转，缩放，移动（平移）和倾斜功能。</p>
+<h2 id="3d-转换">3D 转换</h2>
+<p><strong>rotateX() 方法</strong>：围绕其在一个给定度数X轴旋转的元素。</p>
+<p><strong>rotateY() 方法</strong>：围绕其在一个给定度数Y轴旋转的元素。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">函数</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">matrix3d(<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>, <em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>)</td>
+<td style="text-align:left">定义 3D 转换，使用 16 个值的 4x4 矩阵。</td>
+</tr>
+<tr>
+<td style="text-align:left">translate3d(<em>x</em>,<em>y</em>,<em>z</em>)</td>
+<td style="text-align:left">定义 3D 转化。</td>
+</tr>
+<tr>
+<td style="text-align:left">translateX(<em>x</em>)</td>
+<td style="text-align:left">定义 3D 转化，仅使用用于 X 轴的值。</td>
+</tr>
+<tr>
+<td style="text-align:left">translateY(<em>y</em>)</td>
+<td style="text-align:left">定义 3D 转化，仅使用用于 Y 轴的值。</td>
+</tr>
+<tr>
+<td style="text-align:left">translateZ(<em>z</em>)</td>
+<td style="text-align:left">定义 3D 转化，仅使用用于 Z 轴的值。</td>
+</tr>
+<tr>
+<td style="text-align:left">scale3d(<em>x</em>,<em>y</em>,<em>z</em>)</td>
+<td style="text-align:left">定义 3D 缩放转换。</td>
+</tr>
+<tr>
+<td style="text-align:left">scaleX(<em>x</em>)</td>
+<td style="text-align:left">定义 3D 缩放转换，通过给定一个 X 轴的值。</td>
+</tr>
+<tr>
+<td style="text-align:left">scaleY(<em>y</em>)</td>
+<td style="text-align:left">定义 3D 缩放转换，通过给定一个 Y 轴的值。</td>
+</tr>
+<tr>
+<td style="text-align:left">scaleZ(<em>z</em>)</td>
+<td style="text-align:left">定义 3D 缩放转换，通过给定一个 Z 轴的值。</td>
+</tr>
+<tr>
+<td style="text-align:left">rotate3d(<em>x</em>,<em>y</em>,<em>z</em>,<em>angle</em>)</td>
+<td style="text-align:left">定义 3D 旋转。</td>
+</tr>
+<tr>
+<td style="text-align:left">rotateX(<em>angle</em>)</td>
+<td style="text-align:left">定义沿 X 轴的 3D 旋转。</td>
+</tr>
+<tr>
+<td style="text-align:left">rotateY(<em>angle</em>)</td>
+<td style="text-align:left">定义沿 Y 轴的 3D 旋转。</td>
+</tr>
+<tr>
+<td style="text-align:left">rotateZ(<em>angle</em>)</td>
+<td style="text-align:left">定义沿 Z 轴的 3D 旋转。</td>
+</tr>
+<tr>
+<td style="text-align:left">perspective(<em>n</em>)</td>
+<td style="text-align:left">定义 3D 转换元素的透视视图。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="过渡">过渡</h2>
+<p>必须规定两项内容：</p>
+<ul>
+<li>指定要添加效果的CSS属性</li>
+<li>指定效果的持续时间。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#ff79c6">div</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">transition</span>: <span style="color:#ff79c6">width</span> <span style="color:#bd93f9">1</span><span style="color:#8be9fd">s</span> <span style="color:#ff79c6">linear</span> <span style="color:#bd93f9">2</span><span style="color:#8be9fd">s</span>, <span style="color:#ff79c6">height</span> <span style="color:#bd93f9">2</span><span style="color:#8be9fd">s</span>, <span style="color:#ff79c6">transform</span> <span style="color:#bd93f9">2</span><span style="color:#8be9fd">s</span>;
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">/*应用于宽度、高度和转换效果属性的过渡效果，时长为 2 秒
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">如果未指定的期限，transition将没有任何效果，因为默认值是0。*/</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="https://www.runoob.com/cssref/css3-pr-transition.html">transition</a></td>
+<td style="text-align:left">简写属性，用于在一个属性中设置四个过渡属性。</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://www.runoob.com/cssref/css3-pr-transition-property.html">transition-property</a></td>
+<td style="text-align:left">规定应用过渡的 CSS 属性的名称。</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://www.runoob.com/cssref/css3-pr-transition-duration.html">transition-duration</a></td>
+<td style="text-align:left">定义过渡效果花费的时间。默认是 0。</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://www.runoob.com/cssref/css3-pr-transition-timing-function.html">transition-timing-function</a></td>
+<td style="text-align:left">规定过渡效果的时间曲线。默认是 &ldquo;ease&rdquo;。</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://www.runoob.com/cssref/css3-pr-transition-delay.html">transition-delay</a></td>
+<td style="text-align:left">规定过渡效果何时开始。默认是 0。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="动画">动画</h2>
+<p>@keyframes 规则是创建动画。@keyframes 规则内指定一个 CSS 样式和动画将逐步从目前的样式更改为新的样式。</p>
+<p>当在 <strong>@keyframes</strong> 创建动画，把它绑定到一个选择器，否则动画不会有任何效果。指定至少这两个CSS3的动画属性绑定向一个选择器：</p>
+<ul>
+<li>规定动画的名称</li>
+<li>规定动画的时长（如果省略的持续时间，动画将无法运行，因为默认值是0。）</li>
+</ul>
+<p><strong>可以改变任意多的样式任意多的次数。</strong></p>
+<p>用百分比来规定变化发生的时间，0% 是动画的开始，100% 是动画的完成。&ldquo;from&rdquo; 和 &ldquo;to&quot;等同于 0% 和 100%。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSS" data-lang="CSS"><span style="display:flex;"><span><span style="color:#ff79c6">div</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">width</span>:<span style="color:#bd93f9">100</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">height</span>:<span style="color:#bd93f9">100</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">background</span>:<span style="color:#ff79c6">red</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">animation</span>:myfirst <span style="color:#bd93f9">5</span><span style="color:#8be9fd">s</span>;  <span style="color:#6272a4">/*规定动画的名称和时间*/</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>@<span style="color:#ff79c6">keyframes</span> <span style="color:#ff79c6">myfirst</span> 
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">/*定义一个动画，名字是myfirst，内容是将背景色从red变yellow*/</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">from</span> {<span style="color:#ff79c6">background</span>:<span style="color:#ff79c6">red</span>;}
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">to</span> {<span style="color:#ff79c6">background</span>:<span style="color:#ff79c6">yellow</span>;}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="https://www.runoob.com/cssref/css3-pr-animation-keyframes.html">@keyframes</a></td>
+<td style="text-align:left">规定动画。</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://www.runoob.com/cssref/css3-pr-animation.html">animation</a></td>
+<td style="text-align:left">所有动画属性的简写属性。</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://www.runoob.com/cssref/css3-pr-animation-name.html">animation-name</a></td>
+<td style="text-align:left">规定 @keyframes 动画的名称。</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://www.runoob.com/cssref/css3-pr-animation-duration.html">animation-duration</a></td>
+<td style="text-align:left">规定动画完成一个周期所花费的秒或毫秒。默认是 0。</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://www.runoob.com/cssref/css3-pr-animation-timing-function.html">animation-timing-function</a></td>
+<td style="text-align:left">规定动画的速度曲线。默认是 &ldquo;ease&rdquo;。</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://www.runoob.com/cssref/css3-pr-animation-fill-mode.html">animation-fill-mode</a></td>
+<td style="text-align:left">规定当动画不播放时（当动画完成时，或当动画有一个延迟未开始播放时），要应用到元素的样式。</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://www.runoob.com/cssref/css3-pr-animation-delay.html">animation-delay</a></td>
+<td style="text-align:left">规定动画何时开始。默认是 0。</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://www.runoob.com/cssref/css3-pr-animation-iteration-count.html">animation-iteration-count</a></td>
+<td style="text-align:left">规定动画被播放的次数。默认是 1。（一直播放&ndash;infinite）</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://www.runoob.com/cssref/css3-pr-animation-direction.html">animation-direction</a></td>
+<td style="text-align:left">规定动画是否在下一周期逆向地播放。默认是 &ldquo;normal&rdquo;。</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://www.runoob.com/cssref/css3-pr-animation-play-state.html">animation-play-state</a></td>
+<td style="text-align:left">规定动画是否正在运行或暂停。默认是 &ldquo;running&rdquo;。</td>
+</tr>
+</tbody>
+</table>
+
+    </div>
+    <div class="post-footer">
+        <div class="info">
+            
+            <span class="separator"><a class="tag" href="/tags/computer/">computer</a><a class="tag" href="/tags/%E5%89%8D%E7%AB%AF/">前端</a></span>
+        </div>
+        
+
+
+    </div>
+    
+        
+    
+</div>
+
+                <div class="grow"></div>
+                <div class="built-with">
+    Built with <a href="https://gohugo.io/">Hugo</a> <b>·</b> Using the <a href="https://github.com/LucasVadilho/heyo-hugo-theme">heyo</a> theme
+</div>
+            </div>
+        </div>
+        
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha512-3M00D/rn8n+2ZVXBO9Hib0GKNpkm8MSUU/e2VNthDyBYxKWG+BftNYYcuEjXlyrSO637tidzMBXfE7sQm0INUg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<script type="text/javascript">
+            
+            
+            window.MathJax = {
+                tex: {
+                    inlineMath: [['$', '$'], ['\\(', '\\)']],
+                    displayMath: [['$$','$$'], ['\\[', '\\]']]
+                },
+                svg: {
+                    scale: 1.25,
+                }
+            };
+        </script><script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.1.0/es5/tex-mml-svg.min.js" integrity="sha512-/mL9Gs6E5Bz6NtPOr9eY&#43;T8IIdJbo2JL3TudApzFFelwBXEc3TeFLU6kPq122TJROv7jkktuBRkz5h8vGzrsyA==" crossorigin="anonymous"></script>
+    </body>
+</html>

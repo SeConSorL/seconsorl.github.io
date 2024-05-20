@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Computer on My Blog</title>
+    <link>https://seconsorl.github.io/tags/computer/</link>
+    <description>Recent content in Computer on My Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>216002917@nbu.edu.cn (HZW)</managingEditor>
+    <webMaster>216002917@nbu.edu.cn (HZW)</webMaster>
+    <lastBuildDate>Mon, 06 May 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://seconsorl.github.io/tags/computer/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CSS</title>
+      <link>https://seconsorl.github.io/post/css/</link>
+      <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
+      <guid>https://seconsorl.github.io/post/css/</guid>
+      <description>CSS(Cascading Style Sheet)层叠样式表 TIPS 链接 CSS_菜鸟教程 W3school&#xA;查看网页样式 审查元素|开发者模式（F12） -&amp;gt; 元素 -&amp;gt; 右边的样式&#xA;正则 = 绝对等于 *= 包含这个元素 ^=以这个开头 $=以这个结尾 div 主要用来设置一块一块区域的&#xA;不加宽度设置，默认和上一级一样宽&#xA;img 默认内联元素&#xA;图片居中可以设置为在外面套一个div，设置display:block；再margin:0 auto;即可 或者 外层添加text-align属性 center&#xA;span 主要用于设置一段文字&#xA;CSS预处理器 CSS预处理器定义了一种新的语言，其基本思想是，用一种专门的编程语言，为CSS加了一些编程的特性，将CSS作为目标生成文件，然后开发者就只要使用这种语言进行CSS的编码工作。就是用一种专门的编程语言，进行Web页面样式设计，再通过编译器转化为正常的CSS文件，以供项目使用。&#xA;SASS：基于Ruby，通过服务端处理，功能强大。解析效率高。需要学习Ruby语言，上手难度高于LESS。&#xA;LESS：基于NodeJS，通过客户端处理，使用简单。功能比SASS简单，解析效率也低于SASS，但在实际开发中足够了，所以我们后台人员如果需要的话，建议使用LESS。&#xA;简介 发展史 CSS 1.0：基本&#xA;CSS 2.0：DIV（块）+CSS，HTML 与 CSS 结构分离的思想，利于SEO&#xA;CSS 2.1：浮动，定位&#xA;CSS 3.0：圆角边框，阴影，动画&amp;hellip; 浏览器兼容性~&#xA;格式 文件目录格式 CSS-&amp;gt; .css文件&#xA;.html文件&#xA;内容格式 行内样式 在标签中写style=&amp;quot; &amp;ldquo;，仅对当前标签生效 &amp;lt;h1 style=&amp;#34;color:red&amp;#34;&amp;gt; 1 &amp;lt;/h1&amp;gt; 内部样式 在HTML文件中写：在head标签里加入style标签，在style中写CSS代码 style标签中加CSS代码，和HTML不同 style标签中的注释格式 /* */ &amp;lt;style&amp;gt; h1{ color:red; border-radius:10px; } &amp;lt;/style&amp;gt; 外部样式 在CSS文件中写：不需要加style标签，直接写。 HTML引用CSS（在head标签）： &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;文件路径&amp;#34;&amp;gt; &amp;lt;style&amp;gt; @import url(&amp;#34;路径&amp;#34;); /*CSS2.1 特有 不建议*/ &amp;lt;/style&amp;gt; 语法 样式的优先级：行内样式 &amp;gt; （就近原则）内部样式、外部样式&#xA;选择器1 [选择器2 [选择器3]] { 声明1; 声明2; } color:#6位16进制数; (RGB) &amp;lt;!</description>
+    </item>
+    <item>
+      <title>docker</title>
+      <link>https://seconsorl.github.io/post/docker/</link>
+      <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
+      <guid>https://seconsorl.github.io/post/docker/</guid>
+      <description>TIP 安装DOMJudge&#xA;菜鸟教程&#xA;CSDN&#xA;Docker 官网 docker中文库&#xA;Github Docker 源码&#xA;介绍 Docker，翻译过来就是码头工人&#xA;Docker 是dotCloud公司开源的一个基于LXC（Linux Container）的高级容器引擎，基于Go 语言并遵从 Apache2.0 协议开源。&#xA;Linux Container 容器是一种内核虚拟化技术，可以提供轻量级的虚拟化，以便隔离进程和资源，而且不需要提供指令解释机制以及全虚拟化的其他复杂性。LXC主要通过Kernel的namespace实现每个用户实例之间的项目隔离，通过cgroup实现对资源的配额和调度。&#xA;Docker 可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。&#xA;容器是完全使用沙箱机制，相互之间不会有任何接口（类似 iPhone 的 app）,更重要的是容器性能开销极低。不依赖于任何语言、框架或者包装系统&#xA;Docker 从 17.03 版本之后分为 CE（Community Edition: 社区版） 和 EE（Enterprise Edition: 企业版）&#xA;Docker容器技术与虚拟机的区别 相同点：docker和容器技术和虚拟机技术，都是虚拟化技术。&#xA;不同点：docker有着比虚拟机更少的抽象层。 由于docker不需要Hypervisor实现硬件资源虚拟化，运行在docker容器上的程序直接使用的都是实际物理机的硬件资源。所以docker效率比虚拟机效率高。达到了秒级启动的地步。&#xA;docker相较于VM的优点：&#xA;1、比VM小、快，Docker容器的尺寸减小相比于整个虚拟机大大简化了分布到云和分发时间的开销。Docker启动一个容器实例时间仅仅需要几秒钟。&#xA;2、Docker是一个开放的平台，构建、发布和运行分布式应用程序。&#xA;3、开发人员不需要关系具体是哪个Linux操作系统&#xA;4、Google、微软（azure）、亚马逊、IBM等都支持docker。&#xA;5、Docker支持Unix/Linux操作系统，也支持Windows和Mac。&#xA;Docker局限性：&#xA;Docker用于应用程序时是最有用的，但并不包含数据。日志、数据库等通常放在Docker容器外。一个容器的镜像通常都很小，不用和存储大量数据，存储可以通过外部挂载等方式使用，比如：NFS、ipsan、MFS等 ，或者docker命令 ，-v映射磁盘分区。&#xA;总之，docker只用于计算，存储交给别人。&#xA;工作流程 1、启动docker&#xA;2、下载镜像到本地&#xA;3、启动docker容器实例&#xA;（注册一个dockerhub）&#xA;==Docker核心技术:== 1、Namespace —&amp;gt; 实现Container的进程、网络、消息、文件系统和主机名的隔离。 2、Cgroup —&amp;gt; 实现对资源的配额和调度。&#xA;注意：Cgroup的配额，可以指定实例使用的CPU个数，内存大小等。&#xA;Docker的应用场景 Web 应用的自动化打包和发布。 自动化测试和持续集成、发布。 在服务型环境中部署和调整数据库或其他的后台应用。 从头编译或者扩展现有的 OpenShift 或 Cloud Foundry 平台来搭建自己的 PaaS 环境。 特点 文件系统隔离：每个进程容器运行在一个完全独立的根文件系统里。 资源隔离：系统资源，像CPU和内存等可以分配到不同的容器中，使用cgroup。 网络隔离：每个进程容器运行在自己的网路空间，虚拟接口和IP地址。 日志记录：Docker将收集到和记录的每个进程容器的标准流（stdout/stderr/stdin），用于实时检索或者批量检索 变更管理：容器文件系统的变更可以提交到新的镜像中，并可重复使用以创建更多的容器。无需使用模板或者手动配置。 交互式shell：Docker可以分配一个虚拟终端并且关联到任何容器的标准输出上，例如运行一个一次性交互shell。 优点 Docker 是一个用于开发，交付和运行应用程序的开放平台。Docker 能够将应用程序与基础架构分开，从而可以快速交付软件。&#xA;借助 Docker，可以与管理应用程序相同的方式来管理基础架构。通过利用 Docker 的方法来快速交付，测试和部署代码，大大减少编写代码和在生产环境中运行代码之间的延迟。&#xA;1、快速，一致地交付您的应用程序&#xA;Docker 允许开发人员使用您提供的应用程序或服务的本地容器在标准化环境中工作，从而简化了开发的生命周期。&#xA;2、响应式部署和扩展</description>
+    </item>
+    <item>
+      <title>git</title>
+      <link>https://seconsorl.github.io/post/git/</link>
+      <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
+      <guid>https://seconsorl.github.io/post/git/</guid>
+      <description>TIPS 菜鸟教程&#xA;Git 完整命令手册&#xA;可视化教程&#xA;简介 起源 随着代码库体积的倍数增加，Linus 和社区的小伙伴们很难继续通过手工的方式管理内核代码。于是 Linus 考察了好些版本控制系统，最终决定采用 BitKeeper。&#xA;但 BitKeeper 是商业软件，要收费的。所以 Linus 跟开发 BitKeeper 的商业公司（BitMover）谈判，成功地忽悠到了 BitKeeper 的免费使用权。&#xA;到了 2005 年，BitMover 公司发现 Linux 团队中有人试图破解 BitKeeper 的加密协议。所以，BitMover收回了 Linux 社区的免费使用权。&#xA;2005年4月3日：Linus 开始开发 Git 2005年4月6日：Git 项目对外发布 2005年4月7日：Git 实现作为自身的版本控制工具 2005年4月18日：实现多分支合并 2005年6月16日：Linux 内核 2.6.12 发布，Git 已经可以用于维护 Linux 核心源码 2005年7月26日：Linus 功成身退，将 Git 的维护工作交给另一名 Git 的主要贡献者 Junio C Hamano 取代 SVN 很多公司原来都是使用 SVN 进行版本控制管理，但越来越多的公司选择将代码迁移至 Git（最具标志性的就是使用 SVN 做版本控制的 Google Code ）。&#xA;SVN 和 Git 的区别 最核心的区别是：SVN 是集中式的版本控制系统，而 Git 是分布式的。&#xA;1、Git 是分布式的，SVN 不是：这是 Git 和其它非分布式的版本控制系统，例如 SVN，CVS 等，最核心的区别。 **2、Git 把内容按元数据方式存储，而 SVN 是按文件：**所有的资源控制系统都是把文件的元信息隐藏在一个类似 .svn、.cvs 等的文件夹里。 **3、Git 分支和 SVN 的分支不同：**分支在 SVN 中一点都不特别，其实它就是版本库中的另外一个目录。 **4、Git 没有一个全局的版本号，而 SVN 有：**目前为止这是跟 SVN 相比 Git 缺少的最大的一个特征。 **5、Git 的内容完整性要优于 SVN：**Git 的内容存储使用的是 SHA-1 哈希算法。这能确保代码内容的完整性，确保在遇到磁盘故障和网络问题时降低对版本库的破坏。 集中式版本控制系统需要找一个服务器作为大本营，所有的代码都需要提交到服务器上进行统一的管理。当你需要对代码进行改动时，需要先从服务器上下载一份拷贝，修改完成之后，还需要上传回服务器。</description>
+    </item>
+    <item>
+      <title>HTML5</title>
+      <link>https://seconsorl.github.io/post/html5/</link>
+      <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
+      <guid>https://seconsorl.github.io/post/html5/</guid>
+      <description>TIPS HTML5_菜鸟教程&#xA;W3C标准 结构化标准语言（HTML、XML）&#xA;表现标准语言（CSS）&#xA;行为标准（DOM、ECMAScript）&#xA;行内元素和块元素 块元素：会另起一个行。无论内容多少，该元素会独占一行。 行内元素：内容撑开宽度，左右都是行元素的可以排成一行。 NAME属性 name相同表示同一个组&#xA;nav &amp;lt;nav&amp;gt;标签定义导航链接的部分。&#xA;并不是所有的 HTML 文档都要使用到&amp;lt;nav&amp;gt; 元素。&amp;lt;nav&amp;gt;元素只是作为标注一个导航链接的区域。&#xA;在不同设备上（手机或者PC）可以制定导航链接是否显示，以适应不同屏幕的需求。&#xA;结构 基本结构 DOCTYPE声明 网页头部&amp;lt;head&amp;gt; &amp;lt;/head&amp;gt; 网页主体&amp;lt;body&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;!-- &amp;lt;body&amp;gt; &amp;lt;/body&amp;gt; 开放标签和闭合标签 --&amp;gt; &amp;lt;!-- &amp;lt;hr/&amp;gt;关闭空元素 --&amp;gt; &amp;lt;!-- HTML注释 --&amp;gt; &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;!-- DOCTYPE: 告诉网页用什么规范&amp;gt; --&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;!-- head 网页头部 --&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;!-- meta描述性标签，用来做SEO--&amp;gt; &amp;lt;meta name=&amp;#34;Keywords&amp;#34; content=&amp;#34;...&amp;#34; /&amp;gt; &amp;lt;meta name=&amp;#34;description&amp;#34; content=&amp;#34;...&amp;#34; /&amp;gt; &amp;lt;title&amp;gt;Document&amp;lt;/title&amp;gt; &amp;lt;!-- title网页标题 --&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;!-- body 网页主体 --&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; 结构分析 元素名 描述 header 标题头部区域的内容（用于页面或页面中的一块区域） footer 标记脚部区域的内容（用于整个页面或页面的一块区域） section Web页面中的一块独立区域 article 独立的文章内容 aside 相关内容或应用（常用于侧边栏） nav 导航类辅助内容 基本标签和特殊符号 html里面换行是没用的&#xA;连续的空格符被认为是一个空格&#xA;标签和符号 HTML代码 标题 &amp;lt;h1&amp;gt;一级标签&amp;lt;/h1&amp;gt;&amp;lt;h2&amp;gt;二级标签&amp;lt;/h2&amp;gt;&amp;lt;h3&amp;gt;三级标签&amp;lt;/h3&amp;gt;&amp;lt;h4&amp;gt;四级标签&amp;lt;/h4&amp;gt;&amp;lt;h5&amp;gt;五级标签&amp;lt;/h5&amp;gt;&amp;lt;h6&amp;gt;六级标签&amp;lt;/h6&amp;gt; 段落 &amp;lt;p&amp;gt; 内容 &amp;lt;/p&amp;gt; 换行 &amp;lt;br /&amp;gt; 水平线 &amp;lt;hr /&amp;gt; 字体样式 粗体: &amp;lt;strong&amp;gt; &amp;lt;/strong&amp;gt;斜体: &amp;lt;em&amp;gt; &amp;lt;/em&amp;gt; 空格 &amp;amp;nbsp; 大于&amp;gt; &amp;amp;gt; 小于&amp;lt; &amp;amp;lt; 版权符号© &amp;amp;copy; 注释（多行） &amp;lt;!</description>
+    </item>
+  </channel>
+</rss>

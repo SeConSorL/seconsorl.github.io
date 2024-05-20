@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light"><head>
+    <title>Toml · HZW</title>
+    <meta charset="utf-8">
+    
+    <meta name="generator" content="Hugo 0.124.1">
+    <meta property="og:title" content="Toml" />
+<meta property="og:description" content="a note for learning Toml" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://seconsorl.github.io/post/toml/" /><meta property="og:image" content="https://seconsorl.github.io/images/profile.png" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2024-05-06T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-05-06T00:00:00+00:00" /><meta property="og:site_name" content="A junior from NBU" />
+
+
+
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="HZW">
+    
+    
+    
+    <link rel="stylesheet" type="text/css" href="https://seconsorl.github.io/css/style.min.565d8c479597aa43658922d4b31e286529a7525a22c9546fa1018fc5e5ef6d86.css" integrity="sha256-Vl2MR5WXqkNliSLUsx4oZSmnUloiyVRvoQGPxeXvbYY=" crossorigin="anonymous" type="text/css">
+
+    
+    
+    
+    <script type="text/javascript" src="https://seconsorl.github.io/js/heyo-header.min.a3fa728a9f57833a31dfb45c48caaf1e4890c8c97f07bd7133fc2359745edb5d.js" integrity="sha256-o/pyip9Xgzox37RcSMqvHkiQyMl/B71xM/wjWXRe210=" crossorigin="anonymous"></script>
+
+    
+    
+    <link rel="stylesheet" type="text/css" href="https://seconsorl.github.io/css/fonts.9398921f2d404983c2b7f9a68ddc72e3f5e58a3e38b0a8e4a70d75c12ebfb7c5.css" integrity="sha256-k5iSHy1ASYPCt/mmjdxy4/Xlij44sKjkpw11wS6/t8U=" crossorigin="anonymous">
+
+    
+    
+    
+    <script type="text/javascript" src="https://seconsorl.github.io/js/sidebar-toc.min.788b639e2ec681549740b90b3b865d5f9e1789e3ca9c06ccc45d65655434c954.js" integrity="sha256-eItjni7GgVSXQLkLO4ZdX54XiePKnAbMxF1lZVQ0yVQ=" crossorigin="anonymous"></script>
+
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-graph.26b92ed9317bdc6f35642d588bdf3283f40998846e01cf4bee22a126907fbf3b.js" integrity="sha256-Jrku2TF73G81ZC1Yi98yg/QJmIRuAc9L7iKhJpB/vzs=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-digitalRain.af8a7b5c4428cc62d5bf49bf2698d4112c2459ee0c22c1c753ab304aef69888a.js" integrity="sha256-r4p7XEQozGLVv0m/JpjUESwkWe4MIsHHU6swSu9piIo=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-circleBrushStrokes.fe8fc3ee52e1d90e9236be8c36a27711efa024beb4da304829f95dfbb61d6e84.js" integrity="sha256-/o/D7lLh2Q6SNr6MNqJ3Ee&#43;gJL602jBIKfld&#43;7YdboQ=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-meta.71b5202ea881c86ac19e4b55414656a5444204a4ba08ff7368a5aa99c0a60949.js" integrity="sha256-cbUgLqiByGrBnktVQUZWpURCBKS6CP9zaKWqmcCmCUk=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sidebar-sketch.min.2e95015880993ef9abcad62d111decea22406616931bce193254bf8af2339953.js" integrity="sha256-LpUBWICZPvmrytYtER3s6iJAZhaTG84ZMlS/ivIzmVM=" crossorigin="anonymous" defer></script>
+    
+    
+    
+    <link rel="shortcut icon" href="https://seconsorl.github.io/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://seconsorl.github.io/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://seconsorl.github.io/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://seconsorl.github.io/favicons/favicon-16x16.png">
+    <link rel="canonical" href="https://seconsorl.github.io/post/toml/">
+    
+    
+    
+    
+    
+
+    
+    <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://seconsorl.github.io/images/profile.png" /><meta name="twitter:title" content="Toml"/>
+<meta name="twitter:description" content="a note for learning Toml"/>
+
+</head><body>
+        <div class="main">
+            <div class="page-top">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a  href="/"  title="">Home</a></li>
+        
+            
+            <li><a  href="/post/"  title="">Posts</a></li>
+        
+            
+            <li><a  href="/about/"  title="">About</a></li>
+        
+        <li class="grow"></li>
+        
+        <li>
+            <a class="theme-switch" title="Switch Theme">
+                <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+            <div class="sidebar" id="sidebar">
+    <div class="top-toc">
+        <img src="https://seconsorl.github.io/images/profile.png" alt="profile picture">
+        
+        <a href="/">A junior from NBU</a>
+    </div>
+    
+    <div class="middle-sidebar grow" id="middle-sidebar">
+        
+            
+            
+                
+            
+
+            
+        
+    </div>
+
+    <div class="footer">
+        <ul class="social-links">
+            
+            <li>
+                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://github.com/SeConSorL" target="_blank" rel="noopener noreferrer" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" rel="me" aria-label="instagram">
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+            <li>
+                <a href="mailto:216002917@nbu.edu.cn" target="_blank" rel="noopener noreferrer" rel="me" aria-label="e-mail">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+        </ul>
+
+        <div class="by">by HZW <b>·</b> 2024</div>
+    </div>
+</div>
+            <div class="content">
+<div class="post">
+    
+    <div class="post-title">
+        <h1>Toml</h1>
+        
+            <div class="post-header">
+    <div style="padding-top: 10px;">
+        <i class="far fa-calendar"></i><span class="date">May 6, 2024</span>
+        <i class="far fa-clock"></i><span class="reading-time">4 minutes</span>
+        
+
+
+    </div>
+</div>
+        
+    </div>
+    <div class="post-content">
+        <h2 id="tips">TIPS</h2>
+<p><a href="https://cloud.tencent.com/developer/article/2410904">中文文档</a></p>
+<h2 id="介绍">介绍</h2>
+<p>全称：Tom 的（语义）明显、（配置）最小化的语言。（<strong>Tom&rsquo;s Obvious, Minimal Language</strong>）
+作者：Tom Preston-Werner、Pradyun Gedam 等人。</p>
+<h3 id="应用">应用</h3>
+<p>TOML是在 2013 年发布的配置文件格式，现在有很多新的明星项目都喜欢用它来做配置文件。</p>
+<p>1、有rust语言的包管理工具cargo；</p>
+<p>2、类似于docker的容器工具containerd；</p>
+<p>3、go语言很多项目都喜欢用。比如静态网站生成工具Hugo、数据库InfluxDB、GitLab CI。</p>
+<p>4、python项目也开始接纳。包管理工具 pip、pipenv和Poetry都是用的TOML,[1]现在连官方的metadata管理也开始支持toml。</p>
+<h3 id="宗旨">宗旨</h3>
+<p>TOML 旨在成为一个语义明显且<strong>易于阅读</strong>的<strong>最小化配置</strong>文件格式。
+TOML 被设计成可以<strong>无歧义地映射为哈希表</strong>。
+TOML 应该能很<strong>容易地被解析成各种语言中的数据结构</strong>。</p>
+<h3 id="规范">规范</h3>
+<ul>
+<li>
+<p>TOML 是<strong>大小写敏感</strong>的。</p>
+</li>
+<li>
+<p>TOML 文件必须是合法的 <strong>UTF-8 编码</strong>的 Unicode 文档。</p>
+</li>
+<li>
+<p>空白是指制表符（0x09）或空格（0x20）。</p>
+</li>
+<li>
+<p>换行是指 LF（0x0A）或 CRLF（0x0D 0x0A）。</p>
+</li>
+<li>
+<p><code>#</code>号将此行剩下的部分标记为注释</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#6272a4"># 这是一个全行注释</span>
+</span></span><span style="display:flex;"><span>key = <span style="color:#f1fa8c">&#34;value&#34;</span>  <span style="color:#6272a4"># 这是一个行末注释</span>
+</span></span><span style="display:flex;"><span>another = <span style="color:#f1fa8c">&#34;# 这不是一个注释&#34;</span>
+</span></span></code></pre></div><p><strong>除制表符以外</strong>的控制字符（U+0000 至 U+0008，U+000A 至 U+001F，U+007F）<strong>不允许出现</strong>在注释中。</p>
+</li>
+</ul>
+<h2 id="数据结构">数据结构</h2>
+<h3 id="键值对">键值对</h3>
+<p>TOML 文档<strong>最基本的构成区块</strong>是<strong>键值对</strong>。</p>
+<ul>
+<li>键名在等号的左边，值在右边。</li>
+<li>键名和键值周围的空白会被忽略。</li>
+<li>键、等号和值必须在同一行（不过有些值可以跨多行）。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>key=<span style="color:#f1fa8c">&#34;value&#34;</span>
+</span></span></code></pre></div><h4 id="键名">键名</h4>
+<p>键名可以是<u>裸露</u>的，<u>引号引起来</u>的，或<u>点分隔</u>的。</p>
+<ul>
+<li>
+<p>裸键</p>
+<p><strong>裸键</strong>只能包含 ASCII 字母，ASCII 数字，下划线和短横线（<code>A-Za-z0-9_-</code>）。</p>
+<p><strong>裸键不能为空</strong></p>
+<blockquote>
+<p>注意：裸键允许仅由纯 ASCII 数字构成，例如 <code>1234</code>，但总是被解释为字符串。</p>
+</blockquote>
+</li>
+<li>
+<p>引号键</p>
+<p><strong>引号键</strong>遵循与<u>基本字符串</u>或<u>字面量字符串</u>相同的规则并允许你使用更为广泛的键名。</p>
+<p><strong>空引号键是允许的</strong>（虽然不建议如此）。</p>
+<blockquote>
+<p>除非明显必要，使用裸键方为最佳实践。</p>
+</blockquote>
+</li>
+<li>
+<p>点分隔键</p>
+<p><strong>点分隔键</strong>是一系列通过点相连的裸键或引号键。
+这允许了你将相近属性放在一起：</p>
+<blockquote>
+<p>点分隔符周围的空白会被忽略，不过，最佳实践是不要使用任何不必要的空白。</p>
+</blockquote>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#6272a4">#裸键</span>
+</span></span><span style="display:flex;"><span>ba-re_key = <span style="color:#f1fa8c">&#34;value&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#bd93f9">1234</span> = <span style="color:#f1fa8c">&#34;value&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">#引号键</span>
+</span></span><span style="display:flex;"><span><span style="color:#f1fa8c">&#34;127.0.0.1&#34;</span> = <span style="color:#f1fa8c">&#34;value&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f1fa8c">&#34;ʎǝʞ&#34;</span> = <span style="color:#f1fa8c">&#34;value&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f1fa8c">&#39;quoted &#34;value&#34;&#39;</span> = <span style="color:#f1fa8c">&#34;value&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">#裸键不能为空，但空引号键是允许的</span>
+</span></span><span style="display:flex;"><span>= <span style="color:#f1fa8c">&#34;no key name&#34;</span>  <span style="color:#6272a4"># 非法</span>
+</span></span><span style="display:flex;"><span><span style="color:#f1fa8c">&#34;&#34;</span> = <span style="color:#f1fa8c">&#34;blank&#34;</span>     <span style="color:#6272a4"># 合法但不鼓励</span>
+</span></span><span style="display:flex;"><span><span style="color:#f1fa8c">&#39;&#39;</span> = <span style="color:#f1fa8c">&#39;blank&#39;</span>     <span style="color:#6272a4"># 合法但不鼓励</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">#点分隔键</span>
+</span></span><span style="display:flex;"><span>name = <span style="color:#f1fa8c">&#34;Orange&#34;</span>
+</span></span><span style="display:flex;"><span>physical.color = <span style="color:#f1fa8c">&#34;orange&#34;</span>
+</span></span><span style="display:flex;"><span>physical.shape = <span style="color:#f1fa8c">&#34;round&#34;</span>
+</span></span><span style="display:flex;"><span>site.<span style="color:#f1fa8c">&#34;google.com&#34;</span> = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4">#等价于 JSON 的如下结构：</span>
+</span></span><span style="display:flex;"><span>  {
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;Orange&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;physical&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;color&#34;</span>: <span style="color:#f1fa8c">&#34;orange&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;shape&#34;</span>: <span style="color:#f1fa8c">&#34;round&#34;</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;site&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;google.com&#34;</span>: <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span></code></pre></div><p>多次定义同一个键是非法的。裸键和引号键是等价的：</p>
+<p>只要一个键还没有被直接定义过，就仍可以对它和它下属的键名赋值。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#6272a4"># 不要这样做</span>
+</span></span><span style="display:flex;"><span>name = <span style="color:#f1fa8c">&#34;Tom&#34;</span>
+</span></span><span style="display:flex;"><span>name = <span style="color:#f1fa8c">&#34;Pradyun&#34;</span>
+</span></span><span style="display:flex;"><span>spelling = <span style="color:#f1fa8c">&#34;favorite&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f1fa8c">&#34;spelling&#34;</span> = <span style="color:#f1fa8c">&#34;favourite&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 这使“fruit”键作为表存在。</span>
+</span></span><span style="display:flex;"><span>fruit.apple.smooth = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 所以接下来你可以像中这样对“fruit”表添加内容：</span>
+</span></span><span style="display:flex;"><span>fruit.orange = <span style="color:#bd93f9">2</span>
+</span></span></code></pre></div><h4 id="值">值</h4>
+<p>值必须是以下这些类型。<strong>不指定值是非法的</strong>。</p>
+<p><a href="/post/toml/#字符串">字符串</a>、<a href="/post/toml/#整数">整数</a>、<a href="/post/toml/#浮点数">浮点数</a>、<a href="/post/toml/#布尔值">布尔值</a>、<a href="/post/toml/#坐标日期时刻">坐标日期时刻</a>、<a href="/post/toml/#各地日期时刻">各地日期时刻</a>、<a href="%E5%90%84%E5%9C%B0%E6%97%A5%E6%9C%9F">各地日期</a>、<a href="%E5%90%84%E5%9C%B0%E6%97%B6%E5%88%BB">各地时刻</a>、<a href="/post/toml/#数组">数组</a>、<a href="/post/toml/#内联表">内联表</a></p>
+<h3 id="字符串">字符串</h3>
+<p>有四种方式来表示字符串：<strong>基础式</strong>，<strong>多行基础式</strong>，<strong>字面量式</strong>和<strong>多行字面量式</strong>。所有字符串都只能包含有效的 UTF-8 字符。</p>
+<h4 id="基础字符串">基础字符串</h4>
+<p><strong>基本字符串</strong>由引号（<code>&quot;</code>）包裹。</p>
+<p>任何 Unicode 字符都可以使用，除了那些必须转义的：引号，反斜杠，以及控制字符（U+0000 至 U+001F，U+007F）。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">str</span> <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;我是一个字符串。</span><span style="color:#f1fa8c">\&#34;</span><span style="color:#f1fa8c">你可以把我引起来</span><span style="color:#f1fa8c">\&#34;</span><span style="color:#f1fa8c">。姓名</span><span style="color:#f1fa8c">\t</span><span style="color:#f1fa8c">Jos</span><span style="color:#f1fa8c">\u00E9\n</span><span style="color:#f1fa8c">位置</span><span style="color:#f1fa8c">\t</span><span style="color:#f1fa8c">旧金山。&#34;</span>
+</span></span></code></pre></div><p>为了方便，一些流行的字符有其简便转义写法。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>\b         <span style="color:#ff79c6">-</span> backspace       (U<span style="color:#ff79c6">+</span><span style="color:#bd93f9">0008</span>)
+</span></span><span style="display:flex;"><span>\t         <span style="color:#ff79c6">-</span> tab             (U<span style="color:#ff79c6">+</span><span style="color:#bd93f9">0009</span>)
+</span></span><span style="display:flex;"><span>\n         <span style="color:#ff79c6">-</span> linefeed        (U<span style="color:#ff79c6">+</span><span style="color:#bd93f9">000</span>A)
+</span></span><span style="display:flex;"><span>\f         <span style="color:#ff79c6">-</span> form feed       (U<span style="color:#ff79c6">+</span><span style="color:#bd93f9">000</span>C)
+</span></span><span style="display:flex;"><span>\r         <span style="color:#ff79c6">-</span> carriage <span style="color:#ff79c6">return</span> (U<span style="color:#ff79c6">+</span><span style="color:#bd93f9">000</span>D)
+</span></span><span style="display:flex;"><span>\<span style="color:#f1fa8c">&#34;         - quote           (U+0022)</span>
+</span></span><span style="display:flex;"><span>\\         <span style="color:#ff79c6">-</span> backslash       (U<span style="color:#ff79c6">+</span><span style="color:#bd93f9">005</span>C)
+</span></span><span style="display:flex;"><span>\uXXXX     <span style="color:#ff79c6">-</span> unicode         (U<span style="color:#ff79c6">+</span>XXXX)
+</span></span><span style="display:flex;"><span>\UXXXXXXXX <span style="color:#ff79c6">-</span> unicode         (U<span style="color:#ff79c6">+</span>XXXXXXXX)
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">#任何 Unicode 字符都可以用 \uXXXX 或 \UXXXXXXXX 的形式来转义。转义码必须是有效的 Unicode 标量值。</span>
+</span></span></code></pre></div><p>所有上面未列出的其它转义序列都是保留的，如果被用了，TOML 应当生成一个错误。</p>
+<h4 id="多行基础字符串">多行基础字符串</h4>
+<p><strong>多行基本字符串</strong>由三个引号<code>&quot;&quot;&quot;</code>包裹，允许换行。（类似python）
+紧随开头引号的那个换行会被去除，其它空白和换行会被原样保留。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>str1 <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">Roses are red
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">Violets are blue&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 在 Unix 系统，上面的多行字符串可能等同于：</span>
+</span></span><span style="display:flex;"><span>str2 <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;Roses are red</span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">Violets are blue&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 在 Windows 系统，它可能等价于：</span>
+</span></span><span style="display:flex;"><span>str3 <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;Roses are red</span><span style="color:#f1fa8c">\r\n</span><span style="color:#f1fa8c">Violets are blue&#34;</span>
+</span></span></code></pre></div><p>想要长字符串却不想引入无关空白，可以用“<strong>行末反斜杠</strong>”。当一行的最后一个非空白字符是未被转义的 <code>\</code> 时，它会<strong>连同它后面的所有空白（包括换行）一起被去除</strong>，直到下一个非空白字符或结束引号为止。（python也有）</p>
+<p>还可以在多行基本字符串内的任何地方写<strong>一个引号或两个连续的引号</strong>。它们也可以写在紧邻界分符内的位置。</p>
+<p><u>所有对基本字符串有效的转义序列，对多行基本字符串也同样适用。</u></p>
+<h4 id="字面量字符串单行多行">字面量字符串（单行、多行）</h4>
+<p><strong>字面量字符串</strong>由单引号<code>'</code>包裹。完全不允许转义（<strong>所见即所得</strong>）</p>
+<blockquote>
+<p>由于没有转义，无法在字面量字符串中写入单引号。
+但是，TOML 支持一种多行版本的字面量字符串来解决这个问题。</p>
+</blockquote>
+<p><strong>多行字面量字符串</strong>两侧各有三个单引号<code>'''</code>来包裹，允许换行。任何转义都不存在。紧随开始标记的那个换行会被剔除。开始结束标记之间的所有其它内容会原样对待。</p>
+<blockquote>
+<p>可以在多行字面量字符串中的任何位置写一个或两个单引号，但三个以上的单引号序列不可以。</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>regex  <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;&lt;\i\c*\s*&gt;&#39;</span>
+</span></span><span style="display:flex;"><span>regex2 <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;&#39;&#39;I [dw]on&#39;t need \d</span><span style="color:#f1fa8c">{2}</span><span style="color:#f1fa8c"> apples&#39;&#39;&#39;</span>
+</span></span></code></pre></div><p>除制表符以外的所有控制字符都不允许出现在字面量字符串中。
+因此，对于二进制数据，建议你使用 Base64 或其它合适的 ASCII 或 UTF-8 编码。</p>
+<h3 id="整数">整数</h3>
+<p>纯数字，与其他语言相同。</p>
+<p>对于大数，你<strong>可以在数字之间用下划线</strong>来增强可读性。每个下划线<strong>两侧必须至少有一个数字</strong>。</p>
+<p>前导零是不允许的。整数值 <code>-0</code> 与 <code>+0</code> 是有效的，并等同于无前缀的零。</p>
+<p>非负整数值也可以用十六进制、八进制或二进制来表示。在这些格式中，<code>+</code> 不被允许，而**（前缀后的）前导零是允许**的。</p>
+<p>十六进制值大小写不敏感。数字间的下划线是<strong>允许</strong>的（但<strong>不能存在于前缀和值之间</strong>）。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>int1 = <span style="color:#bd93f9">+99</span>
+</span></span><span style="display:flex;"><span>int2 = <span style="color:#bd93f9">0</span>
+</span></span><span style="display:flex;"><span>int3 = <span style="color:#bd93f9">-17</span>
+</span></span><span style="display:flex;"><span>int4 = <span style="color:#bd93f9">1_000</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 带有 `0x` 前缀的十六进制</span>
+</span></span><span style="display:flex;"><span>hex1 = <span style="color:#bd93f9">0</span>xDEADBEEF
+</span></span><span style="display:flex;"><span>hex2 = <span style="color:#bd93f9">0</span>xdeadbeef
+</span></span><span style="display:flex;"><span>hex3 = <span style="color:#bd93f9">0</span>xdead_beef
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 带有 `0o` 前缀的八进制</span>
+</span></span><span style="display:flex;"><span>oct1 = <span style="color:#bd93f9">0</span>o01234567
+</span></span><span style="display:flex;"><span>oct2 = <span style="color:#bd93f9">0</span>o755 <span style="color:#6272a4"># 对于表示 Unix 文件权限很有用</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 带有 `0b` 前缀的二进制</span>
+</span></span><span style="display:flex;"><span>bin1 = <span style="color:#bd93f9">0</span>b11010110
+</span></span></code></pre></div><blockquote>
+<p>任何 64 位有符号整数（从 −2^63 到 2^63−1）都应当被接受并无损处理。如果无法无损表现某个整数，则必须抛出错误。</p>
+</blockquote>
+<h3 id="浮点数">浮点数</h3>
+<p>浮点数应当被实现为 <strong>IEEE 754 binary64</strong> 值。</p>
+<p>一个浮点数由一个<strong>整数部分</strong>（遵从与十进制整数值相同的规则）后跟上一个<strong>小数部分</strong>和/或一个<strong>指数部分</strong>组成。（也可以用下划线<code>_</code>来增强可读性）</p>
+<p><strong>指数部分</strong>是一个 E（大小写均可）后跟一个整数部分（遵从与十进制整数值相同的规则，但可以包含前导零）。</p>
+<p>小数点<code>.</code>，如果有用到的话，每侧必须紧邻至少一个数字。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#6272a4"># 小数</span>
+</span></span><span style="display:flex;"><span>flt1 <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">+</span><span style="color:#bd93f9">1.0</span>
+</span></span><span style="display:flex;"><span>flt2 <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">3.1415</span>
+</span></span><span style="display:flex;"><span>flt3 <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">-</span><span style="color:#bd93f9">0.01</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 指数</span>
+</span></span><span style="display:flex;"><span>flt4 <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">5e+22</span>
+</span></span><span style="display:flex;"><span>flt5 <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">1e06</span>
+</span></span><span style="display:flex;"><span>flt6 <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">-</span><span style="color:#bd93f9">2E-2</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 都有</span>
+</span></span><span style="display:flex;"><span>flt7 <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">6.626e-34</span>
+</span></span></code></pre></div><p>浮点数值 <code>-0.0</code> 与 <code>+0.0</code> 是有效的，并且应当遵从 IEEE 754。</p>
+<p>特殊浮点值也能够表示。它们是小写的。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#6272a4"># 无穷</span>
+</span></span><span style="display:flex;"><span>sf1 <span style="color:#ff79c6">=</span> inf  <span style="color:#6272a4"># 正无穷</span>
+</span></span><span style="display:flex;"><span>sf2 <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">+</span>inf <span style="color:#6272a4"># 正无穷</span>
+</span></span><span style="display:flex;"><span>sf3 <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">-</span>inf <span style="color:#6272a4"># 负无穷</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 非数</span>
+</span></span><span style="display:flex;"><span>sf4 <span style="color:#ff79c6">=</span> nan  <span style="color:#6272a4"># 实际上对应信号非数码还是静默非数码，取决于实现</span>
+</span></span><span style="display:flex;"><span>sf5 <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">+</span>nan <span style="color:#6272a4"># 等同于 `nan`</span>
+</span></span><span style="display:flex;"><span>sf6 <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">-</span>nan <span style="color:#6272a4"># 有效，实际码取决于实现</span>
+</span></span></code></pre></div><h3 id="布尔值">布尔值</h3>
+<p>要小写。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>bool1 = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>bool2 = <span style="color:#ff79c6">false</span>
+</span></span></code></pre></div><h3 id="坐标日期时刻">坐标日期时刻</h3>
+<p>要准确地表示世上的一个特定时间，你可以使用指定了时区偏移量的 <a href="https://tools.ietf.org/html/rfc3339">RFC 3339</a> 格式的日期时刻。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>odt1 = 1979-05-27T07:32:00Z
+</span></span><span style="display:flex;"><span>odt2 = 1979-05-27T00:32:00-07:00
+</span></span><span style="display:flex;"><span>odt3 = <span style="color:#bd93f9">1979-05-27</span>T00:<span style="color:#bd93f9">32</span>:<span style="color:#bd93f9">00.999999</span><span style="color:#bd93f9">-07</span>:<span style="color:#bd93f9">00</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">#出于可读性的目的，你可以用一个空格字符替代日期和时刻之间的 T（RFC 3339 的第 5.6 节中允许了这样做）。</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>odt4 = <span style="color:#bd93f9">1979-05-27</span> <span style="color:#bd93f9">07</span>:<span style="color:#bd93f9">32</span>:<span style="color:#bd93f9">00</span>Z
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">#毫秒级的精度是必须的。</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">#更高精度的小数秒取决于实现。</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">#如果它的值超出了实现所支持的精度，那超出的部分必须被舍弃，而不能四舍五入</span>
+</span></span></code></pre></div><h3 id="各地日期时刻各地日期各地时刻">各地日期时刻、各地日期、各地时刻</h3>
+<p>同上，也是 <a href="https://tools.ietf.org/html/rfc3339">RFC 3339</a> 格式，但不涉及时区偏移。</p>
+<h3 id="数组">数组</h3>
+<ul>
+<li>数组是内含值的方括号<code>[]</code>。</li>
+<li>空白会被忽略。</li>
+<li>子元素由逗号<code>,</code>分隔。</li>
+<li>数组可以包含与键值对所允许的相同数据类型的值。</li>
+<li>可以混合不同类型的值。（和python相似）</li>
+<li>数组的最后一个值后面可以有终逗号（也称为尾逗号）。</li>
+</ul>
+<h2 id="表">表</h2>
+<p>表（也被称为<strong>哈希表</strong>或<strong>字典</strong>）是键值对的集合。它们由<strong>表头</strong>定义，<strong>连同方括号作为单独的行</strong>出现。</p>
+<ul>
+<li>
+<p>表头不同于数组，因为数组只有值。</p>
+</li>
+<li>
+<p>键名周围的空格会被忽略。缩进被作为空白对待而被忽略。</p>
+</li>
+<li>
+<p>空表是允许的，只要里面没有键值对就行了。</p>
+</li>
+<li>
+<p>不能重复定义一个表。</p>
+</li>
+<li>
+<p>点分隔键<code>.</code>为最后一个键名前的每个键名创建并定义一个表，倘若这些表尚未被创建的话。</p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[table-1]
+</span></span><span style="display:flex;"><span>key1 = <span style="color:#f1fa8c">&#34;some string&#34;</span>
+</span></span><span style="display:flex;"><span>key2 = <span style="color:#bd93f9">123</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[table-2]
+</span></span><span style="display:flex;"><span>key1 = <span style="color:#f1fa8c">&#34;another string&#34;</span>
+</span></span><span style="display:flex;"><span>key2 = <span style="color:#bd93f9">456</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[dog.<span style="color:#f1fa8c">&#34;tater.man&#34;</span>]
+</span></span><span style="display:flex;"><span>type.name = <span style="color:#f1fa8c">&#34;pug&#34;</span>
+</span></span></code></pre></div><h3 id="顶层表">顶层表</h3>
+<p>又被称为根表，于<strong>文档开始处开始</strong>并在<strong>第一个表头（或文件结束处）前结束</strong>。不同于其它表，它<strong>没有名字且无法后置</strong>。</p>
+<h2 id="内联表">内联表</h2>
+<p>内联表提供了一种更为紧凑的语法来表示表。它们对于分组数据特别有用，否则这些数据很快就会变得冗长。</p>
+<ul>
+<li>
+<p>内联表被完整地定义在花括号之中：<code>{</code> 和 <code>}</code>。 括号中，可以出现零或多个以逗号分隔的键值对。</p>
+</li>
+<li>
+<p>键值对采取与标准表中的键值对相同的形式。什么类型的值都可以，包括内联表。</p>
+</li>
+<li>
+<p>内联表得出现在<strong>同一行</strong>内。</p>
+</li>
+<li>
+<p>内联表中，最后一对键值对后<strong>不允许尾逗号</strong></p>
+</li>
+<li>
+<p>不允许花括号中出现任何换行，除非在值中它们合法。</p>
+</li>
+<li>
+<p>内联表是独立的，要在内部定义全部的键与子表。不能在括号以外的地方，再添加键与子表。</p>
+</li>
+<li>
+<p>不能被用于向一个已定义的表添加键或子表。</p>
+</li>
+</ul>
+<h2 id="表数组">表数组</h2>
+<p>这可以通过把表名写在双方括号<code>[[ ]]</code>里的表头来表示。</p>
+<p>表头的第一例定义了这个数组及其首个表元素，而后续的每个则在该数组中创建并定义一个新的表元素。</p>
+<p>这些表按出现顺序插入该数组。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[[fruits]]
+</span></span><span style="display:flex;"><span>name = <span style="color:#f1fa8c">&#34;apple&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[fruits.physical]  <span style="color:#6272a4"># 子表</span>
+</span></span><span style="display:flex;"><span>color = <span style="color:#f1fa8c">&#34;red&#34;</span>
+</span></span><span style="display:flex;"><span>shape = <span style="color:#f1fa8c">&#34;round&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[[fruits.varieties]]  <span style="color:#6272a4"># 嵌套表数组</span>
+</span></span><span style="display:flex;"><span>name = <span style="color:#f1fa8c">&#34;red delicious&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[[fruits.varieties]]
+</span></span><span style="display:flex;"><span>name = <span style="color:#f1fa8c">&#34;granny smith&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[[fruits]]
+</span></span><span style="display:flex;"><span>name = <span style="color:#f1fa8c">&#34;banana&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[[fruits.varieties]]
+</span></span><span style="display:flex;"><span>name = <span style="color:#f1fa8c">&#34;plantain&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">#等价于JSON的如下架构</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;fruits&#34;</span>: [
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;apple&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;physical&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#f1fa8c">&#34;color&#34;</span>: <span style="color:#f1fa8c">&#34;red&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f1fa8c">&#34;shape&#34;</span>: <span style="color:#f1fa8c">&#34;round&#34;</span>
+</span></span><span style="display:flex;"><span>      },
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;varieties&#34;</span>: [
+</span></span><span style="display:flex;"><span>        { <span style="color:#f1fa8c">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;red delicious&#34;</span> },
+</span></span><span style="display:flex;"><span>        { <span style="color:#f1fa8c">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;granny smith&#34;</span> }
+</span></span><span style="display:flex;"><span>      ]
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;banana&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;varieties&#34;</span>: [
+</span></span><span style="display:flex;"><span>        { <span style="color:#f1fa8c">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;plantain&#34;</span> }
+</span></span><span style="display:flex;"><span>      ]
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  ]
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 可以使用内联表定义</span>
+</span></span><span style="display:flex;"><span>points = [ { x = <span style="color:#bd93f9">1</span>, y = <span style="color:#bd93f9">2</span>, z = <span style="color:#bd93f9">3</span> },
+</span></span><span style="display:flex;"><span>           { x = <span style="color:#bd93f9">7</span>, y = <span style="color:#bd93f9">8</span>, z = <span style="color:#bd93f9">9</span> },
+</span></span><span style="display:flex;"><span>           { x = <span style="color:#bd93f9">2</span>, y = <span style="color:#bd93f9">4</span>, z = <span style="color:#bd93f9">8</span> } ]
+</span></span></code></pre></div><ul>
+<li>
+<p>如果一个表或表数组的父级是一个数组元素，该元素必须在定义子级前先定义。</p>
+</li>
+<li>
+<p>不能向一个静态定义的数组追加内容，即便数组尚且为空</p>
+</li>
+<li>
+<p>不能用已经确定为数组的名称定义表</p>
+</li>
+<li>
+<p>不能将数组重定义为普通表</p>
+</li>
+</ul>
+<h2 id="其他">其他</h2>
+<p>使用 <code>.toml</code> 扩展名</p>
+<p>在互联网上传输 TOML 文件时，恰当的 <a href="https://baike.baidu.com/item/MIME/2900607?fr=ge_ala">MIME</a> 类型是 <code>application/toml</code>。</p>
+<p><strong>扩充巴科斯-瑙尔范式（ABNF）</strong>:<a href="https://github.com/toml-lang/toml/blob/1.0.0/toml.abnf">严谨说明</a></p>
+
+    </div>
+    <div class="post-footer">
+        <div class="info">
+            
+            
+        </div>
+        
+
+
+    </div>
+    
+        
+    
+</div>
+
+                <div class="grow"></div>
+                <div class="built-with">
+    Built with <a href="https://gohugo.io/">Hugo</a> <b>·</b> Using the <a href="https://github.com/LucasVadilho/heyo-hugo-theme">heyo</a> theme
+</div>
+            </div>
+        </div>
+        
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha512-3M00D/rn8n+2ZVXBO9Hib0GKNpkm8MSUU/e2VNthDyBYxKWG+BftNYYcuEjXlyrSO637tidzMBXfE7sQm0INUg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<script type="text/javascript">
+            
+            
+            window.MathJax = {
+                tex: {
+                    inlineMath: [['$', '$'], ['\\(', '\\)']],
+                    displayMath: [['$$','$$'], ['\\[', '\\]']]
+                },
+                svg: {
+                    scale: 1.25,
+                }
+            };
+        </script><script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.1.0/es5/tex-mml-svg.min.js" integrity="sha512-/mL9Gs6E5Bz6NtPOr9eY&#43;T8IIdJbo2JL3TudApzFFelwBXEc3TeFLU6kPq122TJROv7jkktuBRkz5h8vGzrsyA==" crossorigin="anonymous"></script>
+    </body>
+</html>

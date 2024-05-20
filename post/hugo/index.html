@@ -1,0 +1,1357 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light"><head>
+    <title>HuGo · HZW</title>
+    <meta charset="utf-8">
+    
+    <meta name="generator" content="Hugo 0.124.1">
+    <meta property="og:title" content="HuGo" />
+<meta property="og:description" content="a note for learning HuGo" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://seconsorl.github.io/post/hugo/" /><meta property="og:image" content="https://seconsorl.github.io/images/profile.png" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2024-05-06T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-05-06T00:00:00+00:00" /><meta property="og:site_name" content="A junior from NBU" />
+
+
+
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="HZW">
+    
+    
+    
+    <link rel="stylesheet" type="text/css" href="https://seconsorl.github.io/css/style.min.565d8c479597aa43658922d4b31e286529a7525a22c9546fa1018fc5e5ef6d86.css" integrity="sha256-Vl2MR5WXqkNliSLUsx4oZSmnUloiyVRvoQGPxeXvbYY=" crossorigin="anonymous" type="text/css">
+
+    
+    
+    
+    <script type="text/javascript" src="https://seconsorl.github.io/js/heyo-header.min.a3fa728a9f57833a31dfb45c48caaf1e4890c8c97f07bd7133fc2359745edb5d.js" integrity="sha256-o/pyip9Xgzox37RcSMqvHkiQyMl/B71xM/wjWXRe210=" crossorigin="anonymous"></script>
+
+    
+    
+    <link rel="stylesheet" type="text/css" href="https://seconsorl.github.io/css/fonts.9398921f2d404983c2b7f9a68ddc72e3f5e58a3e38b0a8e4a70d75c12ebfb7c5.css" integrity="sha256-k5iSHy1ASYPCt/mmjdxy4/Xlij44sKjkpw11wS6/t8U=" crossorigin="anonymous">
+
+    
+    
+    
+    <script type="text/javascript" src="https://seconsorl.github.io/js/sidebar-toc.min.788b639e2ec681549740b90b3b865d5f9e1789e3ca9c06ccc45d65655434c954.js" integrity="sha256-eItjni7GgVSXQLkLO4ZdX54XiePKnAbMxF1lZVQ0yVQ=" crossorigin="anonymous"></script>
+
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-graph.26b92ed9317bdc6f35642d588bdf3283f40998846e01cf4bee22a126907fbf3b.js" integrity="sha256-Jrku2TF73G81ZC1Yi98yg/QJmIRuAc9L7iKhJpB/vzs=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-digitalRain.af8a7b5c4428cc62d5bf49bf2698d4112c2459ee0c22c1c753ab304aef69888a.js" integrity="sha256-r4p7XEQozGLVv0m/JpjUESwkWe4MIsHHU6swSu9piIo=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-circleBrushStrokes.fe8fc3ee52e1d90e9236be8c36a27711efa024beb4da304829f95dfbb61d6e84.js" integrity="sha256-/o/D7lLh2Q6SNr6MNqJ3Ee&#43;gJL602jBIKfld&#43;7YdboQ=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-meta.71b5202ea881c86ac19e4b55414656a5444204a4ba08ff7368a5aa99c0a60949.js" integrity="sha256-cbUgLqiByGrBnktVQUZWpURCBKS6CP9zaKWqmcCmCUk=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sidebar-sketch.min.2e95015880993ef9abcad62d111decea22406616931bce193254bf8af2339953.js" integrity="sha256-LpUBWICZPvmrytYtER3s6iJAZhaTG84ZMlS/ivIzmVM=" crossorigin="anonymous" defer></script>
+    
+    
+    
+    <link rel="shortcut icon" href="https://seconsorl.github.io/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://seconsorl.github.io/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://seconsorl.github.io/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://seconsorl.github.io/favicons/favicon-16x16.png">
+    <link rel="canonical" href="https://seconsorl.github.io/post/hugo/">
+    
+    
+    
+    
+    
+
+    
+    <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://seconsorl.github.io/images/profile.png" /><meta name="twitter:title" content="HuGo"/>
+<meta name="twitter:description" content="a note for learning HuGo"/>
+
+</head><body>
+        <div class="main">
+            <div class="page-top">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a  href="/"  title="">Home</a></li>
+        
+            
+            <li><a  href="/post/"  title="">Posts</a></li>
+        
+            
+            <li><a  href="/about/"  title="">About</a></li>
+        
+        <li class="grow"></li>
+        
+        <li>
+            <a class="theme-switch" title="Switch Theme">
+                <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+            <div class="sidebar" id="sidebar">
+    <div class="top-toc">
+        <img src="https://seconsorl.github.io/images/profile.png" alt="profile picture">
+        
+        <a href="/">A junior from NBU</a>
+    </div>
+    
+    <div class="middle-sidebar grow" id="middle-sidebar">
+        
+            
+            
+                
+            
+
+            
+        
+    </div>
+
+    <div class="footer">
+        <ul class="social-links">
+            
+            <li>
+                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://github.com/SeConSorL" target="_blank" rel="noopener noreferrer" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" rel="me" aria-label="instagram">
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+            <li>
+                <a href="mailto:216002917@nbu.edu.cn" target="_blank" rel="noopener noreferrer" rel="me" aria-label="e-mail">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+        </ul>
+
+        <div class="by">by HZW <b>·</b> 2024</div>
+    </div>
+</div>
+            <div class="content">
+<div class="post">
+    
+    <div class="thumbnail" style="box-shadow: var(--box-shadow); height: 250px;">
+        <img src=https://seconsorl.github.io/images/hugo.png style="object-position: 50% 50%;" title=Hugo alt=Hugo loading="lazy">
+    </div>
+    
+    <div class="post-title">
+        <h1>HuGo</h1>
+        
+            <div class="post-header">
+    <div style="padding-top: 10px;">
+        <i class="far fa-calendar"></i><span class="date">May 6, 2024</span>
+        <i class="far fa-clock"></i><span class="reading-time">14 minutes</span>
+        
+
+
+    </div>
+</div>
+        
+    </div>
+    <div class="post-content">
+        <h2 id="tips">TIPS</h2>
+<p><a href="https://www.gohugo.org/">中文文档</a></p>
+<p><a href="https://gohugo.io/documentation/">英文文档</a></p>
+<p><a href="https://blog.csdn.net/qq_30682027/article/details/83536577?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-0-83536577-blog-132483763.235^v43^pc_blog_bottom_relevance_base9&spm=1001.2101.3001.4242.1&utm_relevant_index=3">Hugo的使用</a></p>
+<p><a href="https://blog.csdn.net/weixin_39246554/article/details/124573538">实战</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/396669087">https://zhuanlan.zhihu.com/p/396669087</a></p>
+<p><a href="https://stilig.me/posts/building-hugo/#%E4%BD%BF%E7%94%A8-hugo">部署到github</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/654088195">自动化部署</a></p>
+<p><a href="https://blog.csdn.net/lb52406/article/details/125494991">目录解释</a></p>
+<h4 id="优点">优点</h4>
+<ul>
+<li>
+<p>静态文件安全、备份方便</p>
+</li>
+<li>
+<p><strong>WordPress</strong>（运行在php上的）的缺点：</p>
+<ul>
+<li>
+<p>备份：不断备份数据库。</p>
+</li>
+<li>
+<p>插件：实现功能需要不同插件，不断升级。</p>
+</li>
+<li>
+<p>升级：不断升级来确定安全性。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Markdown文件管理及方便</p>
+<ul>
+<li>
+<p>纯文本</p>
+</li>
+<li>
+<p>格式统一</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Windows下载方便，单文件的</p>
+<ul>
+<li>其他的同类jekyll、HEXO</li>
+</ul>
+</li>
+</ul>
+<h4 id="已知缺点">已知缺点</h4>
+<ul>
+<li>要确认申请的主机是否支持中文语言（URL）</li>
+</ul>
+<h2 id="安装">安装</h2>
+<ul>
+<li>
+<p>到 <a href="https://github.com/spf13/hugo/releases">Hugo Releases</a> 下载对应的操作系统版本的Hugo二进制文件</p>
+</li>
+<li>
+<p>首先安装好依赖的工具：</p>
+<ul>
+<li><a href="http://git-scm.com/">Git</a></li>
+<li><a href="http://mercurial.selenic.com/">Mercurial</a></li>
+<li><a href="http://golang.org/">Go</a> 1.3+ (Go 1.4+ on Windows)</li>
+</ul>
+<p>设置好 <code>GOPATH</code> 环境变量，获取源码并编译：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ <span style="color:#8be9fd;font-style:italic">export</span> <span style="color:#8be9fd;font-style:italic">GOPATH</span><span style="color:#ff79c6">=</span><span style="color:#8be9fd;font-style:italic">$HOME</span>/go
+</span></span><span style="display:flex;"><span>$ go get -v github.com/spf13/hugo
+</span></span></code></pre></div><p>源码会下载到 <code>$GOPATH/src</code> 目录，二进制在 <code>$GOPATH/bin/</code></p>
+<p>如果需要更新所有Hugo的依赖库，增加 <code>-u</code> 参数：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ go get -u -v github.com/spf13/hugo
+</span></span></code></pre></div></li>
+</ul>
+<h2 id="生成站点">生成站点</h2>
+<p>使用Hugo快速生成站点，比如希望生成到 <code>/path/to/site</code> 路径：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ hugo new site /path/to/site
+</span></span></code></pre></div><p>在 <code>/path/to/site</code> 目录里生成了初始站点，站点目录结构：</p>
+<pre tabindex="0"><code>  ▸ archetypes/
+  ▸ content/
+  ▸ layouts/
+  ▸ static/
+    config.toml
+</code></pre><p><strong>接下来需要完成以下几步</strong>：</p>
+<ol>
+<li>
+<p>Change the current directory to G:\HuGo\hugo\HZW.</p>
+<p><strong>（切换路径到站点目录下）</strong></p>
+</li>
+<li>
+<p>Create or install a theme:</p>
+<ul>
+<li>Create a new theme with the command &ldquo;hugo new theme <THEMENAME>&rdquo;</li>
+<li>Install a theme from <a href="https://themes.gohugo.io/">https://themes.gohugo.io/</a></li>
+</ul>
+<p><strong>（安装或者创建一个主题，可以去找现成的 <a href="https://www.gohugo.org/theme/">https://www.gohugo.org/theme/</a>）</strong></p>
+</li>
+<li>
+<p>Edit hugo.toml, setting the &ldquo;theme&rdquo; property to the theme name.</p>
+<p><strong>(配置toml，可以直接复制现有主题下的.toml文件)</strong></p>
+<p>注意toml文件名要和theme的名字相同</p>
+</li>
+<li>
+<p>Create new content with the command &ldquo;hugo new content <SECTIONNAME>&lt;FILENAME&gt;.<FORMAT>&rdquo;.</p>
+<p><strong>（支持多个格式，不只是 md）</strong></p>
+</li>
+<li>
+<p>Start the embedded web server with the command &ldquo;hugo server &ndash;buildDrafts&rdquo;.</p>
+</li>
+</ol>
+<h2 id="安装皮肤">安装皮肤</h2>
+<p>到 <a href="https://www.gohugo.org/theme/">皮肤列表</a> 挑选一个心仪的皮肤，比如你觉得 <code>Hyde</code> 皮肤不错，找到相关的 <code>GitHub</code> 地址，创建目录 <code>themes</code>，在 <code>themes</code> 目录里把皮肤 <code>git clone</code> 下来：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#6272a4"># 创建 themes 目录</span>
+</span></span><span style="display:flex;"><span>$ <span style="color:#8be9fd;font-style:italic">cd</span> themes
+</span></span><span style="display:flex;"><span>$ git clone https://github.com/spf13/hyde.git
+</span></span></code></pre></div><p>或者直接复制粘贴</p>
+<h2 id="运行hugo">运行Hugo</h2>
+<p>在你的站点根目录执行 <code>Hugo</code> 命令进行调试：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ hugo server --theme<span style="color:#ff79c6">=</span>主题名 --buildDrafts
+</span></span></code></pre></div><p>浏览器里打开： <code>http://localhost:1313</code></p>
+<p>或者直接<code>hugo server</code> 主题在config.toml里直接设置好，就会自动启动默认的主题</p>
+<h2 id="创建文章">创建文章</h2>
+<p>创建一个 <code>about</code> 页面：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ hugo new about.md
+</span></span></code></pre></div><p><code>about.md</code> 自动生成到了 <code>content/about.md</code> ，打开 <code>about.md</code> 看下：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>+++
+</span></span><span style="display:flex;"><span>date = <span style="color:#f1fa8c">&#34;2015-10-25T08:36:54-07:00&#34;</span>   <span style="color:#6272a4">#日期</span>
+</span></span><span style="display:flex;"><span>draft = <span style="color:#ff79c6">true</span>        <span style="color:#6272a4">#是否是草稿</span>
+</span></span><span style="display:flex;"><span>title = <span style="color:#f1fa8c">&#34;about&#34;</span>     <span style="color:#6272a4">#文章标题</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>+++
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>正文内容
+</span></span></code></pre></div><p>内容是 <code>Markdown</code> 格式的，<code>+++</code> 之间的内容是 <a href="https://github.com/toml-lang/toml">TOML</a> 格式的，根据你的喜好，你可以换成 <a href="http://www.yaml.org/">YAML</a> 格式（使用 <code>---</code> 和<code>...</code>标记）或者 <a href="http://www.json.org/">JSON</a> 格式。</p>
+<p>默认情况下，都是草稿，即<code>draft=true</code>,可以<strong>直接更改</strong>或者把它<strong>删掉</strong>，或者在添加<code>-D</code>/<code>--buildDrafts</code>参数</p>
+<h2 id="部署">部署</h2>
+<p>假设需要部署在 <code>GitHub Pages</code> 上，首先在GitHub上创建一个Repository，命名为：<code>用户名.github.io</code> （<code>用户名</code>替换为你的github用户名，<strong>必须小写</strong>）。</p>
+<p>在站点根目录执行 <code>Hugo</code> 命令生成最终页面：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ hugo --theme<span style="color:#ff79c6">=</span>主题名 --baseUrl<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;http://&lt;yourname&gt;.github.io/&#34;</span>
+</span></span></code></pre></div><p>（注意，以上命令并不会生成草稿页面，如果未生成任何文章，请去掉文章头部的 <code>draft=true</code> 再重新生成。）</p>
+<p>如果一切顺利，所有静态页面都会生成到 <code>public</code> 目录，将pubilc目录里所有文件 <code>push</code> 到刚创建的Repository的 <code>master</code> 分支。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ <span style="color:#8be9fd;font-style:italic">cd</span> public
+</span></span><span style="display:flex;"><span>$ git init
+</span></span><span style="display:flex;"><span>$ git remote add origin https://github.com/coderzh/coderzh.github.io.git
+</span></span><span style="display:flex;"><span>$ git add -A
+</span></span><span style="display:flex;"><span>$ git commit -m <span style="color:#f1fa8c">&#34;first commit&#34;</span>
+</span></span><span style="display:flex;"><span>$ git push -u origin master
+</span></span></code></pre></div><p>浏览器里访问：<code>http://coderzh.github.io/</code></p>
+<h2 id="配置-hugo">配置 Hugo</h2>
+<p>Hugo 需要在源目录查找一个 <code>config.toml</code> 的配置文件。如果这个文件不存在，将会查找 <code>config.yaml</code>，然后是 <code>config.json</code> 。或者<code>hugo</code></p>
+<p>这个配置文件是一个整站的配置。它给 Hugo 提供了如何构建站点的方式，比如全局的参数和菜单。</p>
+<p>在 <code>[params]</code> 下面的值将会构成模板里的 <code>.Site.Params</code> 变量。</p>
+<h3 id="变量">变量</h3>
+<p>Hugo 定义好的变量列表如下：</p>
+<p><a href="https://www.gohugo.org/doc/overview/configuration/">变量列表</a></p>
+<h4 id="在md文档中调用">在MD文档中调用</h4>
+<p>格式如下<code>{{ 变量名 }}</code></p>
+<h3 id="编译时忽略的文件">编译时忽略的文件</h3>
+<p>使用 <code>hugo</code> 编译时，将忽略 <code>config.toml</code> 文件中指定的内容，比如：以 <code>.foo</code> 和 <code>.boo</code> 结尾的文件。</p>
+<pre tabindex="0"><code>ignoreFiles = [ &#34;\\.foo$&#34;, &#34;\\.boo$&#34; ]
+</code></pre><p>上面使用了正则表达式，使用 <code>\</code> 转义是因为在 TOML 里。</p>
+<h3 id="设置-blackfriday-渲染">设置 Blackfriday 渲染</h3>
+<p><a href="https://github.com/russross/blackfriday">Blackfriday</a> 是 Hugo 中使用的 <a href="http://daringfireball.net/projects/markdown/">Markdown</a> 渲染引擎。 Hugo 中的 Blackfriday 的默认设置已经很健全，可以适用于大多数的情况。</p>
+<p>但是同时 Hugo 还提供了一些选项。</p>
+<blockquote>
+<ol>
+<li>这些 flags 是非常大小写敏感的！（Hugo v0.15版本）</li>
+<li>这些选项必须在 <code>blackfriday</code> 项下面，可以 <strong>同时用在 site 和 page 级别</strong> 。如果在 page 级别设置了，将会覆盖 site 上的设置。</li>
+</ol>
+</blockquote>
+<h3 id="目录结构">目录结构</h3>
+<p>以<strong>Hyde</strong>主题为例，完整的目录结构如下：</p>
+<pre tabindex="0"><code>iChochy
+├── archetypes                      内容模版目录
+│   └── default.md                  模版文件
+├── config.toml                     配置文件
+├── content                         内容目录
+├── data                            数据目录
+├── layouts                         网站模版目录
+├── static                          静态文件目录
+└── themes                          主题目录
+    └── hyde                        Hyde主题目录
+        ├── CHANGELOG.md            
+        ├── LICENSE.md              
+        ├── README.md
+        ├── archetypes              内容模版
+        │   └── default.md
+        ├── go.mod
+        ├── images
+        │   ├── screenshot.png
+        │   └── tn.png
+        ├── layouts                 网站模版
+        │   ├── 404.html            404面目模版
+        │   ├── _default            默认模版目录
+        │   │   ├── baseof.html     基础模版
+        │   │   ├── list.html       列表页面模版
+        │   │   └── single.html     单页面模版
+        │   ├── index.html          首页模版
+        │   └── partials            模块模版目录
+        │       ├── head.html       HEAD模块模版
+        │       ├── head_fonts.html
+        │       ├── hook_head_end.html
+        │       └── sidebar.html
+        ├── static                  静态目录
+        │   ├── apple-touch-icon-144-precomposed.png
+        │   ├── css
+        │   │   ├── hyde.css
+        │   │   ├── poole.css
+        │   │   ├── print.css
+        │   │   └── syntax.css
+        │   └── favicon.png
+        └── theme.toml              主题配置文件
+</code></pre><h4 id="archetypes">archetypes</h4>
+<p>内容模版目录，通过内容模版，使用<code>hugo new</code>命令创建新的<code>content</code>文件</p>
+<p><code>default.md</code> 为内容模版，当你使用<code>new</code>命令产生一个文件，文件会自动化带有模板里的内容</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>+++
+</span></span><span style="display:flex;"><span>title = <span style="color:#f1fa8c">&#39;{{ replace .File.ContentBaseName &#34;-&#34; &#34; &#34; | title }}&#39;</span>
+</span></span><span style="display:flex;"><span>date = {{ .Date }}
+</span></span><span style="display:flex;"><span>draft = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>+++
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">#如果用模版内容如上，则生成Myself文件如下</span>
+</span></span><span style="display:flex;"><span>+++
+</span></span><span style="display:flex;"><span>title = <span style="color:#f1fa8c">&#39;Myself&#39;</span>
+</span></span><span style="display:flex;"><span>date = 2024-05-17T23:38:43+08:00
+</span></span><span style="display:flex;"><span>draft = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>+++
+</span></span></code></pre></div><h4 id="configtoml">config.toml</h4>
+<p>项目的配置文件，和<code>toml.config</code>的是一个东西。具体参数见<a href="/post/hugo/#TOML.config">TOML.config</a></p>
+<h4 id="content">content</h4>
+<p>内容目录，网站的<code>MD</code>源文件，通过对应的模版生成静态文件。</p>
+<p><code>new</code>命令格式如下：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ hugo new &lt;file_path+name&gt; 
+</span></span></code></pre></div><p>使用<code>new</code>命令产生一个文件，文件的地址为 <code>本项目目录</code>-&gt;<code>content</code>-&gt;<code>&lt;file_path+name&gt; </code></p>
+<h4 id="data">data</h4>
+<p>数据目录，存储结构数据，可以用<code>YAML</code>，<code>JSON</code>或<code>TOML</code>格式编写数据文件，可用<code>.Site.Data.xxxx</code>的方式来获取数据</p>
+<h4 id="layouts">layouts</h4>
+<p>模版目录，以<code>.html</code>文件形式存储模板，这些模板指定如何将内容目录中的源文件呈现到静态网站中</p>
+<p>模版包括：主页模版、单页模板、列表模版、分类模版、模块模版等</p>
+<h4 id="static">static</h4>
+<p>静态文件目录，存储所有静态内容，如：Image，CSS，JavaScript等。当Hugo建立您的网站时，静态目录内的所有文件均按原样复制生成，可有来存储效验文件、<code>CNAME</code>文件等。当你需要调用本地资源时，路径没有以<code>/</code>开头，会自动加上<code>static/</code>的。而当你是</p>
+<h2 id="heyo主题的使用">Heyo主题的使用</h2>
+<h3 id="修改css样式和js">修改CSS样式和JS</h3>
+<p>在<code>config.toml</code> 的 <code>[params]</code> 下，有 <code>customCss</code>， 在这里可以指定一个 <strong>CSS</strong> 文件，他会覆盖默认的CSS样式。同样还有<code>customJs</code>。</p>
+<p>配置时可以<strong>使用远程文件</strong>，即直接<code>customCss=['&lt;URL for a css file&gt;']</code>即可。</p>
+<p>配置时可以引入多个文件，用逗号<code>,</code>隔开即可。比如<code>customCss = ['customCss/my-styles-1.css', 'customCss/my-styles-2.css']</code></p>
+<h3 id="md文档格式">MD文档格式</h3>
+<blockquote>
+<p>这里只列出与<a href="/post/typora_manual/">md</a>不同的</p>
+</blockquote>
+<h3 id="表">表</h3>
+<p>表不是核心 Markdown 规范的一部分，但 Hugo 支持开箱即用（out-of-the-box）地支持它们。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>   Name | Age
+</span></span><span style="display:flex;"><span>--------|------
+</span></span><span style="display:flex;"><span>    Bob | 27
+</span></span><span style="display:flex;"><span>  Alice | 23
+</span></span></code></pre></div><p>也可以使用原来的md的语法</p>
+<h3 id="代码块">代码块</h3>
+<p>可以使用原来的md的语法即三个 <strong>`</strong></p>
+<p>或者可以直接每行空四格 <code> </code> 表示代码块</p>
+<p>或者如下格式（带有 Hugo 内部突出显示简码的代码块）</p>
+<pre tabindex="0"><code><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>//code</span></span></code></pre></div>
+</code></pre><h3 id="块应用">块应用</h3>
+<p><code>blockquote</code> 元素表示从其他来源引用的内容，可以使用<code>footer</code>或者<code>cite</code>。</p>
+<p>例如<code>&lt;cite&gt; 内容 &lt;/cite&gt;</code></p>
+<h3 id="cjk字形">CJK字形</h3>
+<p>在<a href="https://github.com/LucasVadilho/heyo-hugo-theme/issues/2">GitHub issue</a>中，<em>@luobo202254</em>提出浏览器的中文字符默认字体不能很好地与<code>Computer Modern</code>配合。所以<strong>Heyo</strong>使用<code>FandolKai-Regular</code>作为默认字体，字体是从<a href="https://ctan.org/tex-archive/fonts/fandol">CTAN</a>获得的，并且在 GNU GPL 许可证下。</p>
+<h4 id="如何选择字体">如何选择字体</h4>
+<p>你可以在一个自定义的CSS样式中设置字体族，将修改本项目的样式为当前样式。例如</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#ff79c6">*</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">font-family</span>: <span style="color:#f1fa8c">&#39;sans serif&#39;</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="草图sketches暂译">草图（Sketches）（暂译）</h3>
+<p>sketches是 <strong>heyo</strong> 侧边栏中的漂亮可视化效果。默认的都是使用 <a href="https://p5js.org/">p5.js</a> 构建的——一个用于创意编码的 javascript 库。</p>
+<p>目前有以下几种效果：</p>
+<ul>
+<li>Graph图（类似博客园里的背景，点和线构成的图）</li>
+<li>Digital Rain数字雨</li>
+<li>Circles圈</li>
+</ul>
+<h4 id="建立">建立</h4>
+<p><strong>全局配置</strong></p>
+<p>可以在<code>config.toml</code>中的 <code>params.sketch</code> 配置</p>
+<ul>
+<li><code>enable</code>：控制草图是否显示在每一页上</li>
+<li><code>displayOptions</code>：控制草图设置是否在悬停时显示</li>
+<li><code>use</code>：选择将显示的草图</li>
+</ul>
+<p><strong>每页基础</strong></p>
+<p>即使将<code>enable=false</code>，仍然可以在特定页面上启用草图。只需在页面的<code>front-matter</code>（前言）中设置。</p>
+<p><strong>实现自己的草图</strong></p>
+<p>可以导入自己的<strong>JS</strong>代码（之前讲了），只需要在<strong>JS文件</strong>中：</p>
+<ol>
+<li>在类（名为<code>yourclass</code>）中描述 <code>sketch</code></li>
+<li>确保它实现了<code>setup</code> 和 <code>draw</code>（也可以实现<code>mouseWheel</code>， <code>mouseClicked</code> 和  <code>getSettings</code>）</li>
+<li>将类添加到对象<code>SKETCHES</code> 中的 <code>SKETCHES['&lt;yourName&gt;'] = &lt;yourclass&gt;</code></li>
+<li>设置<code>sketch.use</code>为<code>yourName</code></li>
+</ol>
+<h3 id="帖子缩略图thumbnail">帖子缩略图(Thumbnail)</h3>
+<p>给帖子添加缩略图，只需将变量 <code>thumbnail</code> 添加到<code>front-matter</code>。对于<code>thumbnail</code>，可以定义：</p>
+<ul>
+<li><strong>src</strong>：图片来源</li>
+<li><strong>alt</strong>：替换值，（当图片失效时显示），默认为<code>thumbnail</code></li>
+<li><strong>object_postion</strong>：图像位置（默认为50%，50%）</li>
+<li><strong>height</strong>：缩略图的高度（默认为250px）  默认值可以在<strong>CSS变量</strong> <code>--thumbnail-size</code> 中更改，这个变量就在<code>customCSS</code>所指向的文件中</li>
+</ul>
+<h3 id="callout-shortcode标注">callout shortcode(标注)</h3>
+<p>hugo中的shortcode可以看这个<a href="https://zhuanlan.zhihu.com/p/396330042?utm_id=0">shortcode</a></p>
+<pre tabindex="0"><code>
+
+
+
+
+
+
+
+
+
+<div class="callout">
+    <div class="callout-header" style="background: #3492FA;">
+        <div class="callout-icon"><i class=fas&#32;fa-info-circle></i></div>
+        <div class="callout-title">You&rsquo;re not limited to a single file</div>
+    </div>
+    
+    <div class="callout-body">
+        <div>You can have more than one custom file, just use a <code>,</code> to separate them, for example <code>customCss = ['customCss/my-styles-1.css', 'customCss/my-styles-2.css']</code></div>
+    </div>
+    
+</div>
+
+</code></pre><p><code>kind</code>表示类型，<code>title</code>表示标题，<code>content</code>为内容，<code>&quot; &quot;</code>中的为md内容（可以使用md的语法）</p>
+<p><strong>kind</strong>有好多种以下一一介绍：</p>
+<ul>
+<li><strong>Info</strong>（信息）</li>
+<li><strong>Question</strong>（问题）</li>
+<li><strong>Success</strong>（成功）</li>
+<li><strong>Alert</strong>（警报）</li>
+<li><strong>Nope</strong>（不）</li>
+<li><strong>Note</strong>（注意）</li>
+</ul>
+<p>也可以自定义<strong>callout</strong></p>
+<p>格式如下：</p>
+<blockquote>
+<p>图标来源<a href="https://fontawesome.com/search">Font Awesome</a>  这个网站的会提供图标对应的html、react等的代码</p>
+</blockquote>
+<pre tabindex="0"><code>
+
+
+
+
+
+
+
+
+
+<div class="callout">
+    <div class="callout-header" style="background: linear-gradient(95deg, #9198e5, #e66465);">
+        <div class="callout-icon"><i class=fas&#32;fa-atom></i></div>
+        <div class="callout-title">标题</div>
+    </div>
+    
+    <div class="callout-body">
+        <div>内容</div>
+    </div>
+    
+</div>
+
+</code></pre><blockquote>
+<p>这里的-之后信息的就是Font Awesome的图标名称</p>
+</blockquote>
+<h3 id="目录">目录</h3>
+<p>可以使用侧边栏显示目录</p>
+<p>添加 <code>showToc</code> 到当前文档的 <code>front-matter</code>，并设置为<code>true</code></p>
+<p>在 <code>config.toml</code> 有对标题等级的设置，如下：</p>
+<pre tabindex="0"><code>[markup]
+    [markup.tableOfContents]
+        startLevel = 1
+        endLevel = 6
+</code></pre><h3 id="渲染数学内容rendering-math-stuff">渲染数学内容（Rendering Math Stuff）</h3>
+<p>数学排版是通过 JavaScript 库实现的</p>
+<p>这个库在 <code>math.html</code> (<code>/layouts/partials/math.html</code>).</p>
+<p><strong>全局配置</strong></p>
+<p>在<code>config.toml</code>的<code>[params.math]</code>可以设置</p>
+<p><code>enable = true</code>表示启用所有页面的数学排版</p>
+<p><code>use = &quot;katex&quot;</code>表示使用这个库，默认库是 <code>MathJax</code></p>
+<p><strong>每页基础</strong></p>
+<p>可以在<code>front-matter</code>中设置当前页的配置</p>
+<p><strong>MathJax</strong></p>
+<p>可以使用 <code>$...$</code>  或者 <code>\\(...\\)</code> 用作内联公式的分隔符。</p>
+<p><code>$$...$$</code> or <code>\\[...\\]</code>表示块公式</p>
+<p>在公式里如果需要使用<code>$</code>需要用<code>\</code>来转义</p>
+<blockquote>
+<p>注意：在md中<code>\</code>需要用<code>\</code>来转义</p>
+</blockquote>
+<h3 id="徽章badges">徽章(badges)</h3>
+<p>徽章是使用 <a href="https://badgen.net/">badgen.net</a> 生成的。它们可以使用<strong>shortcode</strong>构建，并且还有一种方法可以通过 <strong>front-matter</strong> 将多个徽章添加到<strong>post summary</strong>中。</p>
+<pre tabindex="0"><code>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+    
+
+
+
+    
+
+
+
+
+
+
+
+    <a target="_blank" href=https://www.wikipedia.org><img class="badge" src=https://flat.badgen.net/static/subject/Checkout%20the%20Wiki?color&#61;grey&amp;icon&#61;wiki&amp;label&#61;&amp; alt=subject&#32;Checkout&#32;the&#32;Wiki loading="lazy"/></a>
+
+</code></pre><p>可以<strong>post summary</strong>中显示徽章， 通过在<code>front-matter</code>中设置变量 <code>badges</code> ，例如：</p>
+<pre tabindex="0"><code>badges:
+	github:
+		subject: GitHub
+		status: Check it on GitHub
+    icon: github
+    url: https://github.com/LucasVadilho/heyo-hugo-theme
+    color: grey
+    label: &#34;&#34;
+  template:
+  	flat: false
+  	subject: subject
+  	status: status
+  	label: label
+  	color: pink
+  	label_color: 000
+  	icon: awesome
+  	url: https://badgen.net/
+</code></pre><h4 id="参数">参数</h4>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>值</th>
+<th>默认</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>status</code></td>
+<td>右边的文本或者<code>generator</code>的设置</td>
+<td>Any string</td>
+<td><code>status</code></td>
+</tr>
+<tr>
+<td><code>subject</code></td>
+<td>左边的文字或者<code>generator</code>的设置</td>
+<td>Any string</td>
+<td><code>subject</code></td>
+</tr>
+<tr>
+<td><code>generator</code></td>
+<td>徽章生成器</td>
+<td>Checkout <a href="https://badgen.net/help#generators">badgen&rsquo;s documentation</a></td>
+<td><code>static</code></td>
+</tr>
+<tr>
+<td><code>flat</code></td>
+<td>徽章样式</td>
+<td>`true</td>
+<td>false`</td>
+</tr>
+<tr>
+<td><code>scale</code></td>
+<td>徽章比例</td>
+<td>Any number</td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td><code>label</code></td>
+<td>左侧的文字</td>
+<td>Any string</td>
+<td>None</td>
+</tr>
+<tr>
+<td><code>url</code></td>
+<td>点击跳转到特定URL</td>
+<td>Any URL</td>
+<td>None</td>
+</tr>
+<tr>
+<td><code>icon</code></td>
+<td>左侧的图标</td>
+<td><a href="https://badgen.net/help#icons">Bultin 图标</a> or any SVG URL</td>
+<td>Badgen 的默认值</td>
+</tr>
+<tr>
+<td><code>color</code></td>
+<td>状态颜色</td>
+<td><a href="https://badgen.net/help#colors">Bultin 颜色</a> or 十六进制代码</td>
+<td>Badgen 的默认值</td>
+</tr>
+<tr>
+<td><code>label_color</code></td>
+<td>标签颜色</td>
+<td><a href="https://badgen.net/help#colors">Bultin 颜色</a> or 十六进制代码</td>
+<td>Badgen 的默认值</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><code>subject</code>会被<code>label</code>给覆盖</p>
+<p><code>label</code>可以为空，这样只会显示图标</p>
+</blockquote>
+<h2 id="tomlconfig">TOML.config</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>baseURL = <span style="color:#f1fa8c">&#34;https://your-domain.org&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 更改使用 Hugo 构建网站时使用的默认主题</span>
+</span></span><span style="display:flex;"><span>theme = <span style="color:#f1fa8c">&#34;LoveIt&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 网站标题</span>
+</span></span><span style="display:flex;"><span>title = <span style="color:#f1fa8c">&#34;Stilig&#34;</span>
+</span></span><span style="display:flex;"><span>defaultContentLanguage = <span style="color:#f1fa8c">&#34;zh-cn&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 网站语言, 仅在这里 CN 大写 [&#34;en&#34;, &#34;zh-CN&#34;, &#34;fr&#34;, &#34;pl&#34;, ...]</span>
+</span></span><span style="display:flex;"><span>languageCode = <span style="color:#f1fa8c">&#34;zh-CN&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 语言名称 [&#34;English&#34;, &#34;简体中文&#34;, &#34;Français&#34;, &#34;Polski&#34;, ...]</span>
+</span></span><span style="display:flex;"><span>languageName = <span style="color:#f1fa8c">&#34;简体中文&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 是否包括中日韩文字</span>
+</span></span><span style="display:flex;"><span>hasCJKLanguage = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 默认每页列表显示的文章数目</span>
+</span></span><span style="display:flex;"><span>paginate = <span style="color:#bd93f9">12</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 谷歌分析代号 [UA-XXXXXXXX-X]</span>
+</span></span><span style="display:flex;"><span>googleAnalytics = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 版权描述，仅仅用于 SEO</span>
+</span></span><span style="display:flex;"><span>copyright = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 是否使用 robots.txt</span>
+</span></span><span style="display:flex;"><span>enableRobotsTXT = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 是否使用 git 信息</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">#enableGitInfo = true</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 是否使用 emoji 代码</span>
+</span></span><span style="display:flex;"><span>enableEmoji = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 忽略一些构建错误</span>
+</span></span><span style="display:flex;"><span>ignoreErrors = [<span style="color:#f1fa8c">&#34;error-remote-getjson&#34;</span>, <span style="color:#f1fa8c">&#34;error-missing-instagram-accesstoken&#34;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 作者配置</span>
+</span></span><span style="display:flex;"><span>[author]
+</span></span><span style="display:flex;"><span>  name = <span style="color:#f1fa8c">&#34;Stilig&#34;</span>
+</span></span><span style="display:flex;"><span>  email = <span style="color:#f1fa8c">&#34;your_email&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 菜单配置</span>
+</span></span><span style="display:flex;"><span>[menu]
+</span></span><span style="display:flex;"><span>  [[menu.main]]
+</span></span><span style="display:flex;"><span>    weight = <span style="color:#bd93f9">1</span>
+</span></span><span style="display:flex;"><span>    identifier = <span style="color:#f1fa8c">&#34;posts&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标</span>
+</span></span><span style="display:flex;"><span>    pre = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标</span>
+</span></span><span style="display:flex;"><span>    post = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    name = <span style="color:#f1fa8c">&#34;文章&#34;</span>
+</span></span><span style="display:flex;"><span>    url = <span style="color:#f1fa8c">&#34;/posts/&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># 当你将鼠标悬停在此菜单链接上时, 将显示的标题</span>
+</span></span><span style="display:flex;"><span>    title = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  [[menu.main]]
+</span></span><span style="display:flex;"><span>    weight = <span style="color:#bd93f9">2</span>
+</span></span><span style="display:flex;"><span>    identifier = <span style="color:#f1fa8c">&#34;tags&#34;</span>
+</span></span><span style="display:flex;"><span>    pre = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    post = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    name = <span style="color:#f1fa8c">&#34;标签&#34;</span>
+</span></span><span style="display:flex;"><span>    url = <span style="color:#f1fa8c">&#34;/tags/&#34;</span>
+</span></span><span style="display:flex;"><span>    title = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  [[menu.main]]
+</span></span><span style="display:flex;"><span>    weight = <span style="color:#bd93f9">3</span>
+</span></span><span style="display:flex;"><span>    identifier = <span style="color:#f1fa8c">&#34;categories&#34;</span>
+</span></span><span style="display:flex;"><span>    pre = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    post = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    name = <span style="color:#f1fa8c">&#34;分类&#34;</span>
+</span></span><span style="display:flex;"><span>    url = <span style="color:#f1fa8c">&#34;/categories/&#34;</span>
+</span></span><span style="display:flex;"><span>    title = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Hugo 解析文档的配置</span>
+</span></span><span style="display:flex;"><span>[markup]
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># 语法高亮设置 (https://gohugo.io/content-management/syntax-highlighting)</span>
+</span></span><span style="display:flex;"><span>  [markup.highlight]
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># false 是必要的设置 (https://github.com/dillonzq/LoveIt/issues/158)</span>
+</span></span><span style="display:flex;"><span>    codeFences = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>    guessSyntax = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>    lineNos = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>    lineNumbersInTable = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># false 是必要的设置</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># (https://github.com/dillonzq/LoveIt/issues/158)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># Goldmark 是 Hugo 0.60 以来的默认 Markdown 解析库</span>
+</span></span><span style="display:flex;"><span>    noClasses = <span style="color:#ff79c6">false</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># Goldmark 是 Hugo 0.60 以来的默认 Markdown 解析库</span>
+</span></span><span style="display:flex;"><span>  [markup.goldmark]
+</span></span><span style="display:flex;"><span>    [markup.goldmark.extensions]
+</span></span><span style="display:flex;"><span>      definitionList = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>      footnote = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>      linkify = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>      strikethrough = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>      table = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>      taskList = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>      typographer = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>    [markup.goldmark.renderer]
+</span></span><span style="display:flex;"><span>      <span style="color:#6272a4"># 是否在文档中直接使用 HTML 标签</span>
+</span></span><span style="display:flex;"><span>      unsafe = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># 目录设置</span>
+</span></span><span style="display:flex;"><span>  [markup.tableOfContents]
+</span></span><span style="display:flex;"><span>    startLevel = <span style="color:#bd93f9">2</span>
+</span></span><span style="display:flex;"><span>    endLevel = <span style="color:#bd93f9">6</span>
+</span></span><span style="display:flex;"><span>[params]
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># 网站默认主题样式 [&#34;auto&#34;, &#34;light&#34;, &#34;dark&#34;]</span>
+</span></span><span style="display:flex;"><span>  defaultTheme = <span style="color:#f1fa8c">&#34;light&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># 公共 git 仓库路径，仅在 enableGitInfo 设为 true 时有效</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4">#gitRepo = &#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># LoveIt 新增 | 0.1.1 哪种哈希函数用来 SRI, 为空时表示不使用 SRI</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># [&#34;sha256&#34;, &#34;sha384&#34;, &#34;sha512&#34;, &#34;md5&#34;]</span>
+</span></span><span style="display:flex;"><span>  fingerprint = <span style="color:#f1fa8c">&#34;sha256&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># LoveIt 新增 | 0.2.0 日期格式</span>
+</span></span><span style="display:flex;"><span>  dateFormat = <span style="color:#f1fa8c">&#34;2006-01-02&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># 网站标题, 用于 Open Graph 和 Twitter Cards</span>
+</span></span><span style="display:flex;"><span>  title = <span style="color:#f1fa8c">&#34;Stilig的博客&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># 网站描述, 用于 RSS, SEO, Open Graph 和 Twitter Cards</span>
+</span></span><span style="display:flex;"><span>  description = <span style="color:#f1fa8c">&#34;Stilig的博客&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># 网站图片, 用于 Open Graph 和 Twitter Cards</span>
+</span></span><span style="display:flex;"><span>  images = [<span style="color:#f1fa8c">&#34;首页中间的图片&#34;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 页面头部导航栏配置</span>
+</span></span><span style="display:flex;"><span>[params.header]
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># 桌面端导航栏模式 [&#34;fixed&#34;, &#34;normal&#34;, &#34;auto&#34;]</span>
+</span></span><span style="display:flex;"><span>  desktopMode = <span style="color:#f1fa8c">&#34;normal&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># 移动端导航栏模式 [&#34;fixed&#34;, &#34;normal&#34;, &#34;auto&#34;]</span>
+</span></span><span style="display:flex;"><span>  mobileMode = <span style="color:#f1fa8c">&#34;normal&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># LoveIt 新增 | 0.2.0 页面头部导航栏标题配置</span>
+</span></span><span style="display:flex;"><span>  [params.header.title]
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># LOGO 的 URL</span>
+</span></span><span style="display:flex;"><span>    logo = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># 标题名称</span>
+</span></span><span style="display:flex;"><span>    name = <span style="color:#f1fa8c">&#34;Stilig&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标</span>
+</span></span><span style="display:flex;"><span>    pre = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标</span>
+</span></span><span style="display:flex;"><span>    post = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># LoveIt 新增 | 0.2.5 是否为标题显示打字机动画</span>
+</span></span><span style="display:flex;"><span>    typeit = <span style="color:#ff79c6">false</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 页面底部信息配置</span>
+</span></span><span style="display:flex;"><span>[params.footer]
+</span></span><span style="display:flex;"><span>  enable = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># LoveIt 新增 | 0.2.0 自定义内容 (支持 HTML 格式)</span>
+</span></span><span style="display:flex;"><span>  custom = <span style="color:#f1fa8c">&#39;&#39;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># LoveIt 新增 | 0.2.0 是否显示 Hugo 和主题信息</span>
+</span></span><span style="display:flex;"><span>  hugo = <span style="color:#ff79c6">false</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># LoveIt 新增 | 0.2.0 是否显示版权信息</span>
+</span></span><span style="display:flex;"><span>  copyright = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># LoveIt 新增 | 0.2.0 是否显示作者</span>
+</span></span><span style="display:flex;"><span>  author = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># 网站创立年份</span>
+</span></span><span style="display:flex;"><span>  since = <span style="color:#bd93f9">2022</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># ICP 备案信息，仅在中国使用 (支持 HTML 格式)</span>
+</span></span><span style="display:flex;"><span>  icp = <span style="color:#f1fa8c">&#39;&#39;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># 许可协议信息 (支持 HTML 格式)</span>
+</span></span><span style="display:flex;"><span>  license = <span style="color:#f1fa8c">&#39;&lt;a rel=&#34;license external nofollow noopener noreffer&#34; href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34;&gt;CC BY-NC 4.0&lt;/a&gt;&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># LoveIt 新增 | 0.2.0 Section (所有文章) 页面配置</span>
+</span></span><span style="display:flex;"><span>[params.section]
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># section 页面每页显示文章数量</span>
+</span></span><span style="display:flex;"><span>  paginate = <span style="color:#bd93f9">20</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># 日期格式 (月和日)</span>
+</span></span><span style="display:flex;"><span>  dateFormat = <span style="color:#f1fa8c">&#34;01-02&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># RSS 文章数目</span>
+</span></span><span style="display:flex;"><span>  rss = <span style="color:#bd93f9">10</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># LoveIt 新增 | 0.2.0 List (目录或标签) 页面配置</span>
+</span></span><span style="display:flex;"><span>[params.list]
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># list 页面每页显示文章数量</span>
+</span></span><span style="display:flex;"><span>  paginate = <span style="color:#bd93f9">20</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># 日期格式 (月和日)</span>
+</span></span><span style="display:flex;"><span>  dateFormat = <span style="color:#f1fa8c">&#34;01-02&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># RSS 文章数目</span>
+</span></span><span style="display:flex;"><span>  rss = <span style="color:#bd93f9">10</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># LoveIt 新增 | 0.2.0 应用图标配置</span>
+</span></span><span style="display:flex;"><span>[params.app]
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># 当添加到 iOS 主屏幕或者 Android 启动器时的标题, 覆盖默认标题</span>
+</span></span><span style="display:flex;"><span>  title = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># 是否隐藏网站图标资源链接</span>
+</span></span><span style="display:flex;"><span>  noFavicon = <span style="color:#ff79c6">false</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># 更现代的 SVG 网站图标, 可替代旧的 .png 和 .ico 文件</span>
+</span></span><span style="display:flex;"><span>  svgFavicon = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># Android 浏览器主题色</span>
+</span></span><span style="display:flex;"><span>  themeColor = <span style="color:#f1fa8c">&#34;#ffffff&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># Safari 图标颜色</span>
+</span></span><span style="display:flex;"><span>  iconColor = <span style="color:#f1fa8c">&#34;#5bbad5&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># Windows v8-10磁贴颜色</span>
+</span></span><span style="display:flex;"><span>  tileColor = <span style="color:#f1fa8c">&#34;#da532c&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># LoveIt 新增 | 0.2.0 搜索配置</span>
+</span></span><span style="display:flex;"><span>[params.search]
+</span></span><span style="display:flex;"><span>  enable = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># 搜索引擎的类型 [&#34;lunr&#34;, &#34;algolia&#34;]</span>
+</span></span><span style="display:flex;"><span>  type = <span style="color:#f1fa8c">&#34;algolia&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># 文章内容最长索引长度</span>
+</span></span><span style="display:flex;"><span>  contentLength = <span style="color:#bd93f9">4000</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># 搜索框的占位提示语</span>
+</span></span><span style="display:flex;"><span>  placeholder = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># LoveIt 新增 | 0.2.1 最大结果数目</span>
+</span></span><span style="display:flex;"><span>  maxResultLength = <span style="color:#bd93f9">10</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># LoveIt 新增 | 0.2.3 结果内容片段长度</span>
+</span></span><span style="display:flex;"><span>  snippetLength = <span style="color:#bd93f9">50</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># LoveIt 新增 | 0.2.1 搜索结果中高亮部分的 HTML 标签</span>
+</span></span><span style="display:flex;"><span>  highlightTag = <span style="color:#f1fa8c">&#34;em&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># LoveIt 新增 | 0.2.4 是否在搜索索引中使用基于 baseURL 的绝对路径</span>
+</span></span><span style="display:flex;"><span>  absoluteURL = <span style="color:#ff79c6">false</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4">##注册使用，前往：https://www.algolia.com/</span>
+</span></span><span style="display:flex;"><span>  [params.search.algolia]
+</span></span><span style="display:flex;"><span>    index = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    appID = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    searchKey = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 主页配置</span>
+</span></span><span style="display:flex;"><span>[params.home]
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># LoveIt 新增 | 0.2.0 RSS 文章数目</span>
+</span></span><span style="display:flex;"><span>  rss = <span style="color:#bd93f9">10</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># 主页个人信息</span>
+</span></span><span style="display:flex;"><span>  [params.home.profile]
+</span></span><span style="display:flex;"><span>    enable = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># Gravatar 邮箱，用于优先在主页显示的头像</span>
+</span></span><span style="display:flex;"><span>    gravatarEmail = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># 主页显示头像的 URL</span>
+</span></span><span style="display:flex;"><span>    avatarURL = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># LoveIt 更改 | 0.2.7 主页显示的网站标题 (支持 HTML 格式)</span>
+</span></span><span style="display:flex;"><span>    title = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># 主页显示的网站副标题 (允许 HTML 格式)</span>
+</span></span><span style="display:flex;"><span>    subtitle = <span style="color:#f1fa8c">&#34;欢迎来到我的博客&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># 是否为副标题显示打字机动画</span>
+</span></span><span style="display:flex;"><span>    typeit = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># 是否显示社交账号</span>
+</span></span><span style="display:flex;"><span>    social = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># LoveIt 新增 | 0.2.0 免责声明 (支持 HTML 格式)</span>
+</span></span><span style="display:flex;"><span>    disclaimer = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># 主页文章列表</span>
+</span></span><span style="display:flex;"><span>  [params.home.posts]
+</span></span><span style="display:flex;"><span>    enable = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># 主页每页显示文章数量</span>
+</span></span><span style="display:flex;"><span>    paginate = <span style="color:#bd93f9">6</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># LoveIt 删除 | 0.2.0 被 params.page 中的 hiddenFromHomePage 替代</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># 当你没有在文章前置参数中设置 &#34;hiddenFromHomePage&#34; 时的默认行为</span>
+</span></span><span style="display:flex;"><span>    defaultHiddenFromHomePage = <span style="color:#ff79c6">false</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 作者的社交信息设置</span>
+</span></span><span style="display:flex;"><span>[params.social]
+</span></span><span style="display:flex;"><span>  GitHub = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Linkedin = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Twitter = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Instagram = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Facebook = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Telegram = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Medium = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Gitlab = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Youtubelegacy = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Youtubecustom = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Youtubechannel = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Tumblr = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Quora = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Keybase = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Pinterest = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Reddit = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Codepen = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  FreeCodeCamp = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Bitbucket = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Stackoverflow = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Weibo = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Odnoklassniki = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  VK = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Flickr = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Xing = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Snapchat = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Soundcloud = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Spotify = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Bandcamp = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Paypal = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Fivehundredpx = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Mix = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Goodreads = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Lastfm = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Foursquare = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Hackernews = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Kickstarter = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Patreon = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Steam = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Twitch = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Strava = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Skype = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Whatsapp = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Zhihu = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Douban = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Angellist = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Slidershare = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Jsfiddle = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Deviantart = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Behance = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Dribbble = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Wordpress = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Vine = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Googlescholar = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Researchgate = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Mastodon = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Thingiverse = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Devto = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Gitea = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  XMPP = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Matrix = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Bilibili = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Discord = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  DiscordInvite = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Lichess = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  ORCID = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Pleroma = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Kaggle = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  MediaWiki= <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Plume = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  HackTheBox = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  RootMe= <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Phone = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  Email = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  RSS = <span style="color:#ff79c6">true</span> <span style="color:#6272a4"># LoveIt 新增 | 0.2.0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># LoveIt 更改 | 0.2.0 文章页面全局配置</span>
+</span></span><span style="display:flex;"><span>[params.page]
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># LoveIt 新增 | 0.2.0 是否在主页隐藏一篇文章</span>
+</span></span><span style="display:flex;"><span>  hiddenFromHomePage = <span style="color:#ff79c6">false</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># LoveIt 新增 | 0.2.0 是否在搜索结果中隐藏一篇文章</span>
+</span></span><span style="display:flex;"><span>  hiddenFromSearch = <span style="color:#ff79c6">false</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># LoveIt 新增 | 0.2.0 是否使用 twemoji</span>
+</span></span><span style="display:flex;"><span>  twemoji = <span style="color:#ff79c6">false</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># 是否使用 lightgallery</span>
+</span></span><span style="display:flex;"><span>  lightgallery = <span style="color:#ff79c6">false</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># LoveIt 新增 | 0.2.0 是否使用 ruby 扩展语法</span>
+</span></span><span style="display:flex;"><span>  ruby = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># LoveIt 新增 | 0.2.0 是否使用 fraction 扩展语法</span>
+</span></span><span style="display:flex;"><span>  fraction = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># LoveIt 新增 | 0.2.0 是否使用 fontawesome 扩展语法</span>
+</span></span><span style="display:flex;"><span>  fontawesome = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># 是否在文章页面显示原始 Markdown 文档链接</span>
+</span></span><span style="display:flex;"><span>  linkToMarkdown = <span style="color:#ff79c6">false</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># LoveIt 新增 | 0.2.4 是否在 RSS 中显示全文内容</span>
+</span></span><span style="display:flex;"><span>  rssFullText = <span style="color:#ff79c6">false</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># LoveIt 新增 | 0.2.0 目录配置</span>
+</span></span><span style="display:flex;"><span>  [params.page.toc]
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># 是否使用目录</span>
+</span></span><span style="display:flex;"><span>    enable = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># LoveIt 新增 | 0.2.9 是否保持使用文章前面的静态目录</span>
+</span></span><span style="display:flex;"><span>    keepStatic = <span style="color:#ff79c6">false</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># 是否使侧边目录自动折叠展开</span>
+</span></span><span style="display:flex;"><span>    auto = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># LoveIt 新增 | 0.2.0 代码配置</span>
+</span></span><span style="display:flex;"><span>  [params.page.code]
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># 是否显示代码块的复制按钮</span>
+</span></span><span style="display:flex;"><span>    copy = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># 默认展开显示的代码行数</span>
+</span></span><span style="display:flex;"><span>    maxShownLines = <span style="color:#bd93f9">50</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># LoveIt 更改 | 0.2.0 KaTeX 数学公式</span>
+</span></span><span style="display:flex;"><span>[params.page.math]
+</span></span><span style="display:flex;"><span>  enable = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># LoveIt 更改 | 0.2.11 默认行内定界符是 $ ... $ 和 \( ... \)</span>
+</span></span><span style="display:flex;"><span>  inlineLeftDelimiter = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  inlineRightDelimiter = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># LoveIt 更改 | 0.2.11 默认块定界符是 $$ ... $$, \[ ... \], \begin{equation} ... \end{equation} 和一些其它的函数</span>
+</span></span><span style="display:flex;"><span>  blockLeftDelimiter = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  blockRightDelimiter = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># KaTeX 插件 copy_tex</span>
+</span></span><span style="display:flex;"><span>  copyTex = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># KaTeX 插件 mhchem</span>
+</span></span><span style="display:flex;"><span>  mhchem = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># LoveIt 新增 | 0.2.0 Mapbox GL JS 配置</span>
+</span></span><span style="display:flex;"><span>[params.page.mapbox]
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># Mapbox GL JS 的 access token</span>
+</span></span><span style="display:flex;"><span>  accessToken = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># 浅色主题的地图样式</span>
+</span></span><span style="display:flex;"><span>  lightStyle = <span style="color:#f1fa8c">&#34;mapbox://styles/mapbox/light-v10?optimize=true&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># 深色主题的地图样式</span>
+</span></span><span style="display:flex;"><span>  darkStyle = <span style="color:#f1fa8c">&#34;mapbox://styles/mapbox/dark-v10?optimize=true&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># 是否添加 NavigationControl</span>
+</span></span><span style="display:flex;"><span>  navigation = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># 是否添加 GeolocateControl</span>
+</span></span><span style="display:flex;"><span>  geolocate = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># 是否添加 ScaleControl</span>
+</span></span><span style="display:flex;"><span>  scale = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># 是否添加 FullscreenControl</span>
+</span></span><span style="display:flex;"><span>  fullscreen = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># LoveIt 更改 | 0.2.0 文章页面的分享信息设置</span>
+</span></span><span style="display:flex;"><span>[params.page.share]
+</span></span><span style="display:flex;"><span>  enable = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>  Twitter = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>  Facebook = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>  Linkedin = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>  Whatsapp = <span style="color:#ff79c6">false</span>
+</span></span><span style="display:flex;"><span>  Pinterest = <span style="color:#ff79c6">false</span>
+</span></span><span style="display:flex;"><span>  Tumblr = <span style="color:#ff79c6">false</span>
+</span></span><span style="display:flex;"><span>  HackerNews = <span style="color:#ff79c6">false</span>
+</span></span><span style="display:flex;"><span>  Reddit = <span style="color:#ff79c6">false</span>
+</span></span><span style="display:flex;"><span>  VK = <span style="color:#ff79c6">false</span>
+</span></span><span style="display:flex;"><span>  Buffer = <span style="color:#ff79c6">false</span>
+</span></span><span style="display:flex;"><span>  Xing = <span style="color:#ff79c6">false</span>
+</span></span><span style="display:flex;"><span>  Line = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>  Instapaper = <span style="color:#ff79c6">false</span>
+</span></span><span style="display:flex;"><span>  Pocket = <span style="color:#ff79c6">false</span>
+</span></span><span style="display:flex;"><span>  Flipboard = <span style="color:#ff79c6">false</span>
+</span></span><span style="display:flex;"><span>  Weibo = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>  Blogger = <span style="color:#ff79c6">false</span>
+</span></span><span style="display:flex;"><span>  Baidu = <span style="color:#ff79c6">false</span>
+</span></span><span style="display:flex;"><span>  Odnoklassniki = <span style="color:#ff79c6">false</span>
+</span></span><span style="display:flex;"><span>  Evernote = <span style="color:#ff79c6">false</span>
+</span></span><span style="display:flex;"><span>  Skype = <span style="color:#ff79c6">false</span>
+</span></span><span style="display:flex;"><span>  Trello = <span style="color:#ff79c6">false</span>
+</span></span><span style="display:flex;"><span>  Mix = <span style="color:#ff79c6">false</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># LoveIt 更改 | 0.2.0 评论系统设置</span>
+</span></span><span style="display:flex;"><span>[params.page.comment]
+</span></span><span style="display:flex;"><span>  enable = <span style="color:#ff79c6">false</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># Disqus 评论系统设置</span>
+</span></span><span style="display:flex;"><span>  [params.page.comment.disqus]
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># LoveIt 新增 | 0.1.1</span>
+</span></span><span style="display:flex;"><span>    enable = <span style="color:#ff79c6">false</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># Disqus 的 shortname，用来在文章中启用 Disqus 评论系统</span>
+</span></span><span style="display:flex;"><span>    shortname = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># Gitalk 评论系统设置</span>
+</span></span><span style="display:flex;"><span>  [params.page.comment.gitalk]
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># LoveIt 新增 | 0.1.1</span>
+</span></span><span style="display:flex;"><span>    enable = <span style="color:#ff79c6">false</span>
+</span></span><span style="display:flex;"><span>    owner = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    repo = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    clientId = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    clientSecret = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># Valine 评论系统设置</span>
+</span></span><span style="display:flex;"><span>  [params.page.comment.valine]
+</span></span><span style="display:flex;"><span>    enable = <span style="color:#ff79c6">false</span>
+</span></span><span style="display:flex;"><span>    appId = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    appKey = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    placeholder = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    avatar = <span style="color:#f1fa8c">&#34;mp&#34;</span>
+</span></span><span style="display:flex;"><span>    meta= <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    pageSize = <span style="color:#bd93f9">10</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># 为空时自动适配当前主题 i18n 配置</span>
+</span></span><span style="display:flex;"><span>    lang = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    visitor = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>    recordIP = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>    highlight = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>    enableQQ = <span style="color:#ff79c6">false</span>
+</span></span><span style="display:flex;"><span>    serverURLs = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># LoveIt 新增 | 0.2.6 emoji 数据文件名称, 默认是 &#34;google.yml&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># [&#34;apple.yml&#34;, &#34;google.yml&#34;, &#34;facebook.yml&#34;, &#34;twitter.yml&#34;]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># 位于 &#34;themes/LoveIt/assets/lib/valine/emoji/&#34; 目录</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># 可以在你的项目下相同路径存放你自己的数据文件:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># &#34;assets/lib/valine/emoji/&#34;</span>
+</span></span><span style="display:flex;"><span>    emoji = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># Facebook 评论系统设置</span>
+</span></span><span style="display:flex;"><span>  [params.page.comment.facebook]
+</span></span><span style="display:flex;"><span>    enable = <span style="color:#ff79c6">false</span>
+</span></span><span style="display:flex;"><span>    width = <span style="color:#f1fa8c">&#34;100%&#34;</span>
+</span></span><span style="display:flex;"><span>    numPosts = <span style="color:#bd93f9">10</span>
+</span></span><span style="display:flex;"><span>    appId = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># 为空时自动适配当前主题 i18n 配置</span>
+</span></span><span style="display:flex;"><span>    languageCode = <span style="color:#f1fa8c">&#34;zh_CN&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># LoveIt 新增 | 0.2.0 Telegram Comments 评论系统设置</span>
+</span></span><span style="display:flex;"><span>[params.page.comment.telegram]
+</span></span><span style="display:flex;"><span>  enable = <span style="color:#ff79c6">false</span>
+</span></span><span style="display:flex;"><span>  siteID = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  limit = <span style="color:#bd93f9">5</span>
+</span></span><span style="display:flex;"><span>  height = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  color = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  colorful = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>  dislikes = <span style="color:#ff79c6">false</span>
+</span></span><span style="display:flex;"><span>  outlined = <span style="color:#ff79c6">false</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># LoveIt 新增 | 0.2.0 Commento 评论系统设置</span>
+</span></span><span style="display:flex;"><span>[params.page.comment.commento]
+</span></span><span style="display:flex;"><span>  enable = <span style="color:#ff79c6">false</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># LoveIt 新增 | 0.2.5 utterances 评论系统设置</span>
+</span></span><span style="display:flex;"><span>[params.page.comment.utterances]
+</span></span><span style="display:flex;"><span>  enable = <span style="color:#ff79c6">false</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># owner/repo</span>
+</span></span><span style="display:flex;"><span>  repo = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  issueTerm = <span style="color:#f1fa8c">&#34;pathname&#34;</span>
+</span></span><span style="display:flex;"><span>  label = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  lightTheme = <span style="color:#f1fa8c">&#34;github-light&#34;</span>
+</span></span><span style="display:flex;"><span>  darkTheme = <span style="color:#f1fa8c">&#34;github-dark&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># giscus comment 评论系统设置 (https://giscus.app/zh-CN)</span>
+</span></span><span style="display:flex;"><span>[params.page.comment.giscus]
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># 你可以参考官方文档来使用下列配置</span>
+</span></span><span style="display:flex;"><span>  enable = <span style="color:#ff79c6">false</span>
+</span></span><span style="display:flex;"><span>  repo = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  repoId = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  category = <span style="color:#f1fa8c">&#34;Announcements&#34;</span>
+</span></span><span style="display:flex;"><span>  categoryId = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># 为空时自动适配当前主题 i18n 配置</span>
+</span></span><span style="display:flex;"><span>  lang = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  mapping = <span style="color:#f1fa8c">&#34;pathname&#34;</span>
+</span></span><span style="display:flex;"><span>  reactionsEnabled = <span style="color:#f1fa8c">&#34;1&#34;</span>
+</span></span><span style="display:flex;"><span>  emitMetadata = <span style="color:#f1fa8c">&#34;0&#34;</span>
+</span></span><span style="display:flex;"><span>  inputPosition = <span style="color:#f1fa8c">&#34;bottom&#34;</span>
+</span></span><span style="display:flex;"><span>  lazyLoading = <span style="color:#ff79c6">false</span>
+</span></span><span style="display:flex;"><span>  lightTheme = <span style="color:#f1fa8c">&#34;light&#34;</span>
+</span></span><span style="display:flex;"><span>  darkTheme = <span style="color:#f1fa8c">&#34;dark&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># LoveIt 新增 | 0.2.7 第三方库配置</span>
+</span></span><span style="display:flex;"><span>[params.page.library]
+</span></span><span style="display:flex;"><span>  [params.page.library.css]
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># someCSS = &#34;some.css&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># 位于 &#34;assets/&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># 或者</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># someCSS = &#34;https://cdn.example.com/some.css&#34;</span>
+</span></span><span style="display:flex;"><span>  [params.page.library.js]
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># someJavascript = &#34;some.js&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># 位于 &#34;assets/&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># 或者</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># someJavascript = &#34;https://cdn.example.com/some.js&#34; </span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># LoveIt 更改 | 0.2.10 页面 SEO 配置</span>
+</span></span><span style="display:flex;"><span>[params.page.seo]
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># 图片 URL</span>
+</span></span><span style="display:flex;"><span>  images = []
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># 出版者信息</span>
+</span></span><span style="display:flex;"><span>  [params.page.seo.publisher]
+</span></span><span style="display:flex;"><span>    name = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    logoUrl = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># LoveIt 新增 | 0.2.5 TypeIt 配置</span>
+</span></span><span style="display:flex;"><span>[params.typeit]
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># 每一步的打字速度 (单位是毫秒)</span>
+</span></span><span style="display:flex;"><span>  speed = <span style="color:#bd93f9">100</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># 光标的闪烁速度 (单位是毫秒)</span>
+</span></span><span style="display:flex;"><span>  cursorSpeed = <span style="color:#bd93f9">1000</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># 光标的字符 (支持 HTML 格式)</span>
+</span></span><span style="display:flex;"><span>  cursorChar = <span style="color:#f1fa8c">&#34;|&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># 打字结束之后光标的持续时间 (单位是毫秒, &#34;-1&#34; 代表无限大)</span>
+</span></span><span style="display:flex;"><span>  duration = <span style="color:#bd93f9">-1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 网站验证代码，用于 Google/Bing/Yandex/Pinterest/Baidu</span>
+</span></span><span style="display:flex;"><span>[params.verification]
+</span></span><span style="display:flex;"><span>  google = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  bing = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  yandex = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  pinterest = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  baidu = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># LoveIt 新增 | 0.2.10 网站 SEO 配置</span>
+</span></span><span style="display:flex;"><span>[params.seo]
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># 图片 URL</span>
+</span></span><span style="display:flex;"><span>  image = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># 缩略图 URL</span>
+</span></span><span style="display:flex;"><span>  thumbnailUrl = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># LoveIt 新增 | 0.2.0 网站分析配置</span>
+</span></span><span style="display:flex;"><span>[params.analytics]
+</span></span><span style="display:flex;"><span>  enable = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>  [params.analytics.google]
+</span></span><span style="display:flex;"><span>    id = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># whether to anonymize IP</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># 是否匿名化用户 IP</span>
+</span></span><span style="display:flex;"><span>    anonymizeIP = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#6272a4"># Fathom Analytics</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#6272a4"># 百度统计,自己配置的</span>
+</span></span><span style="display:flex;"><span>  [params.analytics.baidu]
+</span></span><span style="display:flex;"><span>    id = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">#  Cookie 许可配置</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">#[params.cookieconsent]</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4">#enable = true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># 用于 Cookie 许可横幅的文本字符串</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4">#[params.cookieconsent.content]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">#message = &#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">#dismiss = &#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">#link = &#34;&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">#  第三方库文件的 CDN 设置</span>
+</span></span><span style="display:flex;"><span>[params.cdn]
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># CDN 数据文件名称, 默认不启用</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># [&#34;jsdelivr.yml&#34;]</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># 位于 &#34;themes/LoveIt/assets/data/cdn/&#34; 目录</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># 可以在你的项目下相同路径存放你自己的数据文件:</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># &#34;assets/data/cdn/&#34;</span>
+</span></span><span style="display:flex;"><span>  data = <span style="color:#f1fa8c">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">#  兼容性设置</span>
+</span></span><span style="display:flex;"><span>[params.compatibility]
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># 是否使用 Polyfill.io 来兼容旧式浏览器</span>
+</span></span><span style="display:flex;"><span>  polyfill = <span style="color:#ff79c6">false</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># 是否使用 object-fit-images 来兼容旧式浏览器</span>
+</span></span><span style="display:flex;"><span>  objectFit = <span style="color:#ff79c6">false</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 网站地图配置</span>
+</span></span><span style="display:flex;"><span>[sitemap]
+</span></span><span style="display:flex;"><span>  changefreq = <span style="color:#f1fa8c">&#34;weekly&#34;</span>
+</span></span><span style="display:flex;"><span>  filename = <span style="color:#f1fa8c">&#34;sitemap.xml&#34;</span>
+</span></span><span style="display:flex;"><span>  priority = <span style="color:#bd93f9">0.5</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Permalinks 配置</span>
+</span></span><span style="display:flex;"><span>[Permalinks]
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># posts = &#34;:year/:month/:filename&#34;</span>
+</span></span><span style="display:flex;"><span>  posts = <span style="color:#f1fa8c">&#34;:filename&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 隐私信息配置</span>
+</span></span><span style="display:flex;"><span>[privacy]
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4">#  Google Analytics 相关隐私 (被 params.analytics.google 替代)</span>
+</span></span><span style="display:flex;"><span>  [privacy.googleAnalytics]
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># ...</span>
+</span></span><span style="display:flex;"><span>  [privacy.twitter]
+</span></span><span style="display:flex;"><span>    enableDNT = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>  [privacy.youtube]
+</span></span><span style="display:flex;"><span>    privacyEnhanced = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 用于输出 Markdown 格式文档的设置</span>
+</span></span><span style="display:flex;"><span>[mediaTypes]
+</span></span><span style="display:flex;"><span>  [mediaTypes.<span style="color:#f1fa8c">&#34;text/plain&#34;</span>]
+</span></span><span style="display:flex;"><span>    suffixes = [<span style="color:#f1fa8c">&#34;md&#34;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 用于输出 Markdown 格式文档的设置</span>
+</span></span><span style="display:flex;"><span>[outputFormats.MarkDown]
+</span></span><span style="display:flex;"><span>  mediaType = <span style="color:#f1fa8c">&#34;text/plain&#34;</span>
+</span></span><span style="display:flex;"><span>  isPlainText = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>  isHTML = <span style="color:#ff79c6">false</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 用于 Hugo 输出文档的设置</span>
+</span></span><span style="display:flex;"><span>[outputs]
+</span></span><span style="display:flex;"><span>  home = [<span style="color:#f1fa8c">&#34;HTML&#34;</span>, <span style="color:#f1fa8c">&#34;RSS&#34;</span>, <span style="color:#f1fa8c">&#34;JSON&#34;</span>]
+</span></span><span style="display:flex;"><span>  page = [<span style="color:#f1fa8c">&#34;HTML&#34;</span>, <span style="color:#f1fa8c">&#34;MarkDown&#34;</span>]
+</span></span><span style="display:flex;"><span>  section = [<span style="color:#f1fa8c">&#34;HTML&#34;</span>, <span style="color:#f1fa8c">&#34;RSS&#34;</span>]
+</span></span><span style="display:flex;"><span>  taxonomy = [<span style="color:#f1fa8c">&#34;HTML&#34;</span>, <span style="color:#f1fa8c">&#34;RSS&#34;</span>]
+</span></span><span style="display:flex;"><span>  taxonomyTerm = [<span style="color:#f1fa8c">&#34;HTML&#34;</span>]
+</span></span></code></pre></div>
+    </div>
+    <div class="post-footer">
+        <div class="info">
+            
+            <span class="separator"><a class="tag" href="/tags/%E5%8D%9A%E5%AE%A2/">博客</a></span>
+        </div>
+        
+
+
+    </div>
+    
+        
+    
+</div>
+
+                <div class="grow"></div>
+                <div class="built-with">
+    Built with <a href="https://gohugo.io/">Hugo</a> <b>·</b> Using the <a href="https://github.com/LucasVadilho/heyo-hugo-theme">heyo</a> theme
+</div>
+            </div>
+        </div>
+        
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha512-3M00D/rn8n+2ZVXBO9Hib0GKNpkm8MSUU/e2VNthDyBYxKWG+BftNYYcuEjXlyrSO637tidzMBXfE7sQm0INUg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<script type="text/javascript">
+            
+            
+            window.MathJax = {
+                tex: {
+                    inlineMath: [['$', '$'], ['\\(', '\\)']],
+                    displayMath: [['$$','$$'], ['\\[', '\\]']]
+                },
+                svg: {
+                    scale: 1.25,
+                }
+            };
+        </script><script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.1.0/es5/tex-mml-svg.min.js" integrity="sha512-/mL9Gs6E5Bz6NtPOr9eY&#43;T8IIdJbo2JL3TudApzFFelwBXEc3TeFLU6kPq122TJROv7jkktuBRkz5h8vGzrsyA==" crossorigin="anonymous"></script>
+    </body>
+</html>

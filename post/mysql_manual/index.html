@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light"><head>
+    <title>MySQL · HZW</title>
+    <meta charset="utf-8">
+    
+    <meta name="generator" content="Hugo 0.124.1">
+    <meta property="og:title" content="MySQL" />
+<meta property="og:description" content="a note for learning MySQL" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://seconsorl.github.io/post/mysql_manual/" /><meta property="og:image" content="https://seconsorl.github.io/images/profile.png" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2024-05-06T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-05-06T00:00:00+00:00" /><meta property="og:site_name" content="A junior from NBU" />
+
+
+
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="HZW">
+    
+    
+    
+    <link rel="stylesheet" type="text/css" href="https://seconsorl.github.io/css/style.min.565d8c479597aa43658922d4b31e286529a7525a22c9546fa1018fc5e5ef6d86.css" integrity="sha256-Vl2MR5WXqkNliSLUsx4oZSmnUloiyVRvoQGPxeXvbYY=" crossorigin="anonymous" type="text/css">
+
+    
+    
+    
+    <script type="text/javascript" src="https://seconsorl.github.io/js/heyo-header.min.a3fa728a9f57833a31dfb45c48caaf1e4890c8c97f07bd7133fc2359745edb5d.js" integrity="sha256-o/pyip9Xgzox37RcSMqvHkiQyMl/B71xM/wjWXRe210=" crossorigin="anonymous"></script>
+
+    
+    
+    <link rel="stylesheet" type="text/css" href="https://seconsorl.github.io/css/fonts.9398921f2d404983c2b7f9a68ddc72e3f5e58a3e38b0a8e4a70d75c12ebfb7c5.css" integrity="sha256-k5iSHy1ASYPCt/mmjdxy4/Xlij44sKjkpw11wS6/t8U=" crossorigin="anonymous">
+
+    
+    
+    
+    <script type="text/javascript" src="https://seconsorl.github.io/js/sidebar-toc.min.788b639e2ec681549740b90b3b865d5f9e1789e3ca9c06ccc45d65655434c954.js" integrity="sha256-eItjni7GgVSXQLkLO4ZdX54XiePKnAbMxF1lZVQ0yVQ=" crossorigin="anonymous"></script>
+
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-graph.26b92ed9317bdc6f35642d588bdf3283f40998846e01cf4bee22a126907fbf3b.js" integrity="sha256-Jrku2TF73G81ZC1Yi98yg/QJmIRuAc9L7iKhJpB/vzs=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-digitalRain.af8a7b5c4428cc62d5bf49bf2698d4112c2459ee0c22c1c753ab304aef69888a.js" integrity="sha256-r4p7XEQozGLVv0m/JpjUESwkWe4MIsHHU6swSu9piIo=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-circleBrushStrokes.fe8fc3ee52e1d90e9236be8c36a27711efa024beb4da304829f95dfbb61d6e84.js" integrity="sha256-/o/D7lLh2Q6SNr6MNqJ3Ee&#43;gJL602jBIKfld&#43;7YdboQ=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-meta.71b5202ea881c86ac19e4b55414656a5444204a4ba08ff7368a5aa99c0a60949.js" integrity="sha256-cbUgLqiByGrBnktVQUZWpURCBKS6CP9zaKWqmcCmCUk=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sidebar-sketch.min.2e95015880993ef9abcad62d111decea22406616931bce193254bf8af2339953.js" integrity="sha256-LpUBWICZPvmrytYtER3s6iJAZhaTG84ZMlS/ivIzmVM=" crossorigin="anonymous" defer></script>
+    
+    
+    
+    <link rel="shortcut icon" href="https://seconsorl.github.io/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://seconsorl.github.io/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://seconsorl.github.io/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://seconsorl.github.io/favicons/favicon-16x16.png">
+    <link rel="canonical" href="https://seconsorl.github.io/post/mysql_manual/">
+    
+    
+    
+    
+    
+
+    
+    <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://seconsorl.github.io/images/profile.png" /><meta name="twitter:title" content="MySQL"/>
+<meta name="twitter:description" content="a note for learning MySQL"/>
+
+</head><body>
+        <div class="main">
+            <div class="page-top">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a  href="/"  title="">Home</a></li>
+        
+            
+            <li><a  href="/post/"  title="">Posts</a></li>
+        
+            
+            <li><a  href="/about/"  title="">About</a></li>
+        
+        <li class="grow"></li>
+        
+        <li>
+            <a class="theme-switch" title="Switch Theme">
+                <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+            <div class="sidebar" id="sidebar">
+    <div class="top-toc">
+        <img src="https://seconsorl.github.io/images/profile.png" alt="profile picture">
+        
+        <a href="/">A junior from NBU</a>
+    </div>
+    
+    <div class="middle-sidebar grow" id="middle-sidebar">
+        
+            
+            
+                
+            
+
+            
+        
+    </div>
+
+    <div class="footer">
+        <ul class="social-links">
+            
+            <li>
+                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://github.com/SeConSorL" target="_blank" rel="noopener noreferrer" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" rel="me" aria-label="instagram">
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+            <li>
+                <a href="mailto:216002917@nbu.edu.cn" target="_blank" rel="noopener noreferrer" rel="me" aria-label="e-mail">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+        </ul>
+
+        <div class="by">by HZW <b>·</b> 2024</div>
+    </div>
+</div>
+            <div class="content">
+<div class="post">
+    
+    <div class="post-title">
+        <h1>MySQL</h1>
+        
+            <div class="post-header">
+    <div style="padding-top: 10px;">
+        <i class="far fa-calendar"></i><span class="date">May 6, 2024</span>
+        <i class="far fa-clock"></i><span class="reading-time">2 minutes</span>
+        
+
+
+    </div>
+</div>
+        
+    </div>
+    <div class="post-content">
+        <h2 id="启动关闭服务">启动/关闭服务</h2>
+<p>1、命令行[管理员身份运行]</p>
+<p>2、net start mysql80  &ndash;启动</p>
+<p>net stop mysql80  &ndash;关闭</p>
+<h2 id="数据类型">数据类型</h2>
+<table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tinyint</td>
+<td>有符号范围为-128至127，无符号允许范围为0到255。</td>
+</tr>
+<tr>
+<td>smallint</td>
+<td>有符号允许范围为-32768至32767，无符号允许范围为0到65535。</td>
+</tr>
+<tr>
+<td>mediumint</td>
+<td>有符号允许范围为-8388608至8388607，无符号允许范围为0到16777215。</td>
+</tr>
+<tr>
+<td>int</td>
+<td>有符号充许范围为-2147483648至2147483647，无符号许范围为0到4294967295。</td>
+</tr>
+<tr>
+<td>bigint</td>
+<td>有符号允许范围为-9223372036854775808至9223372036854775807，无符号允许范围为0到1844674407370955161615。</td>
+</tr>
+<tr>
+<td>float(m,d)</td>
+<td>可以定义显示长度(m)和小数(d)，默认为10,2，其中2是小数的数量，10是数字(包括小数)的总数。</td>
+</tr>
+<tr>
+<td>double(m，d)</td>
+<td>可以定义显示长度(m)和小数(d)的数量，默认为16,4，其中4个是小数的数量。需要8个字节的存储。</td>
+</tr>
+<tr>
+<td>decimal(m，d)</td>
+<td>定义显示长度(m)和小数(d)的数量是必需的。</td>
+</tr>
+<tr>
+<td>bit(m)</td>
+<td>它用于将位值存储到表列中。这里，m确定每个值的比特数为1到64。</td>
+</tr>
+<tr>
+<td>bool</td>
+<td>仅用于true和false条件。它将数值1视为true，0为false。</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>它类似于bool。</td>
+</tr>
+</tbody>
+</table>
+<h4 id="日期类型">日期类型</h4>
+<p>当插入无效值时，使用零值。</p>
+<table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>最大值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>YEAR[(2 | 4)]</td>
+<td>年份值为2位数或4位数。</td>
+<td>默认值为4位数，存储需要1个字节。</td>
+</tr>
+<tr>
+<td>DATE</td>
+<td>值范围从'1000-01-01&rsquo;到'9999-12-31&rsquo;。</td>
+<td>显示为&quot;yyyy-mm-dd&quot;，存储需要3个字节。</td>
+</tr>
+<tr>
+<td>TIME</td>
+<td>值范围从&rsquo;-838:59:59&rsquo;到'838:59:59&rsquo;。</td>
+<td>显示为&rsquo;hh:mm:ss&rsquo;。存储需要3个字节加上分数秒。</td>
+</tr>
+<tr>
+<td>DATETIME</td>
+<td>值范围从'1000-01-01 00:00:00&rsquo;到'9999-12-31 23:59:59&rsquo;。</td>
+<td>显示为&quot;yyyy-mm-dd hh:mm:ss&quot;。存储需要5个字节加上分数秒。</td>
+</tr>
+<tr>
+<td>TIMESTAMP(m)</td>
+<td>值范围从'1970-01-01 00:00:01&rsquo;UTC到'2038-01-19 03:14:07&rsquo;TC。</td>
+<td>显示为&quot;yyyy-mm-dd hh:mm:ss&quot;。存储需要4个字节加上分数秒。</td>
+</tr>
+</tbody>
+</table>
+<h4 id="字符串类型">字符串类型</h4>
+<p>字符串数据类型用于保持纯文本和二进制数据，例如，文件，图像等。MySQL可以基于正则表达式等的模式匹配来执行字符串值的搜索和比较。</p>
+<table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>最大值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CHAR(size)</td>
+<td>最大255个字符。</td>
+<td>这里大小是存储的字符数。固定长度字符串。空间填充到相同的大小字符</td>
+</tr>
+<tr>
+<td>VARCHAR(size)</td>
+<td>最大255个字符。</td>
+<td>此处的大小是要存储的字符数，可变长度字符串。</td>
+</tr>
+<tr>
+<td>TINYTEXT(size)</td>
+<td>最大255个字符。</td>
+<td>此处大小是存储的字符数。</td>
+</tr>
+<tr>
+<td>TEXT(size)</td>
+<td>最大65,535个字符。</td>
+<td>此处大小是存储的字符数。</td>
+</tr>
+<tr>
+<td>MEDIUMTEXT(size)</td>
+<td>最大16,777,215个字符。</td>
+<td>此处大小是存储的字符数。</td>
+</tr>
+<tr>
+<td>LONGTEXT(size)</td>
+<td>最大4gb或4,294,967,295字符。</td>
+<td>此处大小是存储的字符数。</td>
+</tr>
+<tr>
+<td>BINARY(size)</td>
+<td>最大255个字符。</td>
+<td>此处的大小是要存储的二进制字符数。固定长度字符串。空间填充到相同的大小字符。</td>
+</tr>
+<tr>
+<td>VARBINARY(size)</td>
+<td>最大255个字符。</td>
+<td>此处的大小是要存储的字符数。可变长度串。</td>
+</tr>
+<tr>
+<td>ENUM</td>
+<td>需要1或2个字节，取决于枚举值的数量。枚举最多可具有65,535个值。</td>
+<td>它使用数字索引(1,2,3 &hellip;)来表示字符串值。</td>
+</tr>
+<tr>
+<td>SET</td>
+<td>需要1,2,3,4或8个字节，取决于设置成员的数量。它可以存储最大限度的64个成员。</td>
+<td>它可以保存零个或多个，或任何数量的字符串值。必须从表创建期间指定的预定义值列表中选择它们。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="常用命令">常用命令</h2>
+<pre><code>显示所有数据库：show databases;
+显示创建的数据库：show create database 数据库名称;
+创建一个数据库： create database 数据库名称;
+创建数据库前先判断是否存在：create database if not exists 数据库名称;
+创建数据库并设置字符编码格式：create database 数据库名 character set gbk;
+修改数据库的字符集：alter database 数据库名称 character set 字符集名称(utf8);
+删除一个数据库：drop database 数据库名;
+(drop database if exists 数据库名称; 先判断是否存在数据库,存在再删除删除库)
+切换数据库：use 数据库名称;  use databasename;        选择数据库
+查询现在正在使用的数据库：select database();
+单行注释： #…
+多行注释： /*…*/
+查询某个数据库的所有表的名称： show tables;
+查询表结构：desc 表名;
+创建表：create table 表名(列名1 数据类型1 ,列名2，数据类型2…);
+复制表：create table 表名1 like 表名2;
+修改表名：alter table 表名 rename to 新的表名;
+显示表的字符创建信息: show create table 表名;
+
+drop database name                    直接删除数据库，不提醒。
+mysqladmin drop database name     删除数据库前，有提示。
+show tables;             列出数据库中的所有表	
+describe tablename;      表的详细描述.显示表结构. 等价 show columns from tableName;
+select 中加上 distinct   去除重复字段
+drop table MYTABLE;      删除表
+delete from MYTABLE;     清空表
+
+		select version(),current_date;    显示当前mysql版本和当前日期
+    select now();                     查询时间
+    select user();                    查询当前用户
+    select version();                 查询数据库版本
+    select database();                查询当前使用的数据库
+    显示年月日
+    select dayofmonth(current_date); 
+    select month(current_date);
+    select year(current_date);
+
+    SELECT &quot;welecome to my blog!&quot;;         显示字符串
+    select ((4 * 4) / 10 ) + 25;           当计算器用
+		select CONCAT(f_name, &quot; &quot;, l_name)     
+    AS Name
+    from employee_data 
+    where title = 'Marketing Executive'; 
+    这里用到CONCAT()函数，用来把字符串串接起来。另外，AS 用来 给 结果列'CONCAT(f_name, &quot; &quot;, l_name)'起个 别名。
+</code></pre>
+<h2 id="连接数据库">连接数据库</h2>
+<p><strong>mysql -u root -p</strong>  连接本机数据库</p>
+<p><strong>mysql -h主机地址 -u用户名 －p用户密码</strong></p>
+<p>退出MYSQL命令： <strong>exit (回车)</strong>  <strong>quit</strong></p>
+<h2 id="mysqladmin修改用户密码">mysqladmin：修改用户密码</h2>
+<p>mysqladmin -u root -password h123           //设置 root 密码为 h123     //本机密码传统模式 很简单</p>
+
+    </div>
+    <div class="post-footer">
+        <div class="info">
+            
+            
+        </div>
+        
+
+
+    </div>
+    
+        
+    
+</div>
+
+                <div class="grow"></div>
+                <div class="built-with">
+    Built with <a href="https://gohugo.io/">Hugo</a> <b>·</b> Using the <a href="https://github.com/LucasVadilho/heyo-hugo-theme">heyo</a> theme
+</div>
+            </div>
+        </div>
+        
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha512-3M00D/rn8n+2ZVXBO9Hib0GKNpkm8MSUU/e2VNthDyBYxKWG+BftNYYcuEjXlyrSO637tidzMBXfE7sQm0INUg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<script type="text/javascript">
+            
+            
+            window.MathJax = {
+                tex: {
+                    inlineMath: [['$', '$'], ['\\(', '\\)']],
+                    displayMath: [['$$','$$'], ['\\[', '\\]']]
+                },
+                svg: {
+                    scale: 1.25,
+                }
+            };
+        </script><script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.1.0/es5/tex-mml-svg.min.js" integrity="sha512-/mL9Gs6E5Bz6NtPOr9eY&#43;T8IIdJbo2JL3TudApzFFelwBXEc3TeFLU6kPq122TJROv7jkktuBRkz5h8vGzrsyA==" crossorigin="anonymous"></script>
+    </body>
+</html>

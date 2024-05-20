@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on My Blog</title>
+    <link>https://seconsorl.github.io/categories/</link>
+    <description>Recent content in Categories on My Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>216002917@nbu.edu.cn (HZW)</managingEditor>
+    <webMaster>216002917@nbu.edu.cn (HZW)</webMaster>
+    <lastBuildDate>Tue, 12 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://seconsorl.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Heyo</title>
+      <link>https://seconsorl.github.io/categories/heyo/</link>
+      <pubDate>Tue, 12 Dec 2023 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
+      <guid>https://seconsorl.github.io/categories/heyo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Syntax</title>
+      <link>https://seconsorl.github.io/categories/syntax/</link>
+      <pubDate>Mon, 07 Aug 2023 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
+      <guid>https://seconsorl.github.io/categories/syntax/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Themes</title>
+      <link>https://seconsorl.github.io/categories/themes/</link>
+      <pubDate>Mon, 07 Aug 2023 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
+      <guid>https://seconsorl.github.io/categories/themes/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
