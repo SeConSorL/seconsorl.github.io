@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>前端 on My Blog</title>
-    <link>http://localhost:1313/tags/%E5%89%8D%E7%AB%AF/</link>
+    <link>https://seconsorl.github.io/tags/%E5%89%8D%E7%AB%AF/</link>
     <description>Recent content in 前端 on My Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>216002917@nbu.edu.cn (HZW)</managingEditor>
     <webMaster>216002917@nbu.edu.cn (HZW)</webMaster>
     <lastBuildDate>Mon, 06 May 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://seconsorl.github.io/tags/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CSS</title>
-      <link>http://localhost:1313/post/css/</link>
+      <link>https://seconsorl.github.io/post/css/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/post/css/</guid>
+      <guid>https://seconsorl.github.io/post/css/</guid>
       <description>&lt;p&gt;This article is my note for CSS.&lt;/p&gt;</description>
     </item>
     <item>
       <title>HTML5</title>
-      <link>http://localhost:1313/post/html5/</link>
+      <link>https://seconsorl.github.io/post/html5/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/post/html5/</guid>
+      <guid>https://seconsorl.github.io/post/html5/</guid>
       <description>&lt;p&gt;This article is my note for HTML5.&lt;/p&gt;</description>
     </item>
   </channel>

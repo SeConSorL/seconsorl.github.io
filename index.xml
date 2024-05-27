@@ -2,299 +2,299 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>My Blog</title>
-    <link>http://localhost:1313/</link>
+    <link>https://seconsorl.github.io/</link>
     <description>Recent content on My Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>216002917@nbu.edu.cn (HZW)</managingEditor>
     <webMaster>216002917@nbu.edu.cn (HZW)</webMaster>
     <lastBuildDate>Mon, 06 May 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://seconsorl.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>傅里叶变换</title>
-      <link>http://localhost:1313/post/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2fourier-transform/</link>
+      <link>https://seconsorl.github.io/post/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2fourier-transform/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/post/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2fourier-transform/</guid>
+      <guid>https://seconsorl.github.io/post/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2fourier-transform/</guid>
       <description>&lt;p&gt;This article is my note for 傅里叶变换.&lt;/p&gt;</description>
     </item>
     <item>
       <title>CSS</title>
-      <link>http://localhost:1313/post/css/</link>
+      <link>https://seconsorl.github.io/post/css/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/post/css/</guid>
+      <guid>https://seconsorl.github.io/post/css/</guid>
       <description>&lt;p&gt;This article is my note for CSS.&lt;/p&gt;</description>
     </item>
     <item>
       <title>docker</title>
-      <link>http://localhost:1313/post/docker/</link>
+      <link>https://seconsorl.github.io/post/docker/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/post/docker/</guid>
+      <guid>https://seconsorl.github.io/post/docker/</guid>
       <description>&lt;p&gt;This article is my note for Docker.&lt;/p&gt;</description>
     </item>
     <item>
       <title>git</title>
-      <link>http://localhost:1313/post/git/</link>
+      <link>https://seconsorl.github.io/post/git/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/post/git/</guid>
+      <guid>https://seconsorl.github.io/post/git/</guid>
       <description>&lt;p&gt;This article is my note for Git&lt;/p&gt;</description>
     </item>
     <item>
       <title>HTML5</title>
-      <link>http://localhost:1313/post/html5/</link>
+      <link>https://seconsorl.github.io/post/html5/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/post/html5/</guid>
+      <guid>https://seconsorl.github.io/post/html5/</guid>
       <description>&lt;p&gt;This article is my note for HTML5.&lt;/p&gt;</description>
     </item>
     <item>
       <title>HuGo</title>
-      <link>http://localhost:1313/post/hugo/</link>
+      <link>https://seconsorl.github.io/post/hugo/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/post/hugo/</guid>
+      <guid>https://seconsorl.github.io/post/hugo/</guid>
       <description>&lt;p&gt;This article is my note for HuGo.&lt;/p&gt;</description>
     </item>
     <item>
       <title>cURL</title>
-      <link>http://localhost:1313/post/curl/</link>
+      <link>https://seconsorl.github.io/post/curl/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/post/curl/</guid>
+      <guid>https://seconsorl.github.io/post/curl/</guid>
       <description>https://www.ruanyifeng.com/blog/2011/09/curl.html&#xA;https://www.ruanyifeng.com/blog/2019/09/curl-reference.html</description>
     </item>
     <item>
       <title>DevEco</title>
-      <link>http://localhost:1313/post/deveco_manual/</link>
+      <link>https://seconsorl.github.io/post/deveco_manual/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/post/deveco_manual/</guid>
+      <guid>https://seconsorl.github.io/post/deveco_manual/</guid>
       <description></description>
     </item>
     <item>
       <title>Django</title>
-      <link>http://localhost:1313/post/django%E8%AF%B4%E6%98%8E/</link>
+      <link>https://seconsorl.github.io/post/django%E8%AF%B4%E6%98%8E/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/post/django%E8%AF%B4%E6%98%8E/</guid>
+      <guid>https://seconsorl.github.io/post/django%E8%AF%B4%E6%98%8E/</guid>
       <description>创建项目 django-admin startproject &amp;#34;项目名称&amp;#34; //结构如下&#xD;$ cd 项目名称/&#xD;$ tree&#xD;.&#xD;|-- 项目名称&#xD;| |-- __init__.py&#xD;| |-- asgi.py&#xD;| |-- settings.py&#xD;| |-- urls.py&#xD;| `-- wsgi.py&#xD;`-- manage.py HelloWorld: 项目的容器。 manage.py: 一个实用的命令行工具，可让你以各种方式与该 Django 项目进行交互。 HelloWorld/init.py: 一个空文件，告诉 Python 该目录是一个 Python 包。 HelloWorld/asgi.py: 一个 ASGI 兼容的 Web 服务器的入口，以便运行你的项目。 HelloWorld/settings.py: 该 Django 项目的设置/配置。 HelloWorld/urls.py: 该 Django 项目的 URL 声明; 一份由 Django 驱动的网站&amp;quot;目录&amp;quot;。 HelloWorld/wsgi.py: 一个 WSGI 兼容的 Web 服务器的入口，以便运行你的项目。 启动服务器 python manage.py runserver 0.0.0.0:8000 --这句话需要在项目文件夹下执行 0.0.0.0 让其它电脑可连接到开发服务器，8000 为端口号。如果不说明，那么端口号默认为 8000。&#xA;在浏览器输入你服务器的 ip（这里我们输入本机 IP 地址： 127.0.0.1:8000） 及端口号，如果正常启动，页面中间是一个小火箭&#xA;可以manage.py里修改配置&#xA;if __name__ == &amp;#39;__main__&amp;#39;:&#xD;from django.core.management.commands.runserver import Command as Runserver Runserver.default_addr = &amp;#39;127.0.0.1&amp;#39; # 修改默认地址 Runserver.default_port = &amp;#39;8080&amp;#39; # 修改默认端口 main() urls.</description>
     </item>
     <item>
       <title>golang</title>
-      <link>http://localhost:1313/post/golang/</link>
+      <link>https://seconsorl.github.io/post/golang/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/post/golang/</guid>
+      <guid>https://seconsorl.github.io/post/golang/</guid>
       <description>&lt;p&gt;This article is my note for Golang.&lt;/p&gt;</description>
     </item>
     <item>
       <title>ini</title>
-      <link>http://localhost:1313/post/ini/</link>
+      <link>https://seconsorl.github.io/post/ini/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/post/ini/</guid>
+      <guid>https://seconsorl.github.io/post/ini/</guid>
       <description>&lt;p&gt;This article is my note for ini.&lt;/p&gt;</description>
     </item>
     <item>
       <title>JavaScript</title>
-      <link>http://localhost:1313/post/javascript/</link>
+      <link>https://seconsorl.github.io/post/javascript/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/post/javascript/</guid>
+      <guid>https://seconsorl.github.io/post/javascript/</guid>
       <description>&lt;p&gt;This article is my note for javascript.&lt;/p&gt;</description>
     </item>
     <item>
       <title>JS</title>
-      <link>http://localhost:1313/post/javascript_manual/</link>
+      <link>https://seconsorl.github.io/post/javascript_manual/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/post/javascript_manual/</guid>
+      <guid>https://seconsorl.github.io/post/javascript_manual/</guid>
       <description>&lt;p&gt;This article is my note for how to use javascript.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Latex</title>
-      <link>http://localhost:1313/post/latex/</link>
+      <link>https://seconsorl.github.io/post/latex/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/post/latex/</guid>
+      <guid>https://seconsorl.github.io/post/latex/</guid>
       <description>&lt;p&gt;This article is my note for LaTex.&lt;/p&gt;</description>
     </item>
     <item>
       <title>MySQL</title>
-      <link>http://localhost:1313/post/mysql_manual/</link>
+      <link>https://seconsorl.github.io/post/mysql_manual/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/post/mysql_manual/</guid>
+      <guid>https://seconsorl.github.io/post/mysql_manual/</guid>
       <description>&lt;p&gt;This article is my note for how to use MySQL.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Nginx</title>
-      <link>http://localhost:1313/post/nginx/</link>
+      <link>https://seconsorl.github.io/post/nginx/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/post/nginx/</guid>
+      <guid>https://seconsorl.github.io/post/nginx/</guid>
       <description>&lt;p&gt;This article is my note for proxy.&lt;/p&gt;</description>
     </item>
     <item>
       <title>PHP</title>
-      <link>http://localhost:1313/post/php/</link>
+      <link>https://seconsorl.github.io/post/php/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/post/php/</guid>
+      <guid>https://seconsorl.github.io/post/php/</guid>
       <description>&lt;p&gt;This article is my note for PHP.&lt;/p&gt;</description>
     </item>
     <item>
       <title>postman</title>
-      <link>http://localhost:1313/post/postman/</link>
+      <link>https://seconsorl.github.io/post/postman/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/post/postman/</guid>
+      <guid>https://seconsorl.github.io/post/postman/</guid>
       <description>&lt;p&gt;This article is my note for postman.&lt;/p&gt;</description>
     </item>
     <item>
       <title>QBittorrent和BT、PT</title>
-      <link>http://localhost:1313/post/qbittorrent%E5%92%8Cbtpt/</link>
+      <link>https://seconsorl.github.io/post/qbittorrent%E5%92%8Cbtpt/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/post/qbittorrent%E5%92%8Cbtpt/</guid>
+      <guid>https://seconsorl.github.io/post/qbittorrent%E5%92%8Cbtpt/</guid>
       <description>&lt;p&gt;This article is my note for P2P.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Shell</title>
-      <link>http://localhost:1313/post/shell/</link>
+      <link>https://seconsorl.github.io/post/shell/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/post/shell/</guid>
+      <guid>https://seconsorl.github.io/post/shell/</guid>
       <description>&lt;p&gt;This article is my note for Shell command.&lt;/p&gt;</description>
     </item>
     <item>
       <title>tomcat</title>
-      <link>http://localhost:1313/post/tomcat/</link>
+      <link>https://seconsorl.github.io/post/tomcat/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/post/tomcat/</guid>
+      <guid>https://seconsorl.github.io/post/tomcat/</guid>
       <description></description>
     </item>
     <item>
       <title>Toml</title>
-      <link>http://localhost:1313/post/toml/</link>
+      <link>https://seconsorl.github.io/post/toml/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/post/toml/</guid>
+      <guid>https://seconsorl.github.io/post/toml/</guid>
       <description>&lt;p&gt;This article is my note for TOML.&lt;/p&gt;</description>
     </item>
     <item>
       <title>TypeScript</title>
-      <link>http://localhost:1313/post/typescript_manual/</link>
+      <link>https://seconsorl.github.io/post/typescript_manual/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/post/typescript_manual/</guid>
+      <guid>https://seconsorl.github.io/post/typescript_manual/</guid>
       <description>&lt;p&gt;This article is my note for TypeScript.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Typora</title>
-      <link>http://localhost:1313/post/typora_manual/</link>
+      <link>https://seconsorl.github.io/post/typora_manual/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/post/typora_manual/</guid>
+      <guid>https://seconsorl.github.io/post/typora_manual/</guid>
       <description>&lt;p&gt;This article is my note for Typora.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ubuntu 24</title>
-      <link>http://localhost:1313/post/ubuntu24/</link>
+      <link>https://seconsorl.github.io/post/ubuntu24/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/post/ubuntu24/</guid>
+      <guid>https://seconsorl.github.io/post/ubuntu24/</guid>
       <description>&lt;p&gt;This article is my note for linux, especially for Ubuntu24.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Unity</title>
-      <link>http://localhost:1313/post/unity-for-myfirstuse/</link>
+      <link>https://seconsorl.github.io/post/unity-for-myfirstuse/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/post/unity-for-myfirstuse/</guid>
+      <guid>https://seconsorl.github.io/post/unity-for-myfirstuse/</guid>
       <description>&lt;p&gt;This article is my note for my first use Unity.&lt;/p&gt;</description>
     </item>
     <item>
       <title>XML</title>
-      <link>http://localhost:1313/post/xml/</link>
+      <link>https://seconsorl.github.io/post/xml/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/post/xml/</guid>
+      <guid>https://seconsorl.github.io/post/xml/</guid>
       <description></description>
     </item>
     <item>
       <title>云原生</title>
-      <link>http://localhost:1313/post/%E4%BA%91%E5%8E%9F%E7%94%9F/</link>
+      <link>https://seconsorl.github.io/post/%E4%BA%91%E5%8E%9F%E7%94%9F/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/post/%E4%BA%91%E5%8E%9F%E7%94%9F/</guid>
+      <guid>https://seconsorl.github.io/post/%E4%BA%91%E5%8E%9F%E7%94%9F/</guid>
       <description></description>
     </item>
     <item>
       <title>压力测试</title>
-      <link>http://localhost:1313/post/%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95/</link>
+      <link>https://seconsorl.github.io/post/%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/post/%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95/</guid>
+      <guid>https://seconsorl.github.io/post/%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95/</guid>
       <description>介绍 压力测试（Stress Testing）是一种评估系统在极端条件下性能的技术。其目的是确定系统在过载情况下的稳定性和可靠性，识别潜在的瓶颈和弱点。压力测试通常应用于软件、硬件、网络以及其他需要确保高可靠性的系统中。&#xA;压力测试的主要目标 确定系统的最大负载能力：了解系统在超出正常操作条件时能够处理的最大负载。 识别系统的瓶颈：找出系统性能下降或故障的原因，例如CPU、内存、磁盘I/O或网络带宽的限制。 验证系统的稳定性：确保系统在长时间的高负载下仍能保持正常运行，而不会崩溃或出现重大错误。 测试系统的恢复能力：观察系统在压力解除后能否迅速恢复正常运行。 类型 负载测试（Load Testing）：模拟大量用户或操作请求，逐步增加负载，直到系统达到性能极限。 耐久测试（Endurance Testing）：在较长时间内持续施加高负载，测试系统在长时间运行下的稳定性。 尖峰测试（Spike Testing）：突然增加系统负载，观察系统能否迅速适应并处理这种突发负载。 灾难恢复测试（Disaster Recovery Testing）：模拟灾难性事件，测试系统的恢复能力和应急响应能力。 步骤 确定测试目标：明确测试的具体目标和预期结果。 选择测试工具：选择合适的压力测试工具，如Apache JMeter、LoadRunner、Gatling等。 设计测试方案：规划测试的具体步骤，包括负载模型、测试数据、测试场景等。 执行测试：按照测试方案实施测试，逐步增加负载并监控系统性能。 分析测试结果：收集和分析测试数据，找出系统的瓶颈和问题。 优化系统：根据测试结果，对系统进行优化和调整，提高其性能和稳定性。 重新测试：再次进行压力测试，验证优化后的系统能否满足预期的性能要求。 压力测试工具 一些常用的压力测试工具包括：&#xA;Apache JMeter：开源的负载测试工具，支持多种协议（HTTP、HTTPS、FTP等），适用于Web应用的压力测试。 LoadRunner：商业负载测试工具，功能强大，支持广泛的协议和应用。 Gatling：高性能的负载测试工具，基于Scala开发，适用于大规模并发测试。 Siege：轻量级的HTTP负载测试工具，适用于快速测试Web服务器的性能。 通过定期进行压力测试，组织可以确保其系统在实际使用中能够承受预期的高负载，保持高性能和高可靠性，从而提升用户体验和业务连续性。&#xA;Load Impact（K6） Load Impact（现在更名为k6）有提供免费的试用项，对于匿名用户提供25用户三分钟在线模拟，如果是试用用户则可以获得50用户15分钟在线的模拟测试，Load Impact会记录下每一个模拟测试用户的在线情况。&#xA;官网&#xA;学习使用&#xA;步骤 创建项目&#xA;创建新测试&#xA;开始构造&#xA;开始录制（它会记录你在浏览器的使用记录）&#xA;建议先打开一个空的标签页，然后开始录制；&#xA;安装插件K6（如果是第一次使用的话），这个是chrome插件&#xA;录制脚本的网页地址：输入你要录制脚本的网页地址，然后开始录制&#xA;录制操作：确认开始，就会跳转到你要之前输入的录制脚本的地址，然后你在你项目的地址进行操作你要录制的地方，就会录制你要录制的地址的接口、操作、文件、文档、图片资源等。&#xA;录制完成：停止录制，取消按钮 就是停止录制（停止录制后会跳转回来）&#xA;内容筛选：调整你需要留下的压测内容就勾选保存下来，不需要的就不勾选&#xA;设置负载地区：一般默认即可&#xA;设置模拟用户的数量，时间&#xA;设置资源（CPU，内存，响应时间，请求率等）&#xA;设置选项：设置启动时的模拟用户量，结束时的模拟用户量，中间时间的模拟用户量，时长之类等的设置。&#xA;请求的内容删除与修改：请求的内容，可以查看到请求的内容，或者在里面修改，删除之类的&#xA;执行性能测试&#xA;查看测试结果：跑完之后，在创建的项目里面可以看到测试的记录&#xA;导出，保存，分析：右上角 $\vdots$ 出有选项可以导出数据&#xA;接下来可以直接在里面查看压力性能测试的结果，或者导出保存发给其他人进行性能结果分析，然后根据他的响应时间，CPU,内存，等进行分析优化。&#xA;Apache JMeter Apache JMeter 是开源软件，是一个纯 Java 应用程序，旨在加载测试功能行为和测量性能 。它最初是为测试 Web 应用程序而设计的，但后来扩展到其他测试功能&#xA;功能 能够加载和性能测试许多不同的应用程序/服务器/协议类型： Web - HTTP, HTTPS (Java，NodeJS，PHP，ASP.NET， …) SOAP/REST 网络服务 文件传输协议 通过 JDBC 数据库 LDAP 通过 JMS 的面向消息的中间件 (MOM) 邮件 - SMTP(S)、POP3(S) 和 IMAP(S) 本机命令或 shell 脚本 TCP Java对象 全功能测试 IDE，允许快速测试计划记录（从浏览器或本机应用程序）、构建和调试。 CLI 模式（命令行模式（以前称为非 GUI）/headless 模式）从任何 Java 兼容操作系统（Linux、Windows、Mac OSX 等）进行负载测试 一个完整且准备好呈现的动态 HTML 报告 通过从最流行的响应格式HTML、JSON、 XML或任何文本格式 中提取数据的能力轻松关联 完全的可移植性和100% 的 Java 纯度。 完整的多线程框架允许多个线程并发采样和不同线程组同时采样不同的函数。 测试结果的缓存和离线分析/回放。 高度可扩展的核心： 可插拔采样器允许无限的测试能力。 脚本采样器（JSR223 兼容语言，如Groovy和 BeanShell） 可以使用可插入计时器 选择多个负载统计信息。 数据分析和可视化插件允许很大的可扩展性和个性化。 函数可用于为测试提供动态输入或提供数据操作。 通过适用于 Maven、Gradle 和 Jenkins 的第 3 方开源库轻松持续集成 主要的配置元件 测试计划：是使用 JMeter 进行测试的起点，它是其它 JMeter测试元件的容器 线程组：代表一定数量的用户，它可以用来模拟用户并发发送请求。实际的请求内容在Sampler中定义，它被线程组包含 配置元件：维护Sampler需要的配置信息，并根据实际的需要修改请求的内容 前置处理器：负责在请求之前工作，常用来修改请求的设置 后置处理器：负责在请求之后工作，常用获取返回的值 下载 官网 安装需要Java 8+（jdk8以上）</description>
     </item>
     <item>
       <title>批处理</title>
-      <link>http://localhost:1313/post/%E6%89%B9%E5%A4%84%E7%90%86/</link>
+      <link>https://seconsorl.github.io/post/%E6%89%B9%E5%A4%84%E7%90%86/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/post/%E6%89%B9%E5%A4%84%E7%90%86/</guid>
+      <guid>https://seconsorl.github.io/post/%E6%89%B9%E5%A4%84%E7%90%86/</guid>
       <description>介绍 批处理 批处理(Batch)，也称为批处理脚本。顾名思义，批处理就是对某对象进行批量的处理，通常被认为是一种简化的脚本语言，也称作宏。在计算机系统还是DOS（磁盘操作系统是一种早期的命令行操作系统）时期时被大量使用。它应用于DOS和Windows系统中，由DOS或者Windows系统内嵌的命令解释器（通常是COMMAND. COM或者CMD.EXE）解释运行。批处理文件的扩展名为bat 、cmd。比较常见的批处理包含两类：DOS批处理和PS批处理。&#xA;PS批处理是基于微软的PowerShell的，用来批量处理一些任务的脚本；而DOS批处理则是基于DOS命令的，用来自动地批量地执行DOS命令以实现特定操作的脚本。&#xA;更复杂的情况，需要使用if、for、goto等命令控制程式的运行过程，如同C、Basic等高级语言一样。如果需要实现更复杂的应用，利用外部程式是必要的，这包括系统本身提供的外部命令和第三方提供的工具或者软件。&#xA;批处理程序虽然是在命令行环境中运行，但不仅仅能使用命令行软件，任何当前系统下可运行的程序都可以放在批处理文件中运行。&#xA;有些人认为批处理语言的含义要比上面的描述更广泛，还包括许多软件自带的批处理语言，如 Microsoft Office、Visual Studio、Adobe Photoshop所内置的批处理语言的功能，用户可通过它们让相应的软件执行自动化操作（例如调整某个资料夹所有 PSD 图档的解析度）。 而这类批处理语言也大多提供把一系列操作录制为批处理文件的功能，这样用户不必写程式就能得到批处理程序。&#xA;在Windows NT以后的平台中，还加入了以.cmd为扩展名的批处理文件，其性能比.bat文件更加优越&#xA;运行流程：系统在解释运行批处理程序时，首先扫描整个批处理程序，然后从第一行代码开始向下逐句执行所有的命令，直至程序结尾或遇见exit命令或出错意外退出。&#xA;Windows中的BAT C:/盘根目录下的AUTOEXEC.BAT批处理文件是自动运行批处理文件，每次系统启动时会自动运行该文件，即开机自启动你可以将系统每次启动时都要运行的命令放入该文件中，例如设置搜索路径，调入鼠标驱动和磁盘缓存，设置系统环境变量等。&#xA;BAT 变量 类型&#xA;批处理中的变量可以储存各种各样的数据。&#xA;不过用来计算时，会发现变量类型转为了int，数值的极端范围为[-2147483648，2147483647]。&#xA;如果不拿来计算的话，数万位也是可以的&#xA;命名&#xA;批处理的变量命名没有什么限制，数字 字母 甚至汉字都可以变成变量名&#xA;扩展&#xA;扩展，可以理解为显示出这个的值。如果想要使用这个变量的值一般情况下都要扩展。扩展用%&amp;lt;var&amp;gt;%，用%包围变量&#xA;参数&#xA;参数在批处理的表达是%0、%1、%2 、&amp;hellip;、%9，以及全部参数%*（%*不会包括%0）&#xA;%0的初始量是批处理本身路径；一般只能取前九个参数，除非使用%*&#xA;shift命令允许你获取后面的参数，其格式为shift [/n]。shift 会使%0变成%1，%1变成%2，……，%9变成原来的第10个参数；shift /1会从%1开始替换，保留原%0&#xA;~的用法：%~1：当参数以引号开头时，%~1会自动将引号删除。&#xA;特殊变量&#xA;%CD% - 扩展到当前目录字符串。&#xA;%DATE% - 用跟 DATE 命令同样的格式扩展到当前日期。&#xA;%TIME% - 用跟 TIME 命令同样的格式扩展到当前时间。&#xA;%RANDOM% - 扩展到 0 和 32767 之间的任意十进制数字。&#xA;%ERRORLEVEL% - 扩展到当前 ERRORLEVEL 数值。&#xA;%CMDEXTVERSION% - 扩展到当前命令处理器扩展版本号。&#xA;%CMDCMDLINE% - 扩展到调用命令处理器的原始命令行。&#xA;%HIGHESTNUMANODENUMBER% - 扩展到此计算机上的最高 NUMA 节点号。&#xA;%~dp0 - 代表的是脚本文件在磁盘的位置&#xA;%~dpI - 第I个文件路径参数的完整父级路径&#xA;%~nxI - 第I个文件路径参数的文件名（包括扩展名）&#xA;%~nI - 第I个文件路径参数的文件名（不包括扩展名）&#xA;命令 ECHO：显示信息，或将命令回显打开或关上。&#xA;ECHO [ON | OFF]：echo on表示打开回显，echo off表示关闭回显&#xA;要显示当前回显设置，键入不带参数的 ECHO。</description>
     </item>
     <item>
       <title>数字信号处理</title>
-      <link>http://localhost:1313/post/%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86/</link>
+      <link>https://seconsorl.github.io/post/%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/post/%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86/</guid>
+      <guid>https://seconsorl.github.io/post/%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86/</guid>
       <description>数字信号处理 </description>
     </item>
     <item>
       <title>CJK Glyphs</title>
-      <link>http://localhost:1313/about/cjk/</link>
+      <link>https://seconsorl.github.io/about/cjk/</link>
       <pubDate>Tue, 12 Dec 2023 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/about/cjk/</guid>
+      <guid>https://seconsorl.github.io/about/cjk/</guid>
       <description>&lt;p&gt;Test post for CJK Glyphs.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Custom JavaScript and CSS</title>
-      <link>http://localhost:1313/about/custom/</link>
+      <link>https://seconsorl.github.io/about/custom/</link>
       <pubDate>Mon, 11 Dec 2023 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/about/custom/</guid>
+      <guid>https://seconsorl.github.io/about/custom/</guid>
       <description>&lt;p&gt;With custom CSS and JavaScript you can change pretty much anything in &lt;a href=&#34;https://github.com/LucasVadilho/heyo-hugo-theme&#34;&gt;heyo&lt;/a&gt; appearance or functionality, and it&amp;rsquo;s pretty simple, too!&lt;/p&gt;</description>
     </item>
     <item>
       <title>Markdown Syntax Guide</title>
-      <link>http://localhost:1313/about/markdown-syntax/</link>
+      <link>https://seconsorl.github.io/about/markdown-syntax/</link>
       <pubDate>Mon, 07 Aug 2023 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/about/markdown-syntax/</guid>
+      <guid>https://seconsorl.github.io/about/markdown-syntax/</guid>
       <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Sketches!</title>
-      <link>http://localhost:1313/about/sketches/</link>
+      <link>https://seconsorl.github.io/about/sketches/</link>
       <pubDate>Mon, 07 Aug 2023 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/about/sketches/</guid>
+      <guid>https://seconsorl.github.io/about/sketches/</guid>
       <description>&lt;p&gt;Sketches are the pretty visualizations in &lt;a href=&#34;https://github.com/LucasVadilho/heyo-hugo-theme&#34;&gt;heyo&lt;/a&gt;&amp;rsquo;s sidebar. The default ones were built using &lt;a href=&#34;https://p5js.org/&#34;&gt;p5.js&lt;/a&gt; &amp;ndash; a javascript library for creative coding.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Post Thumbnail</title>
-      <link>http://localhost:1313/about/thumbnail/</link>
+      <link>https://seconsorl.github.io/about/thumbnail/</link>
       <pubDate>Sun, 06 Aug 2023 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/about/thumbnail/</guid>
+      <guid>https://seconsorl.github.io/about/thumbnail/</guid>
       <description>&lt;p&gt;You can now add thumbnails to your posts in &lt;a href=&#34;https://github.com/LucasVadilho/heyo-hugo-theme&#34;&gt;heyo&lt;/a&gt;!&lt;/p&gt;</description>
     </item>
     <item>
       <title>Callout shortcode</title>
-      <link>http://localhost:1313/about/callouts/</link>
+      <link>https://seconsorl.github.io/about/callouts/</link>
       <pubDate>Sat, 05 Aug 2023 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/about/callouts/</guid>
+      <guid>https://seconsorl.github.io/about/callouts/</guid>
       <description>&lt;p&gt;Check it out, &lt;a href=&#34;https://github.com/LucasVadilho/heyo-hugo-theme&#34;&gt;heyo&lt;/a&gt; has callouts now!&lt;/p&gt;</description>
     </item>
     <item>
       <title>Table of Contents</title>
-      <link>http://localhost:1313/about/toc/</link>
+      <link>https://seconsorl.github.io/about/toc/</link>
       <pubDate>Fri, 04 Aug 2023 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/about/toc/</guid>
+      <guid>https://seconsorl.github.io/about/toc/</guid>
       <description>&lt;p&gt;In &lt;a href=&#34;https://github.com/LucasVadilho/heyo-hugo-theme&#34;&gt;heyo&lt;/a&gt; we can use the sidebar to display a Table of Contents!&lt;/p&gt;</description>
     </item>
     <item>
       <title>Rendering Math Stuff</title>
-      <link>http://localhost:1313/about/rendering-math-stuff/</link>
+      <link>https://seconsorl.github.io/about/rendering-math-stuff/</link>
       <pubDate>Thu, 03 Aug 2023 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/about/rendering-math-stuff/</guid>
+      <guid>https://seconsorl.github.io/about/rendering-math-stuff/</guid>
       <description>&lt;p&gt;This article shows how to configure your site with &lt;a href=&#34;https://github.com/LucasVadilho/heyo-hugo-theme&#34;&gt;heyo&lt;/a&gt; theme to display $\LaTeX$.&lt;/p&gt;</description>
     </item>
     <item>
       <title>About</title>
-      <link>http://localhost:1313/about/</link>
+      <link>https://seconsorl.github.io/about/</link>
       <pubDate>Tue, 01 Aug 2023 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/about/</guid>
+      <guid>https://seconsorl.github.io/about/</guid>
       <description>heyo is a responsive, minimalist, and pretty theme built for hugo, based on Alexander Bilz&amp;rsquo;s Anatole.&#xA;Features Cover images Pretty visualizations in the sidebar Table of Contents in the sidebar Callout shortcode Badges shortcode Dark theme Support for custom CSS and JS Multilingual support (english and brazilian portuguese, for now) Open Graph support Soon™ Quickstart To try the exampleSite you just need to:&#xA;git clone https://github.com/LucasVadilho/heyo-hugo-theme heyo cd heyo/exampleSite &amp;amp;&amp;amp; hugo server --themesDir ../.. Live preview You can check a live preview at heyo-theme.oioipio.com.&#xA;Credits All the images in exampleSite were graciously provided by TD Vadilho, you should checkout his website and YouTube!</description>
     </item>
     <item>
       <title>Badges</title>
-      <link>http://localhost:1313/about/badges/</link>
+      <link>https://seconsorl.github.io/about/badges/</link>
       <pubDate>Tue, 01 Aug 2023 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/about/badges/</guid>
+      <guid>https://seconsorl.github.io/about/badges/</guid>
       <description>&lt;p&gt;This article will show you how to add and customize badges in your posts.&lt;/p&gt;</description>
     </item>
   </channel>

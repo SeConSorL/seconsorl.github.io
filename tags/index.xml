@@ -2,138 +2,138 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on My Blog</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://seconsorl.github.io/tags/</link>
     <description>Recent content in Tags on My Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>216002917@nbu.edu.cn (HZW)</managingEditor>
     <webMaster>216002917@nbu.edu.cn (HZW)</webMaster>
     <lastBuildDate>Mon, 06 May 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://seconsorl.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Computer</title>
-      <link>http://localhost:1313/tags/computer/</link>
+      <link>https://seconsorl.github.io/tags/computer/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/tags/computer/</guid>
+      <guid>https://seconsorl.github.io/tags/computer/</guid>
       <description></description>
     </item>
     <item>
       <title>Math</title>
-      <link>http://localhost:1313/tags/math/</link>
+      <link>https://seconsorl.github.io/tags/math/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/tags/math/</guid>
+      <guid>https://seconsorl.github.io/tags/math/</guid>
       <description></description>
     </item>
     <item>
       <title>前端</title>
-      <link>http://localhost:1313/tags/%E5%89%8D%E7%AB%AF/</link>
+      <link>https://seconsorl.github.io/tags/%E5%89%8D%E7%AB%AF/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/tags/%E5%89%8D%E7%AB%AF/</guid>
+      <guid>https://seconsorl.github.io/tags/%E5%89%8D%E7%AB%AF/</guid>
       <description></description>
     </item>
     <item>
       <title>博客</title>
-      <link>http://localhost:1313/tags/%E5%8D%9A%E5%AE%A2/</link>
+      <link>https://seconsorl.github.io/tags/%E5%8D%9A%E5%AE%A2/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/tags/%E5%8D%9A%E5%AE%A2/</guid>
+      <guid>https://seconsorl.github.io/tags/%E5%8D%9A%E5%AE%A2/</guid>
       <description></description>
     </item>
     <item>
       <title>图像</title>
-      <link>http://localhost:1313/tags/%E5%9B%BE%E5%83%8F/</link>
+      <link>https://seconsorl.github.io/tags/%E5%9B%BE%E5%83%8F/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/tags/%E5%9B%BE%E5%83%8F/</guid>
+      <guid>https://seconsorl.github.io/tags/%E5%9B%BE%E5%83%8F/</guid>
       <description></description>
     </item>
     <item>
       <title>服务器</title>
-      <link>http://localhost:1313/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+      <link>https://seconsorl.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
+      <guid>https://seconsorl.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
       <description></description>
     </item>
     <item>
       <title>CJK</title>
-      <link>http://localhost:1313/tags/cjk/</link>
+      <link>https://seconsorl.github.io/tags/cjk/</link>
       <pubDate>Tue, 12 Dec 2023 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/tags/cjk/</guid>
+      <guid>https://seconsorl.github.io/tags/cjk/</guid>
       <description></description>
     </item>
     <item>
       <title>Theme</title>
-      <link>http://localhost:1313/tags/theme/</link>
+      <link>https://seconsorl.github.io/tags/theme/</link>
       <pubDate>Tue, 12 Dec 2023 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/tags/theme/</guid>
+      <guid>https://seconsorl.github.io/tags/theme/</guid>
       <description></description>
     </item>
     <item>
       <title>Css</title>
-      <link>http://localhost:1313/tags/css/</link>
+      <link>https://seconsorl.github.io/tags/css/</link>
       <pubDate>Mon, 11 Dec 2023 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/tags/css/</guid>
+      <guid>https://seconsorl.github.io/tags/css/</guid>
       <description></description>
     </item>
     <item>
       <title>Customization</title>
-      <link>http://localhost:1313/tags/customization/</link>
+      <link>https://seconsorl.github.io/tags/customization/</link>
       <pubDate>Mon, 11 Dec 2023 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/tags/customization/</guid>
+      <guid>https://seconsorl.github.io/tags/customization/</guid>
       <description></description>
     </item>
     <item>
       <title>JS</title>
-      <link>http://localhost:1313/tags/js/</link>
+      <link>https://seconsorl.github.io/tags/js/</link>
       <pubDate>Mon, 11 Dec 2023 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/tags/js/</guid>
+      <guid>https://seconsorl.github.io/tags/js/</guid>
       <description></description>
     </item>
     <item>
       <title>Creative Coding</title>
-      <link>http://localhost:1313/tags/creative-coding/</link>
+      <link>https://seconsorl.github.io/tags/creative-coding/</link>
       <pubDate>Mon, 07 Aug 2023 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/tags/creative-coding/</guid>
+      <guid>https://seconsorl.github.io/tags/creative-coding/</guid>
       <description></description>
     </item>
     <item>
       <title>Html</title>
-      <link>http://localhost:1313/tags/html/</link>
+      <link>https://seconsorl.github.io/tags/html/</link>
       <pubDate>Mon, 07 Aug 2023 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/tags/html/</guid>
+      <guid>https://seconsorl.github.io/tags/html/</guid>
       <description></description>
     </item>
     <item>
       <title>Javascript</title>
-      <link>http://localhost:1313/tags/javascript/</link>
+      <link>https://seconsorl.github.io/tags/javascript/</link>
       <pubDate>Mon, 07 Aug 2023 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/tags/javascript/</guid>
+      <guid>https://seconsorl.github.io/tags/javascript/</guid>
       <description></description>
     </item>
     <item>
       <title>Markdown</title>
-      <link>http://localhost:1313/tags/markdown/</link>
+      <link>https://seconsorl.github.io/tags/markdown/</link>
       <pubDate>Mon, 07 Aug 2023 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/tags/markdown/</guid>
+      <guid>https://seconsorl.github.io/tags/markdown/</guid>
       <description></description>
     </item>
     <item>
       <title>P5js</title>
-      <link>http://localhost:1313/tags/p5js/</link>
+      <link>https://seconsorl.github.io/tags/p5js/</link>
       <pubDate>Mon, 07 Aug 2023 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/tags/p5js/</guid>
+      <guid>https://seconsorl.github.io/tags/p5js/</guid>
       <description></description>
     </item>
     <item>
       <title>Themes</title>
-      <link>http://localhost:1313/tags/themes/</link>
+      <link>https://seconsorl.github.io/tags/themes/</link>
       <pubDate>Mon, 07 Aug 2023 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/tags/themes/</guid>
+      <guid>https://seconsorl.github.io/tags/themes/</guid>
       <description></description>
     </item>
     <item>
       <title>Shortcodes</title>
-      <link>http://localhost:1313/tags/shortcodes/</link>
+      <link>https://seconsorl.github.io/tags/shortcodes/</link>
       <pubDate>Sun, 06 Aug 2023 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/tags/shortcodes/</guid>
+      <guid>https://seconsorl.github.io/tags/shortcodes/</guid>
       <description></description>
     </item>
   </channel>

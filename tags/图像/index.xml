@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>图像 on My Blog</title>
-    <link>http://localhost:1313/tags/%E5%9B%BE%E5%83%8F/</link>
+    <link>https://seconsorl.github.io/tags/%E5%9B%BE%E5%83%8F/</link>
     <description>Recent content in 图像 on My Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>216002917@nbu.edu.cn (HZW)</managingEditor>
     <webMaster>216002917@nbu.edu.cn (HZW)</webMaster>
     <lastBuildDate>Mon, 06 May 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/%E5%9B%BE%E5%83%8F/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://seconsorl.github.io/tags/%E5%9B%BE%E5%83%8F/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>傅里叶变换</title>
-      <link>http://localhost:1313/post/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2fourier-transform/</link>
+      <link>https://seconsorl.github.io/post/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2fourier-transform/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
-      <guid>http://localhost:1313/post/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2fourier-transform/</guid>
+      <guid>https://seconsorl.github.io/post/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2fourier-transform/</guid>
       <description>&lt;p&gt;This article is my note for 傅里叶变换.&lt;/p&gt;</description>
     </item>
   </channel>
