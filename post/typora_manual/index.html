@@ -152,7 +152,7 @@
             
         </ul>
 
-        <div class="by">by HZW <b>·</b> 2024</div>
+        <div class="by">by HZW <b>·</b> 2025</div>
     </div>
 </div>
             <div class="content">
@@ -164,7 +164,7 @@
             <div class="post-header">
     <div style="padding-top: 10px;">
         <i class="far fa-calendar"></i><span class="date">May 6, 2024</span>
-        <i class="far fa-clock"></i><span class="reading-time">2 minutes</span>
+        <i class="far fa-clock"></i><span class="reading-time">3 minutes</span>
         
 
 
@@ -173,8 +173,7 @@
         
     </div>
     <div class="post-content">
-        <p>This article is my note for Typora.</p>
-<h1 id="tips">TIPS</h1>
+        <h1 id="tips">TIPS</h1>
 <ul>
 <li>不在代码块内的HTML代码会被自动识别出来</li>
 </ul>
@@ -241,7 +240,8 @@
 </span></span></span><span style="display:flex;"><span><span style="color:#ff79c6"></span><span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span>(){
 </span></span><span style="display:flex;"><span>	printf(<span style="color:#f1fa8c">&#34;Hello world!</span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">&#34;</span>);
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h1 id="链接">链接</h1>
+</span></span></code></pre></div><p>或者将代码内容的每一行添加至少四个空格或一个制表符<code>Tab</code>即可</p>
+<h1 id="链接">链接</h1>
 <h4 id="访问网页">访问网页</h4>
 <p>链接的使用方式有两种语法</p>
 <p><code>[</code><strong>链接文字</strong><code>](</code><strong>链接地址</strong><code>)</code>   或   <code>&lt;</code><strong>链接地址</strong><code>&gt;</code></p>
@@ -255,6 +255,43 @@
 <p>也可以使用链接来实现<strong>页内跳转</strong>。语法如下：</p>
 <p><code>[</code><strong>链接文字</strong><code>](</code><strong>#标题文字</strong><code>)</code></p>
 <p>但是在<strong>CSDN中不支持</strong>这种页内跳转方式。</p>
+<h4 id="高级链接">高级链接</h4>
+<p>我们可以通过变量来设置一个链接，变量赋值在文档末尾进行。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>这个链接用 1 作为网址变量 [CSDN][1]
+</span></span><span style="display:flex;"><span>这个链接用 csdn 作为网址变量 [CSDN][csdn]
+</span></span><span style="display:flex;"><span>然后在文档的结尾为变量赋值（网址）
+</span></span><span style="display:flex;"><span>  [1]: https://www.csdn.net/
+</span></span><span style="display:flex;"><span>  [csdn]: https://www.csdn.net/
+</span></span></code></pre></div><p>格式如下</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>[hobbit-hole][tag]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[tag]: 网址
+</span></span><span style="display:flex;"><span>[tag]: 网址 &#34;标题&#34;
+</span></span><span style="display:flex;"><span>[tag]: 网址 &#39;标题&#39;
+</span></span><span style="display:flex;"><span>[tag]: 网址 (标题)
+</span></span><span style="display:flex;"><span>[tag]: &lt;<span style="color:#ff79c6">网址</span>&gt; &#34;标题&#34;
+</span></span><span style="display:flex;"><span>[tag]: &lt;<span style="color:#ff79c6">网址</span>&gt; &#39;标题&#39;
+</span></span><span style="display:flex;"><span>[tag]: &lt;<span style="color:#ff79c6">网址</span>&gt; (标题)
+</span></span></code></pre></div><h4 id="脚注">脚注</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>Here&#39;s a simple footnote,[^1] and here&#39;s a longer one.[^bignote]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[^1]: 一个脚注
+</span></span><span style="display:flex;"><span>[^bignote]: 这是一个包含多个段落和代码的文档。
+</span></span><span style="display:flex;"><span>   对段落进行缩进，以将其包含在脚注中。
+</span></span><span style="display:flex;"><span>   同时，`{ my code }`这样可以放代码
+</span></span></code></pre></div><h4 id="内嵌html标签">内嵌HTML标签</h4>
+<ul>
+<li>行级内联标签：如<code>&lt;span&gt;</code>、<code>&lt;cite&gt;</code>、<code>&lt;del&gt;</code>等不受限制，可以在 Markdown 的段落、列表或是标题里任意使用</li>
+<li>区块标签：如<code>&lt;div&gt;</code>、<code>&lt;table&gt;</code>、<code>&lt;pre&gt;</code>、<code>&lt;p&gt;</code>等标签
+<ul>
+<li>必须在前后加上空行，以便于内容区分</li>
+<li>这些元素的开始与结尾标签，不可以用tab或空白缩进</li>
+<li>Markdown会自动识别这区块元素，避免在区块标签前后加上没有必要的<code>&lt;p&gt;</code>标签</li>
+<li>Markdown 语法在HTML区块标签中将不会被进行处理</li>
+</ul>
+</li>
+</ul>
+<p><code>{ begin end }</code></p>
 <h1 id="图片">图片</h1>
 <p>可以在Markdown文档中<strong>插入图片</strong>，语法如下：</p>
 <ul>
@@ -289,7 +326,32 @@ $$
 </code></pre><p>第一种方法表示插入<strong>行内公式（内联公式）</strong>，即可以将公式插入到一行中，比如1 + 2 = 3 1+2=31+2=3这样的公式。</p>
 <p>第二种方法表示插入<strong>行间公式（外联公式）</strong>，即可以将公式插入到行与行之间，<strong>单独占据一行或者数行</strong>的空间，并且<strong>居中放置</strong>。</p>
 <p>如果要在<strong>行间公式内换行</strong>，在换行的位置使用<code>\\</code></p>
-<h4 id="上标下标">上标下标</h4>
+<h4 id="对齐">对齐</h4>
+<p><code>&amp;</code>会一行的内容分成两列，<code>&amp;</code>前面的一列，<code>&amp;</code>后面的一列。分别居中对齐</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span>单行公式左对齐：
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">\begin</span><span style="color:#8be9fd;font-style:italic">{</span>flalign*<span style="color:#8be9fd;font-style:italic">}</span>  
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">&amp;</span> 1+2= 3. <span style="color:#8be9fd;font-style:italic">&amp;</span> 
+</span></span><span style="display:flex;"><span> <span style="color:#ff79c6">\end</span><span style="color:#8be9fd;font-style:italic">{</span>flalign*<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>多行公式左对齐
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">\begin</span><span style="color:#8be9fd;font-style:italic">{</span>flalign*<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">&amp;</span>1+2= 3.<span style="color:#ff79c6">\\</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">&amp;</span>1+2= 3.<span style="color:#ff79c6">\\</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">&amp;</span>1+2= 3.<span style="color:#8be9fd;font-style:italic">&amp;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">\end</span><span style="color:#8be9fd;font-style:italic">{</span>flalign*<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>单行公式右对齐：
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">\begin</span><span style="color:#8be9fd;font-style:italic">{</span>flalign*<span style="color:#8be9fd;font-style:italic">}</span> 
+</span></span><span style="display:flex;"><span> <span style="color:#8be9fd;font-style:italic">&amp;&amp;</span> 1+2= 3.  
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">\end</span><span style="color:#8be9fd;font-style:italic">{</span>flalign*<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>多行公式右对齐
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">\begin</span><span style="color:#8be9fd;font-style:italic">{</span>flalign*<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">&amp;&amp;</span>1+2= 3.<span style="color:#ff79c6">\\</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">&amp;&amp;</span>1+2= 3.<span style="color:#ff79c6">\\</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">&amp;&amp;</span>1+2= 3.
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">\end</span><span style="color:#8be9fd;font-style:italic">{</span>flalign*<span style="color:#8be9fd;font-style:italic">}</span>
+</span></span></code></pre></div><h4 id="上标下标">上标下标</h4>
 <p>上下标可以使用<code>^</code>，<code>_</code>后跟相应的符号来实现。（<strong>单个</strong>）</p>
 <p>如果作为上标、下标的符号有<strong>多个</strong>或者<strong>有一边是复杂结构</strong>，则需要用花括号<code>{}</code>将其括起来。如：
 $$
@@ -452,6 +514,39 @@ $$</p>
 <blockquote>
 <p>111</p>
 </blockquote>
+<h1 id="各种配置文档在markdown中的front-matter">各种配置文档在Markdown中的Front matter</h1>
+<p><strong>Front matter</strong>可以元数据插入到文档中</p>
+<p>元数据一般是键值对的方式导入的，即一个键(Key)对应特定的值(Value)，值可以是任何类型
+<strong>导入格式与配置文档的格式相同</strong></p>
+<h2 id="toml">TOML</h2>
+<p>TOML 前端内容块由开始和结束<code>+++</code>线标识。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>+++
+</span></span><span style="display:flex;"><span>title = <span style="color:#f1fa8c">&#34;YAML front matter example&#34;</span>
+</span></span><span style="display:flex;"><span>key = <span style="color:#f1fa8c">&#34;value&#34;</span>
+</span></span><span style="display:flex;"><span>+++
+</span></span></code></pre></div><h2 id="yaml">YAML</h2>
+<p>YAML 前端内容块由开始和结束<code>---</code>行标识。
+如下所示：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">title</span>: YAML front matter example
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">key</span>: value
+</span></span><span style="display:flex;"><span>---
+</span></span></code></pre></div><h2 id="json">JSON</h2>
+<p>JSON 前面的内容块由开头和结尾的<code>;;;</code>行或<code>{}</code>标识。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;title&#34;</span>: YAML front matter example
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;key&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;subkey1&#34;</span>: <span style="color:#f1fa8c">&#34;value 1&#34;</span>,  <span style="color:#ff79c6">&#34;subkey2&#34;</span>: <span style="color:#f1fa8c">&#34;value 2&#34;</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>显示为: 
+</span></span><span style="display:flex;"><span>“title”:YAML front matter example
+</span></span><span style="display:flex;"><span><span style="color:#f1fa8c">&#34;key&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;subkey1&#34;</span>: <span style="color:#f1fa8c">&#34;value 1&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;subkey2&#34;</span>: <span style="color:#f1fa8c">&#34;value 2&#34;</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span></code></pre></div>
     </div>
     <div class="post-footer">
         <div class="info">

@@ -5,7 +5,37 @@
     <loc>https://seconsorl.github.io/post/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2fourier-transform/</loc>
     <lastmod>2024-05-06T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://seconsorl.github.io/post/qemu/</loc>
+    <lastmod>2024-07-08T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://seconsorl.github.io/post/css/</loc>
+    <lastmod>2024-05-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://seconsorl.github.io/post/deeplearning/</loc>
+    <lastmod>2024-05-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://seconsorl.github.io/post/docker-compose/</loc>
+    <lastmod>2024-05-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://seconsorl.github.io/post/endnote21/</loc>
+    <lastmod>2024-05-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://seconsorl.github.io/post/fine-tuning/</loc>
+    <lastmod>2024-05-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://seconsorl.github.io/post/json/</loc>
+    <lastmod>2024-05-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://seconsorl.github.io/post/kali/</loc>
+    <lastmod>2024-05-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://seconsorl.github.io/post/linux%E4%B8%8Bdocker%E8%B5%84%E6%BA%90%E9%99%90%E5%88%B6/</loc>
+    <lastmod>2024-05-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://seconsorl.github.io/post/musa%E6%91%A9%E5%B0%94%E7%BA%BF%E7%A8%8B/</loc>
+    <lastmod>2024-05-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://seconsorl.github.io/post/pytorch%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2024-05-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://seconsorl.github.io/post/docker/</loc>
@@ -21,9 +51,33 @@
     <lastmod>2024-05-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://seconsorl.github.io/tags/computer/</loc>
+    <lastmod>2024-07-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://seconsorl.github.io/</loc>
+    <lastmod>2024-07-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://seconsorl.github.io/post/</loc>
+    <lastmod>2024-07-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://seconsorl.github.io/tags/</loc>
+    <lastmod>2024-07-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://seconsorl.github.io/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/</loc>
+    <lastmod>2024-07-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://seconsorl.github.io/post/%E6%AF%95%E6%98%87%E7%BC%96%E8%AF%91%E5%99%A8/</loc>
+    <lastmod>2024-05-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://seconsorl.github.io/tags/academic/</loc>
+    <lastmod>2024-05-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://seconsorl.github.io/tags/ai/</loc>
     <lastmod>2024-05-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://seconsorl.github.io/post/curl/</loc>
+    <lastmod>2024-05-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://seconsorl.github.io/tags/deeplearning/</loc>
     <lastmod>2024-05-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://seconsorl.github.io/post/deveco_manual/</loc>
@@ -32,7 +86,13 @@
     <loc>https://seconsorl.github.io/post/django%E8%AF%B4%E6%98%8E/</loc>
     <lastmod>2024-05-06T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://seconsorl.github.io/tags/docker/</loc>
+    <lastmod>2024-05-06T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://seconsorl.github.io/post/golang/</loc>
+    <lastmod>2024-05-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://seconsorl.github.io/tags/gpu/</loc>
     <lastmod>2024-05-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://seconsorl.github.io/post/ini/</loc>
@@ -47,10 +107,10 @@
     <loc>https://seconsorl.github.io/post/latex/</loc>
     <lastmod>2024-05-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://seconsorl.github.io/tags/math/</loc>
+    <loc>https://seconsorl.github.io/tags/llm/</loc>
     <lastmod>2024-05-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://seconsorl.github.io/</loc>
+    <loc>https://seconsorl.github.io/tags/math/</loc>
     <lastmod>2024-05-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://seconsorl.github.io/post/mysql_manual/</loc>
@@ -65,16 +125,22 @@
     <loc>https://seconsorl.github.io/post/postman/</loc>
     <lastmod>2024-05-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://seconsorl.github.io/post/</loc>
+    <loc>https://seconsorl.github.io/post/qbittorrent%E5%92%8Cbtpt/</loc>
     <lastmod>2024-05-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://seconsorl.github.io/post/qbittorrent%E5%92%8Cbtpt/</loc>
+    <loc>https://seconsorl.github.io/post/rag/</loc>
+    <lastmod>2024-05-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://seconsorl.github.io/post/raid/</loc>
     <lastmod>2024-05-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://seconsorl.github.io/post/shell/</loc>
     <lastmod>2024-05-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://seconsorl.github.io/tags/</loc>
+    <loc>https://seconsorl.github.io/post/shor%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2024-05-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://seconsorl.github.io/tags/software/</loc>
     <lastmod>2024-05-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://seconsorl.github.io/post/tomcat/</loc>
@@ -101,6 +167,12 @@
     <loc>https://seconsorl.github.io/post/%E4%BA%91%E5%8E%9F%E7%94%9F/</loc>
     <lastmod>2024-05-06T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://seconsorl.github.io/post/%E4%BC%98%E5%8C%96%E5%99%A8/</loc>
+    <lastmod>2024-05-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://seconsorl.github.io/post/%E5%81%8F%E5%B7%AE-%E6%96%B9%E5%B7%AE%E7%AA%98%E5%A2%83/</loc>
+    <lastmod>2024-05-06T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://seconsorl.github.io/tags/%E5%89%8D%E7%AB%AF/</loc>
     <lastmod>2024-05-06T00:00:00+00:00</lastmod>
   </url><url>
@@ -120,6 +192,12 @@
     <lastmod>2024-05-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://seconsorl.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
+    <lastmod>2024-05-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://seconsorl.github.io/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</loc>
+    <lastmod>2024-05-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://seconsorl.github.io/post/%E9%87%8F%E5%AD%90%E5%AF%86%E7%A0%81/</loc>
     <lastmod>2024-05-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://seconsorl.github.io/categories/</loc>
@@ -205,5 +283,9 @@
   </url><url>
     <loc>https://seconsorl.github.io/about/badges/</loc>
     <lastmod>2023-08-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://seconsorl.github.io/post/bb84/</loc>
+  </url><url>
+    <loc>https://seconsorl.github.io/post/%E5%90%84%E5%9C%B0%E6%97%A5%E6%9C%9F%E6%97%B6%E5%88%BB%E5%90%84%E5%9C%B0%E6%97%A5%E6%9C%9F%E5%90%84%E5%9C%B0%E6%97%B6%E5%88%BB/</loc>
   </url>
 </urlset>

@@ -151,7 +151,7 @@
             
         </ul>
 
-        <div class="by">by HZW <b>·</b> 2024</div>
+        <div class="by">by HZW <b>·</b> 2025</div>
     </div>
 </div>
             <div class="content">
@@ -160,14 +160,20 @@
         
         <div class="post summary">
             
+                <div class="thumbnail"  style="height: 350px;">
+                    <a href=/post/musa%E6%91%A9%E5%B0%94%E7%BA%BF%E7%A8%8B/>
+                        <img src=https://seconsorl.github.io/images/MUSA.jpg style="object-position: 50% 100%;" alt=MUSA title=MUSA loading="lazy">
+                    </a>
+                </div>
+            
             <div class="post-text grow">
                 <div class="post-title">
-                    <h5><a href=/post/ini/>ini</a></h5>
+                    <h5><a href=/post/musa%E6%91%A9%E5%B0%94%E7%BA%BF%E7%A8%8B/>MUSA</a></h5>
                 </div>
                 <div class="post-header">
     <div style="padding-top: 10px;">
         <i class="far fa-calendar"></i><span class="date">May 6, 2024</span>
-        <i class="far fa-clock"></i><span class="reading-time">One minute</span>
+        <i class="far fa-clock"></i><span class="reading-time">0 minutes</span>
         
 
 
@@ -177,7 +183,7 @@
                     <div class="p_part">
                         
                         
-                            <p><p>This article is my note for ini.</p></p>
+                            <p></p>
                         
                     </div>
                 </div>
@@ -185,7 +191,7 @@
                     <div class="meta">
                         <div class="info">
                             
-                            
+                            <a class="tag" href="/tags/computer/">computer</a><a class="tag" href="/tags/gpu/">gpu</a>
                             
 
 
@@ -198,14 +204,20 @@
         
         <div class="post summary">
             
+                <div class="thumbnail"  style="height: 350px;">
+                    <a href=/post/pytorch%E5%AD%A6%E4%B9%A0/>
+                        <img src=https://seconsorl.github.io/images/pytorch.jpg style="object-position: 50% 100%;" alt=pytorch title=pytorch loading="lazy">
+                    </a>
+                </div>
+            
             <div class="post-text grow">
                 <div class="post-title">
-                    <h5><a href=/post/javascript/>JavaScript</a></h5>
+                    <h5><a href=/post/pytorch%E5%AD%A6%E4%B9%A0/>pytorch</a></h5>
                 </div>
                 <div class="post-header">
     <div style="padding-top: 10px;">
         <i class="far fa-calendar"></i><span class="date">May 6, 2024</span>
-        <i class="far fa-clock"></i><span class="reading-time">3 minutes</span>
+        <i class="far fa-clock"></i><span class="reading-time">12 minutes</span>
         
 
 
@@ -215,7 +227,28 @@
                     <div class="p_part">
                         
                         
-                            <p><p>This article is my note for javascript.</p></p>
+                            <p>TIPS 中文文档
+学习顺序
+数据模块 -&gt; 模型模块 -&gt; 损失函数 -&gt; 优化器 -&gt; 迭代训练
+下载和安装
+直接pip install pytorch torch.Storage 一个torch.Storage是一个单一数据类型的连续一维数组。
+每个torch.Tensor都有一个对应的、相同数据类型的存储。
+具体数据类型见下表
+类型 描述 类型 描述 byte()、char()、double()、float()、half()、int()、long()、short() 将此存储转为相应类型 cpu() 如果当前此存储不在CPU上，则返回一个它的CPU副本 pin_memory() 如果此存储当前未被锁定，则将它复制到锁定内存中。 cuda(device=None, async=False) 返回此对象在CUDA内存中的一个副本。 如果此对象已在CUDA内存中且在正确的设备上，那么不会执行复制操作，直接返回原对象。参数：
+device(int) - 目标GPU的id。默认值是当前设备。async (bool) -如果值为True，且源在锁定内存中，则副本相对于宿主是异步的。否则此参数不起效果。 clone()、copy_() 返回此存储的一个副本 tolist() 返回一个包含此存储中元素的列表 type(new_type=None, async=False) 将此对象转为指定类型。如果已经是正确类型，不会执行复制操作，直接返回原对象。 size() 大小 张量（tensor） Torch 自称为神经网络界的Numpy, 因为他能将 torch 产生的 tensor 放在 GPU 中加速运算 (前提是你有合适的 GPU), 就像 Numpy 会把 array 放在 CPU 中加速运算。（numpy array 和 torch tensor 是可以自由地转换的。）
+定义 pytorch中的数据结构——Tensor，Tensor是PyTorch中最基础的概念。
+张量其实是一个多维数组，它是标量、向量、矩阵的高维拓展
+Tensor与Variable
+在Pytorch0.4.0版本之后其实Variable已经并入Tensor，Variable是torch.autograd中的数据类型
+Variable的属性 data: 被包装的Tensor
+grad: data的梯度
+grad_fn: fn表示function的意思，记录创建的创建张量时用到的方法，比如说加法，乘法，这个操作在求导过程需要用到
+Tensor的Function， 是自动求导的关键
+requires_grad: 指示是否需要梯度， 有的不需要梯度
+is_leaf: 指示是否是叶子节点（张量）
+Tensor的属性 Tensor共有8个属性，其中有5个是Variable并入过来的，剩下三个如下：
+dtype: 张量的数据类型， 如torch.FloatTensor, torch.cuda.FloatTensor, 用的最多的一般是float32和int64(torch.long)
+shape: 张量的形状， 如(64, 3, 224, 224)</p>
                         
                     </div>
                 </div>
@@ -223,7 +256,7 @@
                     <div class="meta">
                         <div class="info">
                             
-                            
+                            <a class="tag" href="/tags/computer/">computer</a><a class="tag" href="/tags/ai/">AI</a>
                             
 
 
@@ -236,14 +269,20 @@
         
         <div class="post summary">
             
+                <div class="thumbnail"  style="height: 350px;">
+                    <a href=/post/docker/>
+                        <img src=https://seconsorl.github.io/images/docker.png style="object-position: 50% 70%;" alt=Docker title=Docker loading="lazy">
+                    </a>
+                </div>
+            
             <div class="post-text grow">
                 <div class="post-title">
-                    <h5><a href=/post/javascript_manual/>JS</a></h5>
+                    <h5><a href=/post/docker/>docker</a></h5>
                 </div>
                 <div class="post-header">
     <div style="padding-top: 10px;">
         <i class="far fa-calendar"></i><span class="date">May 6, 2024</span>
-        <i class="far fa-clock"></i><span class="reading-time">2 minutes</span>
+        <i class="far fa-clock"></i><span class="reading-time">7 minutes</span>
         
 
 
@@ -253,7 +292,37 @@
                     <div class="p_part">
                         
                         
-                            <p><p>This article is my note for how to use javascript.</p></p>
+                            <p>TIP 安装DOMJudge
+菜鸟教程
+CSDN
+Docker 官网 docker中文库
+Github Docker 源码
+介绍 Docker，翻译过来就是码头工人
+Docker 是dotCloud公司开源的一个基于LXC（Linux Container）的高级容器引擎，基于Go 语言并遵从 Apache2.0 协议开源。
+Linux Container 容器是一种内核虚拟化技术，可以提供轻量级的虚拟化，以便隔离进程和资源，而且不需要提供指令解释机制以及全虚拟化的其他复杂性。LXC主要通过Kernel的namespace实现每个用户实例之间的项目隔离，通过cgroup实现对资源的配额和调度。
+Docker 可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。
+容器是完全使用沙箱机制，相互之间不会有任何接口（类似 iPhone 的 app）,更重要的是容器性能开销极低。不依赖于任何语言、框架或者包装系统
+Docker 从 17.03 版本之后分为 CE（Community Edition: 社区版） 和 EE（Enterprise Edition: 企业版）
+基本原理 Docker 的CS模式 在 Docker Client （Docker 的命令行接口）中来运行 Docker 的各种命令，这些命令会传送给在 Docker 的宿主机上运行的 Docker 守护进程。而 Docker 守护进程是负责实现 Docker 各种功能的。
+Docker 客户端与守护进程的通信方式 Docker 客户端与守护进程，实际上是通过 Socket 进行连接的。
+Docker 提供了三种 Socket 连接的模式:
+Unix 的端口模式
+unix:///var/run/docker.sock
+TCP 协议的 host:port 模式
+tcp://host:port
+fd 的 Socket 模式
+fd://socketfd
+其中，Unix 的端口模式是 Docker 默认的客户端与守护进程的连接方式。我们也可以通过配置进行修改，来修改 Socket 连接方式。
+Docker容器技术与虚拟机的区别 相同点：docker和容器技术和虚拟机技术，都是虚拟化技术。
+不同点：docker有着比虚拟机更少的抽象层。 由于docker不需要Hypervisor实现硬件资源虚拟化，运行在docker容器上的程序直接使用的都是实际物理机的硬件资源。所以docker效率比虚拟机效率高。达到了秒级启动的地步。
+docker相较于VM的优点：
+1、比VM小、快，Docker容器的尺寸减小相比于整个虚拟机大大简化了分布到云和分发时间的开销。Docker启动一个容器实例时间仅仅需要几秒钟。
+2、Docker是一个开放的平台，构建、发布和运行分布式应用程序。
+3、开发人员不需要关系具体是哪个Linux操作系统
+4、Google、微软（azure）、亚马逊、IBM等都支持docker。
+5、Docker支持Unix/Linux操作系统，也支持Windows和Mac。
+Docker局限性：
+Docker用于应用程序时是最有用的，但并不包含数据。日志、数据库等通常放在Docker容器外。一个容器的镜像通常都很小，不用和存储大量数据，存储可以通过外部挂载等方式使用，比如：NFS、ipsan、MFS等 ，或者docker命令 ，-v映射磁盘分区。</p>
                         
                     </div>
                 </div>
@@ -261,7 +330,7 @@
                     <div class="meta">
                         <div class="info">
                             
-                            
+                            <a class="tag" href="/tags/computer/">computer</a><a class="tag" href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">服务器</a>
                             
 
 
@@ -274,9 +343,15 @@
         
         <div class="post summary">
             
+                <div class="thumbnail"  style="height: 350px;">
+                    <a href=/post/git/>
+                        <img src=https://seconsorl.github.io/images/git.png style="object-position: 50% 100%;" alt=Git title=Git loading="lazy">
+                    </a>
+                </div>
+            
             <div class="post-text grow">
                 <div class="post-title">
-                    <h5><a href=/post/latex/>Latex</a></h5>
+                    <h5><a href=/post/git/>git</a></h5>
                 </div>
                 <div class="post-header">
     <div style="padding-top: 10px;">
@@ -291,7 +366,15 @@
                     <div class="p_part">
                         
                         
-                            <p><p>This article is my note for LaTex.</p></p>
+                            <p>TIPS 菜鸟教程
+Git 完整命令手册
+可视化教程
+简介 起源 随着代码库体积的倍数增加，Linus 和社区的小伙伴们很难继续通过手工的方式管理内核代码。于是 Linus 考察了好些版本控制系统，最终决定采用 BitKeeper。
+但 BitKeeper 是商业软件，要收费的。所以 Linus 跟开发 BitKeeper 的商业公司（BitMover）谈判，成功地忽悠到了 BitKeeper 的免费使用权。
+到了 2005 年，BitMover 公司发现 Linux 团队中有人试图破解 BitKeeper 的加密协议。所以，BitMover收回了 Linux 社区的免费使用权。
+2005年4月3日：Linus 开始开发 Git 2005年4月6日：Git 项目对外发布 2005年4月7日：Git 实现作为自身的版本控制工具 2005年4月18日：实现多分支合并 2005年6月16日：Linux 内核 2.6.12 发布，Git 已经可以用于维护 Linux 核心源码 2005年7月26日：Linus 功成身退，将 Git 的维护工作交给另一名 Git 的主要贡献者 Junio C Hamano 取代 SVN 很多公司原来都是使用 SVN 进行版本控制管理，但越来越多的公司选择将代码迁移至 Git（最具标志性的就是使用 SVN 做版本控制的 Google Code ）。
+SVN 和 Git 的区别 最核心的区别是：SVN 是集中式的版本控制系统，而 Git 是分布式的。
+1、Git 是分布式的，SVN 不是：这是 Git 和其它非分布式的版本控制系统，例如 SVN，CVS 等，最核心的区别。 **2、Git 把内容按元数据方式存储，而 SVN 是按文件：**所有的资源控制系统都是把文件的元信息隐藏在一个类似 .svn、.cvs 等的文件夹里。 **3、Git 分支和 SVN 的分支不同：**分支在 SVN 中一点都不特别，其实它就是版本库中的另外一个目录。 **4、Git 没有一个全局的版本号，而 SVN 有：**目前为止这是跟 SVN 相比 Git 缺少的最大的一个特征。 **5、Git 的内容完整性要优于 SVN：**Git 的内容存储使用的是 SHA-1 哈希算法。这能确保代码内容的完整性，确保在遇到磁盘故障和网络问题时降低对版本库的破坏。 集中式版本控制系统需要找一个服务器作为大本营，所有的代码都需要提交到服务器上进行统一的管理。当你需要对代码进行改动时，需要先从服务器上下载一份拷贝，修改完成之后，还需要上传回服务器。</p>
                         
                     </div>
                 </div>
@@ -299,7 +382,7 @@
                     <div class="meta">
                         <div class="info">
                             
-                            
+                            <a class="tag" href="/tags/computer/">computer</a><a class="tag" href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">服务器</a>
                             
 
 
@@ -312,9 +395,15 @@
         
         <div class="post summary">
             
+                <div class="thumbnail"  style="height: 350px;">
+                    <a href=/post/html5/>
+                        <img src=https://seconsorl.github.io/images/HTML5.png style="object-position: 50% 40%;" alt=HTML5 title=HTML5 loading="lazy">
+                    </a>
+                </div>
+            
             <div class="post-text grow">
                 <div class="post-title">
-                    <h5><a href=/post/mysql_manual/>MySQL</a></h5>
+                    <h5><a href=/post/html5/>HTML5</a></h5>
                 </div>
                 <div class="post-header">
     <div style="padding-top: 10px;">
@@ -329,7 +418,17 @@
                     <div class="p_part">
                         
                         
-                            <p><p>This article is my note for how to use MySQL.</p></p>
+                            <p>TIPS HTML5_菜鸟教程
+W3C标准 结构化标准语言（HTML、XML）
+表现标准语言（CSS）
+行为标准（DOM、ECMAScript）
+行内元素和块元素 块元素：会另起一个行。无论内容多少，该元素会独占一行。 行内元素：内容撑开宽度，左右都是行元素的可以排成一行。 NAME属性 name相同表示同一个组
+nav &lt;nav&gt;标签定义导航链接的部分。
+并不是所有的 HTML 文档都要使用到&lt;nav&gt; 元素。&lt;nav&gt;元素只是作为标注一个导航链接的区域。
+在不同设备上（手机或者PC）可以制定导航链接是否显示，以适应不同屏幕的需求。
+结构 基本结构 DOCTYPE声明 网页头部&lt;head&gt; &lt;/head&gt; 网页主体&lt;body&gt; &lt;/body&gt; &lt;!-- &lt;body&gt; &lt;/body&gt; 开放标签和闭合标签 --&gt; &lt;!-- &lt;hr/&gt;关闭空元素 --&gt; &lt;!-- HTML注释 --&gt; &lt;!DOCTYPE html&gt; &lt;!-- DOCTYPE: 告诉网页用什么规范&gt; --&gt; &lt;html lang=&#34;en&#34;&gt; &lt;head&gt; &lt;!-- head 网页头部 --&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;!-- meta描述性标签，用来做SEO--&gt; &lt;meta name=&#34;Keywords&#34; content=&#34;...&#34; /&gt; &lt;meta name=&#34;description&#34; content=&#34;...&#34; /&gt; &lt;title&gt;Document&lt;/title&gt; &lt;!-- title网页标题 --&gt; &lt;/head&gt; &lt;body&gt; &lt;!-- body 网页主体 --&gt; &lt;/body&gt; &lt;/html&gt; 结构分析 元素名 描述 header 标题头部区域的内容（用于页面或页面中的一块区域） footer 标记脚部区域的内容（用于整个页面或页面的一块区域） section Web页面中的一块独立区域 article 独立的文章内容 aside 相关内容或应用（常用于侧边栏） nav 导航类辅助内容 基本标签和特殊符号 html里面换行是没用的
+连续的空格符被认为是一个空格
+标签和符号 HTML代码 标题 &lt;h1&gt;一级标签&lt;/h1&gt;&lt;h2&gt;二级标签&lt;/h2&gt;&lt;h3&gt;三级标签&lt;/h3&gt;&lt;h4&gt;四级标签&lt;/h4&gt;&lt;h5&gt;五级标签&lt;/h5&gt;&lt;h6&gt;六级标签&lt;/h6&gt; 段落 &lt;p&gt; 内容 &lt;/p&gt; 换行 &lt;br /&gt; 水平线 &lt;hr /&gt; 字体样式 粗体: &lt;strong&gt; &lt;/strong&gt;斜体: &lt;em&gt; &lt;/em&gt; 空格 &amp;nbsp; 大于&gt; &amp;gt; 小于&lt; &amp;lt; 版权符号© &amp;copy; 注释（多行） &lt;!</p>
                         
                     </div>
                 </div>
@@ -337,7 +436,7 @@
                     <div class="meta">
                         <div class="info">
                             
-                            
+                            <a class="tag" href="/tags/computer/">computer</a><a class="tag" href="/tags/%E5%89%8D%E7%AB%AF/">前端</a>
                             
 
 
@@ -376,7 +475,7 @@
         <a href="/page/4/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
       </li>
       <li class="page-item">
-        <a href="/page/7/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+        <a href="/page/10/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
       </li>
     </ul>
         </div>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light"><head>
+    <title>RAG · HZW</title>
+    <meta charset="utf-8">
+    
+    <meta name="generator" content="Hugo 0.124.1">
+    <meta property="og:title" content="RAG" />
+<meta property="og:description" content="a note for learning RAG" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://seconsorl.github.io/post/rag/" /><meta property="og:image" content="https://seconsorl.github.io/images/profile.png" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2024-05-06T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-05-06T00:00:00+00:00" /><meta property="og:site_name" content="A junior from NBU" />
+
+
+
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="HZW">
+    
+    
+    
+    <link rel="stylesheet" type="text/css" href="https://seconsorl.github.io/css/style.min.565d8c479597aa43658922d4b31e286529a7525a22c9546fa1018fc5e5ef6d86.css" integrity="sha256-Vl2MR5WXqkNliSLUsx4oZSmnUloiyVRvoQGPxeXvbYY=" crossorigin="anonymous" type="text/css">
+
+    
+    
+    
+    <script type="text/javascript" src="https://seconsorl.github.io/js/heyo-header.min.a3fa728a9f57833a31dfb45c48caaf1e4890c8c97f07bd7133fc2359745edb5d.js" integrity="sha256-o/pyip9Xgzox37RcSMqvHkiQyMl/B71xM/wjWXRe210=" crossorigin="anonymous"></script>
+
+    
+    
+    <link rel="stylesheet" type="text/css" href="https://seconsorl.github.io/css/fonts.9398921f2d404983c2b7f9a68ddc72e3f5e58a3e38b0a8e4a70d75c12ebfb7c5.css" integrity="sha256-k5iSHy1ASYPCt/mmjdxy4/Xlij44sKjkpw11wS6/t8U=" crossorigin="anonymous">
+
+    
+    
+    
+    <script type="text/javascript" src="https://seconsorl.github.io/js/sidebar-toc.min.788b639e2ec681549740b90b3b865d5f9e1789e3ca9c06ccc45d65655434c954.js" integrity="sha256-eItjni7GgVSXQLkLO4ZdX54XiePKnAbMxF1lZVQ0yVQ=" crossorigin="anonymous"></script>
+
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-graph.26b92ed9317bdc6f35642d588bdf3283f40998846e01cf4bee22a126907fbf3b.js" integrity="sha256-Jrku2TF73G81ZC1Yi98yg/QJmIRuAc9L7iKhJpB/vzs=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-digitalRain.af8a7b5c4428cc62d5bf49bf2698d4112c2459ee0c22c1c753ab304aef69888a.js" integrity="sha256-r4p7XEQozGLVv0m/JpjUESwkWe4MIsHHU6swSu9piIo=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-circleBrushStrokes.fe8fc3ee52e1d90e9236be8c36a27711efa024beb4da304829f95dfbb61d6e84.js" integrity="sha256-/o/D7lLh2Q6SNr6MNqJ3Ee&#43;gJL602jBIKfld&#43;7YdboQ=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-meta.71b5202ea881c86ac19e4b55414656a5444204a4ba08ff7368a5aa99c0a60949.js" integrity="sha256-cbUgLqiByGrBnktVQUZWpURCBKS6CP9zaKWqmcCmCUk=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sidebar-sketch.min.2e95015880993ef9abcad62d111decea22406616931bce193254bf8af2339953.js" integrity="sha256-LpUBWICZPvmrytYtER3s6iJAZhaTG84ZMlS/ivIzmVM=" crossorigin="anonymous" defer></script>
+    
+    
+    
+    <link rel="shortcut icon" href="https://seconsorl.github.io/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://seconsorl.github.io/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://seconsorl.github.io/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://seconsorl.github.io/favicons/favicon-16x16.png">
+    <link rel="canonical" href="https://seconsorl.github.io/post/rag/">
+    
+    
+    
+    
+    
+
+    
+    <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://seconsorl.github.io/images/profile.png" /><meta name="twitter:title" content="RAG"/>
+<meta name="twitter:description" content="a note for learning RAG"/>
+
+</head><body>
+        <div class="main">
+            <div class="page-top">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a  href="/"  title="">Home</a></li>
+        
+            
+            <li><a  href="/post/"  title="">Posts</a></li>
+        
+            
+            <li><a  href="/about/"  title="">About</a></li>
+        
+        <li class="grow"></li>
+        
+        <li>
+            <a class="theme-switch" title="Switch Theme">
+                <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+            <div class="sidebar" id="sidebar">
+    <div class="top-toc">
+        <img src="https://seconsorl.github.io/images/profile.png" alt="profile picture">
+        
+        <a href="/">A junior from NBU</a>
+    </div>
+    
+    <div class="middle-sidebar grow" id="middle-sidebar">
+        
+            
+            
+                
+            
+
+            
+        
+    </div>
+
+    <div class="footer">
+        <ul class="social-links">
+            
+            <li>
+                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://github.com/SeConSorL" target="_blank" rel="noopener noreferrer" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" rel="me" aria-label="instagram">
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+            <li>
+                <a href="mailto:216002917@nbu.edu.cn" target="_blank" rel="noopener noreferrer" rel="me" aria-label="e-mail">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+        </ul>
+
+        <div class="by">by HZW <b>·</b> 2025</div>
+    </div>
+</div>
+            <div class="content">
+<div class="post">
+    
+    <div class="post-title">
+        <h1>RAG</h1>
+        
+            <div class="post-header">
+    <div style="padding-top: 10px;">
+        <i class="far fa-calendar"></i><span class="date">May 6, 2024</span>
+        <i class="far fa-clock"></i><span class="reading-time">One minute</span>
+        
+
+
+    </div>
+</div>
+        
+    </div>
+    <div class="post-content">
+        <h2 id="tips">TIPS</h2>
+<p><a href="https://zhuanlan.zhihu.com/p/28524880040">https://zhuanlan.zhihu.com/p/28524880040</a></p>
+<h2 id="一rag核心技术架构与组件交互">一、RAG核心技术架构与组件交互</h2>
+<h3 id="1-三阶段核心流程原理"><strong>1. 三阶段核心流程原理</strong></h3>
+<p><strong>预处理阶段</strong></p>
+<ul>
+<li>文档解析：HTML/PDF解析中的XPath定位与表格抽取技术（如PyPDFLoader对扫描件的<a href="https://zhida.zhihu.com/search?content_id=254727375&content_type=Article&match_order=1&q=OCR&zhida_source=entity">OCR</a>补偿）</li>
+<li>分块策略：递归字符分割（RecursiveCharacterTextSplitter）与语义分割（SpacyTextSplitter）的对比，滑动窗口重叠率对信息完整性的影响</li>
+<li>向量编码：密集编码（<a href="https://zhida.zhihu.com/search?content_id=254727375&content_type=Article&match_order=1&q=BERT&zhida_source=entity">BERT</a>/BGE）与稀疏编码（<a href="https://zhida.zhihu.com/search?content_id=254727375&content_type=Article&match_order=1&q=BM25&zhida_source=entity">BM25</a>）的联合使用，通过<a href="https://zhida.zhihu.com/search?content_id=254727375&content_type=Article&match_order=1&q=RoBERTa-Large&zhida_source=entity">RoBERTa-Large</a>实现768维语义嵌入</li>
+</ul>
+<p><strong>检索阶段</strong></p>
+<ul>
+<li>混合检索引擎：向量检索（<a href="https://zhida.zhihu.com/search?content_id=254727375&content_type=Article&match_order=1&q=Faiss&zhida_source=entity">Faiss</a>的HNSW索引）+ 倒排索引（<a href="https://zhida.zhihu.com/search?content_id=254727375&content_type=Article&match_order=1&q=Elasticsearch&zhida_source=entity">Elasticsearch</a>）的级联召回，召回率与响应速度的平衡</li>
+<li>重排序机制：Cross-Encoder模型（如MiniLM-L12）对Top100结果进行相关性评分，解决语义漂移问题</li>
+</ul>
+<p><strong>生成阶段</strong></p>
+<ul>
+<li>上下文注入：动态上下文窗口技术（如LongLoRA适配），支持10k tokens以上长文本注入</li>
+<li>注意力融合：检索片段与原始Prompt在Transformer层的交叉注意力权重分配</li>
+</ul>
+<p><img alt="img" src="/RAG_img/v2-96ede47ed1a7452f8ad7d5220094f4cb_1440w.jpg"></p>
+<h3 id="2-进阶架构演进"><strong>2. 进阶架构演进</strong></h3>
+<p><strong>Naive RAG → Advanced RAG</strong></p>
+<ul>
+<li>索引优化：多粒度分块（段落/句子）与多模态索引（图像OCR文本+结构化表格）</li>
+<li>检索增强：查询扩展（Query Rewriting）与HyDE（假设性文档嵌入）技术</li>
+</ul>
+<p><img alt="img" src="/RAG_img/v2-09b52f37bd79d72de945a993615b6913_1440w.jpg"></p>
+<p><strong>Agentic RAG架构</strong></p>
+<ul>
+<li>智能体决策：<a href="https://zhida.zhihu.com/search?content_id=254727375&content_type=Article&match_order=1&q=Toolformer&zhida_source=entity">Toolformer</a>框架下的多工具路由（知识库检索 → 计算器 → API调用）</li>
+<li>自修正流程：输出结果通过T5模型进行事实性校验与迭代修正</li>
+</ul>
+<h2 id="二关键组件技术实现细节">二、关键组件技术实现细节</h2>
+<h3 id="1-检索器模块"><strong>1. 检索器模块</strong></h3>
+<p><strong>双塔模型架构：</strong></p>
+<ul>
+<li>查询编码器（Query Encoder）使用<a href="https://zhida.zhihu.com/search?content_id=254727375&content_type=Article&match_order=1&q=ELECTRA-small&zhida_source=entity">ELECTRA-small</a>，文档编码器（Doc Encoder）使用Contriever</li>
+<li>负采样策略：Batch Negative Sampling与Hard Negative Mining对效果的影响</li>
+</ul>
+<p><strong>近似最近邻（ANN）算法：</strong></p>
+<ul>
+<li>HNSW图索引：构建参数efConstruction=200，搜索参数ef=100时的召回率/时延曲线</li>
+<li>IVFPQ量化：256个粗聚类中心 + 8bit子量化器，压缩比达64倍时的精度损失分析</li>
+</ul>
+<h3 id="2-生成器模块"><strong>2. 生成器模块</strong></h3>
+<p><strong>模型选型策略：</strong></p>
+<ul>
+<li>7B级模型：<a href="https://zhida.zhihu.com/search?content_id=254727375&content_type=Article&match_order=1&q=Qwen-7B&zhida_source=entity">Qwen-7B</a>在RAG任务中通过LoRA微调的显存占用（18GB vs 原生24GB）</li>
+<li>长上下文支持：YaRN插值算法在<a href="https://zhida.zhihu.com/search?content_id=254727375&content_type=Article&match_order=1&q=Llama2-13B&zhida_source=entity">Llama2-13B</a>上的4096→8192 tokens扩展</li>
+</ul>
+<p><strong>提示工程优化：</strong></p>
+<ul>
+<li>结构化指令：</li>
+</ul>
+<p>检索内容开始</p>
+<p>{检索结果1}</p>
+<p>检索内容结束</p>
+<p>请根据以上信息回答：{用户问题}，若信息不足请明确说明</p>
+<ul>
+<li>幻觉抑制：Self-Check机制强制输出中每项事实标注来源文档ID</li>
+</ul>
+<h3 id="3-评估体系设计">3. 评估体系设计</h3>
+<p><strong>检索质量指标：</strong></p>
+<p>MRR@10（Mean Reciprocal Rank）与Recall@50的工程验收标准</p>
+<p><strong>生成质量指标：</strong></p>
+<p>Factual Score（基于NLI模型的事实一致性评分）与BLEU-4的联合评估</p>
+<p><strong>端到端测试集：</strong></p>
+<p>构建200个对抗性样本（如歧义查询、矛盾文档）的压力测试方法</p>
+<p><img alt="img" src="/RAG_img/v2-01ad2a32e32716dbb77d9a807b93d77b_1440w.jpg"></p>
+<h2 id="三工程实践中的组件搭配策略">三、工程实践中的组件搭配策略</h2>
+<h3 id="1-中小规模场景">1. 中小规模场景</h3>
+<ul>
+<li>组件组合：BGE-M3嵌入模型 + FAISS索引 + GPT-3.5-Turbo生成器</li>
+<li>性能表现：500GB文档库下平均响应时间1.8s，GPU消耗8GB</li>
+</ul>
+<h3 id="2-企业级部署方案">2. 企业级部署方案</h3>
+<p><strong>混合检索架构：</strong></p>
+<p>A用户查询 &ndash;&gt; B{Query类型判断}</p>
+<p>B &ndash;&gt;关键词明确 C Elasticsearch倒排索引</p>
+<p>B &ndash;&gt;语义模糊 D CLIP向量检索</p>
+<p>C &amp; D &ndash;&gt; E混合排序器</p>
+<p><strong>分级存储设计：</strong></p>
+<ul>
+<li>热数据（周访问&gt;1000次）：全内存HNSW索引</li>
+<li>温数据：SSD存储的IVFPQ索引</li>
+<li>冷数据：MinIO对象存储 + 按需重建索引</li>
+</ul>
+<h2 id="四前沿技术融合方向">四、前沿技术融合方向</h2>
+<h3 id="1-多模态rag架构">1. 多模态RAG架构：</h3>
+<ul>
+<li>图像检索：<a href="https://zhida.zhihu.com/search?content_id=254727375&content_type=Article&match_order=1&q=CLIP-ViT&zhida_source=entity">CLIP-ViT</a>编码器生成跨模态嵌入</li>
+<li>表格处理：PandasAI自动解析CSV结构化数据</li>
+</ul>
+<h3 id="2-实时更新机制">2. 实时更新机制：</h3>
+<ul>
+<li>增量索引：文档变更触发HNSW图的动态边调整（时间复杂度O(log n)）</li>
+<li>版本快照：基于CDC（Change Data Capture）的索引版本回滚能力</li>
+</ul>
+<h3 id="3-物理启发式优化">3. 物理启发式优化：</h3>
+<p>重整化群（RG）理论在向量降维中的应用，实现512→128维的信息无损压缩</p>
+<p>该版本通过添加算法细节（如HNSW参数配置）、工程指标（响应时间/GPU消耗）、架构图与流程图，显著提升了技术深度。每个组件均包含实现原理、选型对比、参数调优三个层次，符合工业级系统设计需求。</p>
+<p><img alt="img" src="/RAG_img/v2-a5353ce787b4c9b149aae9cec7d81350_1440w.jpg"></p>
+
+    </div>
+    <div class="post-footer">
+        <div class="info">
+            
+            
+        </div>
+        
+
+
+    </div>
+    
+        
+    
+</div>
+
+                <div class="grow"></div>
+                <div class="built-with">
+    Built with <a href="https://gohugo.io/">Hugo</a> <b>·</b> Using the <a href="https://github.com/LucasVadilho/heyo-hugo-theme">heyo</a> theme
+</div>
+            </div>
+        </div>
+        
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha512-3M00D/rn8n+2ZVXBO9Hib0GKNpkm8MSUU/e2VNthDyBYxKWG+BftNYYcuEjXlyrSO637tidzMBXfE7sQm0INUg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<script type="text/javascript">
+            
+            
+            window.MathJax = {
+                tex: {
+                    inlineMath: [['$', '$'], ['\\(', '\\)']],
+                    displayMath: [['$$','$$'], ['\\[', '\\]']]
+                },
+                svg: {
+                    scale: 1.25,
+                }
+            };
+        </script><script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.1.0/es5/tex-mml-svg.min.js" integrity="sha512-/mL9Gs6E5Bz6NtPOr9eY&#43;T8IIdJbo2JL3TudApzFFelwBXEc3TeFLU6kPq122TJROv7jkktuBRkz5h8vGzrsyA==" crossorigin="anonymous"></script>
+    </body>
+</html>

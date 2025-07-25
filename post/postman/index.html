@@ -152,7 +152,7 @@
             
         </ul>
 
-        <div class="by">by HZW <b>·</b> 2024</div>
+        <div class="by">by HZW <b>·</b> 2025</div>
     </div>
 </div>
             <div class="content">
@@ -164,7 +164,7 @@
             <div class="post-header">
     <div style="padding-top: 10px;">
         <i class="far fa-calendar"></i><span class="date">May 6, 2024</span>
-        <i class="far fa-clock"></i><span class="reading-time">One minute</span>
+        <i class="far fa-clock"></i><span class="reading-time">2 minutes</span>
         
 
 
@@ -173,10 +173,10 @@
         
     </div>
     <div class="post-content">
-        <p>This article is my note for postman.</p>
-<h2 id="tips">TIPS</h2>
-<p><a href="https://www.cnblogs.com/yoyoketang/p/14734330.html">学习1</a></p>
-<p><a href="/">学习2</a></p>
+        <h2 id="tips">TIPS</h2>
+<p><a href="https://www.postman.com/">官网</a></p>
+<p><a href="https://www.cnblogs.com/yoyoketang/p/14734330.html">学习1</a>   已至6</p>
+<p><a href="https://blog.csdn.net/u013613428/article/details/51557804">学习2</a></p>
 <h2 id="介绍">介绍</h2>
 <p>Postman是一个<strong>接口测试</strong>工具，用于测试http协议接口。</p>
 <p>在做接口测试的时候，Postman相当于一个客户端，它可以<strong>模拟用户发起的各类HTTP请求</strong>，将请求数据发送数据发送至服务端，获取对应的响应结果，从而验证响应中的结果数据是否和预期值相匹配；并确保开发人员能够及时处理接口中的bug，进而保证产品上线之后的稳定性和安全性。 它主要是用来模拟各种HTTP请求的（如:get/post/delete/put..等等），Postman与浏览器的区别在于<strong>有的浏览器不能输出Json</strong>格式，而Postman<strong>更直观</strong>接口返回的结果。</p>
@@ -190,6 +190,213 @@
 <li>Postman for windows X86 <a href="https://dl.pstmn.io/download/latest/win32">https://dl.pstmn.io/download/latest/win32</a></li>
 <li>Postman for linux <a href="https://dl.pstmn.io/download/latest/linux64">https://dl.pstmn.io/download/latest/linux64</a></li>
 </ul>
+<h2 id="发送get请求">发送GET请求</h2>
+<h3 id="测试接口获取今日天气">测试接口（获取今日天气）</h3>
+<p><a href="http://www.k780.com/api/weather.today">详细说明</a></p>
+<p><a href="http://api.k780.com:88/?app=weather.today&weaid=101020100&appkey=10003&sign=b59bc3ef6191eb9f747dd4e83c99f2a4&format=json">请求示例(json)</a></p>
+<p><strong>请求参数说明</strong></p>
+<p><code>app</code> 是获取哪天的数据，<code>weather.today</code>是获取今天的，<code>weather.future</code>获取未来五天的</p>
+<p><code>wedid</code> 是城市气象编号，与中国天气网编号一致，如上海：101020100</p>
+<p><code>key</code>和<code>sign</code>是身份验证，注册一个可以换成自己的，上例中的10003是公众帐号，</p>
+<p><code>format</code>是返回格式，支持 json，xml</p>
+<blockquote>
+<p>除了<strong>format</strong>不是必须的以外，其他参数都是必须提供的。</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span># 作者-上海悠悠 QQ交流群:<span style="color:#bd93f9">717225969</span>
+</span></span><span style="display:flex;"><span># blog地址 https:<span style="color:#6272a4">//www.cnblogs.com/yoyoketang/
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;success&#34;</span>: <span style="color:#f1fa8c">&#34;1&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;result&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;weaid&#34;</span>: <span style="color:#f1fa8c">&#34;36&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;days&#34;</span>: <span style="color:#f1fa8c">&#34;2021-05-06&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;week&#34;</span>: <span style="color:#f1fa8c">&#34;星期四&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;cityno&#34;</span>: <span style="color:#f1fa8c">&#34;shanghai&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;citynm&#34;</span>: <span style="color:#f1fa8c">&#34;上海&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;cityid&#34;</span>: <span style="color:#f1fa8c">&#34;101020100&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;temperature&#34;</span>: <span style="color:#f1fa8c">&#34;24℃/19℃&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;temperature_curr&#34;</span>: <span style="color:#f1fa8c">&#34;22℃&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;humidity&#34;</span>: <span style="color:#f1fa8c">&#34;31%&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;aqi&#34;</span>: <span style="color:#f1fa8c">&#34;57&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;weather&#34;</span>: <span style="color:#f1fa8c">&#34;小雨&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;weather_curr&#34;</span>: <span style="color:#f1fa8c">&#34;多云&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;weather_icon&#34;</span>: <span style="color:#f1fa8c">&#34;http://api.k780.com/upload/weather/d/1.gif&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;weather_icon1&#34;</span>: <span style="color:#f1fa8c">&#34;&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;wind&#34;</span>: <span style="color:#f1fa8c">&#34;东北风&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;winp&#34;</span>: <span style="color:#f1fa8c">&#34;1级&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;temp_high&#34;</span>: <span style="color:#f1fa8c">&#34;24&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;temp_low&#34;</span>: <span style="color:#f1fa8c">&#34;19&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;temp_curr&#34;</span>: <span style="color:#f1fa8c">&#34;22&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;humi_high&#34;</span>: <span style="color:#f1fa8c">&#34;0&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;humi_low&#34;</span>: <span style="color:#f1fa8c">&#34;0&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;weatid&#34;</span>: <span style="color:#f1fa8c">&#34;2&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;weatid1&#34;</span>: <span style="color:#f1fa8c">&#34;&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;windid&#34;</span>: <span style="color:#f1fa8c">&#34;1&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;winpid&#34;</span>: <span style="color:#f1fa8c">&#34;1&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;weather_iconid&#34;</span>: <span style="color:#f1fa8c">&#34;1&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="collection下添加-request-请求">Collection下添加 request 请求</h3>
+<p>点<code>左上角 New</code> -&gt; <code>添加 Collection</code></p>
+<p><code>Collection</code>是收集器，可以理解成一个测试项目，这个项目下添加需测试的接口</p>
+<p>1、添加<strong>收集器名称和描述</strong></p>
+<p>2、添加后，左侧该收集器的<code>...</code>中添加一个请求（<code>request</code>）</p>
+<p>3、添加需要测试的请求，保存到收集器里面</p>
+<p>这样就可以看到收集器下有一个<strong>GET</strong>请求</p>
+<h3 id="测试">测试</h3>
+<p>以测试天气接口为例：http://api.k780.com:88/?app=weather.today&amp;weaid=101020100&amp;appkey=10003&amp;sign=b59bc3ef6191eb9f747dd4e83c99f2a4&amp;format=json</p>
+<p>可以直接复制整个<strong>url</strong>地址到<strong>GET</strong>请求的地址栏中，会自动生成 <strong>QueryParams</strong> 键值对</p>
+<p>点<strong>send</strong>按钮，就可以看到<strong>response</strong>内容了</p>
+<h3 id="query-params">Query Params</h3>
+<p>Query Params参数有2种编辑方式，可以在表格填写键值对</p>
+<p>也可以在右边点击 <strong>Bulk Edit</strong> ，在其中写多个键值对，中间用冒号隔开，多个参数换行</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>app:weather.today
+</span></span><span style="display:flex;"><span>weaid:<span style="color:#bd93f9">101020100</span>
+</span></span><span style="display:flex;"><span>appkey:<span style="color:#bd93f9">10003</span>
+</span></span><span style="display:flex;"><span>sign:b<span style="color:#bd93f9">59</span>bc<span style="color:#bd93f9">3</span>ef<span style="color:#bd93f9">6191</span>eb<span style="color:#bd93f9">9</span>f<span style="color:#bd93f9">747</span>dd<span style="color:#bd93f9">4e83</span>c<span style="color:#bd93f9">99</span>f<span style="color:#bd93f9">2</span>a<span style="color:#bd93f9">4</span>
+</span></span><span style="display:flex;"><span>format:json
+</span></span><span style="display:flex;"><span># 作者-上海悠悠 QQ交流群:<span style="color:#bd93f9">717225969</span>
+</span></span><span style="display:flex;"><span># blog地址 https:<span style="color:#6272a4">//www.cnblogs.com/yoyoketang/
+</span></span></span></code></pre></div><h2 id="发送post请求">发送POST请求</h2>
+<p>使用 postman 发送 http 协议 post 请求，两种请求参数类型<code>application/json</code> 和 <code>application/x-www-from-urlencode</code></p>
+<h3 id="applicationjson">application/json</h3>
+<p>请求参数是json格式，这种是最常见的，以登录接口为例</p>
+<p>接口名称：用户账户登录</p>
+<p>接口地址: /api/v1/login</p>
+<p>请求方式: POST</p>
+<p>请求参数：<img alt="img1" src="https://img2020.cnblogs.com/blog/1070438/202105/1070438-20210506184140519-1981637071.png"></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span># 作者-上海悠悠 QQ交流群:717225969
+</span></span><span style="display:flex;"><span># blog地址 https://www.cnblogs.com/yoyoketang/
+</span></span><span style="display:flex;"><span>POST http://localhost:8201/api/v1/login HTTP/1.1
+</span></span><span style="display:flex;"><span>Content-Type: application/json;charset=utf-8
+</span></span><span style="display:flex;"><span>User-Agent: PostmanRuntime/7.26.8
+</span></span><span style="display:flex;"><span>Accept: */*
+</span></span><span style="display:flex;"><span>Accept-Encoding: gzip, deflate, br
+</span></span><span style="display:flex;"><span>Connection: keep-alive
+</span></span><span style="display:flex;"><span>Content-Length: 43
+</span></span><span style="display:flex;"><span>Content-Type: application/json
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    &#34;username&#34;: &#34;test&#34;,
+</span></span><span style="display:flex;"><span>    &#34;password&#34;: &#34;123456&#34;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="测试-1">测试</h4>
+<p>1、同样创建一个请求</p>
+<p>2、更改GET为POST，设置输入地址</p>
+<p>3、请求中 <strong>body</strong> 选 <strong>raw</strong>，<strong>text</strong>选择 <code>application/json</code> 类型</p>
+<p>4、输入<strong>json</strong>格式的请求参数</p>
+<p>5、请求头部参数<code>Content-Type: application/json</code></p>
+<p>​	在前面一步<strong>raw</strong>选择<code>application/json</code>类型类型后，会自动添加一个请求头部参数</p>
+<p>6、点 <strong>send</strong> 按钮就可以发送成功了</p>
+<p>7、如果测试没问题，点下<strong>save</strong>按钮，这样左侧的图标就会变成<strong>post</strong>，会保存前面的请求数据</p>
+<h3 id="applicationx-www-from-urlencoded">application/x-www-from-urlencoded</h3>
+<p>如果请求参数是 <code>application/x-www-from-urlencoded</code> 格式， 如：<code>username=test&amp;password=123456</code></p>
+<p>请求示例</p>
+<pre tabindex="0"><code>POST http://localhost:8201/api/v4/login/ HTTP/1.1
+Host: 49.235.92.12:7005
+User-Agent: python-requests/2.22.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 29
+Content-Type: application/x-www-form-urlencoded
+
+username=test&amp;password=123456
+</code></pre><h4 id="测试-2">测试</h4>
+<p>1、postman 上新增一个登陆2的接口请求， <strong>body</strong>可以直接选择：<code>x-www-form-urlencoded</code></p>
+<p>2、这个时候头部会自动生成一个请求参数<code>Content-Type: application/x-www-form-urlencoded</code></p>
+<p>3、body部分在表格写<strong>key-value</strong>格式的参数</p>
+<p>4、后续同上</p>
+<h2 id="全局global变量和环境environment变量">全局(Global)变量和环境(Environment)变量</h2>
+<p>当接口请求中有多个地方用到同一个值时，可以设置变量，在脚本中引用变量。</p>
+<p>postman 可以设置全局变量和环境变量，这样只需要改一个地方，其它脚本引用变量都会生效。</p>
+<p>例如，如果多个请求中具有相同的<code>base_url</code>，但是<code>base_url</code>可能会更改，则可以将其存储在变量中。如果<code>base_url</code>更改，则只需要更改变量值，无论使用变量名称的位置如何，它都会在整个集合中反映出来。相同的原则适用于您的请求中重复数据的任何部分。</p>
+<h3 id="postman-支持的变量的作用范围">postman 支持的变量的作用范围</h3>
+<ul>
+<li>Global 全局变量使您可以访问集合，请求，测试脚本和环境之间的数据。全局变量在整个工作空间中都可用。</li>
+<li>Collection 集合变量可在集合中的整个请求中使用，并且独立于环境，因此请不要根据所选环境进行更改。</li>
+<li>Environment 环境变量使您可以针对不同的环境定制处理，例如本地开发与测试或生产</li>
+<li>Data 数据变量来自外部CSV和JSON文件，以定义在通过Newman或Collection Runner运行集合时可以使用的数据集</li>
+<li>Local 局部变量是临时的，只能在您的请求脚本中访问。局部变量值的范围仅限于单个请求或收集运行，并且在运行完成后不再可用。</li>
+</ul>
+<p><img alt="img2" src="https://img2020.cnblogs.com/blog/1070438/202105/1070438-20210506203548639-673805687.png"></p>
+<p>变量的作用范围如下所示</p>
+<p><img alt="img3" src="https://img2020.cnblogs.com/blog/1070438/202105/1070438-20210506203619391-397982104.png"></p>
+<h3 id="设置为变量variable">设置为变量(variable)</h3>
+<p>如果我们要把部分值设置为变量，可以先选中这部分内容，这时会弹出<code>Set as variable</code>选项</p>
+<p>接下来会有一个弹窗，可以来设置<strong>变量名</strong>和<strong>作用域</strong></p>
+<p>设置完后，选中部分会自动变为<code>{{base_url}}</code>引用变量的值</p>
+<h3 id="查看和编辑变量">查看和编辑变量</h3>
+<p>在右上角点开“眼睛”按钮，会弹出不同作用域的变量列表</p>
+<p>在每个作用域的右上角有<code>Add</code>或者<code>Edit</code>，可以编辑变量</p>
+<h3 id="环境变量environment">环境变量(Environment)</h3>
+<p>当我们有多套测试环境的时候，比如有开发环境，测试环境，联调环境，预发布环境等，每套环境的测试数据不一样，至少base_url地址是不一样的。</p>
+<p>在运行的时候可以选择不同的环境运行，默认是：<code>No Environment</code></p>
+<p><code>左上角New</code> -&gt; <code>Environment</code>  可以新建环境</p>
+<p>此时可以设置环境名称和变量</p>
+<h2 id="集合变量collection-variables的使用">集合变量(collection variables)的使用</h2>
+<p>当使用多个集合(collection) 的时候，每个集合也可以分别定义不同的集合变量。一个集合可以看成一个小的项目，不同集合定义不同变量是很有必要的。</p>
+<p>对收集器编辑时，会有<strong>变量variable</strong>这一栏，在其中可以设置集合变量。</p>
+<h2 id="test脚本中自定义变量参数关联-提取-token-和引用-token-">Test脚本中自定义变量(参数关联 提取 token 和引用 token )</h2>
+<h3 id="查询个人信息接口">查询个人信息接口</h3>
+<p>需用户先登录，返回token</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;code&#34;</span>: <span style="color:#bd93f9">0</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;msg&#34;</span>: <span style="color:#f1fa8c">&#34;login success!&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;username&#34;</span>: <span style="color:#f1fa8c">&#34;test&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;token&#34;</span>: <span style="color:#f1fa8c">&#34;ce5087209dd8abca2e93e8457252056243c0aded&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>查询个人信息接口请求示例</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>GET http://localhost:8201/api/v1/userinfo HTTP/1.1
+</span></span><span style="display:flex;"><span>Content-Length: <span style="color:#bd93f9">0</span>
+</span></span><span style="display:flex;"><span>Authorization: Token 2439b83901810851e273b494c29df357cbe2ed92
+</span></span></code></pre></div><h3 id="tests-脚本中自定义变量">Tests 脚本中自定义变量</h3>
+<p>打开登录接口，在 Tests 区域写 javascript 脚本解析返回的response对象，从json里面提取token并设置为环境变量</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#6272a4">// reponse解析json</span>
+</span></span><span style="display:flex;"><span>jsonData = pm.response.json();
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">// 设置为环境变量</span>
+</span></span><span style="display:flex;"><span>pm.environment.<span style="color:#ff79c6">set</span>(<span style="color:#f1fa8c">&#34;token&#34;</span>, jsonData.token);
+</span></span></code></pre></div><p>运行后点开眼睛按钮，会发现环境变量里面新增一个token的变量</p>
+<h4 id="引用变量">引用变量</h4>
+<p>引用变量： <code>{{token}}</code></p>
+<p>先执行登录接口后获取到token，再执行查询接口就可以查询成功了</p>
+<h4 id="其它变量设置">其它变量设置</h4>
+<p>使用<code>pm.globals</code>来定义一个全局变量：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>pm<span style="color:#ff79c6">.</span>globals<span style="color:#ff79c6">.</span>set(<span style="color:#f1fa8c">&#34;variable_key&#34;</span>, <span style="color:#f1fa8c">&#34;variable_value&#34;</span>);
+</span></span></code></pre></div><p>使用<code>pm.collectionVariables</code>定义集合变量：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>pm.collectionVariables.<span style="color:#ff79c6">set</span>(<span style="color:#f1fa8c">&#34;variable_key&#34;</span>, <span style="color:#f1fa8c">&#34;variable_value&#34;</span>);
+</span></span></code></pre></div><p>使用<code>pm.environment</code>定义的环境变量（在当前选择的环境）：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>pm.environment.<span style="color:#ff79c6">set</span>(<span style="color:#f1fa8c">&#34;variable_key&#34;</span>, <span style="color:#f1fa8c">&#34;variable_value&#34;</span>);
+</span></span></code></pre></div><p>可以<code>unset</code>用来删除变量：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span>pm<span style="color:#ff79c6">.</span>environment<span style="color:#ff79c6">.</span>unset(<span style="color:#f1fa8c">&#34;variable_key&#34;</span>);
+</span></span></code></pre></div><p>部变量是您使用以下语法在请求脚本中设置的临时值：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>pm.variables.<span style="color:#ff79c6">set</span>(<span style="color:#f1fa8c">&#34;variable_key&#34;</span>, <span style="color:#f1fa8c">&#34;variable_value&#34;</span>);
+</span></span></code></pre></div><p>局部变量不会在会话之间持久存在，但是允许您在执行请求或收集/监视运行期间临时覆盖所有其他作用域。
+例如，如果您需要为本地运行的单个请求或集合处理临时测试值，并且不希望该值与您的团队同步或在请求/集合完成运行后仍然可用，则可以使用局部变量。</p>
+<h4 id="在脚本中使用变量">在脚本中使用变量</h4>
+<p>可以使用表示范围级别和<code>.get</code>方法的对象在脚本中检索变量的当前值：</p>
+<pre tabindex="0"><code># 作者-上海悠悠 QQ交流群:717225969
+# blog地址 https://www.cnblogs.com/yoyoketang/
+
+//access a variable at any scope including local
+pm.variables.get(&#34;variable_key&#34;);
+//access a global variable
+pm.globals.get(&#34;variable_key&#34;);
+//access a collection variable
+pm.collectionVariables.get(&#34;variable_key&#34;);
+//access an environment variable
+pm.environment.get(&#34;variable_key&#34;);
+</code></pre><p>使用<code>pm.variables.get()</code>在脚本中访问变量提供更改变量的作用域，而不会影响你的脚本功能的选项。此方法将返回当前优先级最高（或范围最窄）的任何变量。</p>
+<h4 id="访问变量">访问变量</h4>
+<p>您可以在Postman用户界面中使用双花括号来引用变量。例如，要在请求身份验证设置中引用名为“用户名”的变量，可以使用以下语法，在名称周围使用双花括号：</p>
+<pre tabindex="0"><code>{{username}}
+</code></pre><p>运行请求时，邮递员将解析该变量并将其替换为其当前值。例如，您可能有一个请求URL引用一个变量，如下所示：</p>
+<pre tabindex="0"><code>http://pricey-trilby.glitch.me/customer?id={{cust_id}}
+</code></pre><p>cust_id请求运行时，邮递员将发送您当前为该变量存储的任何值。如果cust_id当前为3，则请求将被发送到以下包含查询参数的URL：</p>
+<pre tabindex="0"><code>http://pricey-trilby.glitch.me/customer?id=3
+</code></pre><p>或者，您可以具有一个请求body，该请求body通过将变量的引用括在双引号中来访问变量：</p>
+<pre tabindex="0"><code>{ &#34;customer_id&#34; : &#34;{{cust_id}}&#34; }
+</code></pre><p>您可以在请求URL，参数，标头，授权，正文和标头预设中使用变量。</p>
+
     </div>
     <div class="post-footer">
         <div class="info">

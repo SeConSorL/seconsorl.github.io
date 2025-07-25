@@ -151,7 +151,7 @@
             
         </ul>
 
-        <div class="by">by HZW <b>·</b> 2024</div>
+        <div class="by">by HZW <b>·</b> 2025</div>
     </div>
 </div>
             <div class="content">
@@ -162,7 +162,7 @@
             
             <div class="post-text grow">
                 <div class="post-title">
-                    <h5><a href=/post/%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86/>数字信号处理</a></h5>
+                    <h5><a href=/post/rag/>RAG</a></h5>
                 </div>
                 <div class="post-header">
     <div style="padding-top: 10px;">
@@ -177,7 +177,201 @@
                     <div class="p_part">
                         
                         
-                            <p>数字信号处理 </p>
+                            <p>TIPS https://zhuanlan.zhihu.com/p/28524880040
+一、RAG核心技术架构与组件交互 1. 三阶段核心流程原理 预处理阶段
+文档解析：HTML/PDF解析中的XPath定位与表格抽取技术（如PyPDFLoader对扫描件的OCR补偿） 分块策略：递归字符分割（RecursiveCharacterTextSplitter）与语义分割（SpacyTextSplitter）的对比，滑动窗口重叠率对信息完整性的影响 向量编码：密集编码（BERT/BGE）与稀疏编码（BM25）的联合使用，通过RoBERTa-Large实现768维语义嵌入 检索阶段
+混合检索引擎：向量检索（Faiss的HNSW索引）+ 倒排索引（Elasticsearch）的级联召回，召回率与响应速度的平衡 重排序机制：Cross-Encoder模型（如MiniLM-L12）对Top100结果进行相关性评分，解决语义漂移问题 生成阶段
+上下文注入：动态上下文窗口技术（如LongLoRA适配），支持10k tokens以上长文本注入 注意力融合：检索片段与原始Prompt在Transformer层的交叉注意力权重分配 2. 进阶架构演进 Naive RAG → Advanced RAG
+索引优化：多粒度分块（段落/句子）与多模态索引（图像OCR文本+结构化表格） 检索增强：查询扩展（Query Rewriting）与HyDE（假设性文档嵌入）技术 Agentic RAG架构
+智能体决策：Toolformer框架下的多工具路由（知识库检索 → 计算器 → API调用） 自修正流程：输出结果通过T5模型进行事实性校验与迭代修正 二、关键组件技术实现细节 1. 检索器模块 双塔模型架构：
+查询编码器（Query Encoder）使用ELECTRA-small，文档编码器（Doc Encoder）使用Contriever 负采样策略：Batch Negative Sampling与Hard Negative Mining对效果的影响 近似最近邻（ANN）算法：
+HNSW图索引：构建参数efConstruction=200，搜索参数ef=100时的召回率/时延曲线 IVFPQ量化：256个粗聚类中心 + 8bit子量化器，压缩比达64倍时的精度损失分析 2. 生成器模块 模型选型策略：
+7B级模型：Qwen-7B在RAG任务中通过LoRA微调的显存占用（18GB vs 原生24GB） 长上下文支持：YaRN插值算法在Llama2-13B上的4096→8192 tokens扩展 提示工程优化：
+结构化指令： 检索内容开始
+{检索结果1}
+检索内容结束
+请根据以上信息回答：{用户问题}，若信息不足请明确说明
+幻觉抑制：Self-Check机制强制输出中每项事实标注来源文档ID 3. 评估体系设计 检索质量指标：
+MRR@10（Mean Reciprocal Rank）与Recall@50的工程验收标准
+生成质量指标：
+Factual Score（基于NLI模型的事实一致性评分）与BLEU-4的联合评估
+端到端测试集：
+构建200个对抗性样本（如歧义查询、矛盾文档）的压力测试方法
+三、工程实践中的组件搭配策略 1. 中小规模场景 组件组合：BGE-M3嵌入模型 + FAISS索引 + GPT-3.5-Turbo生成器 性能表现：500GB文档库下平均响应时间1.8s，GPU消耗8GB 2. 企业级部署方案 混合检索架构：
+A用户查询 &ndash;&gt; B{Query类型判断}
+B &ndash;&gt;关键词明确 C Elasticsearch倒排索引
+B &ndash;&gt;语义模糊 D CLIP向量检索</p>
+                        
+                    </div>
+                </div>
+                <div class="post-footer">
+                    <div class="meta">
+                        <div class="info">
+                            
+                            
+                            
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        
+        <div class="post summary">
+            
+            <div class="post-text grow">
+                <div class="post-title">
+                    <h5><a href=/post/raid/>RAID</a></h5>
+                </div>
+                <div class="post-header">
+    <div style="padding-top: 10px;">
+        <i class="far fa-calendar"></i><span class="date">May 6, 2024</span>
+        <i class="far fa-clock"></i><span class="reading-time">8 minutes</span>
+        
+
+
+    </div>
+</div>
+                <div class="post-content">
+                    <div class="p_part">
+                        
+                        
+                            <p>转载至CSDN，方便初学者理解
+一、RAID 概述 1988 年美国加州大学伯克利分校的 D. A. Patterson 教授等首次在论文 “A Case of Redundant Array of Inexpensive Disks” 中提出了 RAID 概念 ，即廉价冗余磁盘阵列（ Redundant Array of Inexpensive Disks ）。由于当时大容量磁盘比较昂贵， RAID 的基本思想是将多个容量较小、相对廉价的磁盘进行有机组合，从而以较低的成本获得与昂贵大容量磁盘相当的容量、性能、可靠性。
+随着磁盘成本和价格的不断降低， RAID 可以使用大部分的磁盘， “廉价” 已经毫无意义。因此， RAID 咨询委员会（ RAID Advisory Board, RAB ）决定用 “ 独立 ” 替代 “ 廉价 ” ，于时 RAID 变成了独立磁盘冗余阵列（ Redundant Array of Independent Disks ）。但这仅仅是名称的变化，实质内容没有改变。
+RAID 这种设计思想很快被业界接纳， RAID 技术作为高性能、高可靠的存储技术，已经得到了非常广泛的应用。 RAID 主要利用数据条带、镜像和数据校验技术来获取高性能、可靠性、容错能力和扩展性，根据运用或组合运用这三种技术的策略和架构，可以把 RAID 分为不同的等级，以满足不同数据应用的需求。 D. A. Patterson 等的论文中定义了 RAID1 ~ RAID5 原始 RAID 等级， 1988 年以来又扩展了 RAID0 和 RAID6 。
+近年来，存储厂商不断推出诸如 RAID7 、 RAID10/01 、 RAID50 、 RAID53 、 RAID100 等 RAID 等级，但这些并无统一的标准。目前业界公认的标准是 RAID0 ~ RAID5 ，除 RAID2 外的四个等级被定为工业标准，而在实际应用领域中使用最多的 RAID 等级是 RAID0 、 RAID1 、 RAID3 、 RAID5 、 RAID6 和 RAID10。</p>
+                        
+                    </div>
+                </div>
+                <div class="post-footer">
+                    <div class="meta">
+                        <div class="info">
+                            
+                            
+                            
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        
+        <div class="post summary">
+            
+            <div class="post-text grow">
+                <div class="post-title">
+                    <h5><a href=/post/shell/>Shell</a></h5>
+                </div>
+                <div class="post-header">
+    <div style="padding-top: 10px;">
+        <i class="far fa-calendar"></i><span class="date">May 6, 2024</span>
+        <i class="far fa-clock"></i><span class="reading-time">9 minutes</span>
+        
+
+
+    </div>
+</div>
+                <div class="post-content">
+                    <div class="p_part">
+                        
+                        
+                            <p>TIPS 在线编辑器
+菜鸟教程
+介绍 Shell 是一个用 C 语言编写的程序，它是用户使用 Linux 的桥梁。Shell 既是一种命令语言，又是一种程序设计语言。
+Ken Thompson 的 sh 是第一种 Unix Shell，Windows Explorer 是一个典型的图形界面 Shell。
+Shell 脚本 Shell 脚本（shell script），是一种为 shell 编写的脚本程序。
+业界所说的 shell 通常都是指 shell 脚本，但读者朋友要知道，shell 和 shell script 是两个不同的概念。
+由于习惯的原因，简洁起见，本文出现的 &ldquo;shell编程&rdquo; 都是指 shell 脚本编程，不是指开发 shell 自身。
+Shell 环境 Shell 编程跟 JavaScript、php 编程一样，只要有一个能编写代码的文本编辑器和一个能解释执行的脚本解释器就可以了。
+Linux 的 Shell 种类众多，常见的有：
+Bourne Shell（/usr/bin/sh或/bin/sh） Bourne Again Shell（/bin/bash） C Shell（/usr/bin/csh） Bourne Again Shell（Bash），由于易用和免费，Bash 在日常工作中被广泛使用。同时，Bash 也是大多数Linux 系统默认的 Shell。
+Shell调用形式 打开终端时系统自动调用：/etc/profile 或 ~/.bashrc
+/etc/profile 此文件为系统的每个用户设置环境信息，当用户第一次登录时，该文件被执行，系统的公共环境变量在这里设置开机自启动的程序，一般也在这里设置。
+~/.bashrc 用户自己的home目录中的.bashrc 登录时会自动调用，打开任意终端时也会自动调用这个文件一般设置与个人用户有关的环境变量，如交叉编译器的路径等。
+运行 指定解析器时候，会创建一个子shell解析脚本
+作为可执行程序 将代码保存为 test.sh，并 cd 到相应目录：
+chmod +x ./test.sh #使脚本具有执行权限 ./test.sh #执行脚本 按照文件中#!指定的解析器解析 注意，一定要写成 ./test.sh，而不是 test.sh，运行其它二进制的程序也一样，直接写 test.sh，linux 系统会去 PATH 里寻找有没有叫 test.sh 的，而只有 /bin, /sbin, /usr/bin，/usr/sbin 等在 PATH 里，你的当前目录通常不在 PATH 里，所以写成 test.</p>
+                        
+                    </div>
+                </div>
+                <div class="post-footer">
+                    <div class="meta">
+                        <div class="info">
+                            
+                            
+                            
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        
+        <div class="post summary">
+            
+            <div class="post-text grow">
+                <div class="post-title">
+                    <h5><a href=/post/shor%E7%AE%97%E6%B3%95/>Shor</a></h5>
+                </div>
+                <div class="post-header">
+    <div style="padding-top: 10px;">
+        <i class="far fa-calendar"></i><span class="date">May 6, 2024</span>
+        <i class="far fa-clock"></i><span class="reading-time">One minute</span>
+        
+
+
+    </div>
+</div>
+                <div class="post-content">
+                    <div class="p_part">
+                        
+                        
+                            <p>非平凡因子 </p>
+                        
+                    </div>
+                </div>
+                <div class="post-footer">
+                    <div class="meta">
+                        <div class="info">
+                            
+                            
+                            
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        
+        <div class="post summary">
+            
+            <div class="post-text grow">
+                <div class="post-title">
+                    <h5><a href=/post/tomcat/>tomcat</a></h5>
+                </div>
+                <div class="post-header">
+    <div style="padding-top: 10px;">
+        <i class="far fa-calendar"></i><span class="date">May 6, 2024</span>
+        <i class="far fa-clock"></i><span class="reading-time">0 minutes</span>
+        
+
+
+    </div>
+</div>
+                <div class="post-content">
+                    <div class="p_part">
+                        
+                        
+                            <p></p>
                         
                     </div>
                 </div>
@@ -206,12 +400,6 @@
         <a href="/page/6/" aria-label="Previous" class="page-link" role="button"><span aria-hidden="true">&laquo;</span></a>
       </li>
       <li class="page-item">
-        <a href="/page/3/" aria-label="Page 3" class="page-link" role="button">3</a>
-      </li>
-      <li class="page-item">
-        <a href="/page/4/" aria-label="Page 4" class="page-link" role="button">4</a>
-      </li>
-      <li class="page-item">
         <a href="/page/5/" aria-label="Page 5" class="page-link" role="button">5</a>
       </li>
       <li class="page-item">
@@ -220,11 +408,17 @@
       <li class="page-item active">
         <a aria-current="page" aria-label="Page 7" class="page-link" role="button">7</a>
       </li>
-      <li class="page-item disabled">
-        <a aria-disabled="true" aria-label="Next" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&raquo;</span></a>
+      <li class="page-item">
+        <a href="/page/8/" aria-label="Page 8" class="page-link" role="button">8</a>
       </li>
-      <li class="page-item disabled">
-        <a aria-disabled="true" aria-label="Last" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&raquo;&raquo;</span></a>
+      <li class="page-item">
+        <a href="/page/9/" aria-label="Page 9" class="page-link" role="button">9</a>
+      </li>
+      <li class="page-item">
+        <a href="/page/8/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/page/10/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
       </li>
     </ul>
         </div>

@@ -15,7 +15,7 @@
       <link>https://seconsorl.github.io/post/hugo/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
       <guid>https://seconsorl.github.io/post/hugo/</guid>
-      <description>&lt;p&gt;This article is my note for HuGo.&lt;/p&gt;</description>
+      <description>TIPS 中文文档&#xA;英文文档&#xA;Hugo的使用&#xA;实战&#xA;https://zhuanlan.zhihu.com/p/396669087&#xA;部署到github&#xA;部署到云服务器&#xA;目录解释&#xA;优点 静态文件安全、备份方便&#xA;WordPress（运行在php上的）的缺点：&#xA;备份：不断备份数据库。&#xA;插件：实现功能需要不同插件，不断升级。&#xA;升级：不断升级来确定安全性。&#xA;Markdown文件管理及方便&#xA;纯文本&#xA;格式统一&#xA;Windows下载方便，单文件的&#xA;其他的同类jekyll、HEXO 已知缺点 要确认申请的主机是否支持中文语言（URL） 安装 到 Hugo Releases 下载对应的操作系统版本的Hugo二进制文件&#xA;首先安装好依赖的工具：&#xA;Git Mercurial Go 1.3+ (Go 1.4+ on Windows) 设置好 GOPATH 环境变量，获取源码并编译：&#xA;$ export GOPATH=$HOME/go $ go get -v github.com/spf13/hugo 源码会下载到 $GOPATH/src 目录，二进制在 $GOPATH/bin/&#xA;如果需要更新所有Hugo的依赖库，增加 -u 参数：&#xA;$ go get -u -v github.com/spf13/hugo 生成站点 使用Hugo快速生成站点，比如希望生成到 /path/to/site 路径：&#xA;$ hugo new site /path/to/site 在 /path/to/site 目录里生成了初始站点，站点目录结构：&#xA;▸ archetypes/ ▸ content/ ▸ layouts/ ▸ static/ config.toml 接下来需要完成以下几步：&#xA;Change the current directory to G:\HuGo\hugo\HZW.&#xA;（切换路径到站点目录下）&#xA;Create or install a theme:&#xA;Create a new theme with the command &amp;ldquo;hugo new theme &amp;rdquo; Install a theme from https://themes.</description>
     </item>
   </channel>
 </rss>

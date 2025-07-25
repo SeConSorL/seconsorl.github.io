@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DeepLearning on My Blog</title>
+    <link>https://seconsorl.github.io/tags/deeplearning/</link>
+    <description>Recent content in DeepLearning on My Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>216002917@nbu.edu.cn (HZW)</managingEditor>
+    <webMaster>216002917@nbu.edu.cn (HZW)</webMaster>
+    <lastBuildDate>Mon, 06 May 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://seconsorl.github.io/tags/deeplearning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DeepLearning</title>
+      <link>https://seconsorl.github.io/post/deeplearning/</link>
+      <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
+      <guid>https://seconsorl.github.io/post/deeplearning/</guid>
+      <description>TIPS 机器学习模型训练的步骤：&#xA;1、数据模块（数据采集，清洗，处理等） 2、建立模型（各种模型的建立） 3、损失函数的选择（根据不同的任务选择不同的损失函数），有了loss就可以求取梯度 4、得到梯度之后，我们会选择某种优化方式去进行优化 5、然后迭代训练 线性回归 介绍 线性回归是分析一个变量与另外一(多)个变量之间关系的方法。因变量是$y$，自变量是$x$，关系线性 $$ y=w\times x +b $$ 任务就是求解$w$，$b$。&#xA;求解步骤： 确定模型&#xA;选择损失函数：这里用MSE $$ \frac{1}{m} \sum_{i=1}^{m}(y_i-\hat{y_i}) $$&#xA;求解梯度并更新$w$，$b$ $$ w = w - LR \times w.grad \ b = b - LR \times w.grad $$&#xA;代码 # 首先我们得有训练样本X，Y， 这里我们随机生成 x = torch.rand(20, 1) * 10 y = 2 * x + (5 + torch.randn(20, 1)) # 构建线性回归函数的参数 w = torch.randn((1), requires_grad=True) b = torch.zeros((1), requires_grad=True) # 这俩都需要求梯度 for iteration in range(100): # 前向传播 wx = torch.mul(w, x) y_pred = torch.add(wx, b) # 计算loss loss = (0.5 * (y-y_pred)**2).mean() # 反向传播 loss.backward() # 更新参数 b.data.sub_(lr * b.</description>
+    </item>
+  </channel>
+</rss>

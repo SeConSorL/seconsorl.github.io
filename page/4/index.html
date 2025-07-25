@@ -151,7 +151,7 @@
             
         </ul>
 
-        <div class="by">by HZW <b>·</b> 2024</div>
+        <div class="by">by HZW <b>·</b> 2025</div>
     </div>
 </div>
             <div class="content">
@@ -160,14 +160,20 @@
         
         <div class="post summary">
             
+                <div class="thumbnail"  style="height: 250px;">
+                    <a href=/post/hugo/>
+                        <img src=https://seconsorl.github.io/images/hugo.png style="object-position: 50% 50%;" alt=Hugo title=Hugo loading="lazy">
+                    </a>
+                </div>
+            
             <div class="post-text grow">
                 <div class="post-title">
-                    <h5><a href=/post/nginx/>Nginx</a></h5>
+                    <h5><a href=/post/hugo/>HuGo</a></h5>
                 </div>
                 <div class="post-header">
     <div style="padding-top: 10px;">
         <i class="far fa-calendar"></i><span class="date">May 6, 2024</span>
-        <i class="far fa-clock"></i><span class="reading-time">4 minutes</span>
+        <i class="far fa-clock"></i><span class="reading-time">14 minutes</span>
         
 
 
@@ -177,7 +183,35 @@
                     <div class="p_part">
                         
                         
-                            <p><p>This article is my note for proxy.</p></p>
+                            <p>TIPS 中文文档
+英文文档
+Hugo的使用
+实战
+https://zhuanlan.zhihu.com/p/396669087
+部署到github
+部署到云服务器
+目录解释
+优点 静态文件安全、备份方便
+WordPress（运行在php上的）的缺点：
+备份：不断备份数据库。
+插件：实现功能需要不同插件，不断升级。
+升级：不断升级来确定安全性。
+Markdown文件管理及方便
+纯文本
+格式统一
+Windows下载方便，单文件的
+其他的同类jekyll、HEXO 已知缺点 要确认申请的主机是否支持中文语言（URL） 安装 到 Hugo Releases 下载对应的操作系统版本的Hugo二进制文件
+首先安装好依赖的工具：
+Git Mercurial Go 1.3+ (Go 1.4+ on Windows) 设置好 GOPATH 环境变量，获取源码并编译：
+$ export GOPATH=$HOME/go $ go get -v github.com/spf13/hugo 源码会下载到 $GOPATH/src 目录，二进制在 $GOPATH/bin/
+如果需要更新所有Hugo的依赖库，增加 -u 参数：
+$ go get -u -v github.com/spf13/hugo 生成站点 使用Hugo快速生成站点，比如希望生成到 /path/to/site 路径：
+$ hugo new site /path/to/site 在 /path/to/site 目录里生成了初始站点，站点目录结构：
+▸ archetypes/ ▸ content/ ▸ layouts/ ▸ static/ config.toml 接下来需要完成以下几步：
+Change the current directory to G:\HuGo\hugo\HZW.
+（切换路径到站点目录下）
+Create or install a theme:
+Create a new theme with the command &ldquo;hugo new theme &rdquo; Install a theme from https://themes.</p>
                         
                     </div>
                 </div>
@@ -185,7 +219,7 @@
                     <div class="meta">
                         <div class="info">
                             
-                            
+                            <a class="tag" href="/tags/%E5%8D%9A%E5%AE%A2/">博客</a>
                             
 
 
@@ -200,45 +234,7 @@
             
             <div class="post-text grow">
                 <div class="post-title">
-                    <h5><a href=/post/php/>PHP</a></h5>
-                </div>
-                <div class="post-header">
-    <div style="padding-top: 10px;">
-        <i class="far fa-calendar"></i><span class="date">May 6, 2024</span>
-        <i class="far fa-clock"></i><span class="reading-time">One minute</span>
-        
-
-
-    </div>
-</div>
-                <div class="post-content">
-                    <div class="p_part">
-                        
-                        
-                            <p><p>This article is my note for PHP.</p></p>
-                        
-                    </div>
-                </div>
-                <div class="post-footer">
-                    <div class="meta">
-                        <div class="info">
-                            
-                            
-                            
-
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-        
-        <div class="post summary">
-            
-            <div class="post-text grow">
-                <div class="post-title">
-                    <h5><a href=/post/postman/>postman</a></h5>
+                    <h5><a href=/post/%E6%AF%95%E6%98%87%E7%BC%96%E8%AF%91%E5%99%A8/>1111</a></h5>
                 </div>
                 <div class="post-header">
     <div style="padding-top: 10px;">
@@ -253,7 +249,7 @@
                     <div class="p_part">
                         
                         
-                            <p><p>This article is my note for postman.</p></p>
+                            <p>+++ hzw=123</p>
                         
                     </div>
                 </div>
@@ -276,7 +272,7 @@
             
             <div class="post-text grow">
                 <div class="post-title">
-                    <h5><a href=/post/qbittorrent%E5%92%8Cbtpt/>QBittorrent和BT、PT</a></h5>
+                    <h5><a href=/post/curl/>cURL</a></h5>
                 </div>
                 <div class="post-header">
     <div style="padding-top: 10px;">
@@ -291,7 +287,8 @@
                     <div class="p_part">
                         
                         
-                            <p><p>This article is my note for P2P.</p></p>
+                            <p>https://www.ruanyifeng.com/blog/2011/09/curl.html
+https://www.ruanyifeng.com/blog/2019/09/curl-reference.html</p>
                         
                     </div>
                 </div>
@@ -314,7 +311,45 @@
             
             <div class="post-text grow">
                 <div class="post-title">
-                    <h5><a href=/post/shell/>Shell</a></h5>
+                    <h5><a href=/post/deveco_manual/>DevEco</a></h5>
+                </div>
+                <div class="post-header">
+    <div style="padding-top: 10px;">
+        <i class="far fa-calendar"></i><span class="date">May 6, 2024</span>
+        <i class="far fa-clock"></i><span class="reading-time">0 minutes</span>
+        
+
+
+    </div>
+</div>
+                <div class="post-content">
+                    <div class="p_part">
+                        
+                        
+                            <p></p>
+                        
+                    </div>
+                </div>
+                <div class="post-footer">
+                    <div class="meta">
+                        <div class="info">
+                            
+                            
+                            
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        
+        <div class="post summary">
+            
+            <div class="post-text grow">
+                <div class="post-title">
+                    <h5><a href=/post/django%E8%AF%B4%E6%98%8E/>Django</a></h5>
                 </div>
                 <div class="post-header">
     <div style="padding-top: 10px;">
@@ -329,7 +364,10 @@
                     <div class="p_part">
                         
                         
-                            <p><p>This article is my note for Shell command.</p></p>
+                            <p>创建项目 django-admin startproject &#34;项目名称&#34; //结构如下 $ cd 项目名称/ $ tree . |-- 项目名称 | |-- __init__.py | |-- asgi.py | |-- settings.py | |-- urls.py | `-- wsgi.py `-- manage.py HelloWorld: 项目的容器。 manage.py: 一个实用的命令行工具，可让你以各种方式与该 Django 项目进行交互。 HelloWorld/init.py: 一个空文件，告诉 Python 该目录是一个 Python 包。 HelloWorld/asgi.py: 一个 ASGI 兼容的 Web 服务器的入口，以便运行你的项目。 HelloWorld/settings.py: 该 Django 项目的设置/配置。 HelloWorld/urls.py: 该 Django 项目的 URL 声明; 一份由 Django 驱动的网站&quot;目录&quot;。 HelloWorld/wsgi.py: 一个 WSGI 兼容的 Web 服务器的入口，以便运行你的项目。 启动服务器 python manage.py runserver 0.0.0.0:8000 --这句话需要在项目文件夹下执行 0.0.0.0 让其它电脑可连接到开发服务器，8000 为端口号。如果不说明，那么端口号默认为 8000。
+在浏览器输入你服务器的 ip（这里我们输入本机 IP 地址： 127.0.0.1:8000） 及端口号，如果正常启动，页面中间是一个小火箭
+可以manage.py里修改配置
+if __name__ == &#39;__main__&#39;: from django.core.management.commands.runserver import Command as Runserver Runserver.default_addr = &#39;127.0.0.1&#39; # 修改默认地址 Runserver.default_port = &#39;8080&#39; # 修改默认端口 main() urls.</p>
                         
                     </div>
                 </div>
@@ -376,7 +414,7 @@
         <a href="/page/5/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
       </li>
       <li class="page-item">
-        <a href="/page/7/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+        <a href="/page/10/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
       </li>
     </ul>
         </div>

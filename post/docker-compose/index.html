@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light"><head>
+    <title>docker compose · HZW</title>
+    <meta charset="utf-8">
+    
+    <meta name="generator" content="Hugo 0.124.1">
+    <meta property="og:title" content="docker compose" />
+<meta property="og:description" content="a note for learning docker compose" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://seconsorl.github.io/post/docker-compose/" /><meta property="og:image" content="https://seconsorl.github.io/images/profile.png" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2024-05-06T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-05-06T00:00:00+00:00" /><meta property="og:site_name" content="A junior from NBU" />
+
+
+
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="HZW">
+    
+    
+    
+    <link rel="stylesheet" type="text/css" href="https://seconsorl.github.io/css/style.min.565d8c479597aa43658922d4b31e286529a7525a22c9546fa1018fc5e5ef6d86.css" integrity="sha256-Vl2MR5WXqkNliSLUsx4oZSmnUloiyVRvoQGPxeXvbYY=" crossorigin="anonymous" type="text/css">
+
+    
+    
+    
+    <script type="text/javascript" src="https://seconsorl.github.io/js/heyo-header.min.a3fa728a9f57833a31dfb45c48caaf1e4890c8c97f07bd7133fc2359745edb5d.js" integrity="sha256-o/pyip9Xgzox37RcSMqvHkiQyMl/B71xM/wjWXRe210=" crossorigin="anonymous"></script>
+
+    
+    
+    <link rel="stylesheet" type="text/css" href="https://seconsorl.github.io/css/fonts.9398921f2d404983c2b7f9a68ddc72e3f5e58a3e38b0a8e4a70d75c12ebfb7c5.css" integrity="sha256-k5iSHy1ASYPCt/mmjdxy4/Xlij44sKjkpw11wS6/t8U=" crossorigin="anonymous">
+
+    
+    
+    
+    <script type="text/javascript" src="https://seconsorl.github.io/js/sidebar-toc.min.788b639e2ec681549740b90b3b865d5f9e1789e3ca9c06ccc45d65655434c954.js" integrity="sha256-eItjni7GgVSXQLkLO4ZdX54XiePKnAbMxF1lZVQ0yVQ=" crossorigin="anonymous"></script>
+
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-graph.26b92ed9317bdc6f35642d588bdf3283f40998846e01cf4bee22a126907fbf3b.js" integrity="sha256-Jrku2TF73G81ZC1Yi98yg/QJmIRuAc9L7iKhJpB/vzs=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-digitalRain.af8a7b5c4428cc62d5bf49bf2698d4112c2459ee0c22c1c753ab304aef69888a.js" integrity="sha256-r4p7XEQozGLVv0m/JpjUESwkWe4MIsHHU6swSu9piIo=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-circleBrushStrokes.fe8fc3ee52e1d90e9236be8c36a27711efa024beb4da304829f95dfbb61d6e84.js" integrity="sha256-/o/D7lLh2Q6SNr6MNqJ3Ee&#43;gJL602jBIKfld&#43;7YdboQ=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-meta.71b5202ea881c86ac19e4b55414656a5444204a4ba08ff7368a5aa99c0a60949.js" integrity="sha256-cbUgLqiByGrBnktVQUZWpURCBKS6CP9zaKWqmcCmCUk=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sidebar-sketch.min.2e95015880993ef9abcad62d111decea22406616931bce193254bf8af2339953.js" integrity="sha256-LpUBWICZPvmrytYtER3s6iJAZhaTG84ZMlS/ivIzmVM=" crossorigin="anonymous" defer></script>
+    
+    
+    
+    <link rel="shortcut icon" href="https://seconsorl.github.io/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://seconsorl.github.io/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://seconsorl.github.io/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://seconsorl.github.io/favicons/favicon-16x16.png">
+    <link rel="canonical" href="https://seconsorl.github.io/post/docker-compose/">
+    
+    
+    
+    
+    
+
+    
+    <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://seconsorl.github.io/images/profile.png" /><meta name="twitter:title" content="docker compose"/>
+<meta name="twitter:description" content="a note for learning docker compose"/>
+
+</head><body>
+        <div class="main">
+            <div class="page-top">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a  href="/"  title="">Home</a></li>
+        
+            
+            <li><a  href="/post/"  title="">Posts</a></li>
+        
+            
+            <li><a  href="/about/"  title="">About</a></li>
+        
+        <li class="grow"></li>
+        
+        <li>
+            <a class="theme-switch" title="Switch Theme">
+                <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+            <div class="sidebar" id="sidebar">
+    <div class="top-toc">
+        <img src="https://seconsorl.github.io/images/profile.png" alt="profile picture">
+        
+        <a href="/">A junior from NBU</a>
+    </div>
+    
+    <div class="middle-sidebar grow" id="middle-sidebar">
+        
+            
+            
+                
+            
+
+            
+        
+    </div>
+
+    <div class="footer">
+        <ul class="social-links">
+            
+            <li>
+                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://github.com/SeConSorL" target="_blank" rel="noopener noreferrer" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" rel="me" aria-label="instagram">
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+            <li>
+                <a href="mailto:216002917@nbu.edu.cn" target="_blank" rel="noopener noreferrer" rel="me" aria-label="e-mail">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+        </ul>
+
+        <div class="by">by HZW <b>·</b> 2025</div>
+    </div>
+</div>
+            <div class="content">
+<div class="post">
+    
+    <div class="thumbnail" style="box-shadow: var(--box-shadow); height: 350px;">
+        <img src=https://seconsorl.github.io/images/docker_compose.jpg style="object-position: 50% 100%;" title=docker_compose alt=docker_compose loading="lazy">
+    </div>
+    
+    <div class="post-title">
+        <h1>docker compose</h1>
+        
+            <div class="post-header">
+    <div style="padding-top: 10px;">
+        <i class="far fa-calendar"></i><span class="date">May 6, 2024</span>
+        <i class="far fa-clock"></i><span class="reading-time">5 minutes</span>
+        
+
+
+    </div>
+</div>
+        
+    </div>
+    <div class="post-content">
+        <h2 id="tips">TIPS</h2>
+<p><a href="https://www.runoob.com/docker/docker-compose.html">菜鸟教程</a></p>
+<p><a href="https://www.cnblogs.com/xyh9039/p/18540766">入门</a></p>
+<p><a href="https://blog.csdn.net/weixin_40483369/article/details/123224292">docker网络1</a></p>
+<p><a href="https://download.csdn.net/blog/column/9266246/125135620">docker网络2</a></p>
+<h2 id="介绍">介绍</h2>
+<p>Compose 是用于定义和运行多容器 Docker 应用程序的工具。通过 Compose，您可以使用 YML 文件来配置应用程序需要的所有服务。然后，使用一个命令，就可以从 YML 文件配置中创建并启动所有服务。</p>
+<p>YML 文件配置介绍 <a href="YAML">YAML</a>。</p>
+<p>Compose 使用的三个步骤：</p>
+<ul>
+<li>使用 Dockerfile 定义应用程序的环境。</li>
+<li>使用 docker-compose.yml 定义构成应用程序的服务，这样它们可以在隔离环境中一起运行。</li>
+<li>最后，执行 docker-compose up 命令来启动并运行整个应用程序。</li>
+</ul>
+<p>docker-compose.yml 的配置案例如下（配置参数参考下文）：</p>
+<p><strong>实例</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#6272a4"># yaml 配置实例</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">version</span>: <span style="color:#f1fa8c">&#39;3&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">services</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">web</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">build</span>: .
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">ports</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f1fa8c">&#34;5000:5000&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">volumes</span>:
+</span></span><span style="display:flex;"><span>      - .:/code
+</span></span><span style="display:flex;"><span>      - logvolume01:/var/log
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">links</span>:
+</span></span><span style="display:flex;"><span>      - redis
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">redis</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">image</span>: redis
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">volumes</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">logvolume01</span>: {}
+</span></span></code></pre></div><h2 id="安装">安装</h2>
+<p>Linux 上我们可以从 Github 上下载它的二进制包来使用，最新发行的版本地址：https://github.com/docker/compose/releases。</p>
+<p>运行以下命令以下载 Docker Compose 的当前稳定版本：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ sudo curl -L <span style="color:#f1fa8c">&#34;https://github.com/docker/compose/releases/download/v2.2.2/docker-compose-</span><span style="color:#ff79c6">$(</span>uname -s<span style="color:#ff79c6">)</span><span style="color:#f1fa8c">-</span><span style="color:#ff79c6">$(</span>uname -m<span style="color:#ff79c6">)</span><span style="color:#f1fa8c">&#34;</span> -o /usr/local/bin/docker-compose
+</span></span></code></pre></div><blockquote>
+<p>Docker Compose 存放在 GitHub，不太稳定。</p>
+<p>你可以也通过执行下面的命令，高速安装 Docker Compose。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>curl -L https://get.daocloud.io/docker/compose/releases/download/v2.4.1/docker-compose-<span style="color:#f1fa8c">`</span>uname -s<span style="color:#f1fa8c">`</span>-<span style="color:#f1fa8c">`</span>uname -m<span style="color:#f1fa8c">`</span> &gt; /usr/local/bin/docker-compose
+</span></span></code></pre></div></blockquote>
+<p>将可执行权限应用于二进制文件：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ sudo chmod +x /usr/local/bin/docker-compose
+</span></span></code></pre></div><p>创建软链：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+</span></span></code></pre></div><p>测试是否安装成功：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ docker-compose version
+</span></span></code></pre></div><p><strong>注意</strong>： 对于 alpine，需要以下依赖包： py-pip，python-dev，libffi-dev，openssl-dev，gcc，libc-dev，和 make。</p>
+<h2 id="使用">使用</h2>
+<h3 id="1准备">1、准备</h3>
+<p>创建一个测试目录：</p>
+<pre tabindex="0"><code>$ mkdir composetest
+$ cd composetest
+</code></pre><p>在测试目录中创建一个名为 app.py 的文件，并复制粘贴以下内容：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">import</span> time
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">import</span> redis
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">from</span> flask <span style="color:#ff79c6">import</span> Flask
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>app <span style="color:#ff79c6">=</span> Flask(__name__)
+</span></span><span style="display:flex;"><span>cache <span style="color:#ff79c6">=</span> redis<span style="color:#ff79c6">.</span>Redis(host<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#39;redis&#39;</span>, port<span style="color:#ff79c6">=</span><span style="color:#bd93f9">6379</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">get_hit_count</span>():
+</span></span><span style="display:flex;"><span>    retries <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">5</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">while</span> <span style="color:#ff79c6">True</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">try</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">return</span> cache<span style="color:#ff79c6">.</span>incr(<span style="color:#f1fa8c">&#39;hits&#39;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">except</span> redis<span style="color:#ff79c6">.</span>exceptions<span style="color:#ff79c6">.</span>ConnectionError <span style="color:#ff79c6">as</span> exc:
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">if</span> retries <span style="color:#ff79c6">==</span> <span style="color:#bd93f9">0</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#ff79c6">raise</span> exc
+</span></span><span style="display:flex;"><span>            retries <span style="color:#ff79c6">-=</span> <span style="color:#bd93f9">1</span>
+</span></span><span style="display:flex;"><span>            time<span style="color:#ff79c6">.</span>sleep(<span style="color:#bd93f9">0.5</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>@app.route(<span style="color:#f1fa8c">&#39;/&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">hello</span>():
+</span></span><span style="display:flex;"><span>    count <span style="color:#ff79c6">=</span> get_hit_count()
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> <span style="color:#f1fa8c">&#39;Hello World! I have been seen </span><span style="color:#f1fa8c">{}</span><span style="color:#f1fa8c"> times.</span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">&#39;</span><span style="color:#ff79c6">.</span>format(count)
+</span></span></code></pre></div><p>在此示例中，redis 是应用程序网络上的 redis 容器的主机名，该主机使用的端口为 6379。</p>
+<p>在 composetest 目录中创建另一个名为 <code>requirements.txt</code> 的文件，内容如下：</p>
+<pre tabindex="0"><code>flask
+redis
+</code></pre><h3 id="2创建-dockerfile-文件">2、创建 Dockerfile 文件</h3>
+<p>在 <code>composetest</code> 目录中，创建一个名为 <code>Dockerfile</code> 的文件，内容如下：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dockerfile" data-lang="dockerfile"><span style="display:flex;"><span><span style="color:#ff79c6">FROM</span><span style="color:#f1fa8c"> python:3.7-alpine</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">WORKDIR</span><span style="color:#f1fa8c"> /code</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">ENV</span> FLASK_APP app.py
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">ENV</span> FLASK_RUN_HOST 0.0.0.0
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">RUN</span> apk add --no-cache gcc musl-dev linux-headers
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">COPY</span> requirements.txt requirements.txt
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">RUN</span> pip install -r requirements.txt
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">COPY</span> . .
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">CMD</span> [<span style="color:#f1fa8c">&#34;flask&#34;</span>, <span style="color:#f1fa8c">&#34;run&#34;</span>]
+</span></span></code></pre></div><p><strong>Dockerfile 内容解释：</strong></p>
+<ul>
+<li>
+<p><code>FROM python:3.7-alpine</code>: 从 Python 3.7 映像开始构建镜像。</p>
+</li>
+<li>
+<p><code>WORKDIR /code</code>: 将工作目录设置为 <code>/code</code>。</p>
+</li>
+<li>
+<pre tabindex="0"><code>ENV FLASK_APP app.py
+ENV FLASK_RUN_HOST 0.0.0.0
+</code></pre><p>设置 flask 命令使用的环境变量。</p>
+</li>
+<li>
+<p><code>RUN apk add --no-cache gcc musl-dev linux-headers</code>: 安装 gcc，以便诸如 MarkupSafe 和 SQLAlchemy 之类的 Python 包可以编译加速。</p>
+</li>
+<li>
+<pre tabindex="0"><code>COPY requirements.txt requirements.txt
+RUN pip install -r requirements.txt
+</code></pre><p>复制 requirements.txt 并安装 Python 依赖项。</p>
+</li>
+<li>
+<p><code>COPY . .</code>: 将 . 项目中的当前目录复制到 . 镜像中的工作目录。</p>
+</li>
+<li>
+<p><code>CMD [&quot;flask&quot;, &quot;run&quot;]</code>: 容器提供默认的执行命令为：<code>flask run</code>。</p>
+</li>
+</ul>
+<h3 id="3创建-docker-composeyml">3、创建 docker-compose.yml</h3>
+<p>在测试目录中创建一个名为 docker-compose.yml 的文件，然后粘贴以下内容：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ff79c6">version</span>: <span style="color:#f1fa8c">&#39;3&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">services</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">web</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">build</span>: .
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">ports</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f1fa8c">&#34;5000:5000&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">redis</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">image</span>: <span style="color:#f1fa8c">&#34;redis:alpine&#34;</span>
+</span></span></code></pre></div><p>该 Compose 文件定义了两个服务：web 和 redis。</p>
+<ul>
+<li><strong>web</strong>：该 web 服务使用从 Dockerfile 当前目录中构建的镜像。然后，它将容器和主机绑定到暴露的端口 5000。此示例服务使用 Flask Web 服务器的默认端口 5000 。</li>
+<li><strong>redis</strong>：该 redis 服务使用 Docker Hub 的公共 Redis 映像。</li>
+</ul>
+<h3 id="4使用-compose-命令构建和运行">4、使用 Compose 命令构建和运行</h3>
+<p>在测试目录中，执行以下命令来启动应用程序：</p>
+<pre tabindex="0"><code>docker-compose up
+</code></pre><p>如果你想在后台执行该服务可以加上 <strong>-d</strong> 参数：</p>
+<pre tabindex="0"><code>docker-compose up -d
+</code></pre><h2 id="yml-配置指令参考">yml 配置指令参考</h2>
+<h3 id="version">version</h3>
+<p>指定本 yml 依从的 compose 哪个版本制定的。</p>
+<h3 id="build">build</h3>
+<p>指定为构建镜像上下文路径：</p>
+<p>例如 webapp 服务，指定为从上下文路径 ./dir/Dockerfile 所构建的镜像：</p>
+<pre tabindex="0"><code>version: &#34;3.7&#34;
+services:
+  webapp:
+    build: ./dir
+</code></pre><p>或者，作为具有在上下文指定的路径的对象，以及可选的 Dockerfile 和 args：</p>
+<pre tabindex="0"><code>version: &#34;3.7&#34;
+services:
+  webapp:
+    build:
+      context: ./dir
+      dockerfile: Dockerfile-alternate
+      args:
+        buildno: 1
+      labels:
+        - &#34;com.example.description=Accounting webapp&#34;
+        - &#34;com.example.department=Finance&#34;
+        - &#34;com.example.label-with-empty-value&#34;
+      target: prod
+</code></pre><ul>
+<li>context：上下文路径。</li>
+<li>dockerfile：指定构建镜像的 Dockerfile 文件名。</li>
+<li>args：添加构建参数，这是只能在构建过程中访问的环境变量。</li>
+<li>labels：设置构建镜像的标签。</li>
+<li>target：多层构建，可以指定构建哪一层。</li>
+</ul>
+<h3 id="cap_addcap_drop">cap_add，cap_drop</h3>
+<p>添加或删除容器拥有的宿主机的内核功能。</p>
+<pre tabindex="0"><code>cap_add:
+  - ALL # 开启全部权限
+
+cap_drop:
+  - SYS_PTRACE # 关闭 ptrace权限
+</code></pre><h3 id="cgroup_parent">cgroup_parent</h3>
+<p>为容器指定父 cgroup 组，意味着将继承该组的资源限制。</p>
+<pre tabindex="0"><code>cgroup_parent: m-executor-abcd
+</code></pre><h3 id="command">command</h3>
+<p>覆盖容器启动的默认命令。</p>
+<pre tabindex="0"><code>command: [&#34;bundle&#34;, &#34;exec&#34;, &#34;thin&#34;, &#34;-p&#34;, &#34;3000&#34;]
+</code></pre><h3 id="container_name">container_name</h3>
+<p>指定自定义容器名称，而不是生成的默认名称。</p>
+<pre tabindex="0"><code>container_name: my-web-container
+</code></pre><h3 id="depends_on">depends_on</h3>
+<p>设置依赖关系。</p>
+<ul>
+<li>docker-compose up ：以依赖性顺序启动服务。在以下示例中，先启动 db 和 redis ，才会启动 web。</li>
+<li>docker-compose up SERVICE ：自动包含 SERVICE 的依赖项。在以下示例中，docker-compose up web 还将创建并启动 db 和 redis。</li>
+<li>docker-compose stop ：按依赖关系顺序停止服务。在以下示例中，web 在 db 和 redis 之前停止。</li>
+</ul>
+<pre tabindex="0"><code>version: &#34;3.7&#34;
+services:
+  web:
+    build: .
+    depends_on:
+      - db
+      - redis
+  redis:
+    image: redis
+  db:
+    image: postgres
+</code></pre><p>注意：web 服务不会等待 redis db 完全启动 之后才启动。</p>
+<h3 id="deploy">deploy</h3>
+<p>指定与服务的部署和运行有关的配置。只在 swarm 模式下才会有用。</p>
+<pre tabindex="0"><code>version: &#34;3.7&#34;
+services:
+  redis:
+    image: redis:alpine
+    deploy:
+      mode：replicated
+      replicas: 6
+      endpoint_mode: dnsrr
+      labels: 
+        description: &#34;This redis service label&#34;
+      resources:
+        limits:
+          cpus: &#39;0.50&#39;
+          memory: 50M
+        reservations:
+          cpus: &#39;0.25&#39;
+          memory: 20M
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+        window: 120s
+</code></pre><p>可以选参数：</p>
+<p><strong>endpoint_mode</strong>：访问集群服务的方式。</p>
+<pre tabindex="0"><code>endpoint_mode: vip 
+# Docker 集群服务一个对外的虚拟 ip。所有的请求都会通过这个虚拟 ip 到达集群服务内部的机器。
+endpoint_mode: dnsrr
+# DNS 轮询（DNSRR）。所有的请求会自动轮询获取到集群 ip 列表中的一个 ip 地址。
+</code></pre><p><strong>labels</strong>：在服务上设置标签。可以用容器上的 labels（跟 deploy 同级的配置） 覆盖 deploy 下的 labels。</p>
+<p><strong>mode</strong>：指定服务提供的模式。</p>
+<ul>
+<li><strong>replicated</strong>：复制服务，复制指定服务到集群的机器上。</li>
+<li><strong>global</strong>：全局服务，服务将部署至集群的每个节点。</li>
+<li>图解：下图中黄色的方块是 replicated 模式的运行情况，灰色方块是 global 模式的运行情况。</li>
+</ul>
+<p><img alt="img" src="/docker-compose_img/docker-composex.png"></p>
+<p><strong>replicas：mode</strong> 为 replicated 时，需要使用此参数配置具体运行的节点数量。</p>
+<p><strong>resources</strong>：配置服务器资源使用的限制，例如上例子，配置 redis 集群运行需要的 cpu 的百分比 和 内存的占用。避免占用资源过高出现异常。</p>
+<p><strong>restart_policy</strong>：配置如何在退出容器时重新启动容器。</p>
+<ul>
+<li>condition：可选 none，on-failure 或者 any（默认值：any）。</li>
+<li>delay：设置多久之后重启（默认值：0）。</li>
+<li>max_attempts：尝试重新启动容器的次数，超出次数，则不再尝试（默认值：一直重试）。</li>
+<li>window：设置容器重启超时时间（默认值：0）。</li>
+</ul>
+<p><strong>rollback_config</strong>：配置在更新失败的情况下应如何回滚服务。</p>
+<ul>
+<li>parallelism：一次要回滚的容器数。如果设置为0，则所有容器将同时回滚。</li>
+<li>delay：每个容器组回滚之间等待的时间（默认为0s）。</li>
+<li>failure_action：如果回滚失败，该怎么办。其中一个 continue 或者 pause（默认pause）。</li>
+<li>monitor：每个容器更新后，持续观察是否失败了的时间 (ns|us|ms|s|m|h)（默认为0s）。</li>
+<li>max_failure_ratio：在回滚期间可以容忍的故障率（默认为0）。</li>
+<li>order：回滚期间的操作顺序。其中一个 stop-first（串行回滚），或者 start-first（并行回滚）（默认 stop-first ）。</li>
+</ul>
+<p><strong>update_config</strong>：配置应如何更新服务，对于配置滚动更新很有用。</p>
+<ul>
+<li>parallelism：一次更新的容器数。</li>
+<li>delay：在更新一组容器之间等待的时间。</li>
+<li>failure_action：如果更新失败，该怎么办。其中一个 continue，rollback 或者pause （默认：pause）。</li>
+<li>monitor：每个容器更新后，持续观察是否失败了的时间 (ns|us|ms|s|m|h)（默认为0s）。</li>
+<li>max_failure_ratio：在更新过程中可以容忍的故障率。</li>
+<li>order：回滚期间的操作顺序。其中一个 stop-first（串行回滚），或者 start-first（并行回滚）（默认stop-first）。</li>
+</ul>
+<p><strong>注</strong>：仅支持 V3.4 及更高版本。</p>
+<h3 id="devices">devices</h3>
+<p>指定设备映射列表。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ff79c6">devices</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f1fa8c">&#34;/dev/ttyUSB0:/dev/ttyUSB0&#34;</span>
+</span></span></code></pre></div><h3 id="dns">dns</h3>
+<p>自定义 DNS 服务器，可以是单个值或列表的多个值。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ff79c6">dns</span>: <span style="color:#bd93f9">8.8.8.8</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">dns</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#bd93f9">8.8.8.8</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#bd93f9">9.9.9.9</span>
+</span></span></code></pre></div><h3 id="dns_search">dns_search</h3>
+<p>自定义 DNS 搜索域。可以是单个值或列表。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ff79c6">dns_search</span>: example.com
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">dns_search</span>:
+</span></span><span style="display:flex;"><span>  - dc1.example.com
+</span></span><span style="display:flex;"><span>  - dc2.example.com
+</span></span></code></pre></div><h3 id="entrypoint">entrypoint</h3>
+<p>覆盖容器默认的 entrypoint。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ff79c6">entrypoint</span>: /code/entrypoint.sh
+</span></span></code></pre></div><p>也可以是以下格式：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ff79c6">entrypoint</span>:
+</span></span><span style="display:flex;"><span>    - php
+</span></span><span style="display:flex;"><span>    - -d
+</span></span><span style="display:flex;"><span>    - zend_extension=/usr/local/lib/php/extensions/no-debug-non-zts-20100525/xdebug.so
+</span></span><span style="display:flex;"><span>    - -d
+</span></span><span style="display:flex;"><span>    - memory_limit=-1
+</span></span><span style="display:flex;"><span>    - vendor/bin/phpunit
+</span></span></code></pre></div><h3 id="env_file">env_file</h3>
+<p>从文件添加环境变量。可以是单个值或列表的多个值。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ff79c6">env_file</span>: .env
+</span></span></code></pre></div><p>也可以是列表格式：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ff79c6">env_file</span>:
+</span></span><span style="display:flex;"><span>  - ./common.env
+</span></span><span style="display:flex;"><span>  - ./apps/web.env
+</span></span><span style="display:flex;"><span>  - /opt/secrets.env
+</span></span></code></pre></div><h3 id="environment">environment</h3>
+<p>添加环境变量。您可以使用数组或字典、任何布尔值，布尔值需要用引号引起来，以确保 YML 解析器不会将其转换为 True 或 False。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ff79c6">environment</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">RACK_ENV</span>: development
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">SHOW</span>: <span style="color:#f1fa8c">&#39;true&#39;</span>
+</span></span></code></pre></div><h3 id="expose">expose</h3>
+<p>暴露端口，但不映射到宿主机，只被连接的服务访问。</p>
+<p>仅可以指定内部端口为参数：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ff79c6">expose</span>:
+</span></span><span style="display:flex;"><span> - <span style="color:#f1fa8c">&#34;3000&#34;</span>
+</span></span><span style="display:flex;"><span> - <span style="color:#f1fa8c">&#34;8000&#34;</span>
+</span></span></code></pre></div><h3 id="extra_hosts">extra_hosts</h3>
+<p>添加主机名映射。类似 docker client &ndash;add-host。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ff79c6">extra_hosts</span>:
+</span></span><span style="display:flex;"><span> - <span style="color:#f1fa8c">&#34;somehost:162.242.195.82&#34;</span>
+</span></span><span style="display:flex;"><span> - <span style="color:#f1fa8c">&#34;otherhost:50.31.209.229&#34;</span>
+</span></span></code></pre></div><p>以上会在此服务的内部容器中 /etc/hosts 创建一个具有 ip 地址和主机名的映射关系：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#bd93f9">162.242.195.82</span>  somehost
+</span></span><span style="display:flex;"><span><span style="color:#bd93f9">50.31.209.229</span>   otherhost
+</span></span></code></pre></div><h3 id="healthcheck">healthcheck</h3>
+<p>用于检测 docker 服务是否健康运行。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ff79c6">healthcheck</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">test</span>: [<span style="color:#f1fa8c">&#34;CMD&#34;</span>, <span style="color:#f1fa8c">&#34;curl&#34;</span>, <span style="color:#f1fa8c">&#34;-f&#34;</span>, <span style="color:#f1fa8c">&#34;http://localhost&#34;</span>] <span style="color:#6272a4"># 设置检测程序</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">interval</span>: 1m30s <span style="color:#6272a4"># 设置检测间隔</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">timeout</span>: 10s <span style="color:#6272a4"># 设置检测超时时间</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">retries</span>: <span style="color:#bd93f9">3</span> <span style="color:#6272a4"># 设置重试次数</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">start_period</span>: 40s <span style="color:#6272a4"># 启动后，多少秒开始启动检测程序</span>
+</span></span></code></pre></div><h3 id="image">image</h3>
+<p>指定容器运行的镜像。以下格式都可以：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ff79c6">image</span>: redis
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">image</span>: ubuntu:14.04
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">image</span>: tutum/influxdb
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">image</span>: example-registry.com:4000/postgresql
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">image</span>: a4bc65fd <span style="color:#6272a4"># 镜像id</span>
+</span></span></code></pre></div><h3 id="logging">logging</h3>
+<p>服务的日志记录配置。</p>
+<p>driver：指定服务容器的日志记录驱动程序，默认值为json-file。有以下三个选项</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ff79c6">driver</span>: <span style="color:#f1fa8c">&#34;json-file&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">driver</span>: <span style="color:#f1fa8c">&#34;syslog&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">driver</span>: <span style="color:#f1fa8c">&#34;none&#34;</span>
+</span></span></code></pre></div><p>仅在 json-file 驱动程序下，可以使用以下参数，限制日志得数量和大小。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ff79c6">logging</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">driver</span>: json-file
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">options</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">max-size</span>: <span style="color:#f1fa8c">&#34;200k&#34;</span> <span style="color:#6272a4"># 单个文件大小为200k</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">max-file</span>: <span style="color:#f1fa8c">&#34;10&#34;</span> <span style="color:#6272a4"># 最多10个文件</span>
+</span></span></code></pre></div><p>当达到文件限制上限，会自动删除旧的文件。</p>
+<p>syslog 驱动程序下，可以使用 syslog-address 指定日志接收地址。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ff79c6">logging</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">driver</span>: syslog
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">options</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">syslog-address</span>: <span style="color:#f1fa8c">&#34;tcp://192.168.0.42:123&#34;</span>
+</span></span></code></pre></div><h3 id="network_mode">network_mode</h3>
+<p>设置网络模式。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ff79c6">network_mode</span>: <span style="color:#f1fa8c">&#34;bridge&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">network_mode</span>: <span style="color:#f1fa8c">&#34;host&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">network_mode</span>: <span style="color:#f1fa8c">&#34;none&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">network_mode</span>: <span style="color:#f1fa8c">&#34;service:[service name]&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">network_mode</span>: <span style="color:#f1fa8c">&#34;container:[container name/id]&#34;</span>
+</span></span></code></pre></div><p>networks</p>
+<p>配置容器连接的网络，引用顶级 networks 下的条目 。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ff79c6">services</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">some-service</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">networks</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">some-network</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">aliases</span>:
+</span></span><span style="display:flex;"><span>         - alias1
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">other-network</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">aliases</span>:
+</span></span><span style="display:flex;"><span>         - alias2
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">networks</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">some-network</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># Use a custom driver</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">driver</span>: custom-driver-1
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">other-network</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># Use a custom driver which takes special options</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">driver</span>: custom-driver-2
+</span></span></code></pre></div><p><strong>aliases</strong> ：同一网络上的其他容器可以使用服务名称或此别名来连接到对应容器的服务。</p>
+<h3 id="restart">restart</h3>
+<ul>
+<li>no：是默认的重启策略，在任何情况下都不会重启容器。</li>
+<li>always：容器总是重新启动。</li>
+<li>on-failure：在容器非正常退出时（退出状态非0），才会重启容器。</li>
+<li>unless-stopped：在容器退出时总是重启容器，但是不考虑在Docker守护进程启动时就已经停止了的容器</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ff79c6">restart</span>: <span style="color:#f1fa8c">&#34;no&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">restart</span>: always
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">restart</span>: <span style="color:#ff79c6">on</span>-failure
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">restart</span>: unless-stopped
+</span></span></code></pre></div><p>注：swarm 集群模式，请改用 restart_policy。</p>
+<h3 id="secrets">secrets</h3>
+<p>存储敏感数据，例如密码：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ff79c6">version</span>: <span style="color:#f1fa8c">&#34;3.1&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">services</span>:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">mysql</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">image</span>: mysql
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">environment</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">MYSQL_ROOT_PASSWORD_FILE</span>: /run/secrets/my_secret
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">secrets</span>:
+</span></span><span style="display:flex;"><span>    - my_secret
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">secrets</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">my_secret</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">file</span>: ./my_secret.txt
+</span></span></code></pre></div><h3 id="security_opt">security_opt</h3>
+<p>修改容器默认的 schema 标签。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>security-opt：
+</span></span><span style="display:flex;"><span>  - label:user:USER   <span style="color:#6272a4"># 设置容器的用户标签</span>
+</span></span><span style="display:flex;"><span>  - label:role:ROLE   <span style="color:#6272a4"># 设置容器的角色标签</span>
+</span></span><span style="display:flex;"><span>  - label:type:TYPE   <span style="color:#6272a4"># 设置容器的安全策略标签</span>
+</span></span><span style="display:flex;"><span>  - label:level:LEVEL  <span style="color:#6272a4"># 设置容器的安全等级标签</span>
+</span></span></code></pre></div><h3 id="stop_grace_period">stop_grace_period</h3>
+<p>指定在容器无法处理 SIGTERM (或者任何 stop_signal 的信号)，等待多久后发送 SIGKILL 信号关闭容器。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ff79c6">stop_grace_period</span>: 1s <span style="color:#6272a4"># 等待 1 秒</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">stop_grace_period</span>: 1m30s <span style="color:#6272a4"># 等待 1 分 30 秒 </span>
+</span></span></code></pre></div><p>默认的等待时间是 10 秒。</p>
+<h3 id="stop_signal">stop_signal</h3>
+<p>设置停止容器的替代信号。默认情况下使用 SIGTERM 。</p>
+<p>以下示例，使用 SIGUSR1 替代信号 SIGTERM 来停止容器。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ff79c6">stop_signal</span>: SIGUSR1
+</span></span></code></pre></div><h3 id="sysctls">sysctls</h3>
+<p>设置容器中的内核参数，可以使用数组或字典格式。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ff79c6">sysctls</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">net.core.somaxconn</span>: <span style="color:#bd93f9">1024</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">net.ipv4.tcp_syncookies</span>: <span style="color:#bd93f9">0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">sysctls</span>:
+</span></span><span style="display:flex;"><span>  - net.core.somaxconn=1024
+</span></span><span style="display:flex;"><span>  - net.ipv4.tcp_syncookies=0
+</span></span></code></pre></div><h3 id="tmpfs">tmpfs</h3>
+<p>在容器内安装一个临时文件系统。可以是单个值或列表的多个值。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ff79c6">tmpfs</span>: /run
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">tmpfs</span>:
+</span></span><span style="display:flex;"><span>  - /run
+</span></span><span style="display:flex;"><span>  - /tmp
+</span></span></code></pre></div><h3 id="ulimits">ulimits</h3>
+<p>覆盖容器默认的 ulimit。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ff79c6">ulimits</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">nproc</span>: <span style="color:#bd93f9">65535</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">nofile</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">soft</span>: <span style="color:#bd93f9">20000</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">hard</span>: <span style="color:#bd93f9">40000</span>
+</span></span></code></pre></div><h3 id="volumes">volumes</h3>
+<p>将主机的数据卷或者文件挂载到容器里。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ff79c6">version</span>: <span style="color:#f1fa8c">&#34;3.7&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">services</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">db</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">image</span>: postgres:latest
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">volumes</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f1fa8c">&#34;/localhost/postgres.sock:/var/run/postgres/postgres.sock&#34;</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f1fa8c">&#34;/localhost/data:/var/lib/postgresql/data&#34;</span>
+</span></span></code></pre></div>
+    </div>
+    <div class="post-footer">
+        <div class="info">
+            
+            <span class="separator"><a class="tag" href="/tags/computer/">computer</a><a class="tag" href="/tags/docker/">docker</a></span>
+        </div>
+        
+
+
+    </div>
+    
+        
+    
+</div>
+
+                <div class="grow"></div>
+                <div class="built-with">
+    Built with <a href="https://gohugo.io/">Hugo</a> <b>·</b> Using the <a href="https://github.com/LucasVadilho/heyo-hugo-theme">heyo</a> theme
+</div>
+            </div>
+        </div>
+        
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha512-3M00D/rn8n+2ZVXBO9Hib0GKNpkm8MSUU/e2VNthDyBYxKWG+BftNYYcuEjXlyrSO637tidzMBXfE7sQm0INUg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<script type="text/javascript">
+            
+            
+            window.MathJax = {
+                tex: {
+                    inlineMath: [['$', '$'], ['\\(', '\\)']],
+                    displayMath: [['$$','$$'], ['\\[', '\\]']]
+                },
+                svg: {
+                    scale: 1.25,
+                }
+            };
+        </script><script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.1.0/es5/tex-mml-svg.min.js" integrity="sha512-/mL9Gs6E5Bz6NtPOr9eY&#43;T8IIdJbo2JL3TudApzFFelwBXEc3TeFLU6kPq122TJROv7jkktuBRkz5h8vGzrsyA==" crossorigin="anonymous"></script>
+    </body>
+</html>

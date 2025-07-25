@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Software on My Blog</title>
+    <link>https://seconsorl.github.io/tags/software/</link>
+    <description>Recent content in Software on My Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>216002917@nbu.edu.cn (HZW)</managingEditor>
+    <webMaster>216002917@nbu.edu.cn (HZW)</webMaster>
+    <lastBuildDate>Mon, 06 May 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://seconsorl.github.io/tags/software/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>EndNote21</title>
+      <link>https://seconsorl.github.io/post/endnote21/</link>
+      <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
+      <guid>https://seconsorl.github.io/post/endnote21/</guid>
+      <description>TIPS https://zhuanlan.zhihu.com/p/709132184&#xA;https://zhuanlan.zhihu.com/p/489154935&#xA;下载和安装 网上找下载地址，下载软件并安装。&#xA;**注意：**以管理员方式运行安装程序&#xA;激活码&#xA;淘宝上找商家（也会提供软件下载地址），几元钱解决&#xA;EndNote 21新功能概览 使用标签（Tag）整理&#xA;可以自定义标签，以此分类&#xA;文献恢复功能&#xA;因为有云端存储&#xA;全新EndNote Web&#xA;类似于Online版本，但是只有21版本有这个&#xA;可以与 1,000 位合作伙伴共享&#xA;主要功能与界面介绍 1、最上方是菜单栏&#xA;2、左侧导航栏（包含数据库管理、分组、在线检索）&#xA;3、中间文献总览（上部为检索工具栏，下部为文献列表）&#xA;4、所选择的文献的详细信息&#xA;左侧导航栏 同步设置（Synv Configuration） 显示所有的参考文献（All References） 最近添加（Recently Added）：右键可以选择&amp;quot;最近多少天&amp;quot; 未分类的文献（Unfiled） 回收站（Trash）：记录最近删除的文献 我的分组（MY GROUPS）：显示所有定义的组别（包括简单分组、组集、智能分组） 我的标签（MY TAGS）：可以自定义标签，按照标签分类 查找全文（FIND FULL TEXT）：查找本地库里含有全文的文献 在线检索（ONLINE SEARCH）：可以在多个数据库在线检索文献 最下方有搜索框，搜索分组&#xA;文献总览 检索框 分为Simple和Advance两种，和一般的文献检索相同&#xA;下方右侧有快捷工具栏，分别实现手动添加文献、添加好友（可以分享library）、输出library、查找全文、输出一个选中的文献Web引用报告&#xA;此外还有**搜索选项（Search options）**可以实现进阶操作&#xA;文献列表 最上方的文献信息标题栏：右键可添加更多的标题 有回形针标识表示已有附件 文献的重要程度（Rating）：可通过加星来体现文献是否重要 标记笔记（reseach note）：作信息补充 文献显示格式内容：可调整 文献的已读状态 当在文献列表区往下滑动阅读文献时，点击过某篇文献就会显示已读状态，但有时软件默认不会显示，这时需要进行设置，操作步骤如下&#xA;点击&amp;quot;Edit&amp;quot; 选择&amp;quot;Preferences&amp;quot; 在弹出对话框中点击&amp;quot;Read/UnreacT，勾选第一个选框，点击确定 数据库 建立 点击&amp;quot;File&amp;quot; -&amp;gt; &amp;ldquo;new&amp;rdquo;&#xA;选择文件位置，创建enl文件&#xA;此时会产生个人数据库文件，包括MyEndNoteLibrary.Data文件夹和MyEndNoteLibrary.en文件&#xA;MyEndNoteLibrary.Data文件夹中包括三个子文件夹：PDF、rdb、tdb&#xA;PDF子文件夹主要用于存放下载的文献全文，其它两个文件用于存放数据&#xA;打开 点击&amp;quot;File&amp;quot; -&amp;gt; &amp;ldquo;open&amp;rdquo; 选择enl文件即可&#xA;此时，软件窗口的标题栏就会显示当前数据库的名字 之后的操作默认是在该数据库进行的&#xA;添加文献 本地导入 点击&amp;quot;File&amp;quot; -&amp;gt; &amp;ldquo;import&amp;rdquo; 选择&amp;quot;file&amp;quot;或者&amp;quot;folder&amp;quot;&#xA;在弹出的对话框中选择&amp;quot;choose&amp;quot; 来选择文件&#xA;本方法是通过在线检索PDF文件的DOI号从而在线下载文献的各种信息&#xA;中文文献或者没有DOI号的文献需要从相应数据库下载导入EndNote&#xA;在线导入 在Online search 中选择要用的数据库。若没有则点击➕添加数据库&#xA;通过进行检索，找到文献&#xA;检索结果出来后，点击➕，将文献添加进库中&#xA;网站导入 在一些提供科研论文检索的网站中，点击&amp;quot;引用（Cite）&amp;quot; 或者&amp;quot;导出（Export）&amp;quot; 会得到txt文件&#xA;通过本地导入 在&amp;quot;import option&amp;ldquo;中选择Endnote import 再导入txt文件即可</description>
+    </item>
+  </channel>
+</rss>

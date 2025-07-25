@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gpu on My Blog</title>
+    <link>https://seconsorl.github.io/tags/gpu/</link>
+    <description>Recent content in Gpu on My Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>216002917@nbu.edu.cn (HZW)</managingEditor>
+    <webMaster>216002917@nbu.edu.cn (HZW)</webMaster>
+    <lastBuildDate>Mon, 06 May 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://seconsorl.github.io/tags/gpu/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MUSA</title>
+      <link>https://seconsorl.github.io/post/musa%E6%91%A9%E5%B0%94%E7%BA%BF%E7%A8%8B/</link>
+      <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
+      <guid>https://seconsorl.github.io/post/musa%E6%91%A9%E5%B0%94%E7%BA%BF%E7%A8%8B/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

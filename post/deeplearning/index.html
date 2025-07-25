@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light"><head>
+    <title>DeepLearning · HZW</title>
+    <meta charset="utf-8">
+    
+    <meta name="generator" content="Hugo 0.124.1">
+    <meta property="og:title" content="DeepLearning" />
+<meta property="og:description" content="a note for learning DL" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://seconsorl.github.io/post/deeplearning/" /><meta property="og:image" content="https://seconsorl.github.io/images/profile.png" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2024-05-06T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-05-06T00:00:00+00:00" /><meta property="og:site_name" content="A junior from NBU" />
+
+
+
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="HZW">
+    
+    
+    
+    <link rel="stylesheet" type="text/css" href="https://seconsorl.github.io/css/style.min.565d8c479597aa43658922d4b31e286529a7525a22c9546fa1018fc5e5ef6d86.css" integrity="sha256-Vl2MR5WXqkNliSLUsx4oZSmnUloiyVRvoQGPxeXvbYY=" crossorigin="anonymous" type="text/css">
+
+    
+    
+    
+    <script type="text/javascript" src="https://seconsorl.github.io/js/heyo-header.min.a3fa728a9f57833a31dfb45c48caaf1e4890c8c97f07bd7133fc2359745edb5d.js" integrity="sha256-o/pyip9Xgzox37RcSMqvHkiQyMl/B71xM/wjWXRe210=" crossorigin="anonymous"></script>
+
+    
+    
+    <link rel="stylesheet" type="text/css" href="https://seconsorl.github.io/css/fonts.9398921f2d404983c2b7f9a68ddc72e3f5e58a3e38b0a8e4a70d75c12ebfb7c5.css" integrity="sha256-k5iSHy1ASYPCt/mmjdxy4/Xlij44sKjkpw11wS6/t8U=" crossorigin="anonymous">
+
+    
+    
+    
+    <script type="text/javascript" src="https://seconsorl.github.io/js/sidebar-toc.min.788b639e2ec681549740b90b3b865d5f9e1789e3ca9c06ccc45d65655434c954.js" integrity="sha256-eItjni7GgVSXQLkLO4ZdX54XiePKnAbMxF1lZVQ0yVQ=" crossorigin="anonymous"></script>
+
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-graph.26b92ed9317bdc6f35642d588bdf3283f40998846e01cf4bee22a126907fbf3b.js" integrity="sha256-Jrku2TF73G81ZC1Yi98yg/QJmIRuAc9L7iKhJpB/vzs=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-digitalRain.af8a7b5c4428cc62d5bf49bf2698d4112c2459ee0c22c1c753ab304aef69888a.js" integrity="sha256-r4p7XEQozGLVv0m/JpjUESwkWe4MIsHHU6swSu9piIo=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-circleBrushStrokes.fe8fc3ee52e1d90e9236be8c36a27711efa024beb4da304829f95dfbb61d6e84.js" integrity="sha256-/o/D7lLh2Q6SNr6MNqJ3Ee&#43;gJL602jBIKfld&#43;7YdboQ=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-meta.71b5202ea881c86ac19e4b55414656a5444204a4ba08ff7368a5aa99c0a60949.js" integrity="sha256-cbUgLqiByGrBnktVQUZWpURCBKS6CP9zaKWqmcCmCUk=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sidebar-sketch.min.2e95015880993ef9abcad62d111decea22406616931bce193254bf8af2339953.js" integrity="sha256-LpUBWICZPvmrytYtER3s6iJAZhaTG84ZMlS/ivIzmVM=" crossorigin="anonymous" defer></script>
+    
+    
+    
+    <link rel="shortcut icon" href="https://seconsorl.github.io/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://seconsorl.github.io/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://seconsorl.github.io/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://seconsorl.github.io/favicons/favicon-16x16.png">
+    <link rel="canonical" href="https://seconsorl.github.io/post/deeplearning/">
+    
+    
+    
+    
+    
+
+    
+    <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://seconsorl.github.io/images/profile.png" /><meta name="twitter:title" content="DeepLearning"/>
+<meta name="twitter:description" content="a note for learning DL"/>
+
+</head><body>
+        <div class="main">
+            <div class="page-top">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a  href="/"  title="">Home</a></li>
+        
+            
+            <li><a  href="/post/"  title="">Posts</a></li>
+        
+            
+            <li><a  href="/about/"  title="">About</a></li>
+        
+        <li class="grow"></li>
+        
+        <li>
+            <a class="theme-switch" title="Switch Theme">
+                <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+            <div class="sidebar" id="sidebar">
+    <div class="top-toc">
+        <img src="https://seconsorl.github.io/images/profile.png" alt="profile picture">
+        
+        <a href="/">A junior from NBU</a>
+    </div>
+    
+    <div class="middle-sidebar grow" id="middle-sidebar">
+        
+            
+            
+                
+            
+
+            
+        
+    </div>
+
+    <div class="footer">
+        <ul class="social-links">
+            
+            <li>
+                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://github.com/SeConSorL" target="_blank" rel="noopener noreferrer" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" rel="me" aria-label="instagram">
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+            <li>
+                <a href="mailto:216002917@nbu.edu.cn" target="_blank" rel="noopener noreferrer" rel="me" aria-label="e-mail">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+        </ul>
+
+        <div class="by">by HZW <b>·</b> 2025</div>
+    </div>
+</div>
+            <div class="content">
+<div class="post">
+    
+    <div class="thumbnail" style="box-shadow: var(--box-shadow); height: 350px;">
+        <img src=https://seconsorl.github.io/images/DeepLearning.jpg style="object-position: 50% 100%;" title=DeepLearning alt=DeepLearning loading="lazy">
+    </div>
+    
+    <div class="post-title">
+        <h1>DeepLearning</h1>
+        
+            <div class="post-header">
+    <div style="padding-top: 10px;">
+        <i class="far fa-calendar"></i><span class="date">May 6, 2024</span>
+        <i class="far fa-clock"></i><span class="reading-time">6 minutes</span>
+        
+
+
+    </div>
+</div>
+        
+    </div>
+    <div class="post-content">
+        <h2 id="tips">TIPS</h2>
+<p>机器学习模型训练的步骤：</p>
+<ul>
+<li>1、数据模块（数据采集，清洗，处理等）</li>
+<li>2、建立模型（各种模型的建立）</li>
+<li>3、损失函数的选择（根据不同的任务选择不同的损失函数），有了loss就可以求取梯度</li>
+<li>4、得到梯度之后，我们会选择某种优化方式去进行优化</li>
+<li>5、然后迭代训练</li>
+</ul>
+<h2 id="线性回归">线性回归</h2>
+<h3 id="介绍">介绍</h3>
+<p>线性回归是分析一个变量与另外一(多)个变量之间关系的方法。因变量是$y$，自变量是$x$，关系线性
+$$
+y=w\times x +b
+$$
+任务就是求解$w$，$b$。</p>
+<h3 id="求解步骤">求解步骤：</h3>
+<ul>
+<li>
+<p>确定模型</p>
+</li>
+<li>
+<p>选择损失函数：这里用MSE
+$$
+\frac{1}{m} \sum_{i=1}^{m}(y_i-\hat{y_i})
+$$</p>
+</li>
+<li>
+<p>求解梯度并更新$w$，$b$
+$$
+w = w - LR \times w.grad  \
+b = b - LR \times w.grad
+$$</p>
+</li>
+</ul>
+<h3 id="代码">代码</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#6272a4"># 首先我们得有训练样本X，Y， 这里我们随机生成</span>
+</span></span><span style="display:flex;"><span>x <span style="color:#ff79c6">=</span> torch<span style="color:#ff79c6">.</span>rand(<span style="color:#bd93f9">20</span>, <span style="color:#bd93f9">1</span>) <span style="color:#ff79c6">*</span> <span style="color:#bd93f9">10</span>
+</span></span><span style="display:flex;"><span>y <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">2</span> <span style="color:#ff79c6">*</span> x <span style="color:#ff79c6">+</span> (<span style="color:#bd93f9">5</span> <span style="color:#ff79c6">+</span> torch<span style="color:#ff79c6">.</span>randn(<span style="color:#bd93f9">20</span>, <span style="color:#bd93f9">1</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 构建线性回归函数的参数</span>
+</span></span><span style="display:flex;"><span>w <span style="color:#ff79c6">=</span> torch<span style="color:#ff79c6">.</span>randn((<span style="color:#bd93f9">1</span>), requires_grad<span style="color:#ff79c6">=</span><span style="color:#ff79c6">True</span>)
+</span></span><span style="display:flex;"><span>b <span style="color:#ff79c6">=</span> torch<span style="color:#ff79c6">.</span>zeros((<span style="color:#bd93f9">1</span>), requires_grad<span style="color:#ff79c6">=</span><span style="color:#ff79c6">True</span>)   <span style="color:#6272a4"># 这俩都需要求梯度</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">for</span> iteration <span style="color:#ff79c6">in</span> <span style="color:#8be9fd;font-style:italic">range</span>(<span style="color:#bd93f9">100</span>):
+</span></span><span style="display:flex;"><span>	<span style="color:#6272a4"># 前向传播</span>
+</span></span><span style="display:flex;"><span>	wx <span style="color:#ff79c6">=</span> torch<span style="color:#ff79c6">.</span>mul(w, x)
+</span></span><span style="display:flex;"><span>	y_pred <span style="color:#ff79c6">=</span> torch<span style="color:#ff79c6">.</span>add(wx, b)
+</span></span><span style="display:flex;"><span>	<span style="color:#6272a4"># 计算loss</span>
+</span></span><span style="display:flex;"><span>	loss <span style="color:#ff79c6">=</span> (<span style="color:#bd93f9">0.5</span> <span style="color:#ff79c6">*</span> (y<span style="color:#ff79c6">-</span>y_pred)<span style="color:#ff79c6">**</span><span style="color:#bd93f9">2</span>)<span style="color:#ff79c6">.</span>mean()
+</span></span><span style="display:flex;"><span>	<span style="color:#6272a4"># 反向传播</span>
+</span></span><span style="display:flex;"><span>	loss<span style="color:#ff79c6">.</span>backward()
+</span></span><span style="display:flex;"><span>	<span style="color:#6272a4"># 更新参数</span>
+</span></span><span style="display:flex;"><span>	b<span style="color:#ff79c6">.</span>data<span style="color:#ff79c6">.</span>sub_(lr <span style="color:#ff79c6">*</span> b<span style="color:#ff79c6">.</span>grad)    <span style="color:#6272a4"># 这种_的加法操作时从自身减，相当于-=</span>
+</span></span><span style="display:flex;"><span>	w<span style="color:#ff79c6">.</span>data<span style="color:#ff79c6">.</span>sub_(lr <span style="color:#ff79c6">*</span> w<span style="color:#ff79c6">.</span>grad)
+</span></span><span style="display:flex;"><span>	<span style="color:#6272a4"># 梯度清零</span>
+</span></span><span style="display:flex;"><span>	w<span style="color:#ff79c6">.</span>grad<span style="color:#ff79c6">.</span>data<span style="color:#ff79c6">.</span>zero_()
+</span></span><span style="display:flex;"><span>	b<span style="color:#ff79c6">.</span>grad<span style="color:#ff79c6">.</span>data<span style="color:#ff79c6">.</span>zero_()
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(w<span style="color:#ff79c6">.</span>data, b<span style="color:#ff79c6">.</span>data)
+</span></span></code></pre></div><h2 id="逻辑回归">逻辑回归</h2>
+<p><strong>逻辑回归模型</strong>是<strong>线性</strong>的二分类模型，模型表达式如下：
+$$
+y=f(wx+b)
+f(x)=\frac{1}{1+e^{-x}}
+$$
+那为什么称为线性呢？</p>
+<p>一个w只影响一个x</p>
+<p>RELU() 函数的决策边界是一条直线。所以依然是线性的**(关于参数是线性的)**</p>
+<h3 id="线性和非线性模型的区别">线性和非线性模型的区别:</h3>
+<ul>
+<li>看决策边界，如果是线性模型，决策边界一定是一条直线。</li>
+<li>看自变量前面参数w，如果自变量只受一个参数w影响，则模型为线性</li>
+</ul>
+<h3 id="实战">实战</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f1fa8c">&#34;&#34;&#34;数据生成&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>torch<span style="color:#ff79c6">.</span>manual_seed(<span style="color:#bd93f9">1</span>)   <span style="color:#6272a4">#随机生成的方式，生成2类样本（用0和1表示）， 每一类样本100个， 每一个样本两个特征</span>
+</span></span><span style="display:flex;"><span>sample_nums <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">100</span>
+</span></span><span style="display:flex;"><span>mean_value <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">1.7</span>
+</span></span><span style="display:flex;"><span>bias <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">1</span>
+</span></span><span style="display:flex;"><span>n_data <span style="color:#ff79c6">=</span> torch<span style="color:#ff79c6">.</span>ones(sample_nums, <span style="color:#bd93f9">2</span>)
+</span></span><span style="display:flex;"><span>x0 <span style="color:#ff79c6">=</span> torch<span style="color:#ff79c6">.</span>normal(mean_value<span style="color:#ff79c6">*</span>n_data, <span style="color:#bd93f9">1</span>) <span style="color:#ff79c6">+</span> bias  <span style="color:#6272a4"># 类别0  数据shape=(100,2)</span>
+</span></span><span style="display:flex;"><span>y0 <span style="color:#ff79c6">=</span> torch<span style="color:#ff79c6">.</span>zeros(sample_nums)   <span style="color:#6272a4"># 类别0， 数据shape=(100, 1)</span>
+</span></span><span style="display:flex;"><span>x1 <span style="color:#ff79c6">=</span> torch<span style="color:#ff79c6">.</span>normal(<span style="color:#ff79c6">-</span>mean_value<span style="color:#ff79c6">*</span>n_data, <span style="color:#bd93f9">1</span>) <span style="color:#ff79c6">+</span> bias   <span style="color:#6272a4"># 类别1， 数据shape=(100,2)</span>
+</span></span><span style="display:flex;"><span>y1 <span style="color:#ff79c6">=</span> torch<span style="color:#ff79c6">.</span>ones(sample_nums)    <span style="color:#6272a4"># 类别1  shape=(100, 1)</span>
+</span></span><span style="display:flex;"><span>train_x <span style="color:#ff79c6">=</span> torch<span style="color:#ff79c6">.</span>cat([x0, x1], <span style="color:#bd93f9">0</span>)
+</span></span><span style="display:flex;"><span>train_y <span style="color:#ff79c6">=</span> torch<span style="color:#ff79c6">.</span>cat([y0, y1], <span style="color:#bd93f9">0</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f1fa8c">&#34;&#34;&#34;建立模型&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">LR</span>(torch<span style="color:#ff79c6">.</span>nn<span style="color:#ff79c6">.</span>Module):
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> __init__(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd;font-style:italic">super</span>(LR, self)<span style="color:#ff79c6">.</span>__init__()
+</span></span><span style="display:flex;"><span>        self<span style="color:#ff79c6">.</span>features <span style="color:#ff79c6">=</span> torch<span style="color:#ff79c6">.</span>nn<span style="color:#ff79c6">.</span>Linear(<span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">1</span>)  <span style="color:#6272a4"># Linear 是module的子类，是参数化module的一种，与其名称一样，表示着一种线性变换。输入2个节点，输出1个节点</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#ff79c6">.</span>sigmoid <span style="color:#ff79c6">=</span> torch<span style="color:#ff79c6">.</span>nn<span style="color:#ff79c6">.</span>Sigmoid()
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">forward</span>(self, x):
+</span></span><span style="display:flex;"><span>        x <span style="color:#ff79c6">=</span> self<span style="color:#ff79c6">.</span>features(x)
+</span></span><span style="display:flex;"><span>        x <span style="color:#ff79c6">=</span> self<span style="color:#ff79c6">.</span>sigmoid(x)
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> x
+</span></span><span style="display:flex;"><span>lr_net <span style="color:#ff79c6">=</span> LR()     <span style="color:#6272a4"># 实例化逻辑回归模型</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">#lr_net = torch.nn.Sequential(</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">#    torch.nn.Linear(2, 1),</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">#    torch.nn.Sigmoid()</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">#)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f1fa8c">&#34;&#34;&#34;选择优化器&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>lr <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0.01</span>
+</span></span><span style="display:flex;"><span>optimizer <span style="color:#ff79c6">=</span> torch<span style="color:#ff79c6">.</span>optim<span style="color:#ff79c6">.</span>SGD(lr_net<span style="color:#ff79c6">.</span>parameters(), lr<span style="color:#ff79c6">=</span>lr, momentum<span style="color:#ff79c6">=</span><span style="color:#bd93f9">0.9</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f1fa8c">&#34;&#34;&#34;模型训练&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">for</span> iteration <span style="color:#ff79c6">in</span> <span style="color:#8be9fd;font-style:italic">range</span>(<span style="color:#bd93f9">1000</span>):
+</span></span><span style="display:flex;"><span>    y_pred <span style="color:#ff79c6">=</span> lr_net(train_x)  <span style="color:#6272a4"># 前向传播</span>
+</span></span><span style="display:flex;"><span>    loss <span style="color:#ff79c6">=</span> loss_fn(y_pred<span style="color:#ff79c6">.</span>squeeze(), train_y) <span style="color:#6272a4"># 计算loss</span>
+</span></span><span style="display:flex;"><span>    loss<span style="color:#ff79c6">.</span>backward() <span style="color:#6272a4"># 反向传播</span>
+</span></span><span style="display:flex;"><span>    optimizer<span style="color:#ff79c6">.</span>step() <span style="color:#6272a4"># 更新参数</span>
+</span></span><span style="display:flex;"><span>    optimizer<span style="color:#ff79c6">.</span>zero_grad() <span style="color:#6272a4"># 清空梯度</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">if</span> iteration <span style="color:#ff79c6">%</span> <span style="color:#bd93f9">20</span> <span style="color:#ff79c6">==</span> <span style="color:#bd93f9">0</span>:  <span style="color:#6272a4"># 绘图</span>
+</span></span><span style="display:flex;"><span>        mask <span style="color:#ff79c6">=</span> y_pred<span style="color:#ff79c6">.</span>ge(<span style="color:#bd93f9">0.5</span>)<span style="color:#ff79c6">.</span>float()<span style="color:#ff79c6">.</span>squeeze()  <span style="color:#6272a4"># 以0.5为阈值进行分类</span>
+</span></span><span style="display:flex;"><span>        correct <span style="color:#ff79c6">=</span> (mask <span style="color:#ff79c6">==</span> train_y)<span style="color:#ff79c6">.</span>sum()  <span style="color:#6272a4"># 计算正确预测的样本个数</span>
+</span></span><span style="display:flex;"><span>        acc <span style="color:#ff79c6">=</span> correct<span style="color:#ff79c6">.</span>item() <span style="color:#ff79c6">/</span> train_y<span style="color:#ff79c6">.</span>size(<span style="color:#bd93f9">0</span>)  <span style="color:#6272a4"># 计算分类准确率</span>
+</span></span><span style="display:flex;"><span>        w0, w1 <span style="color:#ff79c6">=</span> lr_net<span style="color:#ff79c6">.</span>features<span style="color:#ff79c6">.</span>weight[<span style="color:#bd93f9">0</span>]
+</span></span><span style="display:flex;"><span>        w0, w1 <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">float</span>(w0<span style="color:#ff79c6">.</span>item()), <span style="color:#8be9fd;font-style:italic">float</span>(w1<span style="color:#ff79c6">.</span>item())
+</span></span><span style="display:flex;"><span>        plot_b <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">float</span>(lr_net<span style="color:#ff79c6">.</span>features<span style="color:#ff79c6">.</span>bias[<span style="color:#bd93f9">0</span>]<span style="color:#ff79c6">.</span>item())
+</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#39;Loss=</span><span style="color:#f1fa8c">%.4f</span><span style="color:#f1fa8c">&#39;</span> <span style="color:#ff79c6">%</span> loss<span style="color:#ff79c6">.</span>data<span style="color:#ff79c6">.</span>numpy())
+</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Iteration: </span><span style="color:#f1fa8c">{}</span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">w0:</span><span style="color:#f1fa8c">{:.2f}</span><span style="color:#f1fa8c"> w1:</span><span style="color:#f1fa8c">{:.2f}</span><span style="color:#f1fa8c"> b: </span><span style="color:#f1fa8c">{:.2f}</span><span style="color:#f1fa8c"> accuracy:</span><span style="color:#f1fa8c">{:.2%}</span><span style="color:#f1fa8c">&#34;</span><span style="color:#ff79c6">.</span>format(iteration, w0, w1, plot_b, acc))
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span> acc <span style="color:#ff79c6">&gt;</span> <span style="color:#bd93f9">0.99</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">break</span>
+</span></span></code></pre></div><h2 id="基本概念">基本概念</h2>
+<h3 id="偏差方差噪声">偏差、方差、噪声</h3>
+<p>误差可分解为：<strong>偏差（Biase）</strong>、**方差（Variance）<strong>和</strong>噪声（Noise）**之和。
+泛化误差=错误率（error) = $bias^2(x)+var(x)+\alpha$ ，这个可以数学推导证明。</p>
+<p><strong>偏差</strong>度量了学习算法的期望预测与真实结果的偏离程度， 即刻画了学习<strong>算法本身的拟合能力</strong></p>
+<p><strong>方差</strong>度量了同样大小的训练集的变动所导致的学习性能的变化，即刻画了<strong>数据扰动所造成的影响</strong></p>
+<p><strong>噪声</strong>则表达了在当前任务上任何学习算法所能达到的期望泛化误差的下界，即刻画了<strong>学习问题本身的难度。</strong></p>
+<p>==为什么会有偏差和方差？==</p>
+<p>在机器学习中，我们用训练数据集去训练一个模型，通常的做法是定义一个误差函数，通过将这个误差的最小化过程，来提高模型的性能。然而我们学习一个模型的目的是为了解决训练数据集这个领域中的一般化问题，<strong>单纯地将训练数据集的损失最小化，并不能保证在解决更一般的问题时模型仍然是最优，甚至不能保证模型是可用的。<strong>这个训练数据集的损失与一般化的数据集的损失之间的差异就叫做</strong>泛化误差（generalization error）</strong>。</p>
+<p>泛化误差可以分解为<strong>偏差（Biase）</strong>、<strong>方差（Variance）<strong>和</strong>噪声（Noise）</strong></p>
+<p>如果我们能够获得所有可能的数据集合，并在这个数据集合上将损失最小化，那么学习得到的模型就可以称之为“<strong>真实模型</strong>”。当然，在现实生活中我们不可能获取并训练所有可能的数据，所以“真实模型”肯定存在，但是无法获得，即我们获得的数据是真实数据的一个抽样。我们的最终目的是<strong>学习一个模型使其更加接近这个真实模型</strong>。</p>
+<p><strong>Bias</strong>和<strong>Variance</strong>分别从两个方面来描述我们学习到的模型与真实模型之间的差距。</p>
+<ul>
+<li><strong>偏差Bias</strong>是用所有可能的训练数据集训练出的所有模型的输出的平均值与真实模型的输出值之间的差异。</li>
+<li><strong>方差Variance</strong>是不同的训练数据集训练出的模型输出值之间的差异。</li>
+</ul>
+<p><strong>噪声的存在是学习算法所无法解决的问题</strong>，数据的质量决定了学习的上限。假设在数据已经给定的情况下，此时上限已定，我们要做的就是尽可能的接近这个上限</p>
+<p>“偏差-方差分解”说明，泛化性能是由学习算法的能力、数据的充分性以及学习任务本身的难度所共同决定的。给定学习任务，为了取得好的泛化性能，则需使偏差较小，即能够充分拟合数据，并且使方差较小，即使得数据扰动产生的影响小，即好的模型有低方差、低偏差。</p>
+<h4 id="偏差-方差窘境">偏差-方差窘境</h4>
+<p>一般来说，偏差与方差是有冲突的，这称为<strong>偏差-方差窘境（bias-variance dilemma）</strong>。[[偏差-方差窘境]]</p>
+<p>简单的模型会有一个较大的偏差和较小的方差，复杂的模型偏差较小方差较大。所以正确选择模型的复杂度，可以减少误差对模型的影响。复杂度高的模型通常对训练数据有很好的拟合能力，但是对测试数据就不一定了。而复杂度太低的模型又不能很好的拟合训练数据，更不能很好的拟合测试数据。因此，模型复杂度和模型偏差和方差具有如下图所示关系。</p>
+<p><img alt="偏差-方差窘境" src="https://img2018.cnblogs.com/i-beta/878138/202001/878138-20200115153715649-89570001.png"></p>
+<h3 id="正则化">正则化</h3>
+<p><strong>正则化（Regularization）<strong>也叫</strong>约束</strong>，是<strong>防止过拟合</strong>的诸多手段之一，很常用。常命名为 <strong>weight loss</strong> ，或 <strong>decay loss</strong>。</p>
+<blockquote>
+<p>如何控制一个模型的容量，第一种是将模型变得比较小，即减少模型的参数。第二种是限制模型参数的范围变得比较小。<strong>权重衰退</strong>就是<strong>控制参数值的选择范围来控制模型容量</strong>。</p>
+</blockquote>
+<p>通过 <strong>限制 参数值域空间</strong>，显式地 <strong>控制了 模型复杂度</strong>，从而避免了过拟合。</p>
+<ul>
+<li>
+<p><strong>L1 范数：向量各个元素绝对值之和</strong></p>
+</li>
+<li>
+<p><strong>L2 范数：向量各个元素的平方求和然后求平方根</strong></p>
+</li>
+<li>
+<p><strong>Lp 范数：向量各个元素绝对值的 p 次方求和然后求 1/p 次方</strong></p>
+<p>$||x||_p=(\sum_i^N|x_i|^p)^{\frac{1}{p}}$， $x$是一个向量，$x_i$是向量中的第$i$个元素，$p$是范数的阶数(指数)，$N$是向量$x$的维度或者长度。</p>
+</li>
+<li>
+<p><strong>L∞ 范数：向量各个元素求绝对值，最大那个元素的绝对值</strong></p>
+</li>
+</ul>
+<p>正则化的思想修改目标函数，在原来目标函数上再加上<strong>正则项</strong>,即</p>
+<p>$Obj=Cost+Regularization=\frac{1}{N}\sum_i^Nf(\hat y_i,y_i)+R$    这里$N$是数据的个数。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">正则类型</th>
+<th style="text-align:center">约束公式</th>
+<th style="text-align:center">一阶导</th>
+<th style="text-align:center">特性</th>
+<th style="text-align:center">最终药效</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">L1正则化</td>
+<td style="text-align:center">$\lambda</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">\omega</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">L2正则化</td>
+<td style="text-align:center">$\frac{\lambda}{2}</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">\omega</td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<p>这里$N$是向量$\omega$的维度或者长度。$\lambda $ 控制<strong>约束程度</strong></p>
+<h4 id="l1正则化">L1正则化</h4>
+<p>$\lambda $ 取值越大，则对模型复杂度的 <strong>约束程度</strong> 越大。</p>
+<p>==为什么会有稀疏矩阵（数值为0的元素数目远远多于非0元素的数目，并且非0元素分布没有规律）?==</p>
+<p>观察导数可以发现，当$\omega \lt0$ 会往大更新，当$\omega \gt0$ 会往小更新，</p>
+<h4 id="l2正则化">L2正则化</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>深度学习中</th>
+<th>机器学习中</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>L2正则化 的 <strong>别名</strong></td>
+<td>权重衰减 (weight decay)</td>
+<td>岭回归 (ridge regression)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>L1正则化的特点：</strong></p>
+<ul>
+<li>不容易计算， <strong>在零点连续但不可导， 需要分段求导</strong></li>
+<li>L1模型可以将 一些权值缩小到零（稀疏）</li>
+<li>执行隐式变量选择。 这意味着一些变量值对结果的影响降为0， 就像删除它们一样</li>
+<li>其中一些预测因子对应较大的权值， 而其余的（几乎归零）</li>
+<li>由于它可以提供稀疏的解决方案， 因此通常是建模特征数量巨大时的首选模型</li>
+<li>它任意选择高度相关特征中的任何一个， 并将其余特征对应的系数减少到0</li>
+<li><strong>L1范数对于异常值更具抵抗力</strong></li>
+</ul>
+<p><strong>L2正则化的特点：</strong></p>
+<ul>
+<li>容易计算， 可导， 适合基于梯度的方法</li>
+<li>将一些权值缩小到接近0</li>
+<li>相关的预测特征对应的系数值相似</li>
+<li>当特征数量巨大时， 计算量会比较大</li>
+<li>对于有相关特征存在的情况， 它会包含所有这些相关的特征， 但是相关特征的权值分布取决于相关性。</li>
+<li><strong>对异常值非常敏感</strong></li>
+<li>相对于L1正则会更加准确</li>
+</ul>
+</blockquote>
+<h4 id="elastic网络正则化">Elastic网络正则化</h4>
+<p>Elastic网络正则化 = L1正则化 + L2正则化</p>
+<h4 id="最大范数约束">最大范数约束</h4>
+<p>最大范数约束（max norm constraints），通过 <strong>向 参数量级的范数 设置上限</strong>，从而正则化 (即<strong>约束</strong>) 模型复杂度。
+$$
+||\omega_2||\lt c
+$$
+$c$：一般取 $ 10^3 \sim 10^4 $ 数量级。随机失活</p>
+<h4 id="随机失活">随机失活</h4>
+<p><strong>dropout</strong>，2012年于AlexNet中被提出。</p>
+<ul>
+<li>只针对 <strong>全连接层</strong> 进行操作；</li>
+<li>训练阶段和测试阶段的操作不同。</li>
+</ul>
+<p>在<strong>标准暂dropout正则化</strong>中，通过按保留（未丢弃）的节点的分数进行规范化来消除每一层的偏差。换言之，每个中间活性值$h$以暂退概率$p$由随机变量$h&rsquo;$替换，如下所示：
+$$
+h&rsquo;=\begin{cases} 0 &amp; 概率为p \ \frac{h}{1-p} &amp; 其他情况\end{cases} \
+这样保证E[h&rsquo;]=h
+$$
+<strong>训练阶段</strong></p>
+<p><strong>按概率p 随机</strong> 将神经元<strong>置 0</strong> ，以 <strong>缓解 神经元之间隐形的协同适应</strong>，从而达到降低模型复杂度的目的：</p>
+<p>由于每个神经元的dropout是 <strong>随机dropout</strong>，因此每一轮都相当于在一个 <strong>新的</strong> 子网络上训练。那么最终得到的模型便是 <strong>无数个</strong> 子网络 <strong>共同训练</strong> 的成果，效果自然会更好</p>
+<p><strong>测试阶段</strong></p>
+<p>所有神经元均呈<strong>激活态</strong>，但其权重需<strong>乘上$1-p$</strong> 以保证各权重能有和 <strong>训练阶段</strong> 相同的 <strong>期望值</strong>。这样做可以保证训练和测试时<strong>尺度变化一致</strong>。</p>
+<h5 id="nndropout">nn.Dropout</h5>
+<p><code>torch.nn.Dropout(p=0.5, inplace=False)</code></p>
+<blockquote>
+<p>Pytorch在实现Dropout的时候， 是权重除以$1-p$, 这样就不用再测试的时候权重乘以$1-p$了， 也没有改变原来数据的尺度.</p>
+</blockquote>
+<h3 id="归一化">归一化</h3>
+<p><strong>归一化 Normalization</strong>，指将数据样本中的数据进行处理，使它们处于同一量级。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">方法名称</th>
+<th style="text-align:center">缩放范围</th>
+<th style="text-align:center">适用条件</th>
+<th style="text-align:center">操作</th>
+<th style="text-align:center">表达式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">StandardScaler</td>
+<td style="text-align:center">均值为0，方差为1</td>
+<td style="text-align:center">数据本身<strong>分布近似正态分布</strong></td>
+<td style="text-align:center">通过将数据缩放到均值为0、方差为1，消除不同特征的量纲影响</td>
+<td style="text-align:center">$X_{scaled}=\frac{X-\mu }{\sigma}$</td>
+</tr>
+<tr>
+<td style="text-align:center">MinMaxScaler</td>
+<td style="text-align:center">[0, 1]</td>
+<td style="text-align:center">数据分布不平衡或有明显的上下界限</td>
+<td style="text-align:center">将数据缩放到指定的最小值和最大值（默认是0和1）之间</td>
+<td style="text-align:center">$X_{scaled}=\frac{X-X_{min}}{X_{max}-X_{min}}$</td>
+</tr>
+<tr>
+<td style="text-align:center">RobustScaler</td>
+<td style="text-align:center">根据四分位数缩放</td>
+<td style="text-align:center">数据包含异常值</td>
+<td style="text-align:center">基于四分位数进行缩放，<strong>对于异常值不敏感</strong></td>
+<td style="text-align:center">$X_{scaled}=\frac{X-median(X)}{IQR(X)}$</td>
+</tr>
+<tr>
+<td style="text-align:center">MaxAbsScaler</td>
+<td style="text-align:center">[-1, 1]</td>
+<td style="text-align:center">数据已经中心化，即没有偏移。特别适合<strong>稀疏数据</strong>。</td>
+<td style="text-align:center">按每个特征的最大绝对值进行缩放，将数据缩放到最大绝对值为1。</td>
+<td style="text-align:center">$X_{scaled}=\frac{X}{\max(</td>
+</tr>
+<tr>
+<td style="text-align:center">Normalizer</td>
+<td style="text-align:center">每个样本的范数为1</td>
+<td style="text-align:center">样本之间有显著的差异，<strong>需要将其归一化</strong></td>
+<td style="text-align:center">将每个样本缩放为单位范数（通常是L2范数），使每个样本的向量长度为1。</td>
+<td style="text-align:center">$X_{scaled}=\frac{X}{</td>
+</tr>
+<tr>
+<td style="text-align:center">QuantileTransformer</td>
+<td style="text-align:center">[0,1]或正态分布</td>
+<td style="text-align:center">数据分布不均匀</td>
+<td style="text-align:center">通过非线性变换将数据转换为均匀分布或正态分布</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">PowerTransformer (Yeo-Johnson)</td>
+<td style="text-align:center">均值为0，方差为1</td>
+<td style="text-align:center">数据具有正态分布或接近正态分布，适用于<strong>包含负值</strong>的数据。</td>
+<td style="text-align:center">对数据进行幂变换，使其更接近正态分布</td>
+<td style="text-align:center">Box-Cox变换$X_{new}=\frac{X^{\lambda}-1}{\lambda}$<br> Yeo-Johnson变换: 适用于正负值数据。</td>
+</tr>
+<tr>
+<td style="text-align:center">Log Transform</td>
+<td style="text-align:center">非负数据的对数缩放</td>
+<td style="text-align:center">适用于数据呈指数型增长或者极度偏态分布的情况，数据必须为正值或非负值</td>
+<td style="text-align:center">对数据进行对数变换</td>
+<td style="text-align:center">$X_{new}=\log(X+1)$</td>
+</tr>
+</tbody>
+</table>
+<h4 id="其他归一化">其他归一化</h4>
+<ul>
+<li>
+<p>均值归一化：$x&rsquo;=\frac{x-\mu}{x_{max}-x_{min}}$</p>
+</li>
+<li>
+<p>对数归一化：$x&rsquo;=\frac{\lg(x)}{\lg(x_{max})}$</p>
+</li>
+<li>
+<p>反正切函数归一化：$x&rsquo;=\arctan(x) \times \frac{2}{\pi}$</p>
+</li>
+<li>
+<p>小数定标标准化（Demical Point Normalization）：$x&rsquo;=\frac{x}{{10}^j}$</p>
+</li>
+</ul>
+<h4 id="batchnormalization">BatchNormalization</h4>
+<p><strong>BatchNormalization就是批标准化</strong>， 批指的是mini-batch, 标准化也就是0均值1方差，看似这个东西比较简单，但是威力却是很强, 有下面几个优点（来自2015年原文《BatchNormalization：Accelerating Deep Network Train by Reducing Internal Covariate Shift》， 这篇论文堪称这一年深度学习界最重要的一篇论文）：</p>
+<ul>
+<li>可以用更大学习率，加速模型收敛</li>
+<li>可以不用精心设计权值初始化</li>
+<li>可以不用Dropout或者较小的Dropout</li>
+<li>可以不用L2或者较小的weight decay</li>
+<li>可以不用局部响应标准化（AlexNet中用到过）</li>
+</ul>
+<p><a href="https://blog.csdn.net/m0_47256162/article/details/132179949">简单过程</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>Batch Normalization(x, gamma, beta, moving_mean, moving_var, epsilon, momentum)
+</span></span><span style="display:flex;"><span>    输入：
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">-</span> x：当前批次的输入
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">-</span> gamma：缩放因子（缩放平均值后的输入）
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">-</span> beta：偏移（加到缩放后的输入上的偏移）
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">-</span> moving_mean：移动平均的均值（用于训练和评估模式）
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">-</span> moving_var：移动方差（用于训练和评估模式）
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">-</span> epsilon：为避免除以0，添加到方差的值
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">-</span> momentum：移动平均的动量
+</span></span><span style="display:flex;"><span>    输出：
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">-</span> BN后的输入
+</span></span><span style="display:flex;"><span>步骤：
+</span></span><span style="display:flex;"><span><span style="color:#bd93f9">1.</span> 计算批次的均值和方差，用于训练模式。
+</span></span><span style="display:flex;"><span><span style="color:#bd93f9">2.</span> 用移动均值和移动方差，用于评估模式。
+</span></span><span style="display:flex;"><span><span style="color:#bd93f9">3.</span> 对批次进行归一化，x_hat <span style="color:#ff79c6">=</span> (x <span style="color:#ff79c6">-</span> mean) <span style="color:#ff79c6">/</span> sqrt(var <span style="color:#ff79c6">+</span> epsilon)。
+</span></span><span style="display:flex;"><span><span style="color:#bd93f9">4.</span> 进行缩放和偏移，y <span style="color:#ff79c6">=</span> gamma <span style="color:#ff79c6">*</span> x_hat <span style="color:#ff79c6">+</span> beta。
+</span></span><span style="display:flex;"><span><span style="color:#bd93f9">5.</span> 如果是训练阶段，更新移动均值和方差，moving_mean <span style="color:#ff79c6">=</span> momentum <span style="color:#ff79c6">*</span> moving_mean <span style="color:#ff79c6">+</span> (<span style="color:#bd93f9">1</span> <span style="color:#ff79c6">-</span> momentum) <span style="color:#ff79c6">*</span> mean。
+</span></span><span style="display:flex;"><span><span style="color:#bd93f9">6.</span> moving_var <span style="color:#ff79c6">=</span> momentum <span style="color:#ff79c6">*</span> moving_var <span style="color:#ff79c6">+</span> (<span style="color:#bd93f9">1</span> <span style="color:#ff79c6">-</span> momentum) <span style="color:#ff79c6">*</span> var。
+</span></span><span style="display:flex;"><span><span style="color:#bd93f9">7.</span> 返回y作为Batch Normalization的输出。
+</span></span></code></pre></div><p><img alt="BN伪代码" src="https://img-blog.csdnimg.cn/20200310165454151.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3Mzg4MDg1,size_16,color_FFFFFF,t_70"></p>
+<p>最后这句称为<strong>affine transform</strong>，可以增强模型的容纳能力，使得模型自己更加灵活，让模型自己去判断是否需要去改变数据的一个分布（这里的$\gamma$和$\beta$是可学习参数，类似于神经网络的权值$w$和$b$），如果模型发现改变分布不是太好，那么让$\gamma = \sqrt{\sigma_{\mathcal{B}}^{2}+\epsilon}γ$，$\beta = \mu_{\mathcal{B}}$，这样我们的$y_i$ 依然是等于$x_i$ ，没有改变分布。这就是<strong>affine transform</strong>的功能，提供了一个可逆的操作， <strong>到底需不需要改变数据分布，把这个权利交给模型自己学习。</strong></p>
+<h5 id="分析">分析</h5>
+<p>看上面BN论文的标题，会发现这个算法提出本来是想解决<strong>内部协变量偏移Internal Covariate Shift</strong>这个问题的，就是网络输出层的数值尺度的变化导致网络无法训练。</p>
+<p>在神经网络模型训练的时候，发现每一层的方差竟然是前面所有层方差的连乘，那么假设有一层尺度上有点不正常，那么随着网络的加深，很容易引起梯度消失或者爆炸。</p>
+<p>所以权值初始化那里就考虑采用一种初始化的方式控制网络输出层的一个尺度。 所以BN的提出， 也是为了解决这个问题的，只不过解决了这个问题之后，竟然发现带来了一系列的优点。</p>
+<h3 id="损失函数">损失函数</h3>
+<p><strong>普通的交叉熵损失函数</strong>：
+$$
+H(P,Q)=-\sum_{i=1}^N P(x_i)\log Q(x_i)
+$$
+$P$表示数据的原始分布，$Q$表示模型输出的分布，交叉熵损失衡量两个分布之间的差异程度，<strong>交叉熵越低，说明两个分布越近</strong>。</p>
+<p>==交叉熵=相对熵（又称为KL散度）+信息熵==
+$$
+H(P,Q)=D_{KL}(P,Q)+H(P)
+$$
+在机器学习模型中，我们<strong>最小化交叉熵，其实就是最小化相对熵</strong>，因为我们训练集取出来之后就是固定的了，熵就是一个常数。</p>
+<h3 id="heading"></h3>
+<h2 id="神经网络">神经网络</h2>
+<h3 id="激活函数">激活函数</h3>
+<p><img alt="神经网络结构" src="https://img-blog.csdnimg.cn/900ef9091d3c4739afd8ba31170e6147.png"></p>
+<p>写成矩阵形式
+$$
+H_1=X \times W_1 \
+H_2=H_1 \times W_2 \ \
+Output=H_2 \times W_3 \
+=H_1 \times W_2 \times W_3 \
+=X \times (W_1 \times W_2 \times W_3)
+$$
+如果没有非线性激活函数，我们线性运算的矩阵乘法的结合性，无论多少个线性层的叠加，其实就是矩阵的一个连乘，最后还是一个矩阵。这种情况就是最原始的<strong>感知机（Perceptron）</strong>。</p>
+<p>引入非线性激活函数是<strong>为了增加神经网络模型的非线性</strong>。激活函数给神经元引入了非线性因素，使得神经网络可以任意逼近任何非线性函数，这样神经网络就可以应用到众多的非线性模型中。</p>
+<h4 id="常用的">常用的</h4>
+<p>常用的激活函数：<strong>sigmoid，Softmax ，Tanh，ReLU，Leaky ReLU，PReLU，ELU</strong>等</p>
+<h5 id="sigmoid函数">sigmoid函数</h5>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">解释</th>
+<th style="text-align:center">表达式</th>
+<th style="text-align:center">导数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">将输入投影到（0，1），是平滑的</td>
+<td style="text-align:center">$\sigma(x)=\frac{1}{1+e^{-x}}$</td>
+<td style="text-align:center">$\sigma(x)&rsquo;=\sigma(x)[1-\sigma(x)]$</td>
+</tr>
+</tbody>
+</table>
+<p><strong>优点：</strong></p>
+<p>1、Sigmoid函数的输出在(0,1)之间，输出范围有限，优化稳定，可以用作输出层。适用于将预测概率作为输出的模型。</p>
+<p>2、连续函数，便于求导。</p>
+<p><strong>缺点：</strong></p>
+<p>sigmoid函数在<strong>变量取绝对值非常大时会出现饱和现象</strong>，意味着函数会变得很平，并且对输入的微小改变会变得不敏感。在反向传播时，当梯度接近于0，权重基本不会更新，<strong>很容易就会出现梯度消失的情况</strong>，从而无法完成深层网络的训练。</p>
+<p>sigmoid函数的输出不是0均值的，破坏了数据的分布，会导致后层的神经元的输入是非0均值的信号，这会对梯度产生影响。</p>
+<p>计算复杂度高，因为sigmoid函数是指数形式(一般认为：<strong>gpu上一次指数运算等价于数百次乘法运算的成本</strong>)。</p>
+<blockquote>
+<p>这个激活函数在实际神经网络中并没有使用。任何复杂的函数都可以由一个常量加一堆sigmoid函数模拟出来。</p>
+</blockquote>
+<h5 id="softmax函数">Softmax函数</h5>
+<p>**Softmax （归一化指数函数）**是用于多分类问题的激活函数，在多分类问题中，超过两个类标签则需要类成员关系。对于长度为 $K$ 的任意实向量，Softmax 可以将其压缩为长度为 $K$，值在$(0,1)$范围内，并且向量中元素的总和为 $1$ 的实向量。</p>
+<p>在多项逻辑回归和线性判别分析中，函数的输入是从$K$个不同的线性函数得到的结果，而样本向量 $x$ 属于第 $j $个分类的概率为：
+$$
+P(y=j)=\frac{e^{x^T}W_j}{\sum_{k=1}^K e^{{x^T}W_k}}
+$$
+这可以被视作$K$个线性函数的Softmax函数的复合。</p>
+<p><strong>优点：</strong></p>
+<p>1、Softmax 与正常的 max 函数不同：max 函数仅输出最大值，但 Softmax 确保较小的值具有较小的概率，并且不会直接丢弃。Softmax可看作是soft（软化）的max。</p>
+<p>2、Softmax 函数的分母结合了原始输出值的所有因子，这意味着 Softmax 函数获得的各种概率彼此相关。</p>
+<p><strong>缺点：</strong></p>
+<p>1、当使用Softmax函数作为输出节点的激活函数的时候，一般使用交叉熵作为损失函数。由于Softmax函数的数值计算过程中，很容易因为输出节点的输出值比较大而发生数值溢出的现象，在计算交叉熵的时候也可能会出现数值溢出的问题。</p>
+<h5 id="tanh函数">Tanh函数</h5>
+<p><strong>Tanh函数也称为双曲正切函数</strong>，取值范围为$[-1,1]$</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">表达式</th>
+<th style="text-align:center">导数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">$Tanh(x)=\frac{\sinh(x)}{\cosh(x)}=\frac{e^x-e^{-x}}{e^x+e^{-x}}$</td>
+<td style="text-align:center">$Tanh(x)&rsquo;=1-[Tanh(x)]^2$</td>
+</tr>
+</tbody>
+</table>
+<p><strong>优点：</strong>
+1、Tanh函数是 0 均值的，因此实际应用中 Tanh 会比 sigmoid 更好。</p>
+<p><strong>缺点：</strong>
+1、导数范围为(0,1)，仍然存在梯度饱和与exp计算的问题</p>
+<h5 id="relu函数">ReLU函数</h5>
+<p>整流线性单元（Rectified linear unit，ReLU）是现代神经网络中最常用的激活函数，大多数前馈神经网络默认使用的激活函数。</p>
+<p><strong>表达式</strong>：$ReLU(x)=\max(0,x)$</p>
+<p><strong>优点：</strong>
+1、使用ReLU的SGD算法的收敛速度比 sigmoid 和 tanh 快。
+2、在x&gt;0区域上，不会出现梯度饱和、梯度消失的问题。
+3、计算复杂度低，不需要进行指数运算，只要一个阈值就可以得到激活值。</p>
+<p><strong>缺点：</strong>
+1、ReLU的输出不是0均值的。
+2、<strong>Dead ReLU Problem(神经元坏死现象)</strong>：ReLU在负数区域被kill的现象叫做dead relu。ReLU在训练的时很“脆弱”。在x&lt;0时，梯度为0。这个神经元及之后的神经元梯度永远为0，不再对任何数据有所响应，导致相应参数永远不会被更新。</p>
+<p>产生这种现象的两个<strong>原因</strong>：参数初始化问题；<strong>learning rate</strong>太高导致在训练过程中参数更新太大。</p>
+<p><strong>解决方法</strong>：采用<strong>Xavier</strong>初始化方法，以及避免将<strong>learning rate</strong>设置太大或使用<strong>adagrad</strong>等自动调节<strong>learning rate</strong>的算法。Leaky ReLU函数</p>
+<h5 id="leaky-relu函数">Leaky ReLU函数</h5>
+<p><strong>渗漏整流线性单元(Leaky ReLU)</strong>，为了解决dead ReLU现象。用一个类似0.01的小值来初始化神经元，从而使得ReLU在负数区域更偏向于激活而不是死掉。这里的斜率都是确定的</p>
+<p><strong>表达式</strong>：$LReLU(x)=\max(0.01x,x)$</p>
+<h5 id="prelu">PReLU</h5>
+<p><strong>参数整流线性单元(Parametric Rectified linear unit，PReLU)</strong>，用来解决ReLU带来的神经元坏死的问题。其中 $\alpha$ 不是固定的，是通过反向传播学习出来的。</p>
+<p><strong>表达式</strong>：$PReLU(x)=\max{(\alpha x,x)}$</p>
+<h5 id="elu">ELU</h5>
+<p>具有relu的优势，没有Dead ReLU问题，输出均值接近0，实际上PReLU和Leaky ReLU都有这一优点。</p>
+<p>有负数饱和区域，从而对噪声有一些鲁棒性。可以看做是介于ReLU和Leaky ReLU之间的一个函数。</p>
+<p>这个函数也需要计算exp，从而计算量上更大一些。</p>
+<p><strong>表达式</strong>：$f(x)= \begin{cases} x&amp; \text{if x&gt;0}\ \alpha (exp(x)-1)&amp; \text{if x&lt;0} \end{cases}$</p>
+<h4 id="饱和激活函数">饱和激活函数</h4>
+<p><strong>解释</strong>：这些函数<strong>在输入值趋向于正无穷或负无穷时</strong>，其<strong>导数趋近于0</strong></p>
+<p>饱和激活函数在网络训练过程中，由于输入处于激活函数的饱和位置，可能会导致<strong>梯度消失</strong>，即梯度在反向传播过程中逐渐减小，甚至消失，从而阻碍网络的训练过程。</p>
+<p><strong>sigmoid</strong>和<strong>tanh</strong>函数都具有软饱和性，这意味着它们的输出在接近0或1时，梯度接近于0，导致梯度消失问题。此外，<strong>sigmoid</strong>函数的输出不是以0为中心的，而<strong>tanh</strong>函数的输出均值为0，但两者都存在<strong>计算量大</strong>和<strong>可能导致梯度消失</strong>的问题。</p>
+<h4 id="非饱和激活函数">非饱和激活函数</h4>
+<p><strong>非饱和激活函数</strong>主要包括<strong>ReLU（Rectified Linear Unit）</strong>、<strong>Leaky ReLU</strong>、<strong>Swish</strong>、<strong>Mish</strong>、<strong>Maxout</strong>、<strong>hard-sigmoid</strong>、<strong>hard-swish</strong>等。这些函数相较于饱和激活函数，具有以下==优点==：</p>
+<ol>
+<li><strong>收敛速度快</strong>：非饱和激活函数在输入为正时，不存在饱和问题，<strong>解决了梯度消失问题</strong>，使得深层网络可训练，梯度不会过早消失，从而收敛速度不会过慢。</li>
+<li><strong>计算速度快</strong>：非饱和激活函数的计算速度非常快，只需要判断输入是否大于0值，这在处理大量数据时尤其重要。</li>
+<li><strong>网络稀疏性</strong>：ReLU输出会使一部分神经元为0值，在带来网络稀疏性的同时，也减少了参数之间的关联性，一定程度上缓解了过拟合的问题。</li>
+<li><strong>适应低精度需要</strong>：ReLU6函数限制最大输出为6，用于适应float16/int8的低精度需要，这在某些特定的网络架构中非常有用。</li>
+</ol>
+<p>也存在一些==缺点==：</p>
+<ol>
+<li>ReLU函数的输出不是以0为均值的函数，存在<strong>Dead Relu Problem</strong>，即某些神经元可能永远不会被激活。</li>
+<li>当输入为正值时，导数为1，在“链式反应”中，不会出现梯度消失，但梯度下降的强度则完全取决于权值的乘积，如此<strong>可能会导致梯度爆炸</strong>问题。</li>
+</ol>
+<blockquote>
+<p>对于需要<strong>快速收敛</strong>和<strong>计算效率</strong>的应用，<strong>ReLU及其变体</strong>可能是更好的选择。</p>
+<p>而对于需要更<strong>精细控制</strong>或<strong>特定网络架构</strong>的应用，<strong>ELU、Swish</strong>等可能更适合。</p>
+</blockquote>
+<h3 id="梯度下降">梯度下降</h3>
+<p><strong>导数</strong>： 函数在指定坐标轴上的变化率</p>
+<p><strong>方向导数</strong>： 指定方向上的变化率</p>
+<p><strong>梯度</strong>： 一个向量， 方向为方向导数取得最大值的方向</p>
+<p>我们知道梯度是一个向量，它的方向是导数取得最大值的方向，也就是增长最快的方向，而<strong>梯度下降就是沿着梯度的负方向去变化</strong>，这样函数的下降也是最快的。所以我们往往采用梯度下降的方式去更新权值，使得函数的下降尽量的快。</p>
+<h4 id="学习率">学习率</h4>
+<p>在梯度下降过程中，<strong>学习率起到了控制参数更新的一个步伐的作用</strong>。</p>
+<p>随着迭代次数的增加，损失反而越增越大， 就是因为这个步子太大了，跳过了我们的最优值。所以这时候我们想让他这个跨度小一些，就得需要一个参数来控制我们的这个跨度，这个就是学习率。</p>
+<p>当loss上升不降的时候，有可能是学习率的问题，所以我们一般会尝试一个小的学习率。 慢慢的去进行优化。<strong>学习率</strong>一般是我们需要调的一个非常<strong>重要的超参数</strong>， 我们一般是<strong>给定一个范围，然后画出loss的变化曲线，看看哪学习率比较好</strong>，当然下面也会重点学习学习率的调整策略。</p>
+<h4 id="动量momentum">动量（momentum）</h4>
+<p>结合当前梯度与上一次更新信息， 用于当前更新。考虑了上一次的更新信息，相当于加了一个惯性，使得经过局部最优解时不容易卡住，即更有可能达到全局最优解。</p>
+<h5 id="指数加权平均">指数加权平均。</h5>
+<p>指数加权平均在时间序列中经常用于求取平均值的一个方法，它的思想是这样，我们要求取当前时刻的平均值，距离当前时刻越近的那些参数值，它的参考性越大，所占的权重就越大，这个权重是随时间间隔的增大呈指数下降，所以叫做指数滑动平均。公式如下
+$$
+v_t=\beta \times v_{t-1}+(1-\beta)\times \theta_t
+$$
+$v_t$ 是当前时刻的一个平均值，这个平均值有两项构成，一项是当前时刻的参数值$\theta_{t}$，所占的权重是$1-\beta$， 这个$\beta$是个参数。另一项是上一时刻的一个平均值，权重是$\beta$。</p>
+<p><strong>$\beta$  在这里控制着记忆周期的长短，或者平均过去多少天的数据，这个天数就是  $\frac{1}{1-\beta}$</strong></p>
+<h5 id="momentum梯度下降">Momentum梯度下降</h5>
+<ul>
+<li>
+<p>普通的梯度下降：$W_{i+1}=w_i-lr \times g(w_i)$</p>
+</li>
+<li>
+<p>Momentum梯度下降：
+$$
+v_i=m \times v_{i-1}+g(w_i)  \
+w_{i+1}=w_i-lr \times v_i
+$$
+这里$m$就是Momentum系数，$lr$表示学习率，$v_i$表示更新量，$g(w_i)$是$w_i$的梯度。这里的$v_i$就是既考虑了当前梯度，也考虑了上一次梯度的更新信息</p>
+</li>
+</ul>
+<blockquote>
+<p><strong>Momentum梯度下降</strong>，<strong>基本的想法是计算梯度的指数加权平均数，并利用该梯度更新权重</strong></p>
+</blockquote>
+<h2 id="卷积">卷积</h2>
+<p>维度的计算参考[[Pytorch学习#nn.Conv2d]]</p>
+<h3 id="矩阵运算">矩阵运算</h3>
+<p>正常的卷积在代码实现过程中的一个具体操作： 对于正常的卷积，我们需要实现大量的相乘相加操作，而这种乘加的方式恰好是矩阵乘法所擅长的。 所以在代码实现的时候，通常会借助<strong>矩阵乘法</strong>快速的实现卷积操作。</p>
+<p>假设图像是$4\times 4$的，卷积核是$3\times 3$</p>
+<ul>
+<li>
+<p>首先将图像尺寸的$4\times 4$ 拉长成$16\times 1$ ，$16$代表所有的像素，$1$代表只有$1$张图片。</p>
+</li>
+<li>
+<p>然后$3\times 3$ 的卷积核会变成一个$4\times 16$ 的一个矩阵</p>
+<ul>
+<li>
+<p>首先这个$16$，是先把$9$个权值拉成一列，然后下面补$7$个$0$变成$16$</p>
+</li>
+<li>
+<p>$4$是根据我们输出的尺寸计算的，根据<strong>输入尺寸</strong>，<strong>卷积核大小</strong>，<strong>padding</strong>， <strong>stride</strong>信息可以得到输出尺寸是$( 4 − 3 ) / 1 + 1 = 2$， 所以输出是$2\times 2$ ，那么拉成一列就是$4$。 这样我们的输出：</p>
+<p>$O_{4\times 1} = K_{4 \times 16} \times I_{16\times 1}$</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="转置卷积">转置卷积</h3>
+<p><strong>转置卷积又称为反卷积</strong>，<strong>用于对图像进行上采样</strong>。在图像分割任务中经常被使用。</p>
+<p>转置卷积是一个上采样，输入的图像尺寸是比较小的，经过转置卷积之后，会输出一个更大的图像。</p>
+<p>假设输入图像尺寸是$2 \times 2$ ， 卷积核为$3\times 3$ ， <code>padding=0</code>， <code>stride=1</code>, 我们的输出图像尺寸是$4\times 4$ 。</p>
+<ul>
+<li>
+<p>首先，把输入的尺寸进行拉长成一个$4 \times 1$ 的一个向量</p>
+</li>
+<li>
+<p>然后，卷积核变成$16 \times 4$</p>
+<ul>
+<li>
+<p>这个$4$是根据卷积核得来的，因为虽然这里的卷积核有$9$个权值，可是能与图像相乘的最多只有$4$个（也就是卷积核在中间的时候），所以这里采用剔除的方法，从$9$个权值里面剔除$5$个，得到$4$个权重。</p>
+</li>
+<li>
+<p>而这个$16$，依然是根据输出图像的尺寸计算得来的。 因为我们这里的输出是$4\times 4$， 这个可以用上面尺寸运算的逆公式。所以这里的输出：</p>
+<p>$O_{16\times 1} = K_{16 \times 4} \times I_{4\times 1}$</p>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>这个卷积核的尺寸是16 × 4 , 而我们正常卷积运算的卷积核尺寸4 × 16， 所以在<strong>形状上</strong>这两个卷积操作卷积核恰恰是<strong>转置</strong>的关系，这也就是转置卷积的由来了。</p>
+</blockquote>
+<h2 id="全卷积网络fcn">全卷积网络FCN</h2>
+<h2 id="迁移学习和finetune">迁移学习和finetune</h2>
+<h3 id="迁移学习">迁移学习</h3>
+<p>迁移学习：机器学习分支， 研究源域的知识如何应用到目标域，将源任务中学习到的知识运用到目标任务当中，用来提升目标任务里模型的性能。</p>
+<p><strong>源域和目标域</strong>：迁移学习通常会关注一个源域$D_s$和一个目标域$D_t$，其中源域$D_s={ x_i,y_i }_i^{N_s}$使用表示，$x_i,y_i$分别表示数据样本和对应的类别标签。目标域使用$D_t={ x_i,y_i }_i^{N_t}$表示。</p>
+<p>迁移学习的<strong>定义</strong>如下：</p>
+<p>给定源域$D_s$和学习任务$T_s$、目标域$D_t$和学习任务$T_t$，迁移学习的目的是获取源域$D_s$和学习任务$T_s$中的知识以帮助提升目标域中的预测函数$f_t(\cdot)$的学习，其中$ D_s \ne D_t$或者$T_s \ne T_t$ 。</p>
+<blockquote>
+<p>想训练一个模型但是没有足够的数据库，这时候要使用别人已经训练好的模型，这个模型其实相当于一个已经学习到的数据库，把这个模型加入到自己的网络中，从某种角度来看就扩大了自己的数据库，而且节省了大量的计算力。</p>
+</blockquote>
+<h3 id="finetune">finetune</h3>
+<p><strong>什么是模型微调</strong></p>
+<p>给定<strong>预训练模型（Pre_trained model）</strong>，基于模型进行<strong>微调（Fine Tune）</strong>。相对于<strong>从头开始训练(Training a model from scatch)</strong>，微调为你省去大量计算资源和计算时间，提高了计算效率,甚至提高准确率。</p>
+<p>模型微调的步骤：</p>
+<ul>
+<li>获取预训练模型参数（源任务当中学习到的知识）</li>
+<li>加载模型（load_state_dict）将学习到的知识放到新的模型</li>
+<li>修改输出层， 以适应新的任务</li>
+</ul>
+<p>模型微调的训练方法：</p>
+<ul>
+<li>固定预训练的参数(requires_grad=False; lr=0)</li>
+<li>Features Extractor较小学习率(params_group)</li>
+</ul>
+<p>==为什么要微调==</p>
+<p><strong>通常是因为数据集的数量太少，计算资源太少，或训练的神经网络正确率太低</strong>，所以会使用微调进行提升模型效果。</p>
+<p>使用的数据集和若与预训练模型的数据集相似，通常预训练模型使用了大型数据集做训练且由大神们调好网络结构，已经具备了提取浅层基础特征和深层抽象特征的能力，<strong>通常的做法是截断预先训练好的网络的最后一层（softmax层），并用与我们自己的问题相关的新的softmax层替换它。</strong></p>
+<p>例如，ImageNet上预先训练好的网络带有1000个类别的softmax图层。如果我们的任务是对10个类别的分类，则网络的新softmax层将由10个类别组成，而不是1000个类别。然后，我们在网络上运行预先训练的权重。确保执行交叉验证，以便网络能够很好地推广。</p>
+<blockquote>
+<p><strong>微调指导注意事项</strong></p>
+<p>使用<strong>较小的学习率</strong>来训练网络。由于预先训练的权重相对于随机初始化的权重已经相当不错，我们不想过快地扭曲它们太多。通常的做法是使初始学习率比用于从头开始训练（Training from scratch）的初始学习率<strong>小10倍</strong>。</p>
+<ul>
+<li>
+<p>如果数据集数量过少，我们进来只训练最后一层</p>
+</li>
+<li>
+<p>如果数据集数量中等，冻结预训练网络的前几层的权重也是一种常见做法。</p>
+<p>这是因为前几个图层捕捉了与我们的新问题相关的通用特征，如曲线和边。我们希望保持这些权重不变。相反，我们会让网络专注于学习后续深层中特定于数据集的特征。</p>
+</li>
+</ul>
+</blockquote>
+<h3 id="迁移学习和微调的区别">迁移学习和微调的区别</h3>
+<ul>
+<li>
+<p>迁移学习 <strong>feature + classifier</strong>：通常做法就是<strong>在大的数据集</strong>（比如ImageNet）上<strong>训练出一个CNN</strong>，然后<strong>提取最后一层卷积层或者倒数第二层全连接层的输出作为CNN 特征</strong>，然后<strong>直接使用 SVM、贝叶斯或softmax等分类器进行分类</strong>，即将模型的输出作为特征输入分类器。<strong>迁移学习的定义更广泛</strong>，可以包括多种迁移学习方法，如多任务学习、迁移特征学习等。</p>
+</li>
+<li>
+<p>微调 <strong>Fine-tuning</strong>：将在大数据集上训练得到的weights作为特定任务（小数据集）的初始化权重，重新训练该网络（根据需要，修改全连接层输出）。<u>微调的目标是调整预训练模型以适应目标任务的需求，通常需要使用目标数据进行微调。</u></p>
+<p>至于<strong>训练的方式</strong>可以是：</p>
+<p>1.微调<strong>所有层</strong></p>
+<p>2.<strong>固定网络前面几层权重</strong>，只微调网络的后面几层。这样做有两个原因：</p>
+<ul>
+<li>
+<p>A. 避免因数据量小造成过拟合现象；</p>
+</li>
+<li>
+<p>B.CNN前几层的特征中包含更多的一般特征（比如，边缘信息，色彩信息等），这对许多任务来说是非常有用的</p>
+<p>CNN后面几层的特征学习注重高层特征，也就是语义特征，这是针对于数据集而言的，不同的数据集后面几层学习的语义特征也是完全不同的；</p>
+</li>
+</ul>
+<p><strong>Finetune</strong>是把别人的模型的已经训练好的参数，作为我们的初始化参数，这样，收敛速度快，而且需要的计算力也小。</p>
+</li>
+</ul>
+<p><strong>微调是迁移学习的一种具体方法</strong>，是将迁移学习应用到神经网络中的一种形式。</p>
+<p><strong>迁移学习和微调的联系</strong>在于：微调是一种使用预先训练好的模型来学习新任务的迁移学习方法。微调可以利用预训练模型在目标任务上进行快速学习，从而提高模型的准确性和泛化能力。</p>
+
+    </div>
+    <div class="post-footer">
+        <div class="info">
+            
+            <span class="separator"><a class="tag" href="/tags/deeplearning/">DeepLearning</a><a class="tag" href="/tags/ai/">AI</a></span>
+        </div>
+        
+
+
+    </div>
+    
+        
+    
+</div>
+
+                <div class="grow"></div>
+                <div class="built-with">
+    Built with <a href="https://gohugo.io/">Hugo</a> <b>·</b> Using the <a href="https://github.com/LucasVadilho/heyo-hugo-theme">heyo</a> theme
+</div>
+            </div>
+        </div>
+        
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha512-3M00D/rn8n+2ZVXBO9Hib0GKNpkm8MSUU/e2VNthDyBYxKWG+BftNYYcuEjXlyrSO637tidzMBXfE7sQm0INUg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<script type="text/javascript">
+            
+            
+            window.MathJax = {
+                tex: {
+                    inlineMath: [['$', '$'], ['\\(', '\\)']],
+                    displayMath: [['$$','$$'], ['\\[', '\\]']]
+                },
+                svg: {
+                    scale: 1.25,
+                }
+            };
+        </script><script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.1.0/es5/tex-mml-svg.min.js" integrity="sha512-/mL9Gs6E5Bz6NtPOr9eY&#43;T8IIdJbo2JL3TudApzFFelwBXEc3TeFLU6kPq122TJROv7jkktuBRkz5h8vGzrsyA==" crossorigin="anonymous"></script>
+    </body>
+</html>

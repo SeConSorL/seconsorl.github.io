@@ -8,13 +8,62 @@
     <language>en</language>
     <managingEditor>216002917@nbu.edu.cn (HZW)</managingEditor>
     <webMaster>216002917@nbu.edu.cn (HZW)</webMaster>
-    <lastBuildDate>Mon, 06 May 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 08 Jul 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://seconsorl.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Computer</title>
       <link>https://seconsorl.github.io/tags/computer/</link>
-      <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
+      <pubDate>Mon, 08 Jul 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
       <guid>https://seconsorl.github.io/tags/computer/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>虚拟机</title>
+      <link>https://seconsorl.github.io/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/</link>
+      <pubDate>Mon, 08 Jul 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
+      <guid>https://seconsorl.github.io/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Academic</title>
+      <link>https://seconsorl.github.io/tags/academic/</link>
+      <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
+      <guid>https://seconsorl.github.io/tags/academic/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AI</title>
+      <link>https://seconsorl.github.io/tags/ai/</link>
+      <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
+      <guid>https://seconsorl.github.io/tags/ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DeepLearning</title>
+      <link>https://seconsorl.github.io/tags/deeplearning/</link>
+      <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
+      <guid>https://seconsorl.github.io/tags/deeplearning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Docker</title>
+      <link>https://seconsorl.github.io/tags/docker/</link>
+      <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
+      <guid>https://seconsorl.github.io/tags/docker/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gpu</title>
+      <link>https://seconsorl.github.io/tags/gpu/</link>
+      <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
+      <guid>https://seconsorl.github.io/tags/gpu/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LLM</title>
+      <link>https://seconsorl.github.io/tags/llm/</link>
+      <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
+      <guid>https://seconsorl.github.io/tags/llm/</guid>
       <description></description>
     </item>
     <item>
@@ -22,6 +71,13 @@
       <link>https://seconsorl.github.io/tags/math/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
       <guid>https://seconsorl.github.io/tags/math/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Software</title>
+      <link>https://seconsorl.github.io/tags/software/</link>
+      <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
+      <guid>https://seconsorl.github.io/tags/software/</guid>
       <description></description>
     </item>
     <item>
@@ -50,6 +106,13 @@
       <link>https://seconsorl.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
       <guid>https://seconsorl.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>网络安全</title>
+      <link>https://seconsorl.github.io/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</link>
+      <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
+      <guid>https://seconsorl.github.io/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</guid>
       <description></description>
     </item>
     <item>

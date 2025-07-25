@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light"><head>
+    <title>量子密码 · HZW</title>
+    <meta charset="utf-8">
+    
+    <meta name="generator" content="Hugo 0.124.1">
+    <meta property="og:title" content="量子密码" />
+<meta property="og:description" content="a note for learning 量子密码" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://seconsorl.github.io/post/%E9%87%8F%E5%AD%90%E5%AF%86%E7%A0%81/" /><meta property="og:image" content="https://seconsorl.github.io/images/profile.png" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2024-05-06T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-05-06T00:00:00+00:00" /><meta property="og:site_name" content="A junior from NBU" />
+
+
+
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="HZW">
+    
+    
+    
+    <link rel="stylesheet" type="text/css" href="https://seconsorl.github.io/css/style.min.565d8c479597aa43658922d4b31e286529a7525a22c9546fa1018fc5e5ef6d86.css" integrity="sha256-Vl2MR5WXqkNliSLUsx4oZSmnUloiyVRvoQGPxeXvbYY=" crossorigin="anonymous" type="text/css">
+
+    
+    
+    
+    <script type="text/javascript" src="https://seconsorl.github.io/js/heyo-header.min.a3fa728a9f57833a31dfb45c48caaf1e4890c8c97f07bd7133fc2359745edb5d.js" integrity="sha256-o/pyip9Xgzox37RcSMqvHkiQyMl/B71xM/wjWXRe210=" crossorigin="anonymous"></script>
+
+    
+    
+    <link rel="stylesheet" type="text/css" href="https://seconsorl.github.io/css/fonts.9398921f2d404983c2b7f9a68ddc72e3f5e58a3e38b0a8e4a70d75c12ebfb7c5.css" integrity="sha256-k5iSHy1ASYPCt/mmjdxy4/Xlij44sKjkpw11wS6/t8U=" crossorigin="anonymous">
+
+    
+    
+    
+    <script type="text/javascript" src="https://seconsorl.github.io/js/sidebar-toc.min.788b639e2ec681549740b90b3b865d5f9e1789e3ca9c06ccc45d65655434c954.js" integrity="sha256-eItjni7GgVSXQLkLO4ZdX54XiePKnAbMxF1lZVQ0yVQ=" crossorigin="anonymous"></script>
+
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-graph.26b92ed9317bdc6f35642d588bdf3283f40998846e01cf4bee22a126907fbf3b.js" integrity="sha256-Jrku2TF73G81ZC1Yi98yg/QJmIRuAc9L7iKhJpB/vzs=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-digitalRain.af8a7b5c4428cc62d5bf49bf2698d4112c2459ee0c22c1c753ab304aef69888a.js" integrity="sha256-r4p7XEQozGLVv0m/JpjUESwkWe4MIsHHU6swSu9piIo=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-circleBrushStrokes.fe8fc3ee52e1d90e9236be8c36a27711efa024beb4da304829f95dfbb61d6e84.js" integrity="sha256-/o/D7lLh2Q6SNr6MNqJ3Ee&#43;gJL602jBIKfld&#43;7YdboQ=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-meta.71b5202ea881c86ac19e4b55414656a5444204a4ba08ff7368a5aa99c0a60949.js" integrity="sha256-cbUgLqiByGrBnktVQUZWpURCBKS6CP9zaKWqmcCmCUk=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sidebar-sketch.min.2e95015880993ef9abcad62d111decea22406616931bce193254bf8af2339953.js" integrity="sha256-LpUBWICZPvmrytYtER3s6iJAZhaTG84ZMlS/ivIzmVM=" crossorigin="anonymous" defer></script>
+    
+    
+    
+    <link rel="shortcut icon" href="https://seconsorl.github.io/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://seconsorl.github.io/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://seconsorl.github.io/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://seconsorl.github.io/favicons/favicon-16x16.png">
+    <link rel="canonical" href="https://seconsorl.github.io/post/%E9%87%8F%E5%AD%90%E5%AF%86%E7%A0%81/">
+    
+    
+    
+    
+    
+
+    
+    <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://seconsorl.github.io/images/profile.png" /><meta name="twitter:title" content="量子密码"/>
+<meta name="twitter:description" content="a note for learning 量子密码"/>
+
+</head><body>
+        <div class="main">
+            <div class="page-top">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a  href="/"  title="">Home</a></li>
+        
+            
+            <li><a  href="/post/"  title="">Posts</a></li>
+        
+            
+            <li><a  href="/about/"  title="">About</a></li>
+        
+        <li class="grow"></li>
+        
+        <li>
+            <a class="theme-switch" title="Switch Theme">
+                <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+            <div class="sidebar" id="sidebar">
+    <div class="top-toc">
+        <img src="https://seconsorl.github.io/images/profile.png" alt="profile picture">
+        
+        <a href="/">A junior from NBU</a>
+    </div>
+    
+    <div class="middle-sidebar grow" id="middle-sidebar">
+        
+            
+            
+                
+            
+
+            
+        
+    </div>
+
+    <div class="footer">
+        <ul class="social-links">
+            
+            <li>
+                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://github.com/SeConSorL" target="_blank" rel="noopener noreferrer" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" rel="me" aria-label="instagram">
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+            <li>
+                <a href="mailto:216002917@nbu.edu.cn" target="_blank" rel="noopener noreferrer" rel="me" aria-label="e-mail">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+        </ul>
+
+        <div class="by">by HZW <b>·</b> 2025</div>
+    </div>
+</div>
+            <div class="content">
+<div class="post">
+    
+    <div class="post-title">
+        <h1>量子密码</h1>
+        
+            <div class="post-header">
+    <div style="padding-top: 10px;">
+        <i class="far fa-calendar"></i><span class="date">May 6, 2024</span>
+        <i class="far fa-clock"></i><span class="reading-time">One minute</span>
+        
+
+
+    </div>
+</div>
+        
+    </div>
+    <div class="post-content">
+        <h2 id="tips">TIPS</h2>
+<p><a href="https://zhuanlan.zhihu.com/p/396684776">量子密码技术原理及应用前景初探</a></p>
+<h2 id="传统密码技术局限">传统密码技术局限</h2>
+<ul>
+<li>对于对称密码体制，难以安全分发密钥。</li>
+<li>对于非对称密码体制，未来一旦算能取得突破（比如通用量子计算机问世），求解数论经典问题将变得轻而易举，届时信息安全将受到全面挑战。</li>
+<li>在非对称密码体制下，还有可能遭受中间人攻击。</li>
+</ul>
+<h2 id="量子力学">量子力学</h2>
+<h3 id="量子">量子</h3>
+<ul>
+<li>黑体辐射：催生了“量子论”，普朗克的划时代意义的论文《正常光谱能量分布律理论》，得到的重要结论：<strong>能量是由确定数目的、彼此相等的、有限的能量包构成</strong>。</li>
+<li>一个物理量如果存在最小的不可分割的基本单位，则这个物理量是<strong>量子化</strong>的，并把最小单位称为<strong>量子</strong>。</li>
+<li>“量子化”指其物理量的数值是离散的，而不是连续的任意取值。光子就是一种量子，并且是量子密码学中常使用的量子。</li>
+</ul>
+<h4 id="基本特性">基本特性</h4>
+<ul>
+<li><strong>量子态的叠加</strong>（superposition）：对于量子（如光子、电子等），无法同时测量它的位置和速度，因此量子态是叠加的，量子可以同时具备多种量子态。</li>
+<li><strong>干涉</strong>（interference）：</li>
+<li><strong>纠缠</strong>（entanglement）：两个相互纠缠的量子，无论相隔多远，改变其中一个量子的状态时，另一个量子会在瞬间发生状态变化。</li>
+<li><strong>不可克隆</strong>（nonclonability）：不可复制量子态；或者复制后将破坏原来的量子态。</li>
+</ul>
+<h4 id="光子偏振特性">光子偏振特性</h4>
+<p>光子在传播过程中，会沿着与传播方向垂直的方向振动。每个光子的振动方向各不相同：有的左右振动，有的上下振动，有些光子的振动方向，则介于垂直方向和水平方向之间。</p>
+<p>在发送光子时，可用特定方向的滤光偏振片去“规定”或“校正”光子的振动方向。在接收光子时，可用特定方向的滤光偏振片让光子通过或不通过：垂直或水平方向振动的光子可以通过直线型滤光片、在遇到斜角型滤光片时，通过或不通过的可能性各为50%（状态为0或1）；45度或135度斜角方向振动的光子可以通过斜角型滤光片、在遇到直线型滤光片时，通过或不通过的可能性各为50%（状态为0或1）。</p>
+<h3 id="量子计算机的优势和弱点">量子计算机的优势和弱点</h3>
+<p><strong>优势</strong></p>
+<ul>
+<li>大数N的因子分解问题是一个NP难题，当N很大时常规计算机无能为力。[[Shor量子算法]]可将此问题变为P问题，这是量子计算机的优势。</li>
+<li>除了大数因子分解Shor量子算法外，著名的算法还有[[Grover量子搜索算法]]。</li>
+<li>对于量子系统的计算，如果使用常规计算机，其时间复杂度和空间复杂度都很不可观，有些问题在常规计算机上不能计算，量子计算机则可以有效的模拟或计算。量子态具有不可克隆性，而且量子叠加态在测量时出现坍缩，如果将这些特性用于通信，则可完全避免窃听。所以，量子通信技术非常适合于保密通信。</li>
+</ul>
+<p><strong>缺点</strong></p>
+<ul>
+<li>由于量子计算机原则上是专用的，应用范围有一定的限制，因此量子计算机不能代替传统的通用计算机。</li>
+<li>大数因子分解问题Shor量子算法能将NP问题变为P问题，但不存在能够将NP问题变为P问题的通用算法，比如对于旅行商问题；</li>
+<li>如果量子算法使时间复杂度为多项式，则所需功率按指数增长，这是不现实的；</li>
+<li>在计算机解题过程中，数据的读出和复制是经常要执行的操作，这些操作在常规计算机中很容易实现，而在量子计算机中，由于量子态的叠加具有坍缩和量子态的不可克隆，实现这些操作很麻烦。</li>
+</ul>
+<h2 id="量子密码技术原理">量子密码技术原理</h2>
+<p>信息安全的根本，归结到<strong>如何确保密钥本身的安全</strong>。</p>
+<h3 id="密钥分发">密钥分发</h3>
+<ul>
+<li>
+<p>信息论创始人香农，总结提出了“无条件安全”的条件：</p>
+<ul>
+<li>密钥真随机且只是用一次；</li>
+<li>与明文等长且按位进行二进制异或操作；</li>
+</ul>
+<p>只要每次加密时<strong>使用一次性随机密钥（一次一密），而且保证密钥不泄露，则加密结果就是安全可靠的</strong>。</p>
+</li>
+<li>
+<p>光的偏振</p>
+<p>因为光子有两个偏振方向，而且相互垂直。
+所以，单光子源每次生成的单个光子</p>
+</li>
+<li>
+<p>偏振方向测量</p>
+<p>我们可以简单选取”水平垂直“或”对角“的测量方式（称为测量基），对单光子源产生的单光子进行测量</p>
+</li>
+</ul>
+<ul>
+<li>
+<p>对量子编码</p>
+<p>当测量基和光子偏振方向一致，就可以得出结果（要么是1，要么是0）</p>
+</li>
+</ul>
+<h3 id="量子密钥分发交换原理">量子密钥分发交换原理</h3>
+<p>利用量子力学原理以及光子偏振特性，可以在信息发送者张三和信息接收者李四之间安全可靠地产生和交换一次性密钥，再用此密钥进行信息加密，理论上就可保证加密结果的安全可靠。</p>
+<p>考虑到通信双方如果都要拥有光子制备和发射设备，成本会非常昂贵，<strong>若将光子制备分发处理统一交给通信卫星负责，成本将会大幅下降</strong>。关于星地之间如何进行密钥分发处理，暂未见到公开资料。</p>
+<h4 id="加密过程">加密过程</h4>
+<p>假设张三和李四在加密通信之前，<strong>借助通信卫星作为中介</strong>，实现一次性密钥交换的核心处理过程可能是这样的。</p>
+<p>（1）通信卫星预先制备好一序列（比如1000组）处于纠缠态的光子。每个光子的偏振方向，是水平、垂直、45度斜角或135度斜角这四种方向之一。</p>
+<p>（2）张三预先决定每次使用哪种滤光偏振片类型（直线型或斜角型）来从通信卫星接收这1000个光子。</p>
+<p>（3）张三使用传统通信方式，将上述接收方案告知李四。</p>
+<p>（4）通信卫星每次发送光子时，是先把这一组处于纠缠态的两个光子拆开来，将其中一个光子发给张三，同时将另一个光子发给李四。</p>
+<p>（5）通信卫星向张三发送第一组光子中的一个光子。张三使用接收方案里对应于第一个光子的滤光偏振片进行接收，得到第一个光子可能的状态取值。</p>
+<p>（6）几乎同时，通信卫星也向李四发送该组光子的另外一个光子。李四也使用相同类型的偏振片接收对应光子，也得到相同状态取值。</p>
+<p>（7）通信卫星继续向张三、李四发送第二组光子，处理同上，直到发送完全部1000组光子。</p>
+<p>（8）通信卫星使用传统通信方式告诉张三：这1000组光子依次是按照怎样的偏振方案（直线式或者斜角式）来发送的（但不具体告知每个光子的偏振方向究竟是垂直、水平、45度斜角还是135度斜角）。张三逐个核对后，就知道对哪些光子是使用了正确的滤光偏振片类型来接收、哪些不正确。</p>
+<p>张三舍去用错了偏振片类型的取值，只留下用对了偏振片类型的取值后所得到的1、0序列，这就形成了一次性随机密码。</p>
+<p>上述过程中，只有张三知道密钥（通信卫星也不知道），这是和使用“BB84协议”协商得到一次性密钥过程的主要区别所在。</p>
+<p>（9）通信卫星使用传统方式，也将每个光子的偏振方案告诉李四。因为量子的纠缠特性，以及李四使用了和张三相同的接收方案来接收每个光子，所以，李四也会得到与张三相同的密钥。而且同样地，通信卫星也不知道密钥是什么。这相当于张三、李四安全可靠地交换了一次性随机密钥。</p>
+<p>特别说明：</p>
+<p>（1）通信卫星每次给张三发送光子时，是从下列两种方案中随机选择一种偏振方案：直线式或者斜角式。但是每次发给张三和李四的同一组光子，总是相同的偏振方向。</p>
+<p>（2）张三预先准备的滤光偏振片接收方案，对每一个光子而言，其偏振片类型，也是从直线型或者斜角型中随机选择。</p>
+<p>上述两类随机选择过程，可以确保最终生成的一次性密钥具有随机性。</p>
+<h3 id="如何防止密钥被窃听">如何防止密钥被窃听</h3>
+<p>存在5种被窃听的可能</p>
+<ul>
+<li>假如窃听者是企图窃听通信卫星与张三之间的光子信号：对于这1000个光子，窃听者不知道该选择哪种类型的滤光偏振片来接收光子，只能随机盲目选择偏振片类型来接收。一旦用错滤光偏振片，就会引起光子偏振方向改变，当他再将光子转发给张三时，光子就不再是卫星发出时的原始偏振方向。根据“BB84”协议，最终的密钥不可能产生、而且窃听行为也会被通信卫星和张三发现。</li>
+<li>其次，假如是窃听通信卫星与李四之间的光子信号：同样会遇到与上述（1）相同的问题。</li>
+<li>假如是窃听张三与李四之间使用传统方式进行的通信：假设已成功窃听到接收方案，窃听者使用该接收方案去截获通信卫星发给张三或者通信卫星发给李四的光子，然后再转发给张三或李四。因为接收方案中的偏振片类型与卫星发射的光子偏振方向之间存在随机错配性，和张三或李四一样，窃听者对某一部分光子会用错偏振片类型，窃听者在截获这一部分光子时，必然引起这些光子改变偏振方向，被改变偏振方向的光子在转发给张三或者李四后，会导致通信卫星与张三或者通信卫星与李四之间无法协商产生密钥。因此，窃听行为也会失败而且也会曝光。</li>
+<li>假如窃听者是企图窃听通信卫星与张三之间或者通信卫星与李四之间使用传统方式进行的通信内容：因为窃听时通信卫星已经将全部光子发送给了张三和李四，窃听者已没有机会更改偏振片方案去重新接收光子（量子不可克隆性），而且通信卫星和张三、李四之间仅仅交流光子偏振方案，窃密者成功截获的这一信息，也不会有任何用处。</li>
+<li>假如是窃听或侵入通信卫星本身：根据上述密钥分发核心处理过程，通信卫星并不知晓密钥，因此，窃听通信卫星本身并不会引起密钥泄露。</li>
+</ul>
+<h2 id="量子密码技术在金融业应用分析">量子密码技术在金融业应用分析</h2>
+<p>各行各业，也包括金融行业在内，可望基于量子密钥技术重新构建新的应用平台，为信息安全保驾护航。以金融行业为例，设想未来利用量子密钥技术进行通信加解密处理的核心过程如下。</p>
+<p>（1）信息发送者和信息接收者事先向量子密钥分发机构申请注册。</p>
+<p>（2）信息发送者在发送信息前，实时向量子密钥分发机构请求获得一次性量子密钥。</p>
+<p>（3）量子密钥分发机构实时调用通信卫星提供的服务，在信息发送者和接收者之间实现一次性随机密钥的交换处理。</p>
+<p>（4）发送者使用该密钥，利用传统的对称加密算法，对信息正文进行加密。</p>
+<p>（5）密文通过传统信道传送给接收者。</p>
+<p>（6）接收者使用相同密钥进行解密。</p>
+<p>上述信息发送者和信息接收者，都可以是银行同业；或者是银行与客户。</p>
+<p>未来社会很可能会对传统密码技术体系与生态进行重塑。在高安全性需求场景下，从上述核心处理过程可以推演出，既然密钥本身已可安全地进行交换，那么非对称密钥体制也就可能退出历史舞台。</p>
+
+    </div>
+    <div class="post-footer">
+        <div class="info">
+            
+            
+        </div>
+        
+
+
+    </div>
+    
+        
+    
+</div>
+
+                <div class="grow"></div>
+                <div class="built-with">
+    Built with <a href="https://gohugo.io/">Hugo</a> <b>·</b> Using the <a href="https://github.com/LucasVadilho/heyo-hugo-theme">heyo</a> theme
+</div>
+            </div>
+        </div>
+        
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha512-3M00D/rn8n+2ZVXBO9Hib0GKNpkm8MSUU/e2VNthDyBYxKWG+BftNYYcuEjXlyrSO637tidzMBXfE7sQm0INUg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<script type="text/javascript">
+            
+            
+            window.MathJax = {
+                tex: {
+                    inlineMath: [['$', '$'], ['\\(', '\\)']],
+                    displayMath: [['$$','$$'], ['\\[', '\\]']]
+                },
+                svg: {
+                    scale: 1.25,
+                }
+            };
+        </script><script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.1.0/es5/tex-mml-svg.min.js" integrity="sha512-/mL9Gs6E5Bz6NtPOr9eY&#43;T8IIdJbo2JL3TudApzFFelwBXEc3TeFLU6kPq122TJROv7jkktuBRkz5h8vGzrsyA==" crossorigin="anonymous"></script>
+    </body>
+</html>

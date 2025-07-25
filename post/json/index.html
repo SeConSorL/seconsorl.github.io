@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light"><head>
+    <title>JSON · HZW</title>
+    <meta charset="utf-8">
+    
+    <meta name="generator" content="Hugo 0.124.1">
+    <meta property="og:title" content="JSON" />
+<meta property="og:description" content="a note for learning JSON" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://seconsorl.github.io/post/json/" /><meta property="og:image" content="https://seconsorl.github.io/images/profile.png" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2024-05-06T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-05-06T00:00:00+00:00" /><meta property="og:site_name" content="A junior from NBU" />
+
+
+
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="HZW">
+    
+    
+    
+    <link rel="stylesheet" type="text/css" href="https://seconsorl.github.io/css/style.min.565d8c479597aa43658922d4b31e286529a7525a22c9546fa1018fc5e5ef6d86.css" integrity="sha256-Vl2MR5WXqkNliSLUsx4oZSmnUloiyVRvoQGPxeXvbYY=" crossorigin="anonymous" type="text/css">
+
+    
+    
+    
+    <script type="text/javascript" src="https://seconsorl.github.io/js/heyo-header.min.a3fa728a9f57833a31dfb45c48caaf1e4890c8c97f07bd7133fc2359745edb5d.js" integrity="sha256-o/pyip9Xgzox37RcSMqvHkiQyMl/B71xM/wjWXRe210=" crossorigin="anonymous"></script>
+
+    
+    
+    <link rel="stylesheet" type="text/css" href="https://seconsorl.github.io/css/fonts.9398921f2d404983c2b7f9a68ddc72e3f5e58a3e38b0a8e4a70d75c12ebfb7c5.css" integrity="sha256-k5iSHy1ASYPCt/mmjdxy4/Xlij44sKjkpw11wS6/t8U=" crossorigin="anonymous">
+
+    
+    
+    
+    <script type="text/javascript" src="https://seconsorl.github.io/js/sidebar-toc.min.788b639e2ec681549740b90b3b865d5f9e1789e3ca9c06ccc45d65655434c954.js" integrity="sha256-eItjni7GgVSXQLkLO4ZdX54XiePKnAbMxF1lZVQ0yVQ=" crossorigin="anonymous"></script>
+
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-graph.26b92ed9317bdc6f35642d588bdf3283f40998846e01cf4bee22a126907fbf3b.js" integrity="sha256-Jrku2TF73G81ZC1Yi98yg/QJmIRuAc9L7iKhJpB/vzs=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-digitalRain.af8a7b5c4428cc62d5bf49bf2698d4112c2459ee0c22c1c753ab304aef69888a.js" integrity="sha256-r4p7XEQozGLVv0m/JpjUESwkWe4MIsHHU6swSu9piIo=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-circleBrushStrokes.fe8fc3ee52e1d90e9236be8c36a27711efa024beb4da304829f95dfbb61d6e84.js" integrity="sha256-/o/D7lLh2Q6SNr6MNqJ3Ee&#43;gJL602jBIKfld&#43;7YdboQ=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-meta.71b5202ea881c86ac19e4b55414656a5444204a4ba08ff7368a5aa99c0a60949.js" integrity="sha256-cbUgLqiByGrBnktVQUZWpURCBKS6CP9zaKWqmcCmCUk=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sidebar-sketch.min.2e95015880993ef9abcad62d111decea22406616931bce193254bf8af2339953.js" integrity="sha256-LpUBWICZPvmrytYtER3s6iJAZhaTG84ZMlS/ivIzmVM=" crossorigin="anonymous" defer></script>
+    
+    
+    
+    <link rel="shortcut icon" href="https://seconsorl.github.io/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://seconsorl.github.io/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://seconsorl.github.io/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://seconsorl.github.io/favicons/favicon-16x16.png">
+    <link rel="canonical" href="https://seconsorl.github.io/post/json/">
+    
+    
+    
+    
+    
+
+    
+    <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://seconsorl.github.io/images/profile.png" /><meta name="twitter:title" content="JSON"/>
+<meta name="twitter:description" content="a note for learning JSON"/>
+
+</head><body>
+        <div class="main">
+            <div class="page-top">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a  href="/"  title="">Home</a></li>
+        
+            
+            <li><a  href="/post/"  title="">Posts</a></li>
+        
+            
+            <li><a  href="/about/"  title="">About</a></li>
+        
+        <li class="grow"></li>
+        
+        <li>
+            <a class="theme-switch" title="Switch Theme">
+                <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+            <div class="sidebar" id="sidebar">
+    <div class="top-toc">
+        <img src="https://seconsorl.github.io/images/profile.png" alt="profile picture">
+        
+        <a href="/">A junior from NBU</a>
+    </div>
+    
+    <div class="middle-sidebar grow" id="middle-sidebar">
+        
+            
+            
+                
+            
+
+            
+        
+    </div>
+
+    <div class="footer">
+        <ul class="social-links">
+            
+            <li>
+                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://github.com/SeConSorL" target="_blank" rel="noopener noreferrer" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" rel="me" aria-label="instagram">
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+            <li>
+                <a href="mailto:216002917@nbu.edu.cn" target="_blank" rel="noopener noreferrer" rel="me" aria-label="e-mail">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+        </ul>
+
+        <div class="by">by HZW <b>·</b> 2025</div>
+    </div>
+</div>
+            <div class="content">
+<div class="post">
+    
+    <div class="thumbnail" style="box-shadow: var(--box-shadow); height: 350px;">
+        <img src=https://seconsorl.github.io/images/JSON.jpg style="object-position: 50% 100%;" title=JSON alt=JSON loading="lazy">
+    </div>
+    
+    <div class="post-title">
+        <h1>JSON</h1>
+        
+            <div class="post-header">
+    <div style="padding-top: 10px;">
+        <i class="far fa-calendar"></i><span class="date">May 6, 2024</span>
+        <i class="far fa-clock"></i><span class="reading-time">4 minutes</span>
+        
+
+
+    </div>
+</div>
+        
+    </div>
+    <div class="post-content">
+        <h2 id="介绍">介绍</h2>
+<p>JSON <em>（JavaScript Object Notation）</em> 是一种轻量级的数据交换格式，它易于阅读和编写，并且易于机器解析和生成，在 Web 开发中用于数据的格式化和传输。</p>
+<h3 id="json-的数据结构">JSON 的数据结构</h3>
+<p>JSON 由两种数据结构组成：<strong>对象</strong>和<strong>数组</strong>。</p>
+<h4 id="对象">对象</h4>
+<p>对象（object）是由键值对组成的无序集合，键是字符串，值可以是任何类型，包括对象和数组。</p>
+<p>对象由<strong>一对花括号<code>{ }</code>包围</strong>，键和值之间用冒号<code>:</code>分隔。键值对之间用逗号<code>,</code>分隔。</p>
+<p>举个例子：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;list&#34;</span> : [ 
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;Apifox&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">&#34;ID&#34;</span>: <span style="color:#bd93f9">2</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">&#34;city&#34;</span>: <span style="color:#f1fa8c">&#34;Guangzhou&#34;</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    ] 
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>在这个例子中，对象的键是<code>&quot;name&quot;</code>、<code>&quot;ID&quot;</code>和<code>&quot;city&quot;</code>，对应的值是字符串、数字和字符串。</p>
+<h4 id="数组">数组</h4>
+<p>数组（array）是值（value）的有序集合，每个值可以是任何类型，包括对象和数组。数组由一对方括号<code>[ ]</code>包裹，值之间用逗号<code>,</code>分隔。</p>
+<p>举个例子：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#ff79c6">[</span>  <span style="color:#f1fa8c">&#34;apple&#34;</span><span style="color:#ff79c6">,</span>  <span style="color:#f1fa8c">&#34;banana&#34;</span><span style="color:#ff79c6">,</span>  <span style="color:#f1fa8c">&#34;orange&#34;</span><span style="color:#ff79c6">]</span>
+</span></span></code></pre></div><p>在这个例子中，数组包含三个字符串元素：<code>&quot;apple&quot;</code>、<code>&quot;banana&quot;</code>和<code>&quot;orange&quot;</code>。</p>
+<h4 id="值">值</h4>
+<p>值（value）可以是花括号<code>{ }</code>括起来的字符串（String）、数值(Number)、布尔值(true/false)、 null、对象（Object）或者数组（Array），这些结构可以嵌套。</p>
+<ul>
+<li><strong>字符串</strong></li>
+</ul>
+<p>JSON 字符串是由双引号<code>&quot; &quot;</code>包围的 Unicode 字符序列，使用反斜杠 <code>\</code> 转义。</p>
+<p>举个例子：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;Apifox&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;city&#34;</span>: <span style="color:#f1fa8c">&#34;Guangzhou&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>在这个例子中，字符串<code>&quot;name&quot;</code>和<code>&quot;city&quot;</code>是由双引号<code>&quot; &quot;</code>包围的。</p>
+<ul>
+<li><strong>数字</strong></li>
+</ul>
+<p>JSON 数字可以是整数或浮点数。</p>
+<p>举个例子：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;age&#34;</span>: <span style="color:#bd93f9">30</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;weight&#34;</span>: <span style="color:#bd93f9">65.5</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>在这个例子中，数字<code>&quot;30&quot;</code>和<code>&quot;65.5&quot;</code>分别是整数和浮点数，不需要双引号<code>&quot; &quot;</code>包围。</p>
+<ul>
+<li><strong>布尔值</strong></li>
+</ul>
+<p>JSON 布尔值只有两个取值：true 和 false。</p>
+<p>举个例子：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;isStudent&#34;</span>: <span style="color:#ff79c6">true</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;isEmployed&#34;</span>: <span style="color:#ff79c6">false</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>在这个例子中，布尔值<code>&quot;isStudent&quot;</code>的取值为<code>true</code>，布尔值<code>&quot;isEmployed&quot;</code>的取值为<code>false</code>，不需要双引号<code>&quot; &quot;</code>包围。</p>
+<ul>
+<li><strong>null</strong></li>
+</ul>
+<p>JSON 的 null 表示一个空值。</p>
+<p>举个例子：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;middleName&#34;</span>: <span style="color:#ff79c6">null</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>在这个例子中，<code>&quot;middleName&quot;</code>的值为<code>null</code>，不需要双引号<code>&quot; &quot;</code>包围。</p>
+<h4 id="复杂对象示例">复杂对象示例</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#bd93f9">101</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;Jane Doe&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;is_active&#34;</span>: <span style="color:#ff79c6">true</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;roles&#34;</span>: [<span style="color:#f1fa8c">&#34;admin&#34;</span>, <span style="color:#f1fa8c">&#34;editor&#34;</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;contact&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;email&#34;</span>: <span style="color:#f1fa8c">&#34;jane.doe@example.com&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;phone&#34;</span>: <span style="color:#f1fa8c">&#34;123-456-7890&#34;</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;preferences&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;notifications&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">&#34;email&#34;</span>: <span style="color:#ff79c6">true</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">&#34;sms&#34;</span>: <span style="color:#ff79c6">false</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="数组示例">数组示例</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>[
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;Alice&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;age&#34;</span>: <span style="color:#bd93f9">28</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;skills&#34;</span>: [<span style="color:#f1fa8c">&#34;JavaScript&#34;</span>, <span style="color:#f1fa8c">&#34;Python&#34;</span>]
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;Bob&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;age&#34;</span>: <span style="color:#bd93f9">34</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;skills&#34;</span>: [<span style="color:#f1fa8c">&#34;Java&#34;</span>, <span style="color:#f1fa8c">&#34;C++&#34;</span>]
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>]
+</span></span></code></pre></div><h4 id="json-注意事项">JSON 注意事项</h4>
+<ul>
+<li>JSON的<strong>字符串</strong>必须使用双引号<code>&quot; &quot;</code>，而不能使用单引号<code>' '</code>。</li>
+<li>JSON的<strong>值</strong>可以是字符串、数字、布尔值、null、对象或数组。</li>
+<li>JSON的<strong>键</strong>必须是字符串，必须使用双引号<code>&quot; &quot;</code>。</li>
+<li>JSON的格式必须严格遵守规定，否则可能会导致解析错误。</li>
+</ul>
+<h3 id="json-的优点和缺点"><strong>JSON 的优点和缺点</strong></h3>
+<h4 id="优点"><strong>优点</strong></h4>
+<ol>
+<li><strong>与 JavaScript 完美兼容</strong>：JSON 格式源自 JavaScript，因此它与 JavaScript 非常兼容，并且易于在 JavaScript 应用程序中使用。</li>
+<li><strong>轻量级</strong>：JSON 格式非常轻量级，因此它非常适合在网络中传输大量数据。相比于 XML，它的数据量更小，传输速度更快。</li>
+<li><strong>多语言支持</strong>：JSON 格式是一种跨语言的格式，它可以被许多不同语言的程序支持，易于解析和生成，几乎所有编程语言都支持 JSON。</li>
+<li><strong>易于阅读和编辑</strong>：JSON 格式非常易于阅读和编写，因为它具有简单的语法和结构，格式清晰，具有良好的可读性。</li>
+</ol>
+<h4 id="缺点"><strong>缺点</strong></h4>
+<ol>
+<li><strong>不支持注释：</strong> JSON 格式<strong>不支持注释</strong>，这可能使得编写和维护复杂数据时变得有些困难。</li>
+<li><strong>无法表示二进制数据：</strong> JSON 格式<strong>无法直接表示二进制数据</strong>，这意味着它无法用于存储和传输图像、视频等二进制数据。</li>
+<li><strong>不支持命名空间：</strong> JSON <strong>不支持命名空间</strong>，这可能会导致不同的应用程序之间发生命名冲突。</li>
+<li><strong>不支持DTD：</strong> JSON <strong>不支持 DTD</strong>（见 <a href="/post/xml/">XML</a>），这使得在验证 JSON 数据格式时不太方便。</li>
+</ol>
+<h2 id="json-和-xml-的区别">JSON 和 XML 的区别</h2>
+<p>JSON 和 XML都是常用的数据交换格式。它们之间有什么区别呢？</p>
+<ol>
+<li><strong>简洁性与可读性：</strong>
+JSON 比 XML 更加简洁和易读。相比于 XML 的繁琐闭合标签，JSON 采用更为紧凑的表示形式，使得数据结构更清晰明了。</li>
+<li><strong>解析速度与带宽占用：</strong>
+JSON 的解析速度通常比 XML 更快，因为它的结构简单，不需要解析复杂的标签。此外，JSON 数据通常占用的带宽更少，有助于提高传输效率。</li>
+<li><strong>数据复杂性：</strong>
+XML 比 JSON 更适合描述复杂的数据类型和嵌套结构。XML 支持命名空间和多种数据格式，这使得它在处理复杂数据和配置文件时具有优势。</li>
+<li><strong>注释支持：</strong>
+JSON 不支持注释，这意味着在数据中不能嵌入注释说明。而 XML 则支持注释，可以在数据文档中添加解释说明，便于维护和理解。</li>
+</ol>
+<h2 id="python的json库">Python的JSON库</h2>
+<p><a href="https://docs.python.org/zh-cn/3/library/json.html">官方文档</a></p>
+<h3 id="包结构">包结构</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>Lib<span style="color:#ff79c6">/</span>json<span style="color:#ff79c6">/</span>
+</span></span><span style="display:flex;"><span>    ├── __init__<span style="color:#ff79c6">.</span>py    <span style="color:#6272a4"># 主接口文件</span>
+</span></span><span style="display:flex;"><span>    ├── decoder<span style="color:#ff79c6">.</span>py     <span style="color:#6272a4"># JSON解码实现</span>
+</span></span><span style="display:flex;"><span>    ├── encoder<span style="color:#ff79c6">.</span>py     <span style="color:#6272a4"># JSON编码实现</span>
+</span></span><span style="display:flex;"><span>    ├── scanner<span style="color:#ff79c6">.</span>py     <span style="color:#6272a4"># 词法分析器</span>
+</span></span><span style="display:flex;"><span>    └── tool<span style="color:#ff79c6">.</span>py        <span style="color:#6272a4"># 命令行工具支持</span>
+</span></span></code></pre></div><h3 id="主要方法">主要方法</h3>
+<ul>
+<li><code>json.dumps()</code> : 将python对象编码成json字符串</li>
+<li><code>json.dump()</code> : 将python对象编码成json字符串，并写入文件</li>
+<li><code>json.loads()</code> : 将json字符串解码成python对象</li>
+<li><code>json.load()</code> : 从文件中读取json字符串，并解码成python对象</li>
+</ul>
+<h4 id="jsondumps">json.dumps()</h4>
+<blockquote>
+<p>json.dumps(obj, *, skipkeys=False, ensure_ascii=True, check_circular=True, allow_nan=True, cls=None, indent=None, separators=None, default=None, sort_keys=False, **kw)</p>
+</blockquote>
+<p><strong>功能</strong> ：将Python对象编码成JSON字符串。</p>
+<p><strong>常用参数</strong></p>
+<ul>
+<li><code>obj</code> ：要序列化的Python对象。</li>
+<li><code>skipkeys</code> ：为True时，字典的key如果不是基本类型（str、int、float、bool、None）会被跳过，默认False。</li>
+<li><code>ensure_ascii</code> ：为True时，所有非ASCII字符会被转义，默认True。</li>
+<li><code>indent</code> ：指定缩进格式，常用于美化输出，默认None。</li>
+<li><code>separators</code> ：指定分隔符，默认(<code>,</code> 、 <code>:</code>&rsquo;)。</li>
+<li><code>sort_keys</code> ：为True时，字典按key排序，默认False。</li>
+</ul>
+<p><strong>示例</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">import</span> json
+</span></span><span style="display:flex;"><span>data <span style="color:#ff79c6">=</span> {<span style="color:#f1fa8c">&#39;name&#39;</span>: <span style="color:#f1fa8c">&#39;张三&#39;</span>, <span style="color:#f1fa8c">&#39;age&#39;</span>: <span style="color:#bd93f9">18</span>}
+</span></span><span style="display:flex;"><span>json_str <span style="color:#ff79c6">=</span> json<span style="color:#ff79c6">.</span>dumps(data, ensure_ascii<span style="color:#ff79c6">=</span><span style="color:#ff79c6">False</span>, indent<span style="color:#ff79c6">=</span><span style="color:#bd93f9">2</span>)
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(json_str)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 输出：</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># {</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">#   &#34;name&#34;: &#34;张三&#34;,</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">#   &#34;age&#34;: 18</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># }</span>
+</span></span></code></pre></div><h4 id="jsondump">json.dump()</h4>
+<blockquote>
+<p>json.dump(obj, fp, *, skipkeys=False, ensure_ascii=True, check_circular=True, allow_nan=True, cls=None, indent=None, separators=None, default=None, sort_keys=False, **kw)</p>
+</blockquote>
+<p><strong>功能</strong>：将Python对象编码成JSON格式并写入文件。</p>
+<p><strong>参数同dumps</strong></p>
+<p>新增   <code>fp</code> ：文件类对象（有write方法）。</p>
+<p><strong>示例</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">with</span> <span style="color:#8be9fd;font-style:italic">open</span>(<span style="color:#f1fa8c">&#39;data.json&#39;</span>, <span style="color:#f1fa8c">&#39;w&#39;</span>, encoding<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#39;utf-8&#39;</span>) <span style="color:#ff79c6">as</span> f:
+</span></span><span style="display:flex;"><span>    json<span style="color:#ff79c6">.</span>dump(data, f, ensure_ascii<span style="color:#ff79c6">=</span><span style="color:#ff79c6">False</span>, indent<span style="color:#ff79c6">=</span><span style="color:#bd93f9">2</span>)
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 文件data.json内容：</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># {</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">#   &#34;name&#34;: &#34;张三&#34;,</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">#   &#34;age&#34;: 18</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># }</span>
+</span></span></code></pre></div><h4 id="jsonloads">json.loads()</h4>
+<blockquote>
+<p>json.loads(s, *, cls=None, object_hook=None, parse_float=None, parse_int=None, parse_constant=None, object_pairs_hook=None, **kw)</p>
+</blockquote>
+<p><strong>功能</strong> ：将JSON字符串解码为Python对象。</p>
+<p><strong>常用参数</strong></p>
+<ul>
+<li><code>s</code>：JSON格式字符串。</li>
+<li><code>object_hook</code>：自定义对象解码函数，用于将字典转换为自定义Python对象。</li>
+<li><code>cls</code>：自定义解码器类，必须是JSONDecoder的子类。</li>
+<li><code>parse_float</code>：解析JSON数字为浮点数时使用的函数，默认使用float()。</li>
+<li><code>parse_int</code>：解析JSON数字为整数时使用的函数，默认使用int()。</li>
+<li><code>parse_constant</code>：解析JSON特殊值(如-Infinity, Infinity, NaN)的函数。</li>
+<li><code>object_pairs_hook</code>：类似object_hook，但接收的是有序键值对列表而非字典。</li>
+</ul>
+<p><strong>示例</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>json_str <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;{&#34;name&#34;: &#34;张三&#34;, &#34;age&#34;: 18}&#39;</span>
+</span></span><span style="display:flex;"><span>data <span style="color:#ff79c6">=</span> json<span style="color:#ff79c6">.</span>loads(json_str)
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(data)
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 输出：</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># {&#39;name&#39;: &#39;张三&#39;, &#39;age&#39;: 18}</span>
+</span></span></code></pre></div><h4 id="jsonload">json.load()</h4>
+<blockquote>
+<p>json.load(fp, *, cls=None, object_hook=None, parse_float=None, parse_int=None, parse_constant=None, object_pairs_hook=None, **kw)</p>
+</blockquote>
+<p><strong>功能</strong>：从文件读取JSON数据并解码为Python对象。</p>
+<p><strong>参数同loads</strong></p>
+<p>新增 <code>fp</code>：文件类对象。</p>
+<p><strong>示例</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">with</span> <span style="color:#8be9fd;font-style:italic">open</span>(<span style="color:#f1fa8c">&#39;data.json&#39;</span>, <span style="color:#f1fa8c">&#39;r&#39;</span>, encoding<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#39;utf-8&#39;</span>) <span style="color:#ff79c6">as</span> f:
+</span></span><span style="display:flex;"><span>    data <span style="color:#ff79c6">=</span> json<span style="color:#ff79c6">.</span>load(f)
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(data)
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 输出：</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># {&#39;name&#39;: &#39;张三&#39;, &#39;age&#39;: 18}</span>
+</span></span></code></pre></div><h3 id="不常用方法和属性">不常用方法和属性</h3>
+<h4 id="jsonencoder">JSONEncoder</h4>
+<p><strong>功能</strong>：自定义JSON编码器，继承并重写default方法可实现自定义对象序列化。</p>
+<p><strong>示例</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">MyEncoder</span>(json<span style="color:#ff79c6">.</span>JSONEncoder):
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">default</span>(self, obj):
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span> <span style="color:#8be9fd;font-style:italic">isinstance</span>(obj, <span style="color:#8be9fd;font-style:italic">complex</span>):
+</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">return</span> {<span style="color:#f1fa8c">&#39;real&#39;</span>: obj<span style="color:#ff79c6">.</span>real, <span style="color:#f1fa8c">&#39;imag&#39;</span>: obj<span style="color:#ff79c6">.</span>imag}
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> <span style="color:#8be9fd;font-style:italic">super</span>()<span style="color:#ff79c6">.</span>default(obj)
+</span></span><span style="display:flex;"><span>json_str <span style="color:#ff79c6">=</span> json<span style="color:#ff79c6">.</span>dumps(<span style="color:#bd93f9">1</span><span style="color:#ff79c6">+</span><span style="color:#bd93f9">2</span>j, cls<span style="color:#ff79c6">=</span>MyEncoder)
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(json_str)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 输出：{&#34;real&#34;: 1.0, &#34;imag&#34;: 2.0}</span>
+</span></span></code></pre></div><h4 id="jsondecoder">JSONDecoder</h4>
+<p>功能：自定义JSON解码器。</p>
+<p>用于扩展 <code>json.loads</code> 等解码行为，通常无需自定义。</p>
+<h4 id="jsondecodeerror">JSONDecodeError</h4>
+<p><strong>功能</strong>：解码失败时抛出的异常。</p>
+<p><strong>示例</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">try</span>:
+</span></span><span style="display:flex;"><span>  json<span style="color:#ff79c6">.</span>loads(<span style="color:#f1fa8c">&#39;错误json&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">except</span> json<span style="color:#ff79c6">.</span>JSONDecodeError <span style="color:#ff79c6">as</span> e:
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#39;解码失败:&#39;</span>, e)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 输出：解码失败: Expecting value: line 1 column 1 (char 0)</span>
+</span></span></code></pre></div><h3 id="其他辅助模块">其他辅助模块</h3>
+<p><code>decoder.py</code>、<code>encoder.py</code>、<code>scanner.py</code>、<code>tool.py</code>：分别实现了解码、编码、扫描和工具函数，通常无需直接调用。</p>
+<h3 id="python与json类型转换对照表">Python与JSON类型转换对照表</h3>
+<table>
+<thead>
+<tr>
+<th>Python类型</th>
+<th>JSON类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dict</td>
+<td>object</td>
+<td>字典</td>
+</tr>
+<tr>
+<td>list, tuple</td>
+<td>array</td>
+<td>列表、元组</td>
+</tr>
+<tr>
+<td>str</td>
+<td>string</td>
+<td>字符串</td>
+</tr>
+<tr>
+<td>int, float</td>
+<td>number</td>
+<td>数字</td>
+</tr>
+<tr>
+<td>True、False</td>
+<td>true</td>
+<td>布尔值</td>
+</tr>
+<tr>
+<td>None</td>
+<td>null</td>
+<td>空值</td>
+</tr>
+</tbody>
+</table>
+<h2 id="python使用">Python使用</h2>
+<h3 id="导入模块">导入模块</h3>
+<p>在 Python 中，我们可以直接使用内置的 json 模块，无需额外安装。通过以下代码导入 json 模块：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">import</span> json
+</span></span></code></pre></div><h3 id="高级用法">高级用法</h3>
+<h4 id="自定义对象的序列化与反序列化">自定义对象的序列化与反序列化</h4>
+<p>在实际开发中，我们可能会遇到需要序列化自定义对象的情况。默认情况下，json 库无法直接序列化自定义对象，但我们可以自定义一个编码器来实现这个功能。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">import</span> json
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">Person</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> __init__(self, name, age):
+</span></span><span style="display:flex;"><span>        self<span style="color:#ff79c6">.</span>name <span style="color:#ff79c6">=</span> name
+</span></span><span style="display:flex;"><span>        self<span style="color:#ff79c6">.</span>age <span style="color:#ff79c6">=</span> age
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">PersonEncoder</span>(json<span style="color:#ff79c6">.</span>JSONEncoder):
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">default</span>(self, obj):
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span> <span style="color:#8be9fd;font-style:italic">isinstance</span>(obj, Person):
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">return</span> {<span style="color:#f1fa8c">&#34;name&#34;</span>: obj<span style="color:#ff79c6">.</span>name, <span style="color:#f1fa8c">&#34;age&#34;</span>: obj<span style="color:#ff79c6">.</span>age}
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> <span style="color:#8be9fd;font-style:italic">super</span>()<span style="color:#ff79c6">.</span>default(obj)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>person <span style="color:#ff79c6">=</span> Person(<span style="color:#f1fa8c">&#34;John&#34;</span>, <span style="color:#bd93f9">30</span>)
+</span></span><span style="display:flex;"><span>json_str <span style="color:#ff79c6">=</span> json<span style="color:#ff79c6">.</span>dumps(person, cls<span style="color:#ff79c6">=</span>PersonEncoder)
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(json_str)
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 输出结果：</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># {&#34;name&#34;: &#34;John&#34;, &#34;age&#34;: 30}</span>
+</span></span></code></pre></div><p>我们可以看到通过，自定义编码器，成功将自定义的 Person 对象序列化为 JSON 字符串。同样地，我们也可以通过自定义解码器来实现 JSON 字符串到自定义对象的反序列化。</p>
+<h4 id="处理非-ascii-字符">处理非 ASCII 字符</h4>
+<p>在处理包含非 ASCII 字符的 JSON 数据时，我们可以使用 <code>ensure_ascii</code> 参数来控制是否将非 ASCII 字符转义。</p>
+<p>默认情况下，<code>ensure_ascii</code> 参数为 True，非 ASCII 字符会被转义为 Unicode 编码。</p>
+<p>当 <code>ensure_ascii</code> 参数为 False 时，非 ASCII 字符会以原始形式输出，这样更便于阅读和理解。</p>
+<h4 id="使用-indent-参数美化输出">使用 indent 参数美化输出</h4>
+<p>在调试或阅读 JSON 数据时，我们可以通过设置 <code>indent</code> 参数来美化 JSON 输出的格式，使其更易于和阅读。indent 参数指定了缩进的空格数。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>data <span style="color:#ff79c6">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;John&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;age&#34;</span>: <span style="color:#bd93f9">30</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;hobbies&#34;</span>: [<span style="color:#f1fa8c">&#34;reading&#34;</span>, <span style="color:#f1fa8c">&#34;traveling&#34;</span>, <span style="color:#f1fa8c">&#34;sports&#34;</span>]
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>json_str <span style="color:#ff79c6">=</span> json<span style="color:#ff79c6">.</span>dumps(data, indent<span style="color:#ff79c6">=</span><span style="color:#bd93f9">4</span>)
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(json_str)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">/*</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;John&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;age&#34;</span>: <span style="color:#bd93f9">30</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;hobbies&#34;</span>: [
+</span></span><span style="display:flex;"><span>        <span style="color:#f1fa8c">&#34;reading&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f1fa8c">&#34;traveling&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f1fa8c">&#34;sports&#34;</span>
+</span></span><span style="display:flex;"><span>    ]
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">*/</span>
+</span></span></code></pre></div><h3 id="json-库的异常处理">json 库的异常处理</h3>
+<p>在使用 json 库进行数据处理时，可能会遇到一些异常情况例如，无效的 JSON 格式、不支持的数据类型等。我们需要对这些异常进行有效的处理，以确保程序的健壮性。</p>
+<h4 id="常见的异常类型">常见的异常类型</h4>
+<ul>
+<li>
+<p><code>json.JSONDecodeError</code> ：当解析 JSON 数据出错时抛出，例如 JSON 格式不正确。</p>
+</li>
+<li>
+<p><code>TypeError</code> ：当尝试序列化一个不支持的数据类型时抛出。</p>
+</li>
+</ul>
+<h4 id="异常处理示例">异常处理示例</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">import</span> json
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>json_str <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;{&#34;name&#34;: &#34;John&#34;, &#34;age&#34;: 30, &#34;hobbies&#34;: [&#34;reading&#34;, &#34;traveling&#34;]&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">try</span>:
+</span></span><span style="display:flex;"><span>    data <span style="color:#ff79c6">=</span> json<span style="color:#ff79c6">.</span>loads(json_str)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">except</span> json<span style="color:#ff79c6">.</span>JSONDecodeError <span style="color:#ff79c6">as</span> e:
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">f</span><span style="color:#f1fa8c">&#34;JSON 解码错误：</span><span style="color:#f1fa8c">{</span>e<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">except</span> Exception <span style="color:#ff79c6">as</span> e:
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">f</span><span style="color:#f1fa8c">&#34;发生错误：</span><span style="color:#f1fa8c">{</span>e<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># JSON 解码错误：Expecting &#39;,&#39; delimiter: line 1 column 64 (char 63)</span>
+</span></span></code></pre></div>
+    </div>
+    <div class="post-footer">
+        <div class="info">
+            
+            <span class="separator"><a class="tag" href="/tags/computer/">computer</a><a class="tag" href="/tags/%E5%89%8D%E7%AB%AF/">前端</a></span>
+        </div>
+        
+
+
+    </div>
+    
+        
+    
+</div>
+
+                <div class="grow"></div>
+                <div class="built-with">
+    Built with <a href="https://gohugo.io/">Hugo</a> <b>·</b> Using the <a href="https://github.com/LucasVadilho/heyo-hugo-theme">heyo</a> theme
+</div>
+            </div>
+        </div>
+        
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha512-3M00D/rn8n+2ZVXBO9Hib0GKNpkm8MSUU/e2VNthDyBYxKWG+BftNYYcuEjXlyrSO637tidzMBXfE7sQm0INUg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<script type="text/javascript">
+            
+            
+            window.MathJax = {
+                tex: {
+                    inlineMath: [['$', '$'], ['\\(', '\\)']],
+                    displayMath: [['$$','$$'], ['\\[', '\\]']]
+                },
+                svg: {
+                    scale: 1.25,
+                }
+            };
+        </script><script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.1.0/es5/tex-mml-svg.min.js" integrity="sha512-/mL9Gs6E5Bz6NtPOr9eY&#43;T8IIdJbo2JL3TudApzFFelwBXEc3TeFLU6kPq122TJROv7jkktuBRkz5h8vGzrsyA==" crossorigin="anonymous"></script>
+    </body>
+</html>

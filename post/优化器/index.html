@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light"><head>
+    <title>优化器 · HZW</title>
+    <meta charset="utf-8">
+    
+    <meta name="generator" content="Hugo 0.124.1">
+    <meta property="og:title" content="优化器" />
+<meta property="og:description" content="a note for learning 优化器" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://seconsorl.github.io/post/%E4%BC%98%E5%8C%96%E5%99%A8/" /><meta property="og:image" content="https://seconsorl.github.io/images/profile.png" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2024-05-06T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-05-06T00:00:00+00:00" /><meta property="og:site_name" content="A junior from NBU" />
+
+
+
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="HZW">
+    
+    
+    
+    <link rel="stylesheet" type="text/css" href="https://seconsorl.github.io/css/style.min.565d8c479597aa43658922d4b31e286529a7525a22c9546fa1018fc5e5ef6d86.css" integrity="sha256-Vl2MR5WXqkNliSLUsx4oZSmnUloiyVRvoQGPxeXvbYY=" crossorigin="anonymous" type="text/css">
+
+    
+    
+    
+    <script type="text/javascript" src="https://seconsorl.github.io/js/heyo-header.min.a3fa728a9f57833a31dfb45c48caaf1e4890c8c97f07bd7133fc2359745edb5d.js" integrity="sha256-o/pyip9Xgzox37RcSMqvHkiQyMl/B71xM/wjWXRe210=" crossorigin="anonymous"></script>
+
+    
+    
+    <link rel="stylesheet" type="text/css" href="https://seconsorl.github.io/css/fonts.9398921f2d404983c2b7f9a68ddc72e3f5e58a3e38b0a8e4a70d75c12ebfb7c5.css" integrity="sha256-k5iSHy1ASYPCt/mmjdxy4/Xlij44sKjkpw11wS6/t8U=" crossorigin="anonymous">
+
+    
+    
+    
+    <script type="text/javascript" src="https://seconsorl.github.io/js/sidebar-toc.min.788b639e2ec681549740b90b3b865d5f9e1789e3ca9c06ccc45d65655434c954.js" integrity="sha256-eItjni7GgVSXQLkLO4ZdX54XiePKnAbMxF1lZVQ0yVQ=" crossorigin="anonymous"></script>
+
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-graph.26b92ed9317bdc6f35642d588bdf3283f40998846e01cf4bee22a126907fbf3b.js" integrity="sha256-Jrku2TF73G81ZC1Yi98yg/QJmIRuAc9L7iKhJpB/vzs=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-digitalRain.af8a7b5c4428cc62d5bf49bf2698d4112c2459ee0c22c1c753ab304aef69888a.js" integrity="sha256-r4p7XEQozGLVv0m/JpjUESwkWe4MIsHHU6swSu9piIo=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-circleBrushStrokes.fe8fc3ee52e1d90e9236be8c36a27711efa024beb4da304829f95dfbb61d6e84.js" integrity="sha256-/o/D7lLh2Q6SNr6MNqJ3Ee&#43;gJL602jBIKfld&#43;7YdboQ=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sketch-meta.71b5202ea881c86ac19e4b55414656a5444204a4ba08ff7368a5aa99c0a60949.js" integrity="sha256-cbUgLqiByGrBnktVQUZWpURCBKS6CP9zaKWqmcCmCUk=" crossorigin="anonymous" defer></script>
+
+        
+        
+        <script type="text/javascript" src="https://seconsorl.github.io/js/sidebar-sketch.min.2e95015880993ef9abcad62d111decea22406616931bce193254bf8af2339953.js" integrity="sha256-LpUBWICZPvmrytYtER3s6iJAZhaTG84ZMlS/ivIzmVM=" crossorigin="anonymous" defer></script>
+    
+    
+    
+    <link rel="shortcut icon" href="https://seconsorl.github.io/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://seconsorl.github.io/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://seconsorl.github.io/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://seconsorl.github.io/favicons/favicon-16x16.png">
+    <link rel="canonical" href="https://seconsorl.github.io/post/%E4%BC%98%E5%8C%96%E5%99%A8/">
+    
+    
+    
+    
+    
+
+    
+    <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://seconsorl.github.io/images/profile.png" /><meta name="twitter:title" content="优化器"/>
+<meta name="twitter:description" content="a note for learning 优化器"/>
+
+</head><body>
+        <div class="main">
+            <div class="page-top">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a  href="/"  title="">Home</a></li>
+        
+            
+            <li><a  href="/post/"  title="">Posts</a></li>
+        
+            
+            <li><a  href="/about/"  title="">About</a></li>
+        
+        <li class="grow"></li>
+        
+        <li>
+            <a class="theme-switch" title="Switch Theme">
+                <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+            <div class="sidebar" id="sidebar">
+    <div class="top-toc">
+        <img src="https://seconsorl.github.io/images/profile.png" alt="profile picture">
+        
+        <a href="/">A junior from NBU</a>
+    </div>
+    
+    <div class="middle-sidebar grow" id="middle-sidebar">
+        
+            
+            
+                
+            
+
+            
+        
+    </div>
+
+    <div class="footer">
+        <ul class="social-links">
+            
+            <li>
+                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://github.com/SeConSorL" target="_blank" rel="noopener noreferrer" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" rel="me" aria-label="instagram">
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+            <li>
+                <a href="mailto:216002917@nbu.edu.cn" target="_blank" rel="noopener noreferrer" rel="me" aria-label="e-mail">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                </a>
+            </li>
+            
+        </ul>
+
+        <div class="by">by HZW <b>·</b> 2025</div>
+    </div>
+</div>
+            <div class="content">
+<div class="post">
+    
+    <div class="post-title">
+        <h1>优化器</h1>
+        
+            <div class="post-header">
+    <div style="padding-top: 10px;">
+        <i class="far fa-calendar"></i><span class="date">May 6, 2024</span>
+        <i class="far fa-clock"></i><span class="reading-time">One minute</span>
+        
+
+
+    </div>
+</div>
+        
+    </div>
+    <div class="post-content">
+        <h2 id="主要优化器"><strong>主要优化器</strong></h2>
+<h3 id="sgd">SGD</h3>
+<p><strong>SGD</strong>全称<strong>Stochastic Gradient Descent</strong>，随机梯度下降，1847年提出。每次选择一个mini-batch，而不是全部样本，使用梯度下降来更新模型参数。它解决了随机小批量样本的问题，但仍然有自适应学习率、容易卡在梯度较小点等问题。</p>
+<p>我们要把最小化或最大化的函数称为目标函数或准则。当我们对其进行最小化时，我们也把它称为<strong>损失函数或误差函数</strong>。</p>
+<p>假设损失函数为$J(\theta)=\frac{1}{2}\sum_{i=1}^m(h_{\theta}(x)-y)^2$，其中$h_{\theta}(x)=\theta_0+\theta_1 x_1++\theta_2 x_2+\dots++\theta_n x_n$，然后我们要使它最小化。</p>
+<p><strong>梯度下降：梯度的方向是函数在给定点上升最快的方向，那么梯度的反方向就是函数在给定点下降最快的方向</strong>，因此我们在做梯度下降的时候，应该是沿着梯度的反方向进行权重的更新，可以有效的找到全局的最优解。这个参数的更新过程可以描述为：
+$$
+\theta_j:=\theta_j-\alpha \frac{\partial J(\theta)}{\partial \theta_j}  \
+\frac{\partial J(\theta)}{\partial \theta_j}=\frac{\partial }{\partial \theta_j}\frac{1}{2}(h_\theta(x)-y)^2 \
+=2 \cdot \frac{1}{2}(h_\theta(x)-y) \cdot \frac{\partial}{\partial \theta_j}(h_\theta(x)-y)  \
+=(h_\theta(x)-y) \cdot \frac{\partial}{\partial \theta_j}(\sum_{i=0}^n \theta_i x_i-y) \
+=(h_\theta(x)-y)x_j
+$$</p>
+<p>SGD既可以用于分类计算，也可以用于回归计算。</p>
+<p>SGD算法是<strong>从样本中随机抽出一组，训练后按梯度更新一次，然后再抽取一组，再更新一次，在样本量及其大的情况下，可能不用训练完所有的样本就可以获得一个损失值在可接受范围之内的模型了。</strong>（重点：每次迭代使用一组样本）</p>
+<blockquote>
+<p>这里的<strong>随机</strong>是指每次迭代过程中，样本都要被随机打乱，打乱是有效减小样本之间造成的参数更新抵消问题。</p>
+</blockquote>
+<p>==为什么引入SGD?==</p>
+<p>深度神经网络通常有大量的参数需要学习，因此优化算法的效率和精度非常重要。传统的梯度下降算法需要计算全部样本的梯度，非常耗时，并且容易受到噪声的影响。随机梯度下降算法则可以使用一小部分样本来计算梯度，从而大大提高了训练速度和鲁棒性。此外，SGD还可以避免陷入布局最小值，使得训练结果更加准确。</p>
+<p>==步长比梯度下降法小==</p>
+<p>权值的更新不再通过遍历全部的数据集，而是选择其中的一个样本即可。一般来说其<strong>步长的选择比梯度下降法的步长要小一点</strong>，因为梯度下降法使用的是准确梯度，所以它可以朝着全局最优解（当问题为凸问题时）较大幅度的迭代下去，但是随机梯度法不行，因为它使用的是近似梯度，或者对于全局来说有时候它走的也许根本不是梯度下降的方法，故而它走的比较缓，同样这样带来的好处就是相比于梯度下降法，它不是那么容易陷入到局部最优解中去。</p>
+<p>更新公式为：
+$$
+&amp;\quad for \ i=1 \ to \ m \ do   \
+&amp;\qquad \theta_j := \theta_j + \alpha (y^{(i)}-h_\theta (x_j^{(i)}))x_j^{(i)} \ \ \text{(for every j)} \
+$$</p>
+<h4 id="分类">分类</h4>
+<p>随机梯度下降算法通常还有三种不同的应用方式，它们分别是<strong>SGD</strong>，<strong>Batch-SGD</strong>，<strong>Mini-SGD</strong></p>
+<ol>
+<li>
+<p>SGD是最基本的随机梯度下降，它是指<strong>每次参数更新只使用一个样本</strong>，这样可能导致更新较慢。</p>
+</li>
+<li>
+<p>Batch-SGD是批随机梯度下降，它是指<strong>每次参数更新使用所有样本</strong>，即把所有样本都代入计算一遍，然后取它们的参数更新均值，来对参数进行一次性更新，这种更新方式较为粗糙；</p>
+</li>
+<li>
+<p>Mini-Batch-SGD是小批量随机梯度下降，它是指<strong>每次参数更新使用一小批样本</strong>，这批样本的数量通常可以采用<strong>trial-and-error</strong>的方法来确定，这种方法被证明可以有效加快训练速度。</p>
+</li>
+</ol>
+<p><strong>优点</strong>：</p>
+<p>（1）每一轮参数的更新速度加快。</p>
+<p><strong>缺点</strong>：</p>
+<p>（1）准确率下降。由于即使在目标函数为强凸函数的情况下，<strong>SGD仍旧无法做到线性收敛</strong>。</p>
+<p>（2）<strong>可能会收敛到局部最优</strong>，由于单个样本并不能代表全部样本的趋势。</p>
+<p>（3）<strong>不易于并行实现</strong>。</p>
+<h3 id="sgdm">SGDM</h3>
+<p><strong>SGDM</strong>即为<strong>SGD with momentum</strong>，它加入了动量机制，1986年提出。
+$$
+v^1=\lambda v^0 - \eta\nabla L(\theta^0) \
+\theta^1=\theta^0+v^1
+$$
+当前动量V由上一次迭代动量，和当前梯度决定。</p>
+<p>SGDM相比于SGD的差别就在于，参数更新时，不仅仅减去了当前迭代的梯度，还减去了前t-1迭代的梯度的加权和。由此可见，SGDM中，当前迭代的梯度，和之前迭代的累积梯度，都会影响参数更新。</p>
+<blockquote>
+<p>不足的是，SGDM没有考虑对学习率进行<strong>自适应更新</strong>，故<strong>学习率的选择很关键</strong>。</p>
+</blockquote>
+<h3 id="adagrad">Adagrad</h3>
+<p>它利用迭代次数和累积梯度，对学习率进行自动衰减，2011年提出。从而使得刚开始迭代时，学习率较大，可以快速收敛。而后来则逐渐减小，精调参数，使得模型可以稳定找到最优点。其参数迭代公式如下
+$$
+\theta_t=\theta_{t-1}-\frac{\eta}{\sqrt{\sum_{i=0}^{t-1}(g_i)^2}}g_{t-1}
+$$
+与SGD的区别在于，<strong>学习率</strong>  除以  <strong>前 t-1 迭代的梯度的平方和</strong>。故称为<strong>自适应梯度下降</strong>。</p>
+<p>**Adagrad有个致命问题，就是没有考虑迭代衰减。**极端情况，如果刚开始的梯度特别大，而后面的比较小，则学习率基本不会变化了，也就谈不上自适应学习率了。这个问题在RMSProp中得到了修正。</p>
+<h3 id="rmsprop">RMSProp</h3>
+<p>它与Adagrad基本类似，只是加入了<strong>迭代衰减</strong>，2013年提出，如下
+$$
+\theta_t=
+$$
+和Adagrad的区别，在于RMSProp中，梯度累积不是简单的前t-1次迭代梯度的平方和了，而是加入了衰减因子$\alpha$。</p>
+<p>简单理解就是 <strong>学习率</strong> 除以 <strong>前t-1次迭代的梯度的加权平方和</strong> 。加入衰减时make sense的，因为与当前迭代越近的梯度，对当前影响应该越大。另外也完美解决了某些迭代梯度过大，导致自适应梯度无法变化的问题。</p>
+<h3 id="adam"><strong>Adam</strong></h3>
+<p>Adam是SGDM和RMSProp的结合，它基本解决了之前提到的梯度下降的一系列问题，比如随机小样本、自适应学习率、容易卡在梯度较小点等问题，2015年提出。如下</p>
+<p><img alt="Adam" src="https://pic3.zhimg.com/v2-4d5f9f73b8581d5b657cdb93da107452_b.webp?consumer=ZHI_MENG"></p>
+<h2 id="怎么选择优化器">怎么选择优化器</h2>
+
+    </div>
+    <div class="post-footer">
+        <div class="info">
+            
+            
+        </div>
+        
+
+
+    </div>
+    
+        
+    
+</div>
+
+                <div class="grow"></div>
+                <div class="built-with">
+    Built with <a href="https://gohugo.io/">Hugo</a> <b>·</b> Using the <a href="https://github.com/LucasVadilho/heyo-hugo-theme">heyo</a> theme
+</div>
+            </div>
+        </div>
+        
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha512-3M00D/rn8n+2ZVXBO9Hib0GKNpkm8MSUU/e2VNthDyBYxKWG+BftNYYcuEjXlyrSO637tidzMBXfE7sQm0INUg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<script type="text/javascript">
+            
+            
+            window.MathJax = {
+                tex: {
+                    inlineMath: [['$', '$'], ['\\(', '\\)']],
+                    displayMath: [['$$','$$'], ['\\[', '\\]']]
+                },
+                svg: {
+                    scale: 1.25,
+                }
+            };
+        </script><script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.1.0/es5/tex-mml-svg.min.js" integrity="sha512-/mL9Gs6E5Bz6NtPOr9eY&#43;T8IIdJbo2JL3TudApzFFelwBXEc3TeFLU6kPq122TJROv7jkktuBRkz5h8vGzrsyA==" crossorigin="anonymous"></script>
+    </body>
+</html>

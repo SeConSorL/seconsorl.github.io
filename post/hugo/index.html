@@ -152,7 +152,7 @@
             
         </ul>
 
-        <div class="by">by HZW <b>·</b> 2024</div>
+        <div class="by">by HZW <b>·</b> 2025</div>
     </div>
 </div>
             <div class="content">
@@ -177,15 +177,14 @@
         
     </div>
     <div class="post-content">
-        <p>This article is my note for HuGo.</p>
-<h2 id="tips">TIPS</h2>
+        <h2 id="tips">TIPS</h2>
 <p><a href="https://www.gohugo.org/">中文文档</a></p>
 <p><a href="https://gohugo.io/documentation/">英文文档</a></p>
 <p><a href="https://blog.csdn.net/qq_30682027/article/details/83536577?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-0-83536577-blog-132483763.235^v43^pc_blog_bottom_relevance_base9&spm=1001.2101.3001.4242.1&utm_relevant_index=3">Hugo的使用</a></p>
 <p><a href="https://blog.csdn.net/weixin_39246554/article/details/124573538">实战</a></p>
 <p><a href="https://zhuanlan.zhihu.com/p/396669087">https://zhuanlan.zhihu.com/p/396669087</a></p>
 <p><a href="https://stilig.me/posts/building-hugo/#%E4%BD%BF%E7%94%A8-hugo">部署到github</a></p>
-<p><a href="https://zhuanlan.zhihu.com/p/654088195">自动化部署</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/115219597">部署到云服务器</a></p>
 <p><a href="https://blog.csdn.net/lb52406/article/details/125494991">目录解释</a></p>
 <h4 id="优点">优点</h4>
 <ul>
@@ -312,16 +311,22 @@
 <h2 id="部署">部署</h2>
 <p>假设需要部署在 <code>GitHub Pages</code> 上，首先在GitHub上创建一个Repository，命名为：<code>用户名.github.io</code> （<code>用户名</code>替换为你的github用户名，<strong>必须小写</strong>）。</p>
 <p>在站点根目录执行 <code>Hugo</code> 命令生成最终页面：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ hugo --theme<span style="color:#ff79c6">=</span>主题名 --baseUrl<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;http://&lt;yourname&gt;.github.io/&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ hugo --theme<span style="color:#ff79c6">=</span>主题名 --baseUrl<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;http://&lt;yourname&gt;.github.io/&#34;</span> --buildDrafts
+</span></span><span style="display:flex;"><span>或者
+</span></span><span style="display:flex;"><span>$ hugo -D
 </span></span></code></pre></div><p>（注意，以上命令并不会生成草稿页面，如果未生成任何文章，请去掉文章头部的 <code>draft=true</code> 再重新生成。）</p>
 <p>如果一切顺利，所有静态页面都会生成到 <code>public</code> 目录，将pubilc目录里所有文件 <code>push</code> 到刚创建的Repository的 <code>master</code> 分支。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ <span style="color:#8be9fd;font-style:italic">cd</span> public
-</span></span><span style="display:flex;"><span>$ git init
-</span></span><span style="display:flex;"><span>$ git remote add origin https://github.com/coderzh/coderzh.github.io.git
-</span></span><span style="display:flex;"><span>$ git add -A
-</span></span><span style="display:flex;"><span>$ git commit -m <span style="color:#f1fa8c">&#34;first commit&#34;</span>
-</span></span><span style="display:flex;"><span>$ git push -u origin master
-</span></span></code></pre></div><p>浏览器里访问：<code>http://coderzh.github.io/</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">cd</span> public
+</span></span><span style="display:flex;"><span>git init
+</span></span><span style="display:flex;"><span>git add .
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#f1fa8c">&#34;部署Hugo博客第一次测试&#34;</span>
+</span></span><span style="display:flex;"><span>git branch -M main
+</span></span><span style="display:flex;"><span>git remote add origin https://seconsorl.github.io.git
+</span></span><span style="display:flex;"><span>//关联远端github仓库
+</span></span><span style="display:flex;"><span>git push -u origin main
+</span></span></code></pre></div><p>浏览器里访问：<code>https://seconsorl.github.io</code></p>
+<h3 id="githubio无法加载css样式">github.io无法加载CSS样式</h3>
+<p>重新生成最终页面，再pull上去即可</p>
 <h2 id="配置-hugo">配置 Hugo</h2>
 <p>Hugo 需要在源目录查找一个 <code>config.toml</code> 的配置文件。如果这个文件不存在，将会查找 <code>config.yaml</code>，然后是 <code>config.json</code> 。或者<code>hugo</code></p>
 <p>这个配置文件是一个整站的配置。它给 Hugo 提供了如何构建站点的方式，比如全局的参数和菜单。</p>
@@ -414,6 +419,14 @@
 <p>模版包括：主页模版、单页模板、列表模版、分类模版、模块模版等</p>
 <h4 id="static">static</h4>
 <p>静态文件目录，存储所有静态内容，如：Image，CSS，JavaScript等。当Hugo建立您的网站时，静态目录内的所有文件均按原样复制生成，可有来存储效验文件、<code>CNAME</code>文件等。当你需要调用本地资源时，路径没有以<code>/</code>开头，会自动加上<code>static/</code>的。而当你是</p>
+<h4 id="assets">assets</h4>
+<p>可以存储网页中用到的图片，不要存在<strong>static</strong>里。</p>
+<p>使用的时候不需要加前缀，直接加上<strong>assets</strong>里的<strong>相对路径即可</strong></p>
+<p>比如，<code>![反向代理](/Nginx_img/反向代理.png)</code>  （这里一开始的<code>/</code>加不加好像没关系的）</p>
+<p>会直接调用<code>assets/Nginx_img/反向代理.png</code>的图片</p>
+<blockquote>
+<p>如果不成功就<strong>重启hugo</strong>，试试</p>
+</blockquote>
 <h2 id="heyo主题的使用">Heyo主题的使用</h2>
 <h3 id="修改css样式和js">修改CSS样式和JS</h3>
 <p>在<code>config.toml</code> 的 <code>[params]</code> 下，有 <code>customCss</code>， 在这里可以指定一个 <strong>CSS</strong> 文件，他会覆盖默认的CSS样式。同样还有<code>customJs</code>。</p>
@@ -423,19 +436,19 @@
 <blockquote>
 <p>这里只列出与<a href="/post/typora_manual/">md</a>不同的</p>
 </blockquote>
-<h3 id="表">表</h3>
+<h4 id="表">表</h4>
 <p>表不是核心 Markdown 规范的一部分，但 Hugo 支持开箱即用（out-of-the-box）地支持它们。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>   Name | Age
 </span></span><span style="display:flex;"><span>--------|------
 </span></span><span style="display:flex;"><span>    Bob | 27
 </span></span><span style="display:flex;"><span>  Alice | 23
 </span></span></code></pre></div><p>也可以使用原来的md的语法</p>
-<h3 id="代码块">代码块</h3>
+<h4 id="代码块">代码块</h4>
 <p>可以使用原来的md的语法即三个 <strong>`</strong></p>
 <p>或者可以直接每行空四格 <code> </code> 表示代码块</p>
 <p>或者如下格式（带有 Hugo 内部突出显示简码的代码块）</p>
 <pre tabindex="0"><code><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>//code</span></span></code></pre></div>
-</code></pre><h3 id="块应用">块应用</h3>
+</code></pre><h4 id="块应用">块应用</h4>
 <p><code>blockquote</code> 元素表示从其他来源引用的内容，可以使用<code>footer</code>或者<code>cite</code>。</p>
 <p>例如<code>&lt;cite&gt; 内容 &lt;/cite&gt;</code></p>
 <h3 id="cjk字形">CJK字形</h3>

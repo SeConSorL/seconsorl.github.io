@@ -8,35 +8,84 @@
     <language>en</language>
     <managingEditor>216002917@nbu.edu.cn (HZW)</managingEditor>
     <webMaster>216002917@nbu.edu.cn (HZW)</webMaster>
-    <lastBuildDate>Mon, 06 May 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 08 Jul 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://seconsorl.github.io/tags/computer/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>qemu</title>
+      <link>https://seconsorl.github.io/post/qemu/</link>
+      <pubDate>Mon, 08 Jul 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
+      <guid>https://seconsorl.github.io/post/qemu/</guid>
+      <description>TIPS 官方文档&#xA;qemu Note&#xA;使用 QEMU 命令行的一般形式可以表示为：&#xA;$ qemu-system-x86_64 [机器选项] \ [CPU 选项] \ [加速器选择] \ [设备选择] \ [后端选择] \ [接口选项] \ [启动选项] 大多数选项都会生成一些帮助信息。例如：&#xA;$ qemu-system-x86_64 -M help 将列出该 QEMU 二进制文件支持的机器类型。help 也可以作为参数传递给其他选项。例如：&#xA;$ qemu-system-x86_64 -device scsi-hd，help 将列出可以控制设备行为的附加选项的参数及其默认值scsi-hd。&#xA;参数解释&#xA;选项 机器（Machine） 定义机器类型、内存量等 CPU vCPU 的类型和数量/拓扑。大多数加速器都提供hostCPU 选项，该选项会直接传递主机 CPU 配置，而不会过滤任何功能。 加速器（Accelerator） 这取决于您运行的虚拟机管理程序。默认设置是 TCG，它是纯模拟的，因此您必须指定加速器类型才能利用硬件虚拟化。 设备（Devices） 机器类型中默认未定义的附加设备。 后端（Backends） 后端是 QEMU 处理客户机数据的方式，例如块设备如何存储、网络设备如何查看网络或串行设备如何指向外部。 接口（Interfaces） 系统如何显示，如何管理和控制或调试。 引导（Boot） 系统如何启动，通过固件还是直接内核启动。 示例#1 首先定义一台virt机器，它是用于运行 aarch64 客户机的通用平台。我们启用虚拟化功能，以便在模拟客户机中使用 KVM。由于 virt机器自带一些 pflash 设备，我们为它们命名，以便稍后覆盖默认值。&#xA;$ qemu-system-aarch64 \&#xD;-machine type=virt,virtualization=on,pflash0=rom,pflash1=efivars \&#xD;-m 4096 \ 使用选项定义 4 个 vCPU，max该选项提供了 QEMU 能够模拟的所有 Arm 功能。我们启用了更易于模拟的 Arm 指针认证算法实现。我们明确指定了 TCG 加速，尽管 QEMU 默认会使用 TCG 加速。&#xA;-cpu max \&#xD;-smp 4 \&#xD;-accel tcg \ 由于virt平台没有任何默认的网络或存储设备，我们需要定义它们。我们为它们分配 ID，以便稍后将它们与后端连接起来。</description>
+    </item>
     <item>
       <title>CSS</title>
       <link>https://seconsorl.github.io/post/css/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
       <guid>https://seconsorl.github.io/post/css/</guid>
-      <description>&lt;p&gt;This article is my note for CSS.&lt;/p&gt;</description>
+      <description>CSS(Cascading Style Sheet)层叠样式表 TIPS 链接 CSS_菜鸟教程 W3school&#xA;查看网页样式 审查元素|开发者模式（F12） -&amp;gt; 元素 -&amp;gt; 右边的样式&#xA;正则 = 绝对等于 *= 包含这个元素 ^=以这个开头 $=以这个结尾 div 主要用来设置一块一块区域的&#xA;不加宽度设置，默认和上一级一样宽&#xA;img 默认内联元素&#xA;图片居中可以设置为在外面套一个div，设置display:block；再margin:0 auto;即可 或者 外层添加text-align属性 center&#xA;span 主要用于设置一段文字&#xA;CSS预处理器 CSS预处理器定义了一种新的语言，其基本思想是，用一种专门的编程语言，为CSS加了一些编程的特性，将CSS作为目标生成文件，然后开发者就只要使用这种语言进行CSS的编码工作。就是用一种专门的编程语言，进行Web页面样式设计，再通过编译器转化为正常的CSS文件，以供项目使用。&#xA;SASS：基于Ruby，通过服务端处理，功能强大。解析效率高。需要学习Ruby语言，上手难度高于LESS。&#xA;LESS：基于NodeJS，通过客户端处理，使用简单。功能比SASS简单，解析效率也低于SASS，但在实际开发中足够了，所以我们后台人员如果需要的话，建议使用LESS。&#xA;简介 发展史 CSS 1.0：基本&#xA;CSS 2.0：DIV（块）+CSS，HTML 与 CSS 结构分离的思想，利于SEO&#xA;CSS 2.1：浮动，定位&#xA;CSS 3.0：圆角边框，阴影，动画&amp;hellip; 浏览器兼容性~&#xA;格式 文件目录格式 CSS-&amp;gt; .css文件&#xA;.html文件&#xA;内容格式 行内样式 在标签中写style=&amp;quot; &amp;ldquo;，仅对当前标签生效 &amp;lt;h1 style=&amp;#34;color:red&amp;#34;&amp;gt; 1 &amp;lt;/h1&amp;gt; 内部样式 在HTML文件中写：在head标签里加入style标签，在style中写CSS代码 style标签中加CSS代码，和HTML不同 style标签中的注释格式 /* */ &amp;lt;style&amp;gt; h1{ color:red; border-radius:10px; } &amp;lt;/style&amp;gt; 外部样式 在CSS文件中写：不需要加style标签，直接写。 HTML引用CSS（在head标签）： &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;文件路径&amp;#34;&amp;gt; &amp;lt;style&amp;gt; @import url(&amp;#34;路径&amp;#34;); /*CSS2.1 特有 不建议*/ &amp;lt;/style&amp;gt; 语法 样式的优先级：行内样式 &amp;gt; （就近原则）内部样式、外部样式&#xA;选择器1 [选择器2 [选择器3]] { 声明1; 声明2; } color:#6位16进制数; (RGB) &amp;lt;!</description>
+    </item>
+    <item>
+      <title>docker compose</title>
+      <link>https://seconsorl.github.io/post/docker-compose/</link>
+      <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
+      <guid>https://seconsorl.github.io/post/docker-compose/</guid>
+      <description>TIPS 菜鸟教程&#xA;入门&#xA;docker网络1&#xA;docker网络2&#xA;介绍 Compose 是用于定义和运行多容器 Docker 应用程序的工具。通过 Compose，您可以使用 YML 文件来配置应用程序需要的所有服务。然后，使用一个命令，就可以从 YML 文件配置中创建并启动所有服务。&#xA;YML 文件配置介绍 YAML。&#xA;Compose 使用的三个步骤：&#xA;使用 Dockerfile 定义应用程序的环境。 使用 docker-compose.yml 定义构成应用程序的服务，这样它们可以在隔离环境中一起运行。 最后，执行 docker-compose up 命令来启动并运行整个应用程序。 docker-compose.yml 的配置案例如下（配置参数参考下文）：&#xA;实例&#xA;# yaml 配置实例 version: &amp;#39;3&amp;#39; services: web: build: . ports: - &amp;#34;5000:5000&amp;#34; volumes: - .:/code - logvolume01:/var/log links: - redis redis: image: redis volumes: logvolume01: {} 安装 Linux 上我们可以从 Github 上下载它的二进制包来使用，最新发行的版本地址：https://github.com/docker/compose/releases。&#xA;运行以下命令以下载 Docker Compose 的当前稳定版本：&#xA;$ sudo curl -L &amp;#34;https://github.com/docker/compose/releases/download/v2.2.2/docker-compose-$(uname -s)-$(uname -m)&amp;#34; -o /usr/local/bin/docker-compose Docker Compose 存放在 GitHub，不太稳定。&#xA;你可以也通过执行下面的命令，高速安装 Docker Compose。&#xA;curl -L https://get.daocloud.io/docker/compose/releases/download/v2.4.1/docker-compose-`uname -s`-`uname -m` &amp;gt; /usr/local/bin/docker-compose 将可执行权限应用于二进制文件：&#xA;$ sudo chmod +x /usr/local/bin/docker-compose 创建软链：&#xA;$ sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose 测试是否安装成功：</description>
+    </item>
+    <item>
+      <title>JSON</title>
+      <link>https://seconsorl.github.io/post/json/</link>
+      <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
+      <guid>https://seconsorl.github.io/post/json/</guid>
+      <description>介绍 JSON （JavaScript Object Notation） 是一种轻量级的数据交换格式，它易于阅读和编写，并且易于机器解析和生成，在 Web 开发中用于数据的格式化和传输。&#xA;JSON 的数据结构 JSON 由两种数据结构组成：对象和数组。&#xA;对象 对象（object）是由键值对组成的无序集合，键是字符串，值可以是任何类型，包括对象和数组。&#xA;对象由一对花括号{ }包围，键和值之间用冒号:分隔。键值对之间用逗号,分隔。&#xA;举个例子：&#xA;{ &amp;#34;list&amp;#34; : [ { &amp;#34;name&amp;#34;: &amp;#34;Apifox&amp;#34;, &amp;#34;ID&amp;#34;: 2, &amp;#34;city&amp;#34;: &amp;#34;Guangzhou&amp;#34; } ] } 在这个例子中，对象的键是&amp;quot;name&amp;quot;、&amp;quot;ID&amp;quot;和&amp;quot;city&amp;quot;，对应的值是字符串、数字和字符串。&#xA;数组 数组（array）是值（value）的有序集合，每个值可以是任何类型，包括对象和数组。数组由一对方括号[ ]包裹，值之间用逗号,分隔。&#xA;举个例子：&#xA;[ &amp;#34;apple&amp;#34;, &amp;#34;banana&amp;#34;, &amp;#34;orange&amp;#34;] 在这个例子中，数组包含三个字符串元素：&amp;quot;apple&amp;quot;、&amp;quot;banana&amp;quot;和&amp;quot;orange&amp;quot;。&#xA;值 值（value）可以是花括号{ }括起来的字符串（String）、数值(Number)、布尔值(true/false)、 null、对象（Object）或者数组（Array），这些结构可以嵌套。&#xA;字符串 JSON 字符串是由双引号&amp;quot; &amp;quot;包围的 Unicode 字符序列，使用反斜杠 \ 转义。&#xA;举个例子：&#xA;{ &amp;#34;name&amp;#34;: &amp;#34;Apifox&amp;#34;, &amp;#34;city&amp;#34;: &amp;#34;Guangzhou&amp;#34; } 在这个例子中，字符串&amp;quot;name&amp;quot;和&amp;quot;city&amp;quot;是由双引号&amp;quot; &amp;quot;包围的。&#xA;数字 JSON 数字可以是整数或浮点数。&#xA;举个例子：&#xA;{ &amp;#34;age&amp;#34;: 30, &amp;#34;weight&amp;#34;: 65.5 } 在这个例子中，数字&amp;quot;30&amp;quot;和&amp;quot;65.5&amp;quot;分别是整数和浮点数，不需要双引号&amp;quot; &amp;quot;包围。&#xA;布尔值 JSON 布尔值只有两个取值：true 和 false。&#xA;举个例子：&#xA;{ &amp;#34;isStudent&amp;#34;: true, &amp;#34;isEmployed&amp;#34;: false } 在这个例子中，布尔值&amp;quot;isStudent&amp;quot;的取值为true，布尔值&amp;quot;isEmployed&amp;quot;的取值为false，不需要双引号&amp;quot; &amp;quot;包围。&#xA;null JSON 的 null 表示一个空值。&#xA;举个例子：&#xA;{ &amp;#34;middleName&amp;#34;: null } 在这个例子中，&amp;quot;middleName&amp;quot;的值为null，不需要双引号&amp;quot; &amp;quot;包围。</description>
+    </item>
+    <item>
+      <title>kali</title>
+      <link>https://seconsorl.github.io/post/kali/</link>
+      <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
+      <guid>https://seconsorl.github.io/post/kali/</guid>
+      <description>TIPS https://blog.csdn.net/qq_49318132/article/details/145821899&#xA;https://www.cnblogs.com/lsdb/p/6682545.html&#xA;https://www.kaliorg.com/forum.php</description>
+    </item>
+    <item>
+      <title>linux下docker资源限制</title>
+      <link>https://seconsorl.github.io/post/linux%E4%B8%8Bdocker%E8%B5%84%E6%BA%90%E9%99%90%E5%88%B6/</link>
+      <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
+      <guid>https://seconsorl.github.io/post/linux%E4%B8%8Bdocker%E8%B5%84%E6%BA%90%E9%99%90%E5%88%B6/</guid>
+      <description>设置docker容器所能使用的资源上限 启动容器 先启动docker&#xA;查看一下状态，要在运行状态&#xA;查看cgroups tree&#xA;找到docker，可以看到第一个就是我们刚才启动的docker。&#xA;这里你会找到 2 个。一个是在.slice 里面，一个是在 system.slice 里的 containerd.service里。&#xA;查看使用情况 使用 docker stats 可以查看多个容器的使用情况&#xA;docker stats --format &amp;quot;table {{.Container}}\t{{.CPUPerc}}\t{{.MemUsage}}&amp;quot; 可以格式化输出&#xA;在容器中使用 top 命令可以单一容器的使用情况。&#xA;设置CPU上限 访问docker的cpu配置文件目录：&#xA;cd /sys/fs/cgroup/cpu/system.slice/containerd.service&#xD;cd /sys/fs/cgroup/cpu/docker/&amp;lt;容器ID&amp;gt; system.slice system.slice里面有很多，我们进入容器服务的目录，containerd.service&#xA;目录中的cpu.cfs_period_us文件是控制CPU总权数的，而cpu.cfs_quota_us是控制当前容器权数的，里面的内容只有一个数字。&#xA;后者的值相对于前者的百分比即为总容器服务的可使用的CPU上限。&#xA;如果 cpu.cfs_quota_us 为-1时，表示对CPU使用时间没有限制，控制组内的进程可以完全占用CPU资源‌&#xA;这里你可以通过 echo &amp;gt; &amp;lt;file_name&amp;gt; 设置具体值。&#xA;docker docker目录下的 &amp;lt;容器ID&amp;gt;目录下&#xA;这里是设置对于这个容器的cpu使用限制，同上&#xA;其他 此外还有 docker.service&#xA;设置内存上限 接下来设置容器内存使用情况&#xA;cd /sys/fs/cgroup/memory/system.slice/containerd.service&#xD;cd /sys/fs/cgroup/memory/docker/&amp;lt;容器ID&amp;gt; 这里 memory.limit_in_byte 就是设置内存的文件，默认单位是Byte</description>
+    </item>
+    <item>
+      <title>MUSA</title>
+      <link>https://seconsorl.github.io/post/musa%E6%91%A9%E5%B0%94%E7%BA%BF%E7%A8%8B/</link>
+      <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
+      <guid>https://seconsorl.github.io/post/musa%E6%91%A9%E5%B0%94%E7%BA%BF%E7%A8%8B/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>pytorch</title>
+      <link>https://seconsorl.github.io/post/pytorch%E5%AD%A6%E4%B9%A0/</link>
+      <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
+      <guid>https://seconsorl.github.io/post/pytorch%E5%AD%A6%E4%B9%A0/</guid>
+      <description>TIPS 中文文档&#xA;学习顺序&#xA;数据模块 -&amp;gt; 模型模块 -&amp;gt; 损失函数 -&amp;gt; 优化器 -&amp;gt; 迭代训练&#xA;下载和安装&#xA;直接pip install pytorch torch.Storage 一个torch.Storage是一个单一数据类型的连续一维数组。&#xA;每个torch.Tensor都有一个对应的、相同数据类型的存储。&#xA;具体数据类型见下表&#xA;类型 描述 类型 描述 byte()、char()、double()、float()、half()、int()、long()、short() 将此存储转为相应类型 cpu() 如果当前此存储不在CPU上，则返回一个它的CPU副本 pin_memory() 如果此存储当前未被锁定，则将它复制到锁定内存中。 cuda(device=None, async=False) 返回此对象在CUDA内存中的一个副本。 如果此对象已在CUDA内存中且在正确的设备上，那么不会执行复制操作，直接返回原对象。参数：&#xA;device(int) - 目标GPU的id。默认值是当前设备。async (bool) -如果值为True，且源在锁定内存中，则副本相对于宿主是异步的。否则此参数不起效果。 clone()、copy_() 返回此存储的一个副本 tolist() 返回一个包含此存储中元素的列表 type(new_type=None, async=False) 将此对象转为指定类型。如果已经是正确类型，不会执行复制操作，直接返回原对象。 size() 大小 张量（tensor） Torch 自称为神经网络界的Numpy, 因为他能将 torch 产生的 tensor 放在 GPU 中加速运算 (前提是你有合适的 GPU), 就像 Numpy 会把 array 放在 CPU 中加速运算。（numpy array 和 torch tensor 是可以自由地转换的。）&#xA;定义 pytorch中的数据结构——Tensor，Tensor是PyTorch中最基础的概念。&#xA;张量其实是一个多维数组，它是标量、向量、矩阵的高维拓展&#xA;Tensor与Variable&#xA;在Pytorch0.4.0版本之后其实Variable已经并入Tensor，Variable是torch.autograd中的数据类型&#xA;Variable的属性 data: 被包装的Tensor&#xA;grad: data的梯度&#xA;grad_fn: fn表示function的意思，记录创建的创建张量时用到的方法，比如说加法，乘法，这个操作在求导过程需要用到&#xA;Tensor的Function， 是自动求导的关键&#xA;requires_grad: 指示是否需要梯度， 有的不需要梯度&#xA;is_leaf: 指示是否是叶子节点（张量）&#xA;Tensor的属性 Tensor共有8个属性，其中有5个是Variable并入过来的，剩下三个如下：&#xA;dtype: 张量的数据类型， 如torch.FloatTensor, torch.cuda.FloatTensor, 用的最多的一般是float32和int64(torch.long)&#xA;shape: 张量的形状， 如(64, 3, 224, 224)</description>
     </item>
     <item>
       <title>docker</title>
       <link>https://seconsorl.github.io/post/docker/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
       <guid>https://seconsorl.github.io/post/docker/</guid>
-      <description>&lt;p&gt;This article is my note for Docker.&lt;/p&gt;</description>
+      <description>TIP 安装DOMJudge&#xA;菜鸟教程&#xA;CSDN&#xA;Docker 官网 docker中文库&#xA;Github Docker 源码&#xA;介绍 Docker，翻译过来就是码头工人&#xA;Docker 是dotCloud公司开源的一个基于LXC（Linux Container）的高级容器引擎，基于Go 语言并遵从 Apache2.0 协议开源。&#xA;Linux Container 容器是一种内核虚拟化技术，可以提供轻量级的虚拟化，以便隔离进程和资源，而且不需要提供指令解释机制以及全虚拟化的其他复杂性。LXC主要通过Kernel的namespace实现每个用户实例之间的项目隔离，通过cgroup实现对资源的配额和调度。&#xA;Docker 可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。&#xA;容器是完全使用沙箱机制，相互之间不会有任何接口（类似 iPhone 的 app）,更重要的是容器性能开销极低。不依赖于任何语言、框架或者包装系统&#xA;Docker 从 17.03 版本之后分为 CE（Community Edition: 社区版） 和 EE（Enterprise Edition: 企业版）&#xA;基本原理 Docker 的CS模式 在 Docker Client （Docker 的命令行接口）中来运行 Docker 的各种命令，这些命令会传送给在 Docker 的宿主机上运行的 Docker 守护进程。而 Docker 守护进程是负责实现 Docker 各种功能的。&#xA;Docker 客户端与守护进程的通信方式 Docker 客户端与守护进程，实际上是通过 Socket 进行连接的。&#xA;Docker 提供了三种 Socket 连接的模式:&#xA;Unix 的端口模式&#xA;unix:///var/run/docker.sock&#xA;TCP 协议的 host:port 模式&#xA;tcp://host:port&#xA;fd 的 Socket 模式&#xA;fd://socketfd&#xA;其中，Unix 的端口模式是 Docker 默认的客户端与守护进程的连接方式。我们也可以通过配置进行修改，来修改 Socket 连接方式。&#xA;Docker容器技术与虚拟机的区别 相同点：docker和容器技术和虚拟机技术，都是虚拟化技术。&#xA;不同点：docker有着比虚拟机更少的抽象层。 由于docker不需要Hypervisor实现硬件资源虚拟化，运行在docker容器上的程序直接使用的都是实际物理机的硬件资源。所以docker效率比虚拟机效率高。达到了秒级启动的地步。&#xA;docker相较于VM的优点：&#xA;1、比VM小、快，Docker容器的尺寸减小相比于整个虚拟机大大简化了分布到云和分发时间的开销。Docker启动一个容器实例时间仅仅需要几秒钟。&#xA;2、Docker是一个开放的平台，构建、发布和运行分布式应用程序。&#xA;3、开发人员不需要关系具体是哪个Linux操作系统&#xA;4、Google、微软（azure）、亚马逊、IBM等都支持docker。&#xA;5、Docker支持Unix/Linux操作系统，也支持Windows和Mac。&#xA;Docker局限性：&#xA;Docker用于应用程序时是最有用的，但并不包含数据。日志、数据库等通常放在Docker容器外。一个容器的镜像通常都很小，不用和存储大量数据，存储可以通过外部挂载等方式使用，比如：NFS、ipsan、MFS等 ，或者docker命令 ，-v映射磁盘分区。</description>
     </item>
     <item>
       <title>git</title>
       <link>https://seconsorl.github.io/post/git/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
       <guid>https://seconsorl.github.io/post/git/</guid>
-      <description>&lt;p&gt;This article is my note for Git&lt;/p&gt;</description>
+      <description>TIPS 菜鸟教程&#xA;Git 完整命令手册&#xA;可视化教程&#xA;简介 起源 随着代码库体积的倍数增加，Linus 和社区的小伙伴们很难继续通过手工的方式管理内核代码。于是 Linus 考察了好些版本控制系统，最终决定采用 BitKeeper。&#xA;但 BitKeeper 是商业软件，要收费的。所以 Linus 跟开发 BitKeeper 的商业公司（BitMover）谈判，成功地忽悠到了 BitKeeper 的免费使用权。&#xA;到了 2005 年，BitMover 公司发现 Linux 团队中有人试图破解 BitKeeper 的加密协议。所以，BitMover收回了 Linux 社区的免费使用权。&#xA;2005年4月3日：Linus 开始开发 Git 2005年4月6日：Git 项目对外发布 2005年4月7日：Git 实现作为自身的版本控制工具 2005年4月18日：实现多分支合并 2005年6月16日：Linux 内核 2.6.12 发布，Git 已经可以用于维护 Linux 核心源码 2005年7月26日：Linus 功成身退，将 Git 的维护工作交给另一名 Git 的主要贡献者 Junio C Hamano 取代 SVN 很多公司原来都是使用 SVN 进行版本控制管理，但越来越多的公司选择将代码迁移至 Git（最具标志性的就是使用 SVN 做版本控制的 Google Code ）。&#xA;SVN 和 Git 的区别 最核心的区别是：SVN 是集中式的版本控制系统，而 Git 是分布式的。&#xA;1、Git 是分布式的，SVN 不是：这是 Git 和其它非分布式的版本控制系统，例如 SVN，CVS 等，最核心的区别。 **2、Git 把内容按元数据方式存储，而 SVN 是按文件：**所有的资源控制系统都是把文件的元信息隐藏在一个类似 .svn、.cvs 等的文件夹里。 **3、Git 分支和 SVN 的分支不同：**分支在 SVN 中一点都不特别，其实它就是版本库中的另外一个目录。 **4、Git 没有一个全局的版本号，而 SVN 有：**目前为止这是跟 SVN 相比 Git 缺少的最大的一个特征。 **5、Git 的内容完整性要优于 SVN：**Git 的内容存储使用的是 SHA-1 哈希算法。这能确保代码内容的完整性，确保在遇到磁盘故障和网络问题时降低对版本库的破坏。 集中式版本控制系统需要找一个服务器作为大本营，所有的代码都需要提交到服务器上进行统一的管理。当你需要对代码进行改动时，需要先从服务器上下载一份拷贝，修改完成之后，还需要上传回服务器。</description>
     </item>
     <item>
       <title>HTML5</title>
       <link>https://seconsorl.github.io/post/html5/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
       <guid>https://seconsorl.github.io/post/html5/</guid>
-      <description>&lt;p&gt;This article is my note for HTML5.&lt;/p&gt;</description>
+      <description>TIPS HTML5_菜鸟教程&#xA;W3C标准 结构化标准语言（HTML、XML）&#xA;表现标准语言（CSS）&#xA;行为标准（DOM、ECMAScript）&#xA;行内元素和块元素 块元素：会另起一个行。无论内容多少，该元素会独占一行。 行内元素：内容撑开宽度，左右都是行元素的可以排成一行。 NAME属性 name相同表示同一个组&#xA;nav &amp;lt;nav&amp;gt;标签定义导航链接的部分。&#xA;并不是所有的 HTML 文档都要使用到&amp;lt;nav&amp;gt; 元素。&amp;lt;nav&amp;gt;元素只是作为标注一个导航链接的区域。&#xA;在不同设备上（手机或者PC）可以制定导航链接是否显示，以适应不同屏幕的需求。&#xA;结构 基本结构 DOCTYPE声明 网页头部&amp;lt;head&amp;gt; &amp;lt;/head&amp;gt; 网页主体&amp;lt;body&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;!-- &amp;lt;body&amp;gt; &amp;lt;/body&amp;gt; 开放标签和闭合标签 --&amp;gt; &amp;lt;!-- &amp;lt;hr/&amp;gt;关闭空元素 --&amp;gt; &amp;lt;!-- HTML注释 --&amp;gt; &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;!-- DOCTYPE: 告诉网页用什么规范&amp;gt; --&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;!-- head 网页头部 --&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;!-- meta描述性标签，用来做SEO--&amp;gt; &amp;lt;meta name=&amp;#34;Keywords&amp;#34; content=&amp;#34;...&amp;#34; /&amp;gt; &amp;lt;meta name=&amp;#34;description&amp;#34; content=&amp;#34;...&amp;#34; /&amp;gt; &amp;lt;title&amp;gt;Document&amp;lt;/title&amp;gt; &amp;lt;!-- title网页标题 --&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;!-- body 网页主体 --&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; 结构分析 元素名 描述 header 标题头部区域的内容（用于页面或页面中的一块区域） footer 标记脚部区域的内容（用于整个页面或页面的一块区域） section Web页面中的一块独立区域 article 独立的文章内容 aside 相关内容或应用（常用于侧边栏） nav 导航类辅助内容 基本标签和特殊符号 html里面换行是没用的&#xA;连续的空格符被认为是一个空格&#xA;标签和符号 HTML代码 标题 &amp;lt;h1&amp;gt;一级标签&amp;lt;/h1&amp;gt;&amp;lt;h2&amp;gt;二级标签&amp;lt;/h2&amp;gt;&amp;lt;h3&amp;gt;三级标签&amp;lt;/h3&amp;gt;&amp;lt;h4&amp;gt;四级标签&amp;lt;/h4&amp;gt;&amp;lt;h5&amp;gt;五级标签&amp;lt;/h5&amp;gt;&amp;lt;h6&amp;gt;六级标签&amp;lt;/h6&amp;gt; 段落 &amp;lt;p&amp;gt; 内容 &amp;lt;/p&amp;gt; 换行 &amp;lt;br /&amp;gt; 水平线 &amp;lt;hr /&amp;gt; 字体样式 粗体: &amp;lt;strong&amp;gt; &amp;lt;/strong&amp;gt;斜体: &amp;lt;em&amp;gt; &amp;lt;/em&amp;gt; 空格 &amp;amp;nbsp; 大于&amp;gt; &amp;amp;gt; 小于&amp;lt; &amp;amp;lt; 版权符号© &amp;amp;copy; 注释（多行） &amp;lt;!</description>
     </item>
   </channel>
 </rss>

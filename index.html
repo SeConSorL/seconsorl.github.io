@@ -151,7 +151,7 @@
             
         </ul>
 
-        <div class="by">by HZW <b>·</b> 2024</div>
+        <div class="by">by HZW <b>·</b> 2025</div>
     </div>
 </div>
             <div class="content">
@@ -183,7 +183,16 @@
                     <div class="p_part">
                         
                         
-                            <p><p>This article is my note for 傅里叶变换.</p></p>
+                            <p>傅里叶变换 傅里叶级数 介绍 $\sin(kx)$与$\cos(nx)$在一个周期内是两两正交的： $$ \int_{-\pi}^{\pi}\sin(kx)\sin(nx)dx=0(n\ne k)=\pi(n=k) $$ $$ \int_{-\pi}^{\pi}\cos(kx)\cos(nx)dx=0(n\ne k)=\pi(n=k) $$ $$ \int_{-\pi}^{\pi}\sin(kx)\cos(nx)dx=0 $$ 因为被积函数是奇函数。
+因此，$\sin(kx)$与$\cos(nx)$为函数空间的一组正交基。函数空间（此处应为希尔伯特空间:完备的内积空间）中任何一个函数都可以用这些基来表示，就如三维欧式空间中任何一个向量都可以用$x,y,z$来表示。
+不同之处在于对于函数的表示是无穷维的，比如方波函数$SW(x)$：
+它的傅里叶级数可以表示为： $$ SW(x)=b_1 \sin x+b_2 \sin(2x)+b_3 \sin(3x)+\dots =\sum_{n=1}^{\infty}b_n \sin(nx) $$ 求各系数非常简单，方程两边同乘$\sin(kx)$，然后在一个周期内积分，可得： $$ b_k=\frac{1}{\pi}\int_{-\pi}^{\pi}SW(x)\sin(kx)dx=\frac{2}{\pi}\int_0^{\pi}\sin(kx)dx=\frac{2}{\pi}|\frac{-\cos(kx)}{k}|_{0}^{\pi} \ =\frac{2}{\pi}{ \frac{2}{1},\frac{0}{2},\frac{2}{3}\dots } $$
+$$ SW(x)=\frac{4}{\pi}(\frac{\sin x}{1}+\frac{\sin(3x)}{3}+\frac{\sin(5x)}{5}+\dots) $$
+注意：在靠近间断点x=0处，随着所用项（基）的增多，波动(overshoot)越来越靠近间断点，这种现象叫做吉布斯现象(Gibbs phenomenon)。只能减小其影响，但无法避免，这是处理不连续函数的一个巨大障碍。
+吉布斯现象的典故：【英文大意：在刚要进入本世纪的时候, 一位美国物理学家 A．Michelson 制造了一部机器,借助于这部机器可以求得以图像给出的函数的头 80 个傅里叶分量．机器分析所得的这一结果可以通过下列方法进行检验, 即把所求得的分量加在一起, 看看这样得到的函数是否接近于原来的函数．在大多数情况中, 它是正确的; 但是当用于方波函数 S(x) 的时候, 在它的间断点处 “出现了一个原来函数中不存在的奇怪的突点．Michelson 感到迷惑不解, 猜想也许是机器的某个隐藏着的缺陷引起的毛病．他把他的观察写信告诉了著名的数学物理学家 Josiah Gibbs, 征求他的意见．Gibbs研究了这个现象, 并解释了这个现象 (发表在 1899 年给《自然》的一篇通讯中)。】
+类似地，对于偶函数，只需用$\cos(nx)$表示
+一般地，任何一个函数 $f(x)\subset C([−\pi,\pi])$ (既不是奇函数，也不是偶函数)可以表示为： $$ f(x)=a_0+\sum_{n=1}^{\infty}a_n \cos(nx)+\sum_{n=1}^{\infty}b_n \sin(nx) $$ 求各系数特别简单，等式两边分别同乘$1,\cos(kx),\sin(kx)$，然后在一个周期内积分可得$a_0,a_k,b_k$，即： $$ a_0=\frac{1}{2\pi}\int_{-\pi}^{\pi}f(x)dx,\ a_k=\frac{1}{\pi}\int_{-\pi}^{\pi}f(x)\cos(kx)dx,\ b_k=\frac{1}{\pi}\int_{-\pi}^{\pi}f(x)\sin(kx)dx $$ 进一步，推广到复数域。我们知道$e^{-ikx}$与$e^{inx}$是正交的（内积为0），即： $$ \int_{-\pi}^{\pi}e^{-ikx}e^{ink}dx=|\frac{e^{i(n-k)x}}{i(n-k)}|{-\pi}^{\pi}=0 (n\ne k) $$ 也就是说$e^{ikx}$是希尔伯特空间的一组正交基。此处复数内积运算，需乘其共轭 $e^{-ikx}$。则任何一个周期函数$f(x)$可以表示为： $$ f(x)=\sum{n=-\infty}^{\infty}c_ne^{inx} $$ 求$c_k$，则可以两边同时乘上$e^{-ikx}$，然后在一个周期内积分可得： $$ \int_{-\pi}^{\pi}f(x)e^{-ikx}dx=\int_{-\pi}^{\pi}c_0e^{-ikx}dx+\int_{-\pi}^{\pi}c_1e^{ix}e^{-ikx}dx+\int_{-\pi}^{\pi}c_{-1}e^{-ix}e^{-ikx}dx\ \dots+\int_{-\pi}^{\pi}c_ke^{ikx}e^{-ikx}dx+\dots $$ 右边只有$\int_{-\pi}^{\pi}c_ke^{ikx}e^{-ikx}dx=2\pi c_k$，其他都为0，即：
+$c_k=\frac{1}{2\pi}\int_{-\pi}^{\pi}f(x)e^{-ikx}dx$</p>
                         
                     </div>
                 </div>
@@ -192,6 +201,59 @@
                         <div class="info">
                             
                             <a class="tag" href="/tags/math/">math</a><a class="tag" href="/tags/%E5%9B%BE%E5%83%8F/">图像</a>
+                            
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        
+        <div class="post summary">
+            
+                <div class="thumbnail"  style="height: 350px;">
+                    <a href=/post/qemu/>
+                        <img src=https://seconsorl.github.io/images/qemu.jpg style="object-position: 50% 100%;" alt=qemu title=qemu loading="lazy">
+                    </a>
+                </div>
+            
+            <div class="post-text grow">
+                <div class="post-title">
+                    <h5><a href=/post/qemu/>qemu</a></h5>
+                </div>
+                <div class="post-header">
+    <div style="padding-top: 10px;">
+        <i class="far fa-calendar"></i><span class="date">Jul 8, 2024</span>
+        <i class="far fa-clock"></i><span class="reading-time">One minute</span>
+        
+
+
+    </div>
+</div>
+                <div class="post-content">
+                    <div class="p_part">
+                        
+                        
+                            <p>TIPS 官方文档
+qemu Note
+使用 QEMU 命令行的一般形式可以表示为：
+$ qemu-system-x86_64 [机器选项] \ [CPU 选项] \ [加速器选择] \ [设备选择] \ [后端选择] \ [接口选项] \ [启动选项] 大多数选项都会生成一些帮助信息。例如：
+$ qemu-system-x86_64 -M help 将列出该 QEMU 二进制文件支持的机器类型。help 也可以作为参数传递给其他选项。例如：
+$ qemu-system-x86_64 -device scsi-hd，help 将列出可以控制设备行为的附加选项的参数及其默认值scsi-hd。
+参数解释
+选项 机器（Machine） 定义机器类型、内存量等 CPU vCPU 的类型和数量/拓扑。大多数加速器都提供hostCPU 选项，该选项会直接传递主机 CPU 配置，而不会过滤任何功能。 加速器（Accelerator） 这取决于您运行的虚拟机管理程序。默认设置是 TCG，它是纯模拟的，因此您必须指定加速器类型才能利用硬件虚拟化。 设备（Devices） 机器类型中默认未定义的附加设备。 后端（Backends） 后端是 QEMU 处理客户机数据的方式，例如块设备如何存储、网络设备如何查看网络或串行设备如何指向外部。 接口（Interfaces） 系统如何显示，如何管理和控制或调试。 引导（Boot） 系统如何启动，通过固件还是直接内核启动。 示例#1 首先定义一台virt机器，它是用于运行 aarch64 客户机的通用平台。我们启用虚拟化功能，以便在模拟客户机中使用 KVM。由于 virt机器自带一些 pflash 设备，我们为它们命名，以便稍后覆盖默认值。
+$ qemu-system-aarch64 \-machine type=virt,virtualization=on,pflash0=rom,pflash1=efivars \-m 4096 \ 使用选项定义 4 个 vCPU，max该选项提供了 QEMU 能够模拟的所有 Arm 功能。我们启用了更易于模拟的 Arm 指针认证算法实现。我们明确指定了 TCG 加速，尽管 QEMU 默认会使用 TCG 加速。
+-cpu max \-smp 4 \-accel tcg \ 由于virt平台没有任何默认的网络或存储设备，我们需要定义它们。我们为它们分配 ID，以便稍后将它们与后端连接起来。</p>
+                        
+                    </div>
+                </div>
+                <div class="post-footer">
+                    <div class="meta">
+                        <div class="info">
+                            
+                            <a class="tag" href="/tags/computer/">computer</a><a class="tag" href="/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/">虚拟机</a>
                             
 
 
@@ -227,7 +289,24 @@
                     <div class="p_part">
                         
                         
-                            <p><p>This article is my note for CSS.</p></p>
+                            <p>CSS(Cascading Style Sheet)层叠样式表 TIPS 链接 CSS_菜鸟教程 W3school
+查看网页样式 审查元素|开发者模式（F12） -&gt; 元素 -&gt; 右边的样式
+正则 = 绝对等于 *= 包含这个元素 ^=以这个开头 $=以这个结尾 div 主要用来设置一块一块区域的
+不加宽度设置，默认和上一级一样宽
+img 默认内联元素
+图片居中可以设置为在外面套一个div，设置display:block；再margin:0 auto;即可 或者 外层添加text-align属性 center
+span 主要用于设置一段文字
+CSS预处理器 CSS预处理器定义了一种新的语言，其基本思想是，用一种专门的编程语言，为CSS加了一些编程的特性，将CSS作为目标生成文件，然后开发者就只要使用这种语言进行CSS的编码工作。就是用一种专门的编程语言，进行Web页面样式设计，再通过编译器转化为正常的CSS文件，以供项目使用。
+SASS：基于Ruby，通过服务端处理，功能强大。解析效率高。需要学习Ruby语言，上手难度高于LESS。
+LESS：基于NodeJS，通过客户端处理，使用简单。功能比SASS简单，解析效率也低于SASS，但在实际开发中足够了，所以我们后台人员如果需要的话，建议使用LESS。
+简介 发展史 CSS 1.0：基本
+CSS 2.0：DIV（块）+CSS，HTML 与 CSS 结构分离的思想，利于SEO
+CSS 2.1：浮动，定位
+CSS 3.0：圆角边框，阴影，动画&hellip; 浏览器兼容性~
+格式 文件目录格式 CSS-&gt; .css文件
+.html文件
+内容格式 行内样式 在标签中写style=&quot; &ldquo;，仅对当前标签生效 &lt;h1 style=&#34;color:red&#34;&gt; 1 &lt;/h1&gt; 内部样式 在HTML文件中写：在head标签里加入style标签，在style中写CSS代码 style标签中加CSS代码，和HTML不同 style标签中的注释格式 /* */ &lt;style&gt; h1{ color:red; border-radius:10px; } &lt;/style&gt; 外部样式 在CSS文件中写：不需要加style标签，直接写。 HTML引用CSS（在head标签）： &lt;link rel=&#34;stylesheet&#34; href=&#34;文件路径&#34;&gt; &lt;style&gt; @import url(&#34;路径&#34;); /*CSS2.1 特有 不建议*/ &lt;/style&gt; 语法 样式的优先级：行内样式 &gt; （就近原则）内部样式、外部样式
+选择器1 [选择器2 [选择器3]] { 声明1; 声明2; } color:#6位16进制数; (RGB) &lt;!</p>
                         
                     </div>
                 </div>
@@ -249,58 +328,14 @@
         <div class="post summary">
             
                 <div class="thumbnail"  style="height: 350px;">
-                    <a href=/post/docker/>
-                        <img src=https://seconsorl.github.io/images/docker.png style="object-position: 50% 70%;" alt=Docker title=Docker loading="lazy">
+                    <a href=/post/deeplearning/>
+                        <img src=https://seconsorl.github.io/images/DeepLearning.jpg style="object-position: 50% 100%;" alt=DeepLearning title=DeepLearning loading="lazy">
                     </a>
                 </div>
             
             <div class="post-text grow">
                 <div class="post-title">
-                    <h5><a href=/post/docker/>docker</a></h5>
-                </div>
-                <div class="post-header">
-    <div style="padding-top: 10px;">
-        <i class="far fa-calendar"></i><span class="date">May 6, 2024</span>
-        <i class="far fa-clock"></i><span class="reading-time">3 minutes</span>
-        
-
-
-    </div>
-</div>
-                <div class="post-content">
-                    <div class="p_part">
-                        
-                        
-                            <p><p>This article is my note for Docker.</p></p>
-                        
-                    </div>
-                </div>
-                <div class="post-footer">
-                    <div class="meta">
-                        <div class="info">
-                            
-                            <a class="tag" href="/tags/computer/">computer</a><a class="tag" href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">服务器</a>
-                            
-
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-        
-        <div class="post summary">
-            
-                <div class="thumbnail"  style="height: 350px;">
-                    <a href=/post/git/>
-                        <img src=https://seconsorl.github.io/images/git.png style="object-position: 50% 100%;" alt=Git title=Git loading="lazy">
-                    </a>
-                </div>
-            
-            <div class="post-text grow">
-                <div class="post-title">
-                    <h5><a href=/post/git/>git</a></h5>
+                    <h5><a href=/post/deeplearning/>DeepLearning</a></h5>
                 </div>
                 <div class="post-header">
     <div style="padding-top: 10px;">
@@ -315,7 +350,12 @@
                     <div class="p_part">
                         
                         
-                            <p><p>This article is my note for Git</p></p>
+                            <p>TIPS 机器学习模型训练的步骤：
+1、数据模块（数据采集，清洗，处理等） 2、建立模型（各种模型的建立） 3、损失函数的选择（根据不同的任务选择不同的损失函数），有了loss就可以求取梯度 4、得到梯度之后，我们会选择某种优化方式去进行优化 5、然后迭代训练 线性回归 介绍 线性回归是分析一个变量与另外一(多)个变量之间关系的方法。因变量是$y$，自变量是$x$，关系线性 $$ y=w\times x +b $$ 任务就是求解$w$，$b$。
+求解步骤： 确定模型
+选择损失函数：这里用MSE $$ \frac{1}{m} \sum_{i=1}^{m}(y_i-\hat{y_i}) $$
+求解梯度并更新$w$，$b$ $$ w = w - LR \times w.grad \ b = b - LR \times w.grad $$
+代码 # 首先我们得有训练样本X，Y， 这里我们随机生成 x = torch.rand(20, 1) * 10 y = 2 * x + (5 + torch.randn(20, 1)) # 构建线性回归函数的参数 w = torch.randn((1), requires_grad=True) b = torch.zeros((1), requires_grad=True) # 这俩都需要求梯度 for iteration in range(100): # 前向传播 wx = torch.mul(w, x) y_pred = torch.add(wx, b) # 计算loss loss = (0.5 * (y-y_pred)**2).mean() # 反向传播 loss.backward() # 更新参数 b.data.sub_(lr * b.</p>
                         
                     </div>
                 </div>
@@ -323,7 +363,7 @@
                     <div class="meta">
                         <div class="info">
                             
-                            <a class="tag" href="/tags/computer/">computer</a><a class="tag" href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">服务器</a>
+                            <a class="tag" href="/tags/deeplearning/">DeepLearning</a><a class="tag" href="/tags/ai/">AI</a>
                             
 
 
@@ -337,19 +377,19 @@
         <div class="post summary">
             
                 <div class="thumbnail"  style="height: 350px;">
-                    <a href=/post/html5/>
-                        <img src=https://seconsorl.github.io/images/HTML5.png style="object-position: 50% 40%;" alt=HTML5 title=HTML5 loading="lazy">
+                    <a href=/post/docker-compose/>
+                        <img src=https://seconsorl.github.io/images/docker_compose.jpg style="object-position: 50% 100%;" alt=docker_compose title=docker_compose loading="lazy">
                     </a>
                 </div>
             
             <div class="post-text grow">
                 <div class="post-title">
-                    <h5><a href=/post/html5/>HTML5</a></h5>
+                    <h5><a href=/post/docker-compose/>docker compose</a></h5>
                 </div>
                 <div class="post-header">
     <div style="padding-top: 10px;">
         <i class="far fa-calendar"></i><span class="date">May 6, 2024</span>
-        <i class="far fa-clock"></i><span class="reading-time">2 minutes</span>
+        <i class="far fa-clock"></i><span class="reading-time">5 minutes</span>
         
 
 
@@ -359,7 +399,22 @@
                     <div class="p_part">
                         
                         
-                            <p><p>This article is my note for HTML5.</p></p>
+                            <p>TIPS 菜鸟教程
+入门
+docker网络1
+docker网络2
+介绍 Compose 是用于定义和运行多容器 Docker 应用程序的工具。通过 Compose，您可以使用 YML 文件来配置应用程序需要的所有服务。然后，使用一个命令，就可以从 YML 文件配置中创建并启动所有服务。
+YML 文件配置介绍 YAML。
+Compose 使用的三个步骤：
+使用 Dockerfile 定义应用程序的环境。 使用 docker-compose.yml 定义构成应用程序的服务，这样它们可以在隔离环境中一起运行。 最后，执行 docker-compose up 命令来启动并运行整个应用程序。 docker-compose.yml 的配置案例如下（配置参数参考下文）：
+实例
+# yaml 配置实例 version: &#39;3&#39; services: web: build: . ports: - &#34;5000:5000&#34; volumes: - .:/code - logvolume01:/var/log links: - redis redis: image: redis volumes: logvolume01: {} 安装 Linux 上我们可以从 Github 上下载它的二进制包来使用，最新发行的版本地址：https://github.com/docker/compose/releases。
+运行以下命令以下载 Docker Compose 的当前稳定版本：
+$ sudo curl -L &#34;https://github.com/docker/compose/releases/download/v2.2.2/docker-compose-$(uname -s)-$(uname -m)&#34; -o /usr/local/bin/docker-compose Docker Compose 存放在 GitHub，不太稳定。
+你可以也通过执行下面的命令，高速安装 Docker Compose。
+curl -L https://get.daocloud.io/docker/compose/releases/download/v2.4.1/docker-compose-`uname -s`-`uname -m` &gt; /usr/local/bin/docker-compose 将可执行权限应用于二进制文件：
+$ sudo chmod +x /usr/local/bin/docker-compose 创建软链：
+$ sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose 测试是否安装成功：</p>
                         
                     </div>
                 </div>
@@ -367,7 +422,7 @@
                     <div class="meta">
                         <div class="info">
                             
-                            <a class="tag" href="/tags/computer/">computer</a><a class="tag" href="/tags/%E5%89%8D%E7%AB%AF/">前端</a>
+                            <a class="tag" href="/tags/computer/">computer</a><a class="tag" href="/tags/docker/">docker</a>
                             
 
 
@@ -406,7 +461,7 @@
         <a href="/page/2/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
       </li>
       <li class="page-item">
-        <a href="/page/7/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+        <a href="/page/10/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
       </li>
     </ul>
         </div>

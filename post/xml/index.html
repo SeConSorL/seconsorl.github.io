@@ -152,7 +152,7 @@
             
         </ul>
 
-        <div class="by">by HZW <b>·</b> 2024</div>
+        <div class="by">by HZW <b>·</b> 2025</div>
     </div>
 </div>
             <div class="content">
@@ -164,7 +164,7 @@
             <div class="post-header">
     <div style="padding-top: 10px;">
         <i class="far fa-calendar"></i><span class="date">May 6, 2024</span>
-        <i class="far fa-clock"></i><span class="reading-time">0 minutes</span>
+        <i class="far fa-clock"></i><span class="reading-time">3 minutes</span>
         
 
 
@@ -173,7 +173,227 @@
         
     </div>
     <div class="post-content">
-        
+        <h2 id="tips">TIPS</h2>
+<p><a href="https://www.runoob.com/xml/xml-tutorial.html">菜鸟教程</a></p>
+<p><a href="https://www.w3school.com.cn/xml/index.asp">W3C_school</a></p>
+<h2 id="简介">简介</h2>
+<p>XML 被设计用来传输和存储数据。</p>
+<p>HTML 被设计用来显示数据。</p>
+<p>XML 指可扩展标记语言（eXtensible Markup Language）。</p>
+<p>可扩展标记语言（英语：Extensible Markup Language，简称：XML）是一种标记语言，是从标准通用标记语言（SGML）中简化修改出来的。它主要用到的有可扩展标记语言、可扩展样式语言（XSL）、XBRL和XPath等。</p>
+<p><img alt="img" src="/XML_img/sta-je-xml.jpeg"></p>
+<ul>
+<li>XML 指可扩展标记语言（EXtensible Markup Language）。</li>
+<li>XML 是一种很像HTML的标记语言。</li>
+<li>XML 的设计宗旨是传输数据，而不是显示数据。</li>
+<li>XML <strong>标签没有被预定义</strong>。您需要自行定义标签。</li>
+<li>XML 被设计为具有自我描述性。</li>
+<li>XML 是 W3C 的推荐标准。</li>
+</ul>
+<h4 id="xml-不是对-html-的替代">XML 不是对 HTML 的替代</h4>
+<p><strong>XML 是对 HTML 的补充。</strong></p>
+<p>XML 不会替代 HTML，XML 用于传输数据，而 HTML 用于格式化并显示数据。</p>
+<p>对 XML 最好的描述是：<strong>XML 是独立于软件和硬件的信息传输工具。</strong></p>
+<ul>
+<li>
+<p>XML 语言没有预定义的标签。XML 允许创作者定义自己的标签和自己的文档结构。比如， <code>&lt;to&gt;</code> 和 <code>&lt;from&gt;</code> 标签没有在任何 XML 标准中定义过，这些标签是由 XML 文档的创作者发明的。</p>
+</li>
+<li>
+<p>HTML 中使用的标签都是预定义的。HTML 文档只能使用在 HTML 标准中定义过的标签（如 <code>&lt;p&gt;</code>、<code>&lt;h1&gt;</code> 等等）。</p>
+</li>
+</ul>
+<h2 id="语法">语法</h2>
+<h3 id="元素">元素</h3>
+<p><strong>XML文档由元素构成</strong>，每个元素包括<strong>开始标签</strong>、<strong>结束标签</strong>和<strong>元素内容</strong>。</p>
+<p>XML 文档形成了一种树结构，它从&quot;根部&quot;开始，然后扩展到&quot;枝叶&quot;。</p>
+<p>XML 文档使用简单的具有自我描述性的语法：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#ff79c6">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">&lt;note&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">&lt;to&gt;</span>Tove<span style="color:#ff79c6">&lt;/to&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">&lt;from&gt;</span>Jani<span style="color:#ff79c6">&lt;/from&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">&lt;heading&gt;</span>Reminder<span style="color:#ff79c6">&lt;/heading&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">&lt;body&gt;</span>Don&#39;t forget me this weekend!<span style="color:#ff79c6">&lt;/body&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">&lt;/note&gt;</span>
+</span></span></code></pre></div><p>第一行是 XML 声明。它定义 XML 的版本（1.0）和所使用的编码（UTF-8）。</p>
+<p>下一行描述文档的<strong>根元素</strong>（像在说：&ldquo;本文档是一个便签&rdquo;）：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#ff79c6">&lt;note&gt;</span>
+</span></span></code></pre></div><p>接下来 4 行描述根的 4 个<strong>子元素</strong>（<code>to</code>，<code> from</code>， <code>heading</code> 以及 <code>body</code>）：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#ff79c6">&lt;to&gt;</span>Tove<span style="color:#ff79c6">&lt;/to&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">&lt;from&gt;</span>Jani<span style="color:#ff79c6">&lt;/from&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">&lt;heading&gt;</span>Reminder<span style="color:#ff79c6">&lt;/heading&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">&lt;body&gt;</span>Don&#39;t forget me this weekend!<span style="color:#ff79c6">&lt;/body&gt;</span>
+</span></span></code></pre></div><p>最后一行定义根元素的结尾：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#ff79c6">&lt;/note&gt;</span>
+</span></span></code></pre></div><h3 id="树结构">树结构</h3>
+<p>XML 文档必须包含<strong>根元素</strong>。该元素是所有其他元素的父元素。</p>
+<p>XML 文档中的元素形成了一棵文档树。这棵树从根部开始，并扩展到树的最底端。</p>
+<p>所有的元素都可以有子元素：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#ff79c6">&lt;root&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">&lt;child&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">&lt;subchild&gt;</span>.....<span style="color:#ff79c6">&lt;/subchild&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">&lt;/child&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">&lt;/root&gt;</span>
+</span></span></code></pre></div><p>父、子以及同胞等术语用于描述元素之间的关系。父元素拥有子元素。相同层级上的子元素成为同胞（兄弟或姐妹）。</p>
+<p>所有的元素都可以有文本内容和属性（类似 HTML 中）。</p>
+<p><strong>实例</strong></p>
+<p><img alt="DOM node tree" src="/XML_img/nodetree.gif"></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#ff79c6">&lt;bookstore&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&lt;book</span> <span style="color:#50fa7b">category=</span><span style="color:#f1fa8c">&#34;COOKING&#34;</span><span style="color:#ff79c6">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&lt;title</span> <span style="color:#50fa7b">lang=</span><span style="color:#f1fa8c">&#34;en&#34;</span><span style="color:#ff79c6">&gt;</span>Everyday Italian<span style="color:#ff79c6">&lt;/title&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&lt;author&gt;</span>Giada De Laurentiis<span style="color:#ff79c6">&lt;/author&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&lt;year&gt;</span>2005<span style="color:#ff79c6">&lt;/year&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&lt;price&gt;</span>30.00<span style="color:#ff79c6">&lt;/price&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&lt;/book&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&lt;book</span> <span style="color:#50fa7b">category=</span><span style="color:#f1fa8c">&#34;CHILDREN&#34;</span><span style="color:#ff79c6">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&lt;title</span> <span style="color:#50fa7b">lang=</span><span style="color:#f1fa8c">&#34;en&#34;</span><span style="color:#ff79c6">&gt;</span>Harry Potter<span style="color:#ff79c6">&lt;/title&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&lt;author&gt;</span>J K. Rowling<span style="color:#ff79c6">&lt;/author&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&lt;year&gt;</span>2005<span style="color:#ff79c6">&lt;/year&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&lt;price&gt;</span>29.99<span style="color:#ff79c6">&lt;/price&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&lt;/book&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&lt;book</span> <span style="color:#50fa7b">category=</span><span style="color:#f1fa8c">&#34;WEB&#34;</span><span style="color:#ff79c6">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&lt;title</span> <span style="color:#50fa7b">lang=</span><span style="color:#f1fa8c">&#34;en&#34;</span><span style="color:#ff79c6">&gt;</span>Learning XML<span style="color:#ff79c6">&lt;/title&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&lt;author&gt;</span>Erik T. Ray<span style="color:#ff79c6">&lt;/author&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&lt;year&gt;</span>2003<span style="color:#ff79c6">&lt;/year&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&lt;price&gt;</span>39.95<span style="color:#ff79c6">&lt;/price&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&lt;/book&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">&lt;/bookstore&gt;</span>
+</span></span></code></pre></div><p>实例中的根元素是 <code>&lt;bookstore&gt;</code>。文档中的所有<code>&lt;book&gt;</code> 元素都被包含在 <code>&lt;bookstore&gt;</code> 中。</p>
+<p><code>&lt;book&gt;</code> 元素有 4 个子元素：<code>&lt;title&gt;、&lt;author&gt;、&lt;year&gt;、&lt;price&gt;</code>。</p>
+<h3 id="属性">属性</h3>
+<p>元素可以包含属性，属性提供有关元素的附加信息。</p>
+<p>属性位于开始标签中，例如：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#ff79c6">&lt;person</span> <span style="color:#50fa7b">age=</span><span style="color:#f1fa8c">&#34;30&#34;</span> <span style="color:#50fa7b">gender=</span><span style="color:#f1fa8c">&#34;male&#34;</span><span style="color:#ff79c6">&gt;</span>John Doe<span style="color:#ff79c6">&lt;/person&gt;</span>
+</span></span></code></pre></div><h3 id="标签">标签</h3>
+<h4 id="xml-单标签">XML 单标签</h4>
+<p>所有的 XML 元素一般都有一个关闭标签，但也允许单标签的使用的。</p>
+<p>单标签的写法如下：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#ff79c6">&lt;elementName</span> <span style="color:#50fa7b">attribute=</span><span style="color:#f1fa8c">&#34;value&#34;</span> <span style="color:#ff79c6">/&gt;</span>
+</span></span></code></pre></div><p>单标签是指在一个标签中同时包含了开始和结束标签，形式类似于 HTML 中的空元素标签<code>&lt;br /&gt;</code>。</p>
+<h4 id="空元素标签">空元素标签</h4>
+<p>在XML中，你可以使用以下两种方式表示单标签：</p>
+<p>使用空元素标签：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#ff79c6">&lt;exampleTag</span> <span style="color:#ff79c6">/&gt;</span>
+</span></span></code></pre></div><p>使用开始和结束标签，但是不包含任何内容：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#ff79c6">&lt;exampleTag&gt;&lt;/exampleTag&gt;</span>
+</span></span></code></pre></div><p>这两种表示方式是等效的，你可以根据个人或项目的约定选择使用其中之一。</p>
+<p>在许多XML解析器中，它们都会将这两种形式解释为相同的结构。</p>
+<p><strong>实例</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#ff79c6">&lt;lineBreak</span> <span style="color:#ff79c6">/&gt;</span>
+</span></span></code></pre></div><p>这里 <code>&lt;lineBreak /&gt;</code> 是一个单标签，表示一个换行的操作。</p>
+<p>带属性的单标签：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#ff79c6">&lt;image</span> <span style="color:#50fa7b">src=</span><span style="color:#f1fa8c">&#34;logo.png&#34;</span> <span style="color:#50fa7b">alt=</span><span style="color:#f1fa8c">&#34;Logo&#34;</span> <span style="color:#ff79c6">/&gt;</span>
+</span></span></code></pre></div><p>这个标签表示一个图像元素，它包含 <code>src</code> 和 <code>alt</code> 属性，表示图像的路径和替代文本。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#ff79c6">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">&lt;root</span>\<span style="color:#ff79c6">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&lt;note</span> <span style="color:#50fa7b">to=</span><span style="color:#f1fa8c">&#34;Tove&#34;</span> <span style="color:#50fa7b">from=</span><span style="color:#f1fa8c">&#34;Jani&#34;</span> <span style="color:#50fa7b">heading=</span><span style="color:#f1fa8c">&#34;Reminder&#34;</span> <span style="color:#50fa7b">body=</span><span style="color:#f1fa8c">&#34;Don&#39;t forget me this weekend!&#34;</span> <span style="color:#ff79c6">/&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&lt;emptyElement</span> <span style="color:#50fa7b">attribute=</span><span style="color:#f1fa8c">&#34;value&#34;</span> <span style="color:#ff79c6">/&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;/root\&gt;
+</span></span></code></pre></div><p>在这个示例中，<code>&lt;note&gt;</code> 和 <code>&lt;emptyElement /&gt;</code> 都是单标签。<code>&lt;note&gt;</code> 标签的用途是传递信息，而 <code>&lt;emptyElement /&gt;</code> 是一个没有子元素的空标签。</p>
+<h4 id="大小写敏感">大小写敏感</h4>
+<p>XML 标签对大小写敏感。标签 <code>&lt;Letter&gt;</code> 与标签 <code>&lt;letter&gt;</code> 是不同的。</p>
+<p>必须使用相同的大小写来编写打开标签和关闭标签：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#ff79c6">&lt;Message&gt;</span>这是错误的<span style="color:#ff79c6">&lt;/message&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">&lt;message&gt;</span>这是正确的<span style="color:#ff79c6">&lt;/message&gt;</span>
+</span></span></code></pre></div><blockquote>
+<p>打开标签和关闭标签通常被称为开始标签和结束标签。不论哪种术语，它们的概念都是相同的。</p>
+</blockquote>
+<h2 id="xml-必须正确嵌套">XML 必须正确嵌套</h2>
+<p>在 HTML 中，常会看到没有正确嵌套的元素：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#ff79c6">&lt;b&gt;&lt;i&gt;</span>This text is bold and italic<span style="color:#ff79c6">&lt;/b&gt;&lt;/i&gt;</span>
+</span></span></code></pre></div><p>在 XML 中，所有元素都<strong>必须</strong>彼此正确地嵌套：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#ff79c6">&lt;b&gt;&lt;i&gt;</span>This text is bold and italic<span style="color:#ff79c6">&lt;/i&gt;&lt;/b&gt;</span>
+</span></span></code></pre></div><p>在上面的实例中，正确嵌套的意思是：由于 <code>&lt;i&gt;</code> 元素是在 <code>&lt;b&gt;</code> 元素内打开的，那么它必须在 <code>&lt;b&gt;</code> 元素内关闭。</p>
+<h2 id="xml-属性值必须加引号">XML 属性值必须加引号</h2>
+<p>与 HTML 类似，XML 元素也可拥有属性（名称/值的对）。</p>
+<p>在 XML 中，XML 的属性值必须加引号。</p>
+<p>请研究下面的两个 XML 文档。 第一个是错误的，第二个是正确的：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#ff79c6">&lt;note</span> <span style="color:#50fa7b">date=</span><span style="color:#f1fa8c">12/11/2007</span><span style="color:#ff79c6">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">&lt;to&gt;</span>Tove<span style="color:#ff79c6">&lt;/to&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">&lt;from&gt;</span>Jani<span style="color:#ff79c6">&lt;/from&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">&lt;/note&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">&lt;note</span> <span style="color:#50fa7b">date=</span><span style="color:#f1fa8c">&#34;12/11/2007&#34;</span><span style="color:#ff79c6">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">&lt;to&gt;</span>Tove<span style="color:#ff79c6">&lt;/to&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">&lt;from&gt;</span>Jani<span style="color:#ff79c6">&lt;/from&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">&lt;/note&gt;</span>
+</span></span></code></pre></div><p>在第一个文档中的错误是，note 元素中的 date 属性没有加引号。</p>
+<h2 id="实体引用">实体引用</h2>
+<p>在 XML 中，一些字符拥有特殊的意义。</p>
+<p>如果您把字符 &ldquo;&lt;&rdquo; 放在 XML 元素中，会发生错误，这是因为解析器会把它当作新元素的开始。</p>
+<p>这样会产生 XML 错误：</p>
+<pre tabindex="0"><code>&lt;message&gt;if salary &lt; 1000 then&lt;/message&gt;
+</code></pre><p>为了避免这个错误，请用<strong>实体引用</strong>来代替 &ldquo;&lt;&rdquo; 字符：</p>
+<pre tabindex="0"><code>&lt;message&gt;if salary &amp;lt; 1000 then&lt;/message&gt;
+</code></pre><p>在 XML 中，有 5 个预定义的实体引用：</p>
+<table>
+<thead>
+<tr>
+<th>&lt;</th>
+<th>&lt;</th>
+<th>less than</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&gt;</td>
+<td>&gt;</td>
+<td>greater than</td>
+</tr>
+<tr>
+<td>&amp;</td>
+<td>&amp;</td>
+<td>ampersand</td>
+</tr>
+<tr>
+<td>'</td>
+<td>'</td>
+<td>apostrophe</td>
+</tr>
+<tr>
+<td>&quot;</td>
+<td>&quot;</td>
+<td>quotation mark</td>
+</tr>
+</tbody>
+</table>
+<p>**注释：**在 XML 中，只有字符 &ldquo;&lt;&rdquo; 和 &ldquo;&amp;&rdquo; 确实是非法的。大于号是合法的，但是用实体引用来代替它是一个好习惯。</p>
+<hr>
+<h2 id="xml-中的注释">XML 中的注释</h2>
+<p>在 XML 中编写注释的语法与 HTML 的语法很相似。</p>
+<pre tabindex="0"><code>&lt;!-- This is a comment --&gt;
+</code></pre><hr>
+<h2 id="在-xml-中空格会被保留">在 XML 中，空格会被保留</h2>
+<p>HTML 会把多个连续的空格字符裁减（合并）为一个：</p>
+<table>
+<thead>
+<tr>
+<th>HTML:</th>
+<th><code>Hello           Tove</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>输出结果:</td>
+<td>Hello Tove</td>
+</tr>
+</tbody>
+</table>
+<p>在 XML 中，文档中的空格不会被删减：</p>
+<pre tabindex="0"><code>&lt;bookstore&gt;
+    &lt;book&gt;
+        &lt;title&gt;xx       xxx&lt;/title&gt;
+        &lt;author&gt;John Doe&lt;/author&gt;
+        &lt;price&gt;29.99&lt;/price&gt;
+    &lt;/book&gt;
+&lt;/bookstore&gt;
+</code></pre><p>title 内容读取显示如下：</p>
+<pre tabindex="0"><code>xx       xxx
+</code></pre><hr>
+<h2 id="xml-以-lf-存储换行">XML 以 LF 存储换行</h2>
+<p>在 Windows 应用程序中，换行通常以一对字符来存储：回车符（CR）和换行符（LF）。</p>
+<p>在 Unix 和 Mac OSX 中，使用 LF 来存储新行。</p>
+<p>在旧的 Mac 系统中，使用 CR 来存储新行。</p>
+<p>XML 以 LF 存储换行。</p>
+
     </div>
     <div class="post-footer">
         <div class="info">

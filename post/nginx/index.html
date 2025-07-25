@@ -7,7 +7,7 @@
     <meta property="og:title" content="Nginx" />
 <meta property="og:description" content="a note for learning Nginx" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://seconsorl.github.io/post/nginx/" /><meta property="og:image" content="https://seconsorl.github.io/images/profile.png" /><meta property="article:section" content="post" />
+<meta property="og:url" content="https://seconsorl.github.io/post/nginx/" /><meta property="og:image" content="https://seconsorl.github.io/posts/Nginx_img/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86.png" /><meta property="og:image" content="https://seconsorl.github.io/posts/Nginx_img/%E6%AD%A3%E5%90%91%E4%B8%8E%E5%8F%8D%E5%90%91.png" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2024-05-06T00:00:00+00:00" />
 <meta property="article:modified_time" content="2024-05-06T00:00:00+00:00" /><meta property="og:site_name" content="A junior from NBU" />
 
@@ -73,7 +73,7 @@
 
     
     <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://seconsorl.github.io/images/profile.png" /><meta name="twitter:title" content="Nginx"/>
+<meta name="twitter:image" content="https://seconsorl.github.io/posts/Nginx_img/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86.png" /><meta name="twitter:title" content="Nginx"/>
 <meta name="twitter:description" content="a note for learning Nginx"/>
 
 </head><body>
@@ -152,7 +152,7 @@
             
         </ul>
 
-        <div class="by">by HZW <b>·</b> 2024</div>
+        <div class="by">by HZW <b>·</b> 2025</div>
     </div>
 </div>
             <div class="content">
@@ -173,17 +173,18 @@
         
     </div>
     <div class="post-content">
-        <p>This article is my note for proxy.</p>
-<h2 id="反向代理介绍">反向代理介绍</h2>
+        <h2 id="反向代理介绍">反向代理介绍</h2>
 <p><strong>反向代理</strong>（Reverse Proxy）方式是指用代理服务器来接受 internet 上的连接请求，然后将请求转发给内部网络上的服务器，并将从服务器上得到的结果返回给 internet 上请求连接的客户端，此时代理服务器对外就表现为一个反向代理服务器。</p>
 <p>举个例子，一个用户访问 <a href="http://www.example.com/readme">http://www.example.com/readme</a>，但是 <a href="http://www.example.com/">www.example.com</a> 上并不存在 readme 页面，它是偷偷从另外一台服务器上取回来，然后作为自己的内容返回给用户。但是用户并不知情这个过程。对用户来说，就像是直接从 <a href="http://www.example.com/">www.example.com</a> 获取 readme 页面一样。这里所提到的 <a href="http://www.example.com/">www.example.com</a> 这个域名对应的服务器就设置了反向代理功能。</p>
-<p><img alt="反向代理" src="/Nginx_img/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86.png"></p>
+<!-- ![反向代理](posts/Nginx_img/反向代理.png) -->
+<!-- <img src="posts/Nginx_img/反向代理.png" alt="反向代理" /> -->
 <h3 id="正向代理和反向代理">正向代理和反向代理</h3>
 <p><strong>正向代理和代理服务器</strong></p>
 <p>正向代理即通常所说的代理，用于代表内部网络用户向Internet上的服务器(或称外部服务器，通常为Web服务器)发出连接请求，并接收响应结果，执行该代理功能的服务器称为代理服务器。使用代理服务器访问外部网络时，客户端必须在局域网设置中指明代理服务器的地址以及要代理的服务的端口号。</p>
 <p><strong>反向代理和代理服务器</strong></p>
 <p>反向代理的方向与正向代理相反，指代表外部网络用户向内部服务器发出请求，即接收来自Internet上用户的连接请求，并将这些请求转发给内部网络上的服务器，然后将从内部服务器上得到的响应返回给Internet上请求连接的客户：执行反向代理服务的服务器称为反向代理服务器，反向代理服务器对外部用户表现为一个服务器。</p>
-<p><img alt="正向与反向" src="/Nginx_img/%E6%AD%A3%E5%90%91%E5%92%8C%E5%8F%8D%E5%90%91.png"></p>
+<!-- ![正向和反向](images[0]) -->
+<!-- <img src="/static/posts/Nginx_img/正向与反向.png" alt="正向和反向" /> -->
 <h3 id="原理">原理</h3>
 <p>反向代理服务器，对于客户端而言它就像是原始服务器，并且客户端不需要进行任何特别的设置。</p>
 <ul>
@@ -489,6 +490,7 @@
 <p><code>$http_user_agent</code> ：记录客户端浏览器的相关信息；</p>
 <p>2、<strong>惊群现象</strong>：一个网路连接到来，多个睡眠的进程被同事叫醒，但只有一个进程能获得链接，这样会影响系统性能。</p>
 <p>3、每个指令必须有分号结束</p>
+
     </div>
     <div class="post-footer">
         <div class="info">

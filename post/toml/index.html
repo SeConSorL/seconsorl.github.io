@@ -152,7 +152,7 @@
             
         </ul>
 
-        <div class="by">by HZW <b>·</b> 2024</div>
+        <div class="by">by HZW <b>·</b> 2025</div>
     </div>
 </div>
             <div class="content">
@@ -173,8 +173,7 @@
         
     </div>
     <div class="post-content">
-        <p>This article is my note for TOML.</p>
-<h2 id="tips">TIPS</h2>
+        <h2 id="tips">TIPS</h2>
 <p><a href="https://cloud.tencent.com/developer/article/2410904">中文文档</a></p>
 <h2 id="介绍">介绍</h2>
 <p>全称：Tom 的（语义）明显、（配置）最小化的语言。（<strong>Tom&rsquo;s Obvious, Minimal Language</strong>）
@@ -292,7 +291,7 @@ TOML 应该能很<strong>容易地被解析成各种语言中的数据结构</st
 </span></span><span style="display:flex;"><span>fruit.orange = <span style="color:#bd93f9">2</span>
 </span></span></code></pre></div><h4 id="值">值</h4>
 <p>值必须是以下这些类型。<strong>不指定值是非法的</strong>。</p>
-<p><a href="/post/toml/#字符串">字符串</a>、<a href="/post/toml/#整数">整数</a>、<a href="/post/toml/#浮点数">浮点数</a>、<a href="/post/toml/#布尔值">布尔值</a>、<a href="/post/toml/#坐标日期时刻">坐标日期时刻</a>、<a href="/post/toml/#各地日期时刻">各地日期时刻</a>、<a href="%E5%90%84%E5%9C%B0%E6%97%A5%E6%9C%9F">各地日期</a>、<a href="%E5%90%84%E5%9C%B0%E6%97%B6%E5%88%BB">各地时刻</a>、<a href="/post/toml/#数组">数组</a>、<a href="/post/toml/#内联表">内联表</a></p>
+<p><a href="/post/toml/#字符串">字符串</a>、<a href="/post/toml/#整数">整数</a>、<a href="/post/toml/#浮点数">浮点数</a>、<a href="/post/toml/#布尔值">布尔值</a>、<a href="/post/toml/#坐标日期时刻">坐标日期时刻</a>、<a href="/post/toml/#各地日期时刻、各地日期、各地时刻">各地日期时刻、各地日期、各地时刻</a>、<a href="/post/toml/#数组">数组</a>、<a href="/post/toml/#内联表">内联表</a></p>
 <h3 id="字符串">字符串</h3>
 <p>有四种方式来表示字符串：<strong>基础式</strong>，<strong>多行基础式</strong>，<strong>字面量式</strong>和<strong>多行字面量式</strong>。所有字符串都只能包含有效的 UTF-8 字符。</p>
 <h4 id="基础字符串">基础字符串</h4>
@@ -405,6 +404,7 @@ TOML 应该能很<strong>容易地被解析成各种语言中的数据结构</st
 </span></span><span style="display:flex;"><span><span style="color:#6272a4">#如果它的值超出了实现所支持的精度，那超出的部分必须被舍弃，而不能四舍五入</span>
 </span></span></code></pre></div><h3 id="各地日期时刻各地日期各地时刻">各地日期时刻、各地日期、各地时刻</h3>
 <p>同上，也是 <a href="https://tools.ietf.org/html/rfc3339">RFC 3339</a> 格式，但不涉及时区偏移。</p>
+<p>具体见 <a href="/post/%E5%90%84%E5%9C%B0%E6%97%A5%E6%9C%9F%E6%97%B6%E5%88%BB%E5%90%84%E5%9C%B0%E6%97%A5%E6%9C%9F%E5%90%84%E5%9C%B0%E6%97%B6%E5%88%BB/">此</a></p>
 <h3 id="数组">数组</h3>
 <ul>
 <li>数组是内含值的方括号<code>[]</code>。</li>
@@ -537,6 +537,7 @@ TOML 应该能很<strong>容易地被解析成各种语言中的数据结构</st
 <p>使用 <code>.toml</code> 扩展名</p>
 <p>在互联网上传输 TOML 文件时，恰当的 <a href="https://baike.baidu.com/item/MIME/2900607?fr=ge_ala">MIME</a> 类型是 <code>application/toml</code>。</p>
 <p><strong>扩充巴科斯-瑙尔范式（ABNF）</strong>:<a href="https://github.com/toml-lang/toml/blob/1.0.0/toml.abnf">严谨说明</a></p>
+
     </div>
     <div class="post-footer">
         <div class="info">

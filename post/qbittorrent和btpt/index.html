@@ -152,7 +152,7 @@
             
         </ul>
 
-        <div class="by">by HZW <b>·</b> 2024</div>
+        <div class="by">by HZW <b>·</b> 2025</div>
     </div>
 </div>
             <div class="content">
@@ -173,17 +173,68 @@
         
     </div>
     <div class="post-content">
-        <p>This article is my note for P2P.</p>
-<h2 id="qbit下载">Qbit下载</h2>
+        <h2 id="qbit下载">Qbit下载</h2>
 <p>官网版本：https://www.qbittorrent.org/download.php</p>
 <p>历史版本：https://www.fosshub.com/qBittorrent-old.html</p>
 <p>所有版本：https://sourceforge.net/projects/qbittorrent/files/</p>
 <p>增强版：https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases</p>
 <p>官方版和增强版的区别，官方版使用时会被迅雷吸血，且不能自动订阅Track，但是可以玩<a href="https://baike.baidu.com/item/pt%E4%B8%8B%E8%BD%BD/6883416">PT(private tracker)</a>；增强版则相反。</p>
+<h2 id="p2p">P2P</h2>
+<h3 id="介绍">介绍</h3>
+<p>**点对点技术（peer-to-peer， 简称P2P）**又称对等互联网络技术，是一种网络新技术，依赖网络中参与者的计算能力和带宽，而不是把依赖都聚集在较少的几台服务器上。P2P网络通常用于通过[Ad Hoc](<a href="https://baike.baidu.com/item/Ad">https://baike.baidu.com/item/Ad</a> Hoc/0?fromModule=lemma_inlink)连接来连接节点。这类网络可以用于多种用途，各种文件共享软件已经得到了广泛的使用。P2P技术也被使用在类似VoIP等实时媒体业务的数据通信中。</p>
+<p><strong>纯点对点网络没有客户端或服务器的概念，只有平等的同级节点</strong>，同时对网络上的其它节点充当客户端和服务器。这种网络设计模型不同于客户端-服务器模型，在客户端-服务器模型中通信通常来往于一个中央服务器。有些网络（如Napster, OpenNAP）的一些功能（比如搜索）使用客户端-服务器（C/S）结构，而使用P2P结构来实现另外一些功能。类似<strong>Gnutella</strong>或<strong>Freenet</strong>的网络则使用纯P2P结构来实现全部的任务。</p>
+<h3 id="p2p资源定位方式">p2p资源定位方式</h3>
+<p>p2p网络中进行资源定位是首先要解决问题。一般采用三种方式：</p>
+<ul>
+<li>
+<p><strong>集中方式索引</strong>：每一个节点将自身能够提供共享的内容注册到一个或几个集中式的目录服务器中。查找资源时首先通过服务器定位，然后两个节点之间再直接通讯。例如早期的<strong>napster</strong>。这类网络实现简单，但往往需要大的目录服务器的支持，并且系统的健壮性不好。</p>
+</li>
+<li>
+<p><strong>广播方式</strong>：没有任何索引信息，内容提交与内容查找都通过相邻接节点直接广播传递。例如gnutella。一般情况下，采取这种方式的p2p网络对参与节点的带宽要求比较高。</p>
+</li>
+<li>
+<p><strong>动态哈希表的方式</strong>：上述两种定位方式可以依据不同的p2p应用环境进行选择，但是人们普遍看好<strong>dht(distributed hash</strong>
+**table，分散式杂凑表)**方式。基于dht的p2p网络在一定程度上可以直接实现内容的定位。</p>
+<p>一个矛盾的问题是：如果一个节点提供共享的内容表示越复杂，则哈希函数越不好选择；相应的，网络的拓扑结构就越复杂。而如果内容表示简单，则又达不到真正实现依据内容定位的能力。目前大多数dht方式的p2p网络对节点所提供共享内容的表示都很简单，一般仅仅为文件名。</p>
+</li>
+</ul>
+<h3 id="现有p2p协议分类">现有p2p协议分类</h3>
+<ul>
+<li>
+<p><strong>napster</strong>：世界上第一个大型的p2p应用网络；中央集中式，倒闭了。</p>
+<p>napster，这是当时很火的一种共享服务，主要用于查找mp3，它有一个服务器用于存储mp3文件的链接位置并提供检索，而真正的mp3文件则存放在千千万万的个人电脑上，搜索到的文件通过p2p方式直接在个人电脑间传播共享。这种方式的缺点就是需要一台服务器，在mp3文件版权之争火热的年代，napster很快就成为众矢之的，被众多唱片公司诉讼侵犯版权而被迫关闭。当然服务器一关napster也就不复存在。</p>
+</li>
+<li>
+<p><strong>gnutella</strong>和<strong>gnutella2</strong>（gnutella2是对gnutella的改进和扩展）：<strong>开源</strong>的；<strong>第一个真正非中心的无结构p2p网络</strong>，文件查询采用洪泛方式。</p>
+<p>gnutella吸取了napster的失败教训，将p2p的理念更推进一步：它不存在中枢目录服务器，所有资料都放在个人电脑上。用户只要安装了该软件，就将自己的电脑立即变成一台能够提供完整目录和文件服务的服务器，并会自动搜寻其它同类服务器，从而联成一台由无数pc组成的超级服务器网络。传统网络的server和client在它的面前被重新定义。</p>
+</li>
+<li>
+<p><strong>fasttrack</strong>：第一个客户端是kazaa。协议与gnutella类似。02－03年的最大用户网，05年退至第三名。衰退原因是这个网络无法应对众多用户同时使用，而且有版权拥有者pollution的行为，以及间谍软件的问题。<strong>imesh也是以fasttrack为协议的</strong>。</p>
+</li>
+<li>
+<p><strong>edonkey，overnet，kad</strong>：人们在利用p2p软件的时候大多只愿“获取”，而不愿“共享”，p2p的发展遇到了意识的发展瓶颈。不过，一头“驴”很快改变了游戏规则，这就是电驴－edonkey，它引入了强制共享机制。</p>
+<ul>
+<li>edeonkey将网络节点分成服务器层和客户层，并且将文件分块以提高下载速度。edonkey网络下最普及的p2p客户端程序是edonkey2000和emule。<strong>emule是edonkey的后继</strong>，但是更出色，采用了<strong>dht</strong>来构建底层网络拓扑，目前非常流行的p2p文件共享软件。</li>
+<li>overnet设计的目的是取代edonkey，它没有中心服务器，但用户数少于edonkey。</li>
+<li>kademlia 协议，在这里叫做kad网络，采用udp方式通信。很类似于overnet，几乎只有edonkey用户使用它。</li>
+</ul>
+</li>
+<li>
+<p><strong>bittorrent</strong>：借助分散式服务器提供共享文件索引的混合式p2p网络，文件分片下载。下载速度高，没有查找功能，种子具有时效性。它将中心目录服务器的稳定性同优化的分布式文件管理结合起来。</p>
+<p>BitTorrent的意思就是pnp下载，也叫变态下载。bt下载是p2p下载，pp下载的扩展。pnp中的两个p都是指网民的个人电脑，在网上抽象为一个点point。n是之1，2，3，……n中的n就是无限的意思。pnp就是说个人电脑和个人电脑通过网络连接，多对多连接的意思。</p>
+<p>bt下载为什么俗称变态下载呢？这是因为这种下载方式和传统的单单依靠网站服务器作为下载源的方式不同，它采用的是人人电脑都是服务器的思想，下载的人越多，共享的人越多，下载的速度也越快。 BitTorrent 下载工具软件可以说是一个最新概念 P2P 的下载工具、它采用了多点对多点的原理，一般简称 BT(BitTorrent) 也就是大家所说的变态下载。该软件相当的特殊，一般我们下载档案或软件，大都由 HTTP 站点或FTP 站台下载，若同时间下载人数多时，基于该服务器频宽的因素，速度会减慢许多，而该软件却不同，恰巧相反，同时间下载的人数越多你下载的速度便越快，因为它采用了多点对多点的传输原理。</p>
+</li>
+<li>
+<p><strong>direct connect</strong>：一种常用在小的网络和大学内部网络中的协议，适用于小网络环境中，**dc++**是常见客户端。</p>
+</li>
+<li>
+<p><strong>ares</strong>：类似gnutella网络。</p>
+</li>
+</ul>
 <h2 id="bt和pt原理">BT和PT原理</h2>
-<p>BT下载时，软件会分析.torrent<a href="https://baike.baidu.com/item/%E7%A7%8D%E5%AD%90%E6%96%87%E4%BB%B6/0?fromModule=lemma_inlink">种子文件</a>得到Tracker地址，然后连接Tracker服务器，服务器返回其他<a href="https://baike.baidu.com/item/%E4%B8%8B%E8%BD%BD%E8%80%85/7487318?fromModule=lemma_inlink">下载者</a>的<a href="https://baike.baidu.com/item/IP/224599?fromModule=lemma_inlink">IP</a>，下载者再与这些IP联系进行下载，从而减轻了服务器的负担，BT下载的Tracker是公开的，而Private Tracker 下载(PT下载)的Tracker则是私有的。</p>
-<p>PT下载是一种小范围的BT下载，通过禁用<a href="https://baike.baidu.com/item/DHT/1007999?fromModule=lemma_inlink">DHT</a>有要求地选择并控制<a href="https://baike.baidu.com/item/%E7%94%A8%E6%88%B7%E6%95%B0%E9%87%8F/0?fromModule=lemma_inlink">用户数量</a>，这样，在有限的范围内，下载的用户基本上都可以达到自己的宽带上限，Private Tracker 下载(PT下载)下载还通过论坛等方式的约束机制将BT下载的理念现实化，真正让用户做到下载的过程中努力上传。因此，Private Tracker 下载(PT下载)的速度很快，能够让用户带宽得到最大程度的使用。</p>
-<p>我们下载时用得最多的方式可能就是BT下载。BT下载和传统的依靠<a href="https://baike.baidu.com/item/%E7%BD%91%E7%AB%99%E6%9C%8D%E5%8A%A1%E5%99%A8/8156379?fromModule=lemma_inlink">网站服务器</a>作为下载源的<a href="https://baike.baidu.com/item/HTTP/243074?fromModule=lemma_inlink">HTTP</a>/<a href="https://baike.baidu.com/item/FTP/13839?fromModule=lemma_inlink">FTP</a>下载不同，采用的是P2P<a href="https://baike.baidu.com/item/%E7%82%B9%E5%AF%B9%E7%82%B9/7452984?fromModule=lemma_inlink">点对点</a>下载方式。BT下载的理念是人人都是服务器，下载的同时也进行上传，这样参与进来的人越多，下载的速度也越快。如果下载的人数足够多，往往可以达到<a href="https://baike.baidu.com/item/%E7%BD%91%E7%BB%9C%E5%B8%A6%E5%AE%BD/6120475?fromModule=lemma_inlink">网络带宽</a>的峰值。</p>
+<p>BT下载时，软件会分析.torrent种子文件得到Tracker地址，然后连接Tracker服务器，服务器返回其他下载者的IP，下载者再与这些IP联系进行下载，从而减轻了服务器的负担，BT下载的Tracker是公开的，而Private Tracker 下载(PT下载)的Tracker则是私有的。</p>
+<p>PT下载是一种小范围的BT下载，通过禁用<a href="https://baike.baidu.com/item/DHT/1007999?fromModule=lemma_inlink">DHT</a>有要求地选择并控制用户数量，这样，在有限的范围内，下载的用户基本上都可以达到自己的宽带上限，Private Tracker 下载(PT下载)下载还通过论坛等方式的约束机制将BT下载的理念现实化，真正让用户做到下载的过程中努力上传。因此，Private Tracker 下载(PT下载)的速度很快，能够让用户带宽得到最大程度的使用。</p>
+<p>我们下载时用得最多的方式可能就是BT下载。BT下载和传统的依靠网站服务器作为下载源的HTTP/FTP下载不同，采用的是P2P点对点下载方式。BT下载的理念是人人都是服务器，下载的同时也进行上传，这样参与进来的人越多，下载的速度也越快。如果下载的人数足够多，往往可以达到网络带宽的峰值。</p>
 <h2 id="pt实现">PT实现</h2>
 <ul>
 <li>首先，划分范围最好的方式就是论坛。新会员必须通过前期的会员邀请才可以加入，邀请注册机制有效地控制了下载人数。</li>
@@ -249,6 +300,7 @@
 <li>设置：完成后开始做种  一定要勾选上，不然其他人连接不上，因为不选的话就没有第一个BT文件了。先有1才有2</li>
 <li>Tracker网址：即别人来连接的媒介，即会把种子中包含Tracker网址，其他人通过Tracker网址来获取共享者的IP来下载。</li>
 </ul>
+
     </div>
     <div class="post-footer">
         <div class="info">

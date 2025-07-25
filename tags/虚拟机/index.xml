@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>虚拟机 on My Blog</title>
+    <link>https://seconsorl.github.io/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/</link>
+    <description>Recent content in 虚拟机 on My Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>216002917@nbu.edu.cn (HZW)</managingEditor>
+    <webMaster>216002917@nbu.edu.cn (HZW)</webMaster>
+    <lastBuildDate>Mon, 08 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://seconsorl.github.io/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>qemu</title>
+      <link>https://seconsorl.github.io/post/qemu/</link>
+      <pubDate>Mon, 08 Jul 2024 00:00:00 +0000</pubDate><author>216002917@nbu.edu.cn (HZW)</author>
+      <guid>https://seconsorl.github.io/post/qemu/</guid>
+      <description>TIPS 官方文档&#xA;qemu Note&#xA;使用 QEMU 命令行的一般形式可以表示为：&#xA;$ qemu-system-x86_64 [机器选项] \ [CPU 选项] \ [加速器选择] \ [设备选择] \ [后端选择] \ [接口选项] \ [启动选项] 大多数选项都会生成一些帮助信息。例如：&#xA;$ qemu-system-x86_64 -M help 将列出该 QEMU 二进制文件支持的机器类型。help 也可以作为参数传递给其他选项。例如：&#xA;$ qemu-system-x86_64 -device scsi-hd，help 将列出可以控制设备行为的附加选项的参数及其默认值scsi-hd。&#xA;参数解释&#xA;选项 机器（Machine） 定义机器类型、内存量等 CPU vCPU 的类型和数量/拓扑。大多数加速器都提供hostCPU 选项，该选项会直接传递主机 CPU 配置，而不会过滤任何功能。 加速器（Accelerator） 这取决于您运行的虚拟机管理程序。默认设置是 TCG，它是纯模拟的，因此您必须指定加速器类型才能利用硬件虚拟化。 设备（Devices） 机器类型中默认未定义的附加设备。 后端（Backends） 后端是 QEMU 处理客户机数据的方式，例如块设备如何存储、网络设备如何查看网络或串行设备如何指向外部。 接口（Interfaces） 系统如何显示，如何管理和控制或调试。 引导（Boot） 系统如何启动，通过固件还是直接内核启动。 示例#1 首先定义一台virt机器，它是用于运行 aarch64 客户机的通用平台。我们启用虚拟化功能，以便在模拟客户机中使用 KVM。由于 virt机器自带一些 pflash 设备，我们为它们命名，以便稍后覆盖默认值。&#xA;$ qemu-system-aarch64 \&#xD;-machine type=virt,virtualization=on,pflash0=rom,pflash1=efivars \&#xD;-m 4096 \ 使用选项定义 4 个 vCPU，max该选项提供了 QEMU 能够模拟的所有 Arm 功能。我们启用了更易于模拟的 Arm 指针认证算法实现。我们明确指定了 TCG 加速，尽管 QEMU 默认会使用 TCG 加速。&#xA;-cpu max \&#xD;-smp 4 \&#xD;-accel tcg \ 由于virt平台没有任何默认的网络或存储设备，我们需要定义它们。我们为它们分配 ID，以便稍后将它们与后端连接起来。</description>
+    </item>
+  </channel>
+</rss>
